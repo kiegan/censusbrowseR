@@ -1,0 +1,47 @@
+---
+title: "USAboundaries"
+author: "Kiegan Rice"
+date: "September 15, 2016"
+output: html_document
+---
+
+### Install USAboundaries package
+```{r}
+install.packages("USAboundaries")
+library(USAboundaries)
+library(sp)
+install_data_package()
+```
+
+### Do some example mapping
+```{r}
+map_states <- us_boundaries("1850-07-04")
+map_counties <- us_boundaries(as.Date("1850-07-04"), type = "county")
+new_england <- c("Massachusetts", "Vermont", "New Hampshire", "Connecticut",
+"Rhode Island", "Maine")
+map_ne <- us_boundaries("1943-02-12", states = new_england)
+map_congressional <- us_boundaries(type = "congressional",
+  states = new_england)
+if (require(sp)) {
+  us_congressional
+  plot(map_states)
+  plot(map_counties)
+  plot(map_ne)
+  plot(map_congressional)
+  }
+```
+
+### State maps for our range of census data
+```{r}
+years <- seq(1790, 1960, by = 10)
+dates <- paste(years, "-07-04", sep = "")
+
+par(mfrow=c(3,6))
+for (i in 1:length(dates)){
+  map_hist_states <- us_boundaries(dates[i],type = "state")
+  if (require(sp)){
+    plot(map_hist_states)
+  }
+}
+
+```
