@@ -4,7 +4,7 @@
 \name{ppd}
 \alias{ppd}
 \title{Portland Police districts}
-\format{A data frame with 11578 rows and 10 variables:
+\format{A data frame with almost 12000 rows and 10 variables:
 \itemize{
   \item long, lat: geographic longitude and latitude
   \item order: order in which points have to be connected for the right shape
