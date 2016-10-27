@@ -1,0 +1,37 @@
+---
+title: "clean raw data"
+author: "Kiegan Rice"
+date: "October 16, 2016"
+output: html_document
+---
+
+## messing around with it to see what we are dealing with
+```{r}
+states1790 <- read.csv("~/Statistical-Atlas/raw-data/1790 State Level Census Data.csv", skip = 22)
+head(states1790)
+
+states1790.1 <- states1790[1:18,]
+```
+
+```{r}
+states1800 <- read.csv("~/Statistical-Atlas/raw-data/1800 State Level Census Data.csv", skip = 22)
+head(states1800)
+
+states1800.1 <- states1800[1:19,]
+```
+
+
+```{r}
+remove.commas <- function(X){
+  as.numeric(gsub(",", "", X))
+}
+
+get.states <- function(filename, year){
+  df <- read.csv(filename, skip=22)
+  df <- df[(3:(dim(df)[1]-24)),]
+
+  df.2 <- apply(X = df[,-1], MARGIN = 2, FUN = remove.commas)
+  df <- data.frame("State" = df[,1], df.2)
+  return(df)
+}
+```
