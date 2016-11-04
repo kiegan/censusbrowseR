@@ -7,17 +7,17 @@ output: html_document
 
 ## messing around with it to see what we are dealing with
 ```{r}
-states1790 <- read.csv("~/Statistical-Atlas/raw-data/1790 State Level Census Data.csv", skip = 22)
-head(states1790)
+#states1790 <- read.csv("~/Statistical-Atlas/raw-data/1790 State Level Census Data.csv", skip = 22)
+#head(states1790)
 
-states1790.1 <- states1790[1:18,]
+#states1790.1 <- states1790[1:18,]
 ```
 
 ```{r}
-states1800 <- read.csv("~/Statistical-Atlas/raw-data/1800 State Level Census Data.csv", skip = 22)
-head(states1800)
+#states1800 <- read.csv("~/Statistical-Atlas/raw-data/1800 State Level Census Data.csv", skip = 22)
+#head(states1800)
 
-states1800.1 <- states1800[1:19,]
+#states1800.1 <- states1800[1:19,]
 ```
 
 
@@ -27,11 +27,20 @@ remove.commas <- function(X){
 }
 
 get.states <- function(filename, year){
-  df <- read.csv(filename, skip=22)
+  df <- read.csv(filename, skip=22, na.string="N/A")
   df <- df[(3:(dim(df)[1]-24)),]
-
   df.2 <- apply(X = df[,-1], MARGIN = 2, FUN = remove.commas)
-  df <- data.frame("State" = df[,1], df.2)
+  df <- data.frame("Year" = year, "State" = df[,1], df.2)
+  # if 'State' column = "State" or "" <- bye
+  df <- df[!(df$State == "State" | df$State == ""),]
+  df$Type <- ifelse(grepl("(territory)", df$State) == TRUE, "Territory", "State")
+  # add column 'type' state, territory, other
+  df$State <- gsub(" \\(territory\\)", "", df$State)
   return(df)
 }
+
+# save clean data into separate R files and put into package
+# put all of them into one file (rbind)
+# how much do the names match up with what was actually asked in the census
+  # keep the names and document changes, but changing names could be a good idea
 ```
