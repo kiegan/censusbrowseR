@@ -1,0 +1,29 @@
+---
+title: "df to list"
+author: "Kiegan Rice"
+date: "December 18, 2016"
+output: html_document
+---
+
+```{r}
+df1 <- states1790
+df2 <- states1800
+df3 <- states1810
+df4 <- states1820
+df5 <- states1830
+df6 <- states1840
+df7 <- states1850
+df8 <- states1860
+df9 <- states1870
+df10 <- states1880
+df11 <- states1890
+df12 <- states1900
+df13 <- states1910
+df14 <- states1920
+df15 <- states1930
+df16 <- states1940
+df17 <- states1950
+df18 <- states1960
+states.list <- lapply(ls(pattern="df[0-9]+"), function(x) get(x))
+save(states.list, file = "~/Statistical-Atlas/statatlas/data/stateslist.rda")
+```
