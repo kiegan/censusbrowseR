@@ -26,6 +26,6 @@ df17 <- states1950
 df18 <- states1960
 states.list <- lapply(ls(pattern="df[0-9]+"), function(x) get(x))
 stateslist <- states.list
-names(stateslist) <- as.character(10*179:196)
-save(stateslist, file = "~/Statistical-Atlas/statatlas/data/stateslist.rda")
+names(stateslist) <- paste0("X",as.character(10*179:196))
+save(stateslist, file = "../data/stateslist.rda")
 ```
