@@ -25,5 +25,7 @@ df16 <- states1940
 df17 <- states1950
 df18 <- states1960
 states.list <- lapply(ls(pattern="df[0-9]+"), function(x) get(x))
-save(states.list, file = "~/Statistical-Atlas/statatlas/data/stateslist.rda")
+stateslist <- states.list
+names(stateslist) <- as.character(10*179:196)
+save(stateslist, file = "~/Statistical-Atlas/statatlas/data/stateslist.rda")
 ```
