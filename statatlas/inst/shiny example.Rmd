@@ -1,6 +1,4 @@
 ---
-title: "statatlas interactive"
-author: "Kiegan Rice"
 output: html_document
 runtime: shiny
 ---
@@ -8,6 +6,12 @@ runtime: shiny
 ### Choosing your variables  
 
 ```{r, echo=FALSE}
+
+shinyUI(navbarPage("Get Your Data",
+  tabPanel("Single Year"),
+  tabPanel("Multiple Years")
+))
+
 library(statatlas)
 inputPanel(
   selectInput("year", label = "Census Year:",
@@ -17,7 +21,6 @@ inputPanel(
   
   textInput("topic2", label = "Secondary Topic:", value = "")
 )
-
 
 #renderTable({
 #  library(statatlas)
@@ -42,6 +45,23 @@ renderTable({
   variable1 = variables[grep(input$topic, variables)]
   variable2 = variables[grep(input$topic2, variables)]
   data.frame(available_colnames = variable1[variable1 %in% variable2])
+})
+
+inputPanel(
+  sliderInput("range", label = "Range of Years",
+              min = 1790, max = 1960, step = 10, sep = "", value = c(1790, 1820)),
+  
+  selectInput("topic.choose", label = "Choose Topic",
+              choices = c("Gender", "Race", "Agriculture")),
+  
+  selectInput("focus.choose", label = "Choose Focus Group",
+              choices = c("FEMALE", "MALE", "WHITE", "NONWHITE"))
+)
+
+renderTable({
+  variables <- names(stateslist[[paste0("X", input$range)]])
+  
+  #input$range
 })
 ```
 
