@@ -5,36 +5,57 @@ runtime: shiny
 
 ### Choosing your variables  
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(statatlas)
+library(DT)
 shinyUI(navbarPage("Get Your Data",
   tabPanel("Single Year", 
            inputPanel(
-  selectInput("year", label = "Census Year:",
-              choices = 10*179:196, selected = 1790),
+              selectInput("year", label = "Census Year:",
+                choices = 10*179:196, selected = 1790),
   
-  textInput("topic", label = "Variable of Interest:", value = ""),
+              textInput("topic", label = "Variable of Interest:", value = ""),
   
-  textInput("topic2", label = "Secondary Variable:", value = "")
-), renderTable({
-  library(statatlas)
-  data(stateslist)
-  variables <- names(stateslist[[paste0("X",input$year)]])
-  variable1 = variables[grep(input$topic, variables)]
-  variable2 = variables[grep(input$topic2, variables)]
-  data.frame(available_colnames = variable1[variable1 %in% variable2])
-})),
-
-  tabPanel("Multiple Years", {inputPanel(
-  sliderInput("range", label = "Range of Years",
-              min = 1790, max = 1960, step = 10, sep = "", value = c(1790, 1820)),
+              textInput("topic2", label = "Secondary Variable:", value = "")), 
+            DT::renderDataTable({
+              library(statatlas)
+              data(stateslist)
+              variables <- names(stateslist[[paste0("X",input$year)]])
+              variable1 = variables[grep(input$topic, variables)]
+              variable2 = variables[grep(input$topic2, variables)]
+              data.frame(available_colnames = variable1[variable1 %in% variable2])
+              })
+           ),
+  tabPanel("Multiple Years", 
+           {inputPanel(
+              sliderInput("range", label = "Range of Years",
+                min = 1790, max = 1960, step = 10, sep = "", value = c(1790, 1820)),
   
-  textInput("topic3", label = "Variable of Interest:",
-              value = "")
-)})
+              textInput("topic3", label = "Variable of Interest:",
+                value = ""))}, 
+           DT::renderDataTable({
+              years <- as.integer(seq(input$range[1], input$range[2], by = 10))
+              varvec <- c()
+              is_present <- data.frame()
+              for (i in 1:length(years)){
+                variables <- names(stateslist[[paste0("X",years[i])]])
+                variable1 = variables[grep(input$topic3, variables)]
+                varvec <- c(varvec,variable1)
+              }
+              varvec_u <- unique(varvec)
+              is_present <- matrix(NA, nrow = length(varvec_u), ncol = length(years))
+              for(i in 1:length(years)){
+                variables <- names(stateslist[[paste0("X",years[i])]])
+                is_present[,i] <- varvec_u %in% variables
+              }
+              
+              #table <- data.frame(available_colnames = varvec_u)
+              is_present_01 <- data.frame(ifelse(is_present == TRUE, "X", ""))
+              table <- data.frame(cbind(varvec_u, is_present_01, rowSums(is_present)))
+              
+              names(table) <- c("Available_Colnames", years, "Total")
+              table 
+              })
+           )
 ))
-```
-## append all of the variable names for all of the years, then shrink down by unique, then create a binary as to whether they are in the unique or not. Mark with a check or X where they match. 
-## leave as a table, and denote how many of the selected years also have that column.
-
-## data table that shows which years the variable is present (each year is a column), and then another column that says how many of the years it is present (sum) 
+``` 
