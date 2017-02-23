@@ -54,7 +54,7 @@ shinyApp(
               table 
               }, options = list(dom = 'ltipr'))
     output$dnld = downloadHandler('census-filtered.csv', content = function(file) {
-    write.csv(output$tbl, file)
+    write.csv(tbl, file)
   })
   }
 )
