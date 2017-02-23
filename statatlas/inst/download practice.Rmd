@@ -1,0 +1,62 @@
+---
+title: "Download Button"
+author: "Kiegan Rice"
+date: "February 23, 2017"
+output: html_document
+runtime: shiny
+---
+
+```{r}
+library(shiny)
+library(statatlas)
+library(DT)
+
+shinyApp(
+  ui = navbarPage(
+    tabPanel("Single Year",
+    DT::dataTableOutput('tbl'),
+    p(class = 'text-center', downloadButton('dnld', 'Download Filtered Data'))
+  ),
+  
+    tabPanel("Multiple Years")),
+  
+  
+  server = function(input, output, session){
+    selectInput("year", label = "Census Year:",
+                choices = 10*179:196, selected = 1790)
+  
+    textInput("topic", label = "Variable of Interest:", value = "")
+  
+    textInput("topic2", label = "Secondary Variable:", value = "")
+    
+    
+    output$tbl = DT::renderDataTable({
+              years <- as.integer(seq(input$range[1], input$range[2], by = 10))
+              varvec <- c()
+              is_present <- data.frame()
+              for (i in 1:length(years)){
+                variables <- names(stateslist[[paste0("X",years[i])]])
+                variable1 = variables[grep(input$topic3, variables)]
+                varvec <- c(varvec,variable1)
+              }
+              varvec_u <- unique(varvec)
+              is_present <- matrix(NA, nrow = length(varvec_u), ncol = length(years))
+              for(i in 1:length(years)){
+                variables <- names(stateslist[[paste0("X",years[i])]])
+                is_present[,i] <- varvec_u %in% variables
+              }
+              
+              table <- data.frame(available_colnames = varvec_u)
+              is_present_01 <- data.frame(ifelse(is_present == TRUE, "X", ""))
+              table <- data.frame(cbind(varvec_u, is_present_01, rowSums(is_present)))
+              
+              names(table) <- c("Available_Colnames", years, "Total")
+              table 
+              }, options = list(dom = 'ltipr'))
+    output$dnld = downloadHandler('census-filtered.csv', content = function(file) {
+    write.csv(output$tbl, file)
+  })
+  }
+)
+
+```

@@ -6,8 +6,11 @@ runtime: shiny
 ### Choosing your variables  
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(shiny)
 library(statatlas)
 library(DT)
+
+
 shinyUI(navbarPage("Get Your Data",
   tabPanel("Single Year", 
            inputPanel(
@@ -16,7 +19,8 @@ shinyUI(navbarPage("Get Your Data",
   
               textInput("topic", label = "Variable of Interest:", value = ""),
   
-              textInput("topic2", label = "Secondary Variable:", value = "")), 
+              textInput("topic2", label = "Secondary Variable:", value = "")),
+              
             DT::renderDataTable({
               library(statatlas)
               data(stateslist)
@@ -24,15 +28,19 @@ shinyUI(navbarPage("Get Your Data",
               variable1 = variables[grep(input$topic, variables)]
               variable2 = variables[grep(input$topic2, variables)]
               data.frame(available_colnames = variable1[variable1 %in% variable2])
-              })
+              }, options = list(dom = 'ltipr')
+           )
            ),
   tabPanel("Multiple Years", 
-           {inputPanel(
+           inputPanel(
               sliderInput("range", label = "Range of Years",
                 min = 1790, max = 1960, step = 10, sep = "", value = c(1790, 1820)),
   
               textInput("topic3", label = "Variable of Interest:",
-                value = ""))}, 
+                value = "")),
+          
+
+           
            DT::renderDataTable({
               years <- as.integer(seq(input$range[1], input$range[2], by = 10))
               varvec <- c()
@@ -49,13 +57,13 @@ shinyUI(navbarPage("Get Your Data",
                 is_present[,i] <- varvec_u %in% variables
               }
               
-              #table <- data.frame(available_colnames = varvec_u)
+              table <- data.frame(available_colnames = varvec_u)
               is_present_01 <- data.frame(ifelse(is_present == TRUE, "X", ""))
               table <- data.frame(cbind(varvec_u, is_present_01, rowSums(is_present)))
               
               names(table) <- c("Available_Colnames", years, "Total")
               table 
-              })
-           )
+              }, options = list(dom = 'ltipr'))
+)
 ))
 ``` 
