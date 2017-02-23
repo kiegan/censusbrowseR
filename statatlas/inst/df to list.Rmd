@@ -15,13 +15,21 @@ df6 <- states1840
 df7 <- states1850
 df8 <- states1860
 df9 <- states1870
+## there are some extra columns here...
+df9 <- select(df9, -(grep("X.", colnames(df9))))
 df10 <- states1880
+# and here
+df10 <- select(df10, -(grep("X.", colnames(df10))))
 df11 <- states1890
+df11 <- select(df11, -(grep("X.", colnames(df11))))
 df12 <- states1900
+df12 <- select(df9, -(grep("X.", colnames(df12))))
 df13 <- states1910
 df14 <- states1920
+df14 <- select(df14, -(grep("X.", colnames(df14))))
 df15 <- states1930
 df16 <- states1940
+df16 <- select(df16, -(grep("X.", colnames(df16))))
 df17 <- states1950
 df18 <- states1960
 states.list <- lapply(ls(pattern="df[0-9]+"), function(x) get(x))
