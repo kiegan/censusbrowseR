@@ -101,19 +101,25 @@ shinyApp(
     
 ####### DOWNLOAD DATA, MULTIPLE YEARS #######
     output$dnld2 = downloadHandler('census-filtered.csv', content = function(file) {
+      library(dplyr)
       ## this is where to manipulate data into correct format (rows = colnames)
-      colstoget <- mydata2()[input$tbl2_rows_selected,1]
+      colstoget <- as.character(mydata2()[input$tbl2_rows_selected,1])
       years <- as.integer(seq(input$range[1], input$range[2], by = 10))
-      dnld.dat.join <- data.frame(State = stateslist[[paste0("X", input$range[2])]]$State, 
-                                  Year = stateslist[[paste0("X", input$range[2])]]$Year,
-                                  TOTAL.POPULATION = 
-                                    stateslist[[paste0("X", input$range[2])]]$TOTAL.POPULATION)
-      for (i in 1:length(years)){
+#      dnld.dat.join <- data.frame(State = stateslist[[paste0("X", input$range[2])]]$State, 
+#                                  Year = stateslist[[paste0("X", input$range[2])]]$Year,
+#                                  TOTAL.POPULATION = 
+#                                    stateslist[[paste0("X", input$range[2])]]$TOTAL.POPULATION)
+      dnld.dat.join <- stateslist[[paste0("X", years[1])]]
+      dnld.dat.join <- dnld.dat.join[,names(dnld.dat.join)%in%c("Year", "State", "TOTAL.POPULATION", "Type", colstoget)]
+      
+      if (length(years) > 1) {
+      for (i in 2:length(years)){
         yr.dat <- stateslist[[paste0("X", years[i])]]
-        dnld.dat <- yr.dat[,names(yr.dat)%in%colstoget]
-        dnld.dat.join <- merge(dnld.dat.join, dnld.dat, all = TRUE)
+        dnld.dat <- yr.dat[,names(yr.dat)%in%c("Year", "State", "TOTAL.POPULATION", "Type", colstoget)]
+        dnld.dat.join <- full_join(dnld.dat.join, dnld.dat)
       }
-      write.csv(dnld.dat.join, file)
+      }
+      write.csv(dnld.dat.join, file, row.names=FALSE)
     })
     
     

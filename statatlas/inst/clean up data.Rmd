@@ -43,6 +43,7 @@ get.states <- function(filename, year){
 states1790 <- get.states("~/Statistical-Atlas/raw-data/1790 State Level Census Data.csv", 1790)
 save(states1790, file = "~/Statistical-Atlas/statatlas/data/states1790.rda")
 
+
 ## repeat this for each year
 states1960 <- get.states("~/Statistical-Atlas/raw-data/1960 State Level Census Data.csv", 1960)
 save(states1960, file = "~/Statistical-Atlas/statatlas/data/states1960.rda")
