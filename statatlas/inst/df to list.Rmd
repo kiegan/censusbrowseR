@@ -34,7 +34,7 @@ df16 <- states1940
 df17 <- states1950
 df18 <- states1960
 #states.list <- lapply(ls(pattern="df[0-9]+"), function(x) get(x))
-states.list <- list(df1, df2, df3, df3, df4, df5, df6, df7, df8, df9, df10, df11, df12, df13, df14, df15, df16, df17, df18)
+states.list <- list(df1, df2, df3, df4, df5, df6, df7, df8, df9, df10, df11, df12, df13, df14, df15, df16, df17, df18)
 stateslist <- states.list
 names(stateslist) <- paste0("X",as.character(10*179:196))
 save(stateslist, file = "../data/stateslist.rda")
