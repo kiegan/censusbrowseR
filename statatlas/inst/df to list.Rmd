@@ -6,6 +6,7 @@ output: html_document
 ---
 
 ```{r}
+library(statatlas)
 df1 <- states1790
 df2 <- states1800
 df3 <- states1810

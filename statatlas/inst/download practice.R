@@ -35,7 +35,7 @@ shinyApp(
     
 ####### REACTIVE FOR SINGLE YEAR TABLE #######
     mydata1 <- reactive({
-      library(statatlas)
+    library(statatlas)
     data(stateslist)
     variables <- names(stateslist[[paste0("X",input$year)]])
     variable1 = variables[grep(input$topic, variables)]

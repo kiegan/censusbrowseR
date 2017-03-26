@@ -1,0 +1,43 @@
+---
+title: "A User-Friendly U.S. Census Browser for R"
+author: "Kiegan Rice"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r, echo = FALSE}
+#Email Univ. of Virginia Library
+#  * done, they are going to follow up with more information
+  
+#Is there a way to set up a warning for variables that might change names over time?
+
+#Visualizations 
+#  - Compare slaves to free (color scale like election example)
+#  - Use USAboundaries
+#  - Facet when using different variables (slaves, free, etc)
+#  - Log scale for numbers?
+  
+#Write-up
+```
+
+## Introduction  
+
+## Background (Literature Review)  
+
+## Work  
+
+### Motivation  
+
+### Description  
+
+### Example  
+
+Questions for Dr. Hofmann about Example:  
+  - Could we do a discrete scale that is the same for all years? May be hard since the population increases over time, but it would allow us to compare charts across years. 
+  - Years comparing 'SLAVES', 'TOTAL.FREE.COLORED.PERSONS', and 'PERC.AFRICAN.AMERICANS.FREE', can we put these next to each other or just look at them individually?
+
+### Implementation  
+
+## Discussion of Future Work  
+

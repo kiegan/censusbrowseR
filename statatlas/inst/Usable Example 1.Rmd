@@ -1,0 +1,477 @@
+---
+title: "Usable Example 1"
+author: "Kiegan Rice"
+date: "March 23, 2017"
+output: html_document
+---
+
+
+We are interested in exploring the history of African Americans in the United States using the available census data. To do this, I have used the 'Get Your Data' Shiny tool to find three different .csv files relating to the population of African Americans in U.S. states. There are three different files because the census uses different words to refer to African Americans at different points in history. Because of these changes, one file contains variable names that use the term 'slave', one file contains variable names that use the term 'colored', and the third contains variable names that use the term 'negro'. These files are in the 'inst' folder in `statatlas`.   
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+library(statatlas)
+library(tidyverse)
+library(USAboundaries)
+library(broom)
+library(maptools)
+library(gridExtra)
+data_c <- readr::read_csv("./counts-using-word-colored.csv")
+data_s <- readr::read_csv("./counts-using-word-slave.csv")
+data_n <- readr::read_csv("./counts-using-word-negro.csv")
+
+data_full <- full_join(data_s, data_c, by = c("Year", "State", "TOTAL.POPULATION", "Type"))
+#data_full %>% glimpse
+
+data_full <- full_join(data_full, data_n, by = c("Year", "State", "TOTAL.POPULATION", "Type"))
+#data_full %>% glimpse
+
+```
+
+## 1790  
+
+```{r, echo = FALSE, message = FALSE}
+map_states_1790 <- us_boundaries("1790-07-04")
+
+m1790_df <- fortify(map_states_1790, region = "name")
+m1790_df <- m1790_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1790_df, by = "State")
+data_full_wmap <- full_join(data_full, m1790_df, by = "State")
+
+#data_full_wmap %>% glimpse
+
+
+#data_full_wmap %>% filter(Year == 1790) %>% summary()
+  # this tells us that the only variable recorded this year is 'SLAVES'. We will use that.
+
+data_full_wmap %>%
+  filter(Year == 1790) %>% 
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(SLAVES)), colour = "black") + 
+  theme_bw() + theme(legend.title = element_blank()) + labs(title = "Total Slaves (log scale)")
+```
+
+
+## 1800  
+
+```{r, echo = FALSE, message = FALSE}
+map_states_1800 <- us_boundaries("1800-07-04")
+
+m1800_df <- fortify(map_states_1800, region = "name")
+m1800_df <- m1800_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1800_df, by = "State")
+data_full_wmap <- full_join(data_full, m1800_df, by = "State")
+
+#data_full_wmap %>% glimpse
+
+#data_full_wmap %>% filter(Year == 1800) %>% summary()
+  # again, 'SLAVES' is the only relevant column here
+
+data_full_wmap %>%
+  filter(Year == 1800) %>% 
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(SLAVES)), colour = "black") + 
+  theme_bw() + theme(legend.title = element_blank()) + labs(title = "Total Slaves (log scale)")
+```
+
+## 1810  
+
+```{r, echo = FALSE, message = FALSE}
+map_states_1810 <- us_boundaries("1810-07-04")
+
+m1810_df <- fortify(map_states_1810, region = "name")
+m1810_df <- m1810_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1810_df, by = "State")
+data_full_wmap <- full_join(data_full, m1810_df, by = "State")
+
+#data_full_wmap %>% glimpse
+
+#data_full_wmap %>% filter(Year == 1810) %>% summary()
+  # again, 'SLAVES' is the only relevant column here
+
+data_full_wmap %>%
+  filter(Year == 1810) %>% 
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(SLAVES)), colour = "black") + 
+  theme_bw() + theme(legend.title = element_blank()) + labs(title = "Total Slaves (log scale)")
+```
+
+## 1820  
+
+```{r, echo = FALSE, message = FALSE}
+map_states_1820 <- us_boundaries("1820-07-04")
+
+m1820_df <- fortify(map_states_1820, region = "name")
+m1820_df <- m1820_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1820_df, by = "State")
+data_full_wmap <- full_join(data_full, m1820_df, by = "State")
+
+#data_full_wmap %>% glimpse
+
+#data_full_wmap %>% filter(Year == 1820) %>% summary()
+  # now we have 'TOTAL.SLAVES' and 'TOTAL.FREE.COLORED.PERSONS'
+
+data_full_wmap <- data_full_wmap %>% 
+  mutate(PERC.AFRICAN.AMERICANS.FREE = TOTAL.FREE.COLORED.PERSONS/(TOTAL.FREE.COLORED.PERSONS+TOTAL.SLAVES))
+
+
+p1_1820 <- data_full_wmap %>%
+  filter(Year == 1820) %>% 
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(TOTAL.SLAVES)), colour = "black") + 
+  theme_bw() + labs(title = "Total Slaves (log scale)") + theme(legend.title = element_blank())
+
+p2_1820 <- data_full_wmap %>% 
+  filter(Year == 1820) %>%
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(TOTAL.FREE.COLORED.PERSONS)), colour = "black") + 
+  theme_bw() + labs(title = "Total Free Colored Persons (log scale)") + theme(legend.title = element_blank())
+
+p3_1820 <- data_full_wmap %>% 
+  filter(Year == 1820) %>%
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = PERC.AFRICAN.AMERICANS.FREE), colour = "black") + 
+  theme_bw() + labs(title = "Percent Free vs Percent Slaves") + scale_fill_gradient2(midpoint = .5) + theme(legend.title = element_blank())
+
+p1_1820
+p2_1820
+p3_1820
+```
+
+## 1830  
+
+```{r, echo = FALSE, message = FALSE}
+map_states_1830 <- us_boundaries("1830-07-04")
+
+m1830_df <- fortify(map_states_1830, region = "name")
+m1830_df <- m1830_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1830_df, by = "State")
+data_full_wmap <- full_join(data_full, m1830_df, by = "State")
+
+#data_full_wmap %>% glimpse
+
+#data_full_wmap %>% filter(Year == 1830) %>% summary()
+  # we again have 'TOTAL.SLAVES' and 'TOTAL.FREE.COLORED.PERSONS'
+
+data_full_wmap <- data_full_wmap %>% 
+  mutate(PERC.AFRICAN.AMERICANS.FREE = TOTAL.FREE.COLORED.PERSONS/(TOTAL.FREE.COLORED.PERSONS+TOTAL.SLAVES))
+
+
+p1_1830 <- data_full_wmap %>%
+  filter(Year == 1830) %>% 
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(TOTAL.SLAVES)), colour = "black") + 
+  theme_bw() + labs(title = "Total Slaves (log scale)") + theme(legend.title = element_blank())
+
+p2_1830 <- data_full_wmap %>% 
+  filter(Year == 1830) %>%
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(TOTAL.FREE.COLORED.PERSONS)), colour = "black") + 
+  theme_bw() + labs(title = "Total Free Colored Persons (log scale)") + theme(legend.title = element_blank())
+
+p3_1830 <- data_full_wmap %>% 
+  filter(Year == 1830) %>%
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = PERC.AFRICAN.AMERICANS.FREE), colour = "black") + 
+  theme_bw() + labs(title = "Percent Free vs Percent Slaves") + 
+  scale_fill_gradient2(midpoint = .5) + theme(legend.title = element_blank())
+
+p1_1830
+p2_1830
+p3_1830
+grid.arrange(p1_1830, p2_1830, p3_1830, ncol = 3)
+```
+
+
+## 1840  
+
+```{r, echo = FALSE, message = FALSE}
+map_states_1840 <- us_boundaries("1840-07-04")
+
+m1840_df <- fortify(map_states_1840, region = "name")
+m1840_df <- m1840_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1830_df, by = "State")
+data_full_wmap <- full_join(data_full, m1840_df, by = "State")
+
+#data_full_wmap %>% glimpse
+
+#data_full_wmap %>% filter(Year == 1840) %>% summary()
+  # we again have 'TOTAL.SLAVES' and 'TOTAL.FREE.COLORED.PERSONS'
+
+data_full_wmap <- data_full_wmap %>% 
+  mutate(PERC.AFRICAN.AMERICANS.FREE = TOTAL.FREE.COLORED.PERSONS/(TOTAL.FREE.COLORED.PERSONS+TOTAL.SLAVES))
+
+
+p1_1840 <- data_full_wmap %>%
+  filter(Year == 1840) %>% 
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(TOTAL.SLAVES)), colour = "black") + 
+  theme_bw() + labs(title = "Total Slaves (log scale)") + theme(legend.title = element_blank())
+
+p2_1840 <- data_full_wmap %>% 
+  filter(Year == 1840) %>%
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(TOTAL.FREE.COLORED.PERSONS)), colour = "black") + 
+  theme_bw() + labs(title = "Total Free Colored Persons (log scale)") + theme(legend.title = element_blank())
+
+p3_1840 <- data_full_wmap %>% 
+  filter(Year == 1840) %>%
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = PERC.AFRICAN.AMERICANS.FREE), colour = "black") + 
+  theme_bw() + labs(title = "Percent Free vs Percent Slaves") + 
+  scale_fill_gradient2(midpoint = .5) + theme(legend.title = element_blank())
+
+p1_1840
+p2_1840
+p3_1840
+grid.arrange(p1_1840, p2_1840, p3_1840, ncol = 3)
+
+```
+
+
+## 1850  
+
+```{r, echo = FALSE, message = FALSE}
+map_states_1850 <- us_boundaries("1850-07-04")
+
+m1850_df <- fortify(map_states_1850, region = "name")
+m1850_df <- m1850_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1850_df, by = "State")
+data_full_wmap <- full_join(data_full, m1850_df, by = "State")
+
+#data_full_wmap %>% glimpse
+
+#data_full_wmap %>% filter(Year == 1850) %>% summary()
+  # here we have 'TOTAL.SLAVES' and 'TOTAL.FREE.COLORED.POPULATION'. I assume 'TOTAL.FREE.COLORED.POPULATION' is just a different way to see 'TOTAL.FREE.COLORED.PERSONS'. Small wording changes like this happen a lot in the census data!
+
+
+# We also now have many northern states who do not report slaves as part of their census, since they were considered free states 
+## look up the laws about this 
+
+# We will turn 'NA' values for 'TOTAL.SLAVES' to 0 in a new variable called 'TOTAL.SLAVES.ZERO' so that we can continue to calculate the ratio of slaves to free. (We just assume 0 slaves in Free States)
+
+data_full_wmap <- data_full_wmap %>% mutate(TOTAL.SLAVES.ZERO = ifelse(is.na(TOTAL.SLAVES),0,TOTAL.SLAVES))
+
+data_full_wmap <- data_full_wmap %>% 
+  mutate(PERC.AFRICAN.AMERICANS.FREE = TOTAL.FREE.COLORED.POPULATION/(TOTAL.FREE.COLORED.POPULATION+TOTAL.SLAVES.ZERO))
+
+
+
+
+p1_1850 <- data_full_wmap %>%
+  filter(Year == 1850) %>% 
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(TOTAL.SLAVES)), colour = "black") + 
+  theme_bw() + labs(title = "Total Slaves (log scale)") + theme(legend.title = element_blank())
+
+p2_1850 <- data_full_wmap %>% 
+  filter(Year == 1850) %>%
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(TOTAL.FREE.COLORED.POPULATION)), colour = "black") + 
+  theme_bw() + labs(title = "Total Free Colored Persons (log scale)") + theme(legend.title = element_blank())
+
+p3_1850 <- data_full_wmap %>% 
+  filter(Year == 1850) %>%
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = PERC.AFRICAN.AMERICANS.FREE), colour = "black") + 
+  theme_bw() + labs(title = "Percent Free vs Percent Slaves") + 
+  scale_fill_gradient2(midpoint = .5) + theme(legend.title = element_blank())
+
+p1_1850
+p2_1850
+p3_1850
+grid.arrange(p1_1850, p2_1850, p3_1850, ncol = 3)
+
+```
+
+Since we are in 1850 now, and many states have abolished slavery at this point, it may be interesting to look at just total population. Even though we can look at comparing the number of slaves in all the states and the number of free persons in all the states, we haven't looked at just a total count of how many African Americans live in various states. 
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+p4_1850 <- data_full_wmap %>% 
+  filter(Year == 1850) %>%
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(TOTAL.FREE.COLORED.POPULATION + TOTAL.SLAVES.ZERO)), colour = "black") + 
+  theme_bw() + labs(title = "Total African American Persons, Slave or Free (log scale)") + 
+  theme(legend.title = element_blank())
+
+p4_1850
+```
+
+## 1860  
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+map_states_1860 <- us_boundaries("1860-07-04")
+
+m1860_df <- fortify(map_states_1860, region = "name")
+m1860_df <- m1860_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1860_df, by = "State")
+data_full_wmap <- full_join(data_full, m1860_df, by = "State")
+
+#data_full_wmap %>% glimpse
+
+#data_full_wmap %>% filter(Year == 1860) %>% summary()
+  # now instead of 'TOTAL.SLAVES', we have 'AGGR..SLAVES' as a count. From what I can tell it is 'TOTAL.FEMALE.SLAVES' and 'TOTAL.MALE.SLAVES' added together. 
+  # We also don't have a 'TOTAL.FREE.COLORED.POPULATION' or a 'TOTAL.FREE.COLORED.PERSONS' column, but we can add 'TOTAL.FREE.COLORED.FEMALES' and 'TOTAL.FREE.COLORED.MALES' together to get a (hopefully) accurate number for this.
+
+
+# We will continue to replace NA's with 0's for 'AGGR..SLAVES' because of the fact that many states don't report this value - slavery is illegal there at this time (they are free states). This allows us to continue calculating the ratio. 
+
+data_full_wmap <- data_full_wmap %>% mutate(AGGR..SLAVES.ZERO = ifelse(is.na(AGGR..SLAVES),0,AGGR..SLAVES))
+
+
+data_full_wmap <- data_full_wmap %>% 
+  mutate(PERC.AFRICAN.AMERICANS.FREE = 
+           (TOTAL.FREE.COLORED.MALES + TOTAL.FREE.COLORED.FEMALES)/
+           (TOTAL.FREE.COLORED.MALES + TOTAL.FREE.COLORED.FEMALES + AGGR..SLAVES.ZERO))
+
+
+
+
+p1_1860 <- data_full_wmap %>%
+  filter(Year == 1860) %>% 
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(AGGR..SLAVES)), colour = "black") + 
+  theme_bw() + labs(title = "Total Slaves (log scale)") + theme(legend.title = element_blank())
+
+p2_1860 <- data_full_wmap %>% 
+  filter(Year == 1860) %>%
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(TOTAL.FREE.COLORED.MALES + TOTAL.FREE.COLORED.FEMALES)), colour = "black") + 
+  theme_bw() + labs(title = "Total Free Colored Males and Females") + theme(legend.title = element_blank())
+
+p3_1860 <- data_full_wmap %>% 
+  filter(Year == 1860) %>%
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = PERC.AFRICAN.AMERICANS.FREE), colour = "black") + 
+  theme_bw() + labs(title = "Percent Free vs Percent Slaves") + 
+  scale_fill_gradient2(midpoint = .5) + theme(legend.title = element_blank())
+
+p1_1860
+p2_1860
+p3_1860
+grid.arrange(p1_1860, p2_1860, p3_1860, ncol = 3)
+```
+
+
+Again, since we are getting to the point where many states are completely free states, it may be interesting to look at just total numbers of African Americans. Being able to see how the African American population shifts around in states as slavery becomes abolished in certain areas - and soon after, in all states - tells us an interesting story as well. 
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+p4_1860 <- data_full_wmap %>% 
+  filter(Year == 1860) %>%
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(TOTAL.FREE.COLORED.MALES + TOTAL.FREE.COLORED.FEMALES + AGGR..SLAVES.ZERO)), colour = "black") + 
+  theme_bw() + labs(title = "Total African American Persons, Slave or Free (log scale)") + 
+  theme(legend.title = element_blank())
+
+p4_1860
+```
+
+## 1870  
+
+This is an important point in time. Slavery was abolished in the mid-1960's, so by the 1870 census we should see a dramatic shift in the slave population and the free population - there shouldn't even be a 'slave' variable at all.  
+
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+map_states_1870 <- us_boundaries("1870-07-04")
+
+m1870_df <- fortify(map_states_1870, region = "name")
+m1870_df <- m1870_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1870_df, by = "State")
+data_full_wmap <- full_join(data_full, m1870_df, by = "State")
+
+#data_full_wmap %>% glimpse
+
+#data_full_wmap %>% filter(Year == 1870) %>% summary()
+  # Now, because slavery was abolished, the only variable we have as a measure is the 'COLORED.PERSONS' variable. 
+  # Thus, we will just visualize that variable. This will be similar to the 1950 and 1960 visualizations that we did for 'total african americans'.
+
+p1_1870 <- data_full_wmap %>%
+  filter(Year == 1870) %>% 
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(COLORED.PERSONS)), colour = "black") + 
+  theme_bw() + labs(title = "Total Colored Persons (log scale)") + theme(legend.title = element_blank())
+
+
+p1_1870
+```
+
+
+
+
+
+
+## 1880  
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+map_states_1880 <- us_boundaries("1880-07-04")
+
+m1880_df <- fortify(map_states_1880, region = "name")
+m1880_df <- m1880_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1880_df, by = "State")
+data_full_wmap <- full_join(data_full, m1880_df, by = "State")
+
+#data_full_wmap %>% glimpse
+
+#data_full_wmap %>% filter(Year == 1880) %>% summary()
+  # Again, now we are fully in the post-slavery United States so there is not any slavery category on the census. 
+  # We are just using 'COLORED.PERSONS'. 
+
+
+
+p1_1880 <- data_full_wmap %>%
+  filter(Year == 1880) %>% 
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(COLORED.PERSONS)), colour = "black") + 
+  theme_bw() + labs(title = "Total Colored Persons (log scale)") + theme(legend.title = element_blank())
+
+
+p1_1880
+```
+
+## 1890 - we are waiting on this. Data is not confirmed as correct.  
+
+## 1900  
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+map_states_1900 <- us_boundaries("1900-07-04")
+
+m1900_df <- fortify(map_states_1900, region = "name")
+m1900_df <- m1900_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1900_df, by = "State")
+data_full_wmap <- full_join(data_full, m1900_df, by = "State")
+
+#data_full_wmap %>% glimpse
+
+data_full_wmap %>% filter(Year == 1900) %>% summary()
+  # Now, we have several different categories. We have 'TOTAL.COLORED.FEMALES' and 'TOTAL.COLORED.MALES', which we could add to get an estimate of 'TOTAL.COLORED.PERSONS'.
+  # We also have 'NEGRO.FEMALES' and 'NEGRO.MALES' which we could add together to get an estimate of 'TOTAL.NEGRO.PERSONS'.
+  # I believe the distinction here may be that they are referring to all non-white persons as 'colored', and they are making a separate distinction for African Americans
+
+
+
+p1_1880 <- data_full_wmap %>%
+  filter(Year == 1880) %>% 
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(COLORED.PERSONS)), colour = "black") + 
+  theme_bw() + labs(title = "Total Colored Persons (log scale)") + theme(legend.title = element_blank())
+
+
+p1_1880
+```
+
+
+## 1910  
+
+## 1920 - we are waiting on this. Data is not confirmed as correct.  
+
+## 1930  
+
+## 1940  
+
+## 1950  
+
+## 1960  
+
+
+
+
+
+
+
