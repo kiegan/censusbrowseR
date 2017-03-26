@@ -62,7 +62,7 @@ shinyApp(
     ## this is where to manipulate data into correct format (rows = colnames)
     colstoget <- mydata1()[input$tbl_rows_selected,]
     yr.dat <- stateslist[[paste0("X",input$year)]]
-    dnld.dat <- yr.dat[,names(yr.dat)%in%colstoget]
+    dnld.dat <- yr.dat[,names(yr.dat)%in%c("Year", "State", "TOTAL.POPULATION", "Type", colstoget)]
     write.csv(dnld.dat, file)
   })
     
