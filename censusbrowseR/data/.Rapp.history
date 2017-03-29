@@ -1,0 +1,4 @@
+load("/Users/crazykiwi7/Statistical-Atlas/statatlas/data/states1790.rda")
+head(states1790)
+load("/Users/crazykiwi7/Statistical-Atlas/statatlas/data/stateslist.rda")
+load("/Users/crazykiwi7/Statistical-Atlas/statatlas/data/states1800.rda")

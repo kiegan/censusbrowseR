@@ -1,0 +1,23 @@
+---
+title: "Get only states"
+author: "Kiegan Rice"
+output: html_document
+---
+
+```{r}
+install.packages("USAboundaries")
+library(USAboundaries)
+library(sp)
+install_data_package()
+library(ggplot2)
+```
+
+
+```{r}
+map_states <- us_boundaries("1851-07-04", type = "state")
+state_names <- as.vector(map_states$name[-6])
+map_states2 <- us_boundaries("1850-07-04", type = "state", states = state_names)
+if (require(sp)){
+  plot(map_states)
+}
+```

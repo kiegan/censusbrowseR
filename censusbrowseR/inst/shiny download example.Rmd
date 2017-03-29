@@ -1,0 +1,59 @@
+---
+title: 'example2'
+output: html_document
+runtime: shiny
+---
+
+```{r}
+library(shiny)
+library(DT)
+shinyApp(
+    ui = fluidPage(
+        DT::dataTableOutput('tbl'),
+        tags$style(HTML('#downloadIrisData {display: none;}')),
+        downloadLink("downloadIrisData")
+    ),
+    server = function(input, output, session) {
+        # DataTables Output
+        output$tbl  <-  DT::renderDataTable(
+            iris,
+            extensions = 'Buttons',
+            options = list(
+                dom = 'Bflrtip',
+                buttons = list(
+                    # Buttons download
+                    # Won't download the entire table because server-side DT
+                    # Only what is shown on the page (default = 10 records)
+                    list(
+                        extend = 'csv',
+                        text = 'Buttons Download',
+                        filename = 'buttonsiris.csv'
+                    ),
+                    # download by sending signal to shiny
+                    # Will download the entire table (150 records)
+                    list(
+                        extend = '',
+                        text = '<i> Shiny Download</i>',
+                        action = JS("function() {document.getElementById('downloadIrisData').click();}")
+                    )
+                )
+            )
+        )
+        
+        # Download Handler
+        output$downloadIrisData <- downloadHandler(
+            filename = function() {
+                'shinyiris.csv'
+            },
+            content = function(file) {
+                write.csv(iris, file)
+            }
+        )
+        
+        # Necessary, because the Shiny download link is hidden
+        outputOptions(output, 'downloadIrisData', suspendWhenHidden = FALSE)
+        
+    }
+)
+
+```
