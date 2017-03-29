@@ -297,6 +297,8 @@ p4_1850
 ```
 
 ## 1860  
+This is the only year the word 'black' is used to describe any part of the population, and they have 'NATIVE' vs. 'FOREIGN' born. This may be something interesting to look into, but I am not going to look into it at the moment.  
+
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 map_states_1860 <- us_boundaries("1860-07-04")
@@ -439,35 +441,150 @@ data_full_wmap <- full_join(data_full, m1900_df, by = "State")
 
 #data_full_wmap %>% glimpse
 
-data_full_wmap %>% filter(Year == 1900) %>% summary()
+#data_full_wmap %>% filter(Year == 1900) %>% summary()
   # Now, we have several different categories. We have 'TOTAL.COLORED.FEMALES' and 'TOTAL.COLORED.MALES', which we could add to get an estimate of 'TOTAL.COLORED.PERSONS'.
   # We also have 'NEGRO.FEMALES' and 'NEGRO.MALES' which we could add together to get an estimate of 'TOTAL.NEGRO.PERSONS'.
   # I believe the distinction here may be that they are referring to all non-white persons as 'colored', and they are making a separate distinction for African Americans
 
 
 
-p1_1880 <- data_full_wmap %>%
-  filter(Year == 1880) %>% 
+p1_1900 <- data_full_wmap %>%
+  filter(Year == 1900) %>% 
   ggplot(aes(x = long, y = lat, group = group)) + 
-  geom_polygon(aes(fill = log(COLORED.PERSONS)), colour = "black") + 
-  theme_bw() + labs(title = "Total Colored Persons (log scale)") + theme(legend.title = element_blank())
+  geom_polygon(aes(fill = log(NEGRO.FEMALES + NEGRO.MALES)), colour = "black") + 
+  theme_bw() + labs(title = "Total Black Males and Females (log scale)") + theme(legend.title = element_blank())
+## here for labeling I am using the word 'Black' instead of the word 'Negro', mostly because I am very against the use of the word 'Negro', and from the context I am assuming that is how they are distinguishing between the Black population and all minorities, which they count as 'colored'.
 
-
-p1_1880
+p1_1900
 ```
 
 
 ## 1910  
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+map_states_1910 <- us_boundaries("1910-07-04")
 
-## 1920 - we are waiting on this. Data is not confirmed as correct.  
+m1910_df <- fortify(map_states_1910, region = "name")
+m1910_df <- m1910_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1910_df, by = "State")
+data_full_wmap <- full_join(data_full, m1910_df, by = "State")
+
+#data_full_wmap %>% glimpse
+
+#data_full_wmap %>% filter(Year == 1910) %>% summary()
+  # Now, the only category we have is 'TOTAL.NEGROES' (along with the male and female breakdowns).
+
+
+p1_1910 <- data_full_wmap %>%
+  filter(Year == 1910) %>% 
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(TOTAL.NEGROES)), colour = "black") + 
+  theme_bw() + labs(title = "Total Black Persons (log scale)") + theme(legend.title = element_blank())
+## here for labeling I am using the word 'Black' instead of the word 'Negro', mostly because I am very against the use of the word 'Negro', and from the context I am assuming that is how they are distinguishing between the Black population and all minorities, which they count as 'colored'.
+
+p1_1910
+```
+
+## 1920  
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+map_states_1920 <- us_boundaries("1920-07-04")
+
+m1920_df <- fortify(map_states_1920, region = "name")
+m1920_df <- m1920_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1920_df, by = "State")
+data_full_wmap <- full_join(data_full, m1920_df, by = "State")
+
+#data_full_wmap %>% glimpse
+
+#data_full_wmap %>% filter(Year == 1920) %>% summary()
+  # Now the relevant columns are 'MALE.NEGROES' and 'FEMALE.NEGROES'. We will add the two together to get an estimate of the 'TOTAL' value.
+
+
+p1_1920 <- data_full_wmap %>%
+  filter(Year == 1920) %>% 
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(MALE.NEGROES + FEMALE.NEGROES)), colour = "black") + 
+  theme_bw() + labs(title = "Total Black Persons (log scale)") + theme(legend.title = element_blank())
+## here for labeling I am using the word 'Black' instead of the word 'Negro', mostly because I am very against the use of the word 'Negro', and from the context I am assuming that is how they are distinguishing between the Black population and all minorities, which they count as 'colored'.
+
+p1_1920
+```
 
 ## 1930  
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+map_states_1930 <- us_boundaries("1930-07-04")
 
-## 1940  
+m1930_df <- fortify(map_states_1930, region = "name")
+m1930_df <- m1930_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1930_df, by = "State")
+data_full_wmap <- full_join(data_full, m1930_df, by = "State")
+
+#data_full_wmap %>% glimpse
+
+#data_full_wmap %>% filter(Year == 1930) %>% summary()
+  # Now, we have 'NEGRO.FEMALES' and 'NEGRO.MALES', which we can add together to get an estimate of the 'TOTAL'.
+
+
+p1_1930 <- data_full_wmap %>%
+  filter(Year == 1930) %>% 
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(NEGRO.FEMALES + NEGRO.MALES)), colour = "black") + 
+  theme_bw() + labs(title = "Total Black Persons (log scale)") + theme(legend.title = element_blank())
+## here for labeling I am using the word 'Black' instead of the word 'Negro', mostly because I am very against the use of the word 'Negro', and from the context I am assuming that is how they are distinguishing between the Black population and all minorities, which they count as 'colored'.
+
+p1_1930
+```
+
+## 1940 - we are waiting on this. Data is not confirmed as correct.
 
 ## 1950  
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+map_states_1950 <- us_boundaries("1950-07-04")
+
+m1950_df <- fortify(map_states_1950, region = "name")
+m1950_df <- m1950_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1950_df, by = "State")
+data_full_wmap <- full_join(data_full, m1950_df, by = "State")
+
+#data_full_wmap %>% glimpse
+
+#data_full_wmap %>% filter(Year == 1950) %>% summary()
+  # Again, we have 'NEGRO.FEMALES' and 'NEGRO.MALES', which we can add together to get an estimate of the 'TOTAL'.
+
+
+p1_1950 <- data_full_wmap %>%
+  filter(Year == 1950) %>% 
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(NEGRO.FEMALES + NEGRO.MALES)), colour = "black") + 
+  theme_bw() + labs(title = "Total Black Persons (log scale)") + theme(legend.title = element_blank())
+## here for labeling I am using the word 'Black' instead of the word 'Negro', mostly because I am very against the use of the word 'Negro', and from the context I am assuming that is how they are distinguishing between the Black population and all minorities, which they count as 'colored'.
+
+p1_1950
+```
 
 ## 1960  
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+map_states_1960 <- us_boundaries("1960-07-04")
+
+m1960_df <- fortify(map_states_1960, region = "name")
+m1960_df <- m1960_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1960_df, by = "State")
+data_full_wmap <- full_join(data_full, m1960_df, by = "State")
+
+#data_full_wmap %>% glimpse
+
+#data_full_wmap %>% filter(Year == 1960) %>% summary()
+  # Again, we have 'NEGRO.FEMALES..1960' and 'NEGRO.MALES..1960', which we can add together to get an estimate of the 'TOTAL'.
+
+
+p1_1960 <- data_full_wmap %>%
+  filter(Year == 1960) %>% 
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(NEGRO.FEMALES..1960 + NEGRO.MALES..1960)), colour = "black") + 
+  theme_bw() + labs(title = "Total Black Persons (log scale)") + theme(legend.title = element_blank())
+## here for labeling I am using the word 'Black' instead of the word 'Negro', mostly because I am very against the use of the word 'Negro', and from the context I am assuming that is how they are distinguishing between the Black population and all minorities, which they count as 'colored'.
+
+p1_1960
+```
 
 
 
