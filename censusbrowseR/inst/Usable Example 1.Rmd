@@ -1,12 +1,11 @@
 ---
 title: "Usable Example 1"
 author: "Kiegan Rice"
-date: "March 23, 2017"
 output: html_document
 ---
 
 
-We are interested in exploring the history of African Americans in the United States using the available census data. To do this, I have used the 'Get Your Data' Shiny tool to find three different .csv files relating to the population of African Americans in U.S. states. There are three different files because the census uses different words to refer to African Americans at different points in history. Because of these changes, one file contains variable names that use the term 'slave', one file contains variable names that use the term 'colored', and the third contains variable names that use the term 'negro'. These files are in the 'inst' folder in `statatlas`.   
+We are interested in exploring the history of African Americans in the United States using the available census data. To do this, I have used the 'Get Your Data' Shiny tool to find three different .csv files relating to the population of African Americans in U.S. states. There are three different files because the census uses different words to refer to African Americans at different points in history. Because of these changes, one file contains variable names that use the term 'slave', one file contains variable names that use the term 'colored', and the third contains variable names that use the term 'negro'. These files are in the 'inst' folder in `censusbrowseR`.   
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 library(statatlas)
@@ -37,7 +36,7 @@ m1790_df <- m1790_df %>% mutate(State = toupper(id))
 #anti_join(data_full, m1790_df, by = "State")
 data_full_wmap <- full_join(data_full, m1790_df, by = "State")
 
-#data_full_wmap %>% glimpse
+data_full_wmap %>% glimpse
 
 
 #data_full_wmap %>% filter(Year == 1790) %>% summary()
@@ -50,6 +49,16 @@ data_full_wmap %>%
   theme_bw() + theme(legend.title = element_blank()) + labs(title = "Total Slaves (log scale)")
 ```
 
+### Trying to get a shadow of the current US behind the map
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+map_states_1960 <- us_boundaries("1960-07-04")
+m1960_df <- fortify(map_states_1960, region = "name")
+m1960_df <- m1960_df %>% mutate(State = toupper(id))
+anti_join(data_full_wmap, m1960_df, by = "State")
+data_full_wghost <- full_join(data_full_wmap, m1960_df, by = "State")
+
+```
 
 ## 1800  
 
@@ -97,7 +106,7 @@ data_full_wmap %>%
 
 ## 1820  
 
-```{r, echo = FALSE, message = FALSE}
+```{r, fig.width = 10, echo = FALSE, message = FALSE}
 map_states_1820 <- us_boundaries("1820-07-04")
 
 m1820_df <- fortify(map_states_1820, region = "name")
@@ -135,6 +144,8 @@ p3_1820 <- data_full_wmap %>%
 p1_1820
 p2_1820
 p3_1820
+
+
 ```
 
 ## 1830  

@@ -1,6 +1,6 @@
 
 library(shiny)
-library(statatlas)
+library(censusbrowseR)
 library(DT)
 
 shinyApp(
