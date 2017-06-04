@@ -1,0 +1,2365 @@
+File Manifest for ICPSR 2896
+
+Haines, Michael R., and Inter-university Consortium for Political and
+Social Research. Historical, Demographic, Economic, and Social Data: The
+United States, 1790-2002. ICPSR02896-v3. Ann Arbor, MI: Inter-university
+Consortium for Political and Social Research [distributor], 2010-05-21.
+http://doi.org/10.3886/ICPSR02896.v3
+
+Details on the version history can be found below the file listings.
+
+
+Study-level Documentation
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-related_literature.txt        -       -         -       2017-05-22  -
+
+    02896-manifest.txt                  -       -         -       2017-05-23  -
+
+    02896-Codebook.pdf                  -       -         -       2010-05-21  a9a0737d18f6aff5afd1e9fb1a88e1e9
+
+
+DS0001 1790 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0001-Data.dta                 -       312       68      2010-05-21  b6c646049aa898a5534687a5bdc33201
+
+    02896-0001-Data.sav                 -       312       68      2010-05-21  bc81cbef375003cb8da8f90d1e4d763b
+
+    02896-0001-Data.stc                 -       312       68      2010-05-21  afde15212b3bd3bbee4e83784e31b083
+
+    02896-0001-Data.txt                 431     312       68      2010-05-21  1b53ad1d46ba7e2fc2e598fa42d2057a
+
+    02896-0001-Setup.dct                -       -         -       2010-05-21  2db7452b27d9e2e7fa7adb8271720a64
+
+    02896-0001-Setup.do                 -       -         -       2010-05-21  3e9d485992d43207bfbce699cec19d78
+
+    02896-0001-Setup.sas                -       -         -       2010-05-21  20e3521b95da48df010c6dbaf7a968dd
+
+    02896-0001-Setup.sps                -       -         -       2010-05-21  9673d415f7df08a56d3d7e54a076d657
+
+
+DS0002 1800 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0002-Data.dta                 -       448       29      2010-05-21  c72185632d46e40c84cd2ba664309186
+
+    02896-0002-Data.sav                 -       448       29      2010-05-21  30bf4451f87f518693b25fb90a9f863d
+
+    02896-0002-Data.stc                 -       448       29      2010-05-21  4f6402558f8c6a32cd0923be16eac964
+
+    02896-0002-Data.txt                 176     448       29      2010-05-21  91d08933d64c3d573e01963d391266a3
+
+    02896-0002-Setup.dct                -       -         -       2010-05-21  b461cc2c5252b38c4e6e43a3964f8730
+
+    02896-0002-Setup.do                 -       -         -       2010-05-21  2868fab25f11d39635de8c37b65aba9c
+
+    02896-0002-Setup.sas                -       -         -       2010-05-21  5ae55a10edb48aac5985b3feeba3f101
+
+    02896-0002-Setup.sps                -       -         -       2010-05-21  90471a00b8741a163fa4134bb46672e8
+
+
+DS0003 1810 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0003-Data.dta                 -       606       29      2010-05-21  9830d98559e4b5fd26aaa97cb9366a89
+
+    02896-0003-Data.sav                 -       606       29      2010-05-21  b56911c822fd66edfd2bfd844a0b2ac9
+
+    02896-0003-Data.stc                 -       606       29      2010-05-21  3d3c4a3f3f516c0910f08d388500db03
+
+    02896-0003-Data.txt                 185     606       29      2010-05-21  7d093aa3b0b063d6ec5efc1ab4d69294
+
+    02896-0003-Setup.dct                -       -         -       2010-05-21  167556cd56b5d9956eab414f7bdc430a
+
+    02896-0003-Setup.do                 -       -         -       2010-05-21  9b701bb32347f26c4b3b1fdc33a184e5
+
+    02896-0003-Setup.sas                -       -         -       2010-05-21  ad0e7ff4c991580dfde199670daec82e
+
+    02896-0003-Setup.sps                -       -         -       2010-05-21  a224e721720bfcd2db4a23581ae44f42
+
+
+DS0004 1820 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0004-Data.dta                 -       790       54      2010-05-21  aa39397185d576d6c7bb7aba9742668e
+
+    02896-0004-Data.sav                 -       790       54      2010-05-21  2b2001d0e95add99818743206d7f22b8
+
+    02896-0004-Data.stc                 -       790       54      2010-05-21  e57ecc1bae89a711f2c9fbedb1a2e0c5
+
+    02896-0004-Data.txt                 320     790       54      2010-05-21  d6d02abd1237d76e4be577c384af3adf
+
+    02896-0004-Setup.dct                -       -         -       2010-05-21  cedd62bd4e67e1fbae9e8cc4d87c28cc
+
+    02896-0004-Setup.do                 -       -         -       2010-05-21  00cdaf0bd3032d1cb5e45c5f964a79d5
+
+    02896-0004-Setup.sas                -       -         -       2010-05-21  ec88446c1c77d4f4f835d2cee93deb51
+
+    02896-0004-Setup.sps                -       -         -       2010-05-21  6f9c2855a8d9da02f10503884ae6acb0
+
+
+DS0005 1830 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0005-Data.dta                 -       1,026     87      2010-05-21  855997d164fd4a1e0eb618799b2e54aa
+
+    02896-0005-Data.sav                 -       1,026     87      2010-05-21  8feee8ee520dd7beceae1811e38fc3b5
+
+    02896-0005-Data.stc                 -       1,026     87      2010-05-21  7dad7406450aeed5a137f80e5321f01c
+
+    02896-0005-Data.txt                 484     1,026     87      2010-05-21  67ec791e7d6077d9dfe9dabaca9fce06
+
+    02896-0005-Setup.dct                -       -         -       2010-05-21  4a9a008648cc1ccd69c53f61b87d8f8a
+
+    02896-0005-Setup.do                 -       -         -       2010-05-21  fcc069cdbb385d93df905df305544f6f
+
+    02896-0005-Setup.sas                -       -         -       2010-05-21  5bb319d34d4e591243d255e0e1463c94
+
+    02896-0005-Setup.sps                -       -         -       2010-05-21  82eff863442841bf1a385bde00c543bb
+
+
+DS0006 1840 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0006-Data.dta                 -       1,311     111     2010-05-21  851b561701e2c96c8b2df9ff7b970070
+
+    02896-0006-Data.sav                 -       1,311     111     2010-05-21  a0d1d6cd06abbbd98c1471676a5160a5
+
+    02896-0006-Data.stc                 -       1,311     111     2010-05-21  9b1fc6e4c52e08b1ba42b11a6d4c8687
+
+    02896-0006-Data.txt                 601     1,311     111     2010-05-21  e229f3fda0b661e0e8b03884036b049e
+
+    02896-0006-Setup.dct                -       -         -       2010-05-21  017ba66b28f412a2c2a56100fd00c48a
+
+    02896-0006-Setup.do                 -       -         -       2010-05-21  d5d543c42a178a3c8818676e077bfae8
+
+    02896-0006-Setup.sas                -       -         -       2010-05-21  e7dae6683a57b2e68f3e2f6775999187
+
+    02896-0006-Setup.sps                -       -         -       2010-05-21  e714ce5640a085b74262f258b4ba534f
+
+
+DS0007 1850 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0007-Data.dta                 -       1,671     313     2010-05-21  95ce8c33c31b2f97ba82b5ff979ca38b
+
+    02896-0007-Data.sav                 -       1,671     313     2010-05-21  f08b802497aeb4b2e614e26126e22d29
+
+    02896-0007-Data.stc                 -       1,671     313     2010-05-21  9baf6f316739924808c1097f933cdc91
+
+    02896-0007-Data.txt                 1766    1,671     313     2010-05-21  6eb6b57f5ea33c373f7cb656a9bdf1af
+
+    02896-0007-Setup.dct                -       -         -       2010-05-21  542eaf841abb49fe57dec4843bbd18ef
+
+    02896-0007-Setup.do                 -       -         -       2010-05-21  675f89ae0deb3b4665d2a6d5e71adf90
+
+    02896-0007-Setup.sas                -       -         -       2010-05-21  a933de59c823f9403ecb55a307ba63f9
+
+    02896-0007-Setup.sps                -       -         -       2010-05-21  c5f58c302f5ad112e3a20822e31fe235
+
+
+DS0008 1850 Census S01 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0008-Data.dta                 -       37        200     2010-05-21  04073885362babff52edf7aacee57067
+
+    02896-0008-Data.sav                 -       37        200     2010-05-21  94cca215224239fe60620ee551ba60f3
+
+    02896-0008-Data.stc                 -       37        200     2010-05-21  75bbe5e14824469dee2a2e79b7c41ca0
+
+    02896-0008-Data.txt                 1183    37        200     2010-05-21  c19117d72f4c7fcd07ae72d6fd0bd8c3
+
+    02896-0008-Setup.dct                -       -         -       2010-05-21  7323edaa0266eaad8a2975334faf902a
+
+    02896-0008-Setup.do                 -       -         -       2010-05-21  d8c4b32ffc006b73c329e3e6a6a756af
+
+    02896-0008-Setup.sas                -       -         -       2010-05-21  00e942a3629f5d361bff5703a15275f9
+
+    02896-0008-Setup.sps                -       -         -       2010-05-21  399ee91d6d2f5f9dfe5a4b7881c490dc
+
+
+DS0009 1860 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0009-Data.dta                 -       2,149     427     2010-05-21  2af33e0e8ea40027d2817b5e943a0c78
+
+    02896-0009-Data.sav                 -       2,149     427     2010-05-21  69718008578c201befa7b937dec1f9c1
+
+    02896-0009-Data.stc                 -       2,149     427     2010-05-21  3b0cae5af3f2191740bab8a1d7cdeb8d
+
+    02896-0009-Data.txt                 2075    2,149     427     2010-05-21  739b9f83bd9ed6c0b32c9b4b34b09609
+
+    02896-0009-Setup.dct                -       -         -       2010-05-21  feb7699f93131f79aa8ef0873deb4d6c
+
+    02896-0009-Setup.do                 -       -         -       2010-05-21  0b0644f6b9f002c97e3d4ab51b849cc9
+
+    02896-0009-Setup.sas                -       -         -       2010-05-21  907481a1847385ca466cfc64050b8d2e
+
+    02896-0009-Setup.sps                -       -         -       2010-05-21  6f6fc740de5f41d40c56e8f4b86e600d
+
+
+DS0010 1860 Census S01 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0010-Data.dta                 -       43        245     2010-05-21  084eb86661610d7288d780e276c3d4dd
+
+    02896-0010-Data.sav                 -       43        245     2010-05-21  157f92e742b232d9cfbebe78cf00d916
+
+    02896-0010-Data.stc                 -       43        245     2010-05-21  2ab158028cd71c96ca5fcbb77438ab70
+
+    02896-0010-Data.txt                 1556    43        245     2010-05-21  cb609021d8b5323f52acbe5776392c66
+
+    02896-0010-Setup.dct                -       -         -       2010-05-21  d286549c87b0e48a0c712bd95a32bb32
+
+    02896-0010-Setup.do                 -       -         -       2010-05-21  15990c4a468c85c0e3d406ecca3be585
+
+    02896-0010-Setup.sas                -       -         -       2010-05-21  789a9aa394828a9486c6ed87fba06a4f
+
+    02896-0010-Setup.sps                -       -         -       2010-05-21  2ad9bc91791ea37146a3cb3c7d7a4070
+
+
+DS0011 1870 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0011-Data.dta                 -       2,365     216     2010-05-21  ec1ede917e0224d6b300613e7fbf53cb
+
+    02896-0011-Data.sav                 -       2,365     216     2010-05-21  9ccd4e77b6dac4d9c401c06b5be1c92b
+
+    02896-0011-Data.stc                 -       2,365     216     2010-05-21  9ef9da22c003a1eaa7d042834983390b
+
+    02896-0011-Data.txt                 1323    2,365     216     2010-05-21  b138b0f8d7d4ef8b651ea1e172500d1b
+
+    02896-0011-Setup.dct                -       -         -       2010-05-21  d2c692a5b213c7f63cb989931e4e0887
+
+    02896-0011-Setup.do                 -       -         -       2010-05-21  4b072bf90b9141b43e7f01deb3e4a1b8
+
+    02896-0011-Setup.sas                -       -         -       2010-05-21  2cf93ccca532fafa54e348c99ef18776
+
+    02896-0011-Setup.sps                -       -         -       2010-05-21  e56752d62628e973561240be7d1db30a
+
+
+DS0012 1870 Census S01 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0012-Data.dta                 -       48        601     2010-05-21  9a0b64f42914e03d0c331674210de099
+
+    02896-0012-Data.sav                 -       48        601     2010-05-21  0ebe4bd05e175bd332c71e1a1632db74
+
+    02896-0012-Data.stc                 -       48        601     2010-05-21  092cba3984e4b3ff2b7b752cf797ca0e
+
+    02896-0012-Data.txt                 1879    48        601     2010-05-21  c4b64d8be0ad32ebb195b773b19fdab9
+
+    02896-0012-Setup.dct                -       -         -       2010-05-21  386d6a34e8a60ce5093e7ec8dc75ad0a
+
+    02896-0012-Setup.do                 -       -         -       2010-05-21  06a1f3afa54322ebfed7fb0ac055a421
+
+    02896-0012-Setup.sas                -       -         -       2010-05-21  6fcc6977729acced851e71e32c0939d4
+
+    02896-0012-Setup.sps                -       -         -       2010-05-21  39f66fa76c147cbdc813076cce039c70
+
+
+DS0013 1870 Census S02 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0013-Data.dta                 -       48        229     2010-05-21  07f413f4e5e063a3aeed0bf6d392c109
+
+    02896-0013-Data.sav                 -       48        229     2010-05-21  46d663770e1b3de39bdd0fb6b6000a78
+
+    02896-0013-Data.stc                 -       48        229     2010-05-21  307e3966d3b42663d41b440407b289d9
+
+    02896-0013-Data.txt                 1200    48        229     2010-05-21  28ad015177067018faf51f080b4936a4
+
+    02896-0013-Setup.dct                -       -         -       2010-05-21  cfc22717a472e3ff728aa38ec8d23084
+
+    02896-0013-Setup.do                 -       -         -       2010-05-21  0bd0819d24942a1d4b9860984f56e6fe
+
+    02896-0013-Setup.sas                -       -         -       2010-05-21  05f1e3826eb651e54c126afe65ff62a5
+
+    02896-0013-Setup.sps                -       -         -       2010-05-21  7ebe76d5f932bc87b9aa03b37c65ab6d
+
+
+DS0014 1870 Census S03 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0014-Data.dta                 -       48        289     2010-05-21  9c8d774dce50a8f8b725aa8e14577121
+
+    02896-0014-Data.sav                 -       48        289     2010-05-21  b53bb23e11d6f8f0684f26204e2934f3
+
+    02896-0014-Data.stc                 -       48        289     2010-05-21  0858e8a92ea46ee9b19a07997c48bc13
+
+    02896-0014-Data.txt                 1417    48        289     2010-05-21  fcb91e5cdf8ffb4e85ba76d9d24b918e
+
+    02896-0014-Setup.dct                -       -         -       2010-05-21  b201a0e0bc28fbba8544f4f7c8f63c6f
+
+    02896-0014-Setup.do                 -       -         -       2010-05-21  bb3a97646e2290145ad5f83e657af98f
+
+    02896-0014-Setup.sas                -       -         -       2010-05-21  d74a72b979cd24473000c79ca53efc34
+
+    02896-0014-Setup.sps                -       -         -       2010-05-21  54ee16c97bf5ded3e744f3150c19023b
+
+
+DS0015 1880 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0015-Data.dta                 -       2,663     188     2010-05-21  dbbae8c1075dac23b27007413ce4d9a4
+
+    02896-0015-Data.sav                 -       2,663     188     2010-05-21  070dbe734da814799aef088203f3b337
+
+    02896-0015-Data.stc                 -       2,663     188     2010-05-21  18e3e3d629e588cb6ef93f7d5048b0e2
+
+    02896-0015-Data.txt                 1212    2,663     188     2010-05-21  057b9de543d2d9ba16cd0cfb09133f8b
+
+    02896-0015-Setup.dct                -       -         -       2010-05-21  7ecc55db31ffb6e905e1157b049304c7
+
+    02896-0015-Setup.do                 -       -         -       2010-05-21  e097da25e04910134542c84d17081964
+
+    02896-0015-Setup.sas                -       -         -       2010-05-21  4cbeb80ef5c5c187601201270426e413
+
+    02896-0015-Setup.sps                -       -         -       2010-05-21  f60cd2d7775ac93452e8f8b47e813b72
+
+
+DS0016 1880 Census S01 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0016-Data.dta                 -       48        397     2010-05-21  eeef5f53beab30eae21b7608a91699d6
+
+    02896-0016-Data.sav                 -       48        397     2010-05-21  c75581b170dfb719a76ff72dc89b040d
+
+    02896-0016-Data.stc                 -       48        397     2010-05-21  404953caff1c742a0c553d596f23eaed
+
+    02896-0016-Data.txt                 2033    48        397     2010-05-21  d1944eed6ce52da7fb839ac739ab9eec
+
+    02896-0016-Setup.dct                -       -         -       2010-05-21  02376afe1cfe7b90741481e6d65ddaf5
+
+    02896-0016-Setup.do                 -       -         -       2010-05-21  270f2d88919305512d46d3285bc1be5f
+
+    02896-0016-Setup.sas                -       -         -       2010-05-21  650e61f39caebe3aa3dcb5d229de0e2f
+
+    02896-0016-Setup.sps                -       -         -       2010-05-21  25f17e3c490ebd384dd2ee390c59f370
+
+
+DS0017 1880 Census S02 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0017-Data.dta                 -       48        484     2010-05-21  49147285e52de83b6e2222edb48b1a1e
+
+    02896-0017-Data.sav                 -       48        484     2010-05-21  ec4cb46648351ec264814d4a5c81dc69
+
+    02896-0017-Data.stc                 -       48        484     2010-05-21  c28775942029acce7f7a9795bd311612
+
+    02896-0017-Data.txt                 2442    48        484     2010-05-21  63c1adcb992f3d60e285d04e133467a8
+
+    02896-0017-Setup.dct                -       -         -       2010-05-21  d13892f79aee88d8d8594e5a14406951
+
+    02896-0017-Setup.do                 -       -         -       2010-05-21  71317990ff4a57e55d0312fbdd7a5479
+
+    02896-0017-Setup.sas                -       -         -       2010-05-21  388d097272237e88e14329b74866b39a
+
+    02896-0017-Setup.sps                -       -         -       2010-05-21  69077d49bd23c8fe1edd0a9488ee7a45
+
+
+DS0018 1890 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0018-Data.dta                 -       2,854     199     2010-05-21  0abe2793697d1084785377f57a82382f
+
+    02896-0018-Data.sav                 -       2,854     199     2010-05-21  e84175ece3e554f85d0c41ab17689b38
+
+    02896-0018-Data.stc                 -       2,854     199     2010-05-21  02120c4c9ea1277c30d3cd077eec6dfc
+
+    02896-0018-Data.txt                 1325    2,854     199     2010-05-21  c99265ff7edfc66c571fe8db1563ad2b
+
+    02896-0018-Setup.dct                -       -         -       2010-05-21  f2207f1cc1687e5567bcea53e85b44d3
+
+    02896-0018-Setup.do                 -       -         -       2010-05-21  82384540981f704aa193e5168e69ee53
+
+    02896-0018-Setup.sas                -       -         -       2010-05-21  e9baf0cad4cff182bce131f17e682e13
+
+    02896-0018-Setup.sps                -       -         -       2010-05-21  3a203feeee6535335ba233afa613450e
+
+
+DS0019 1890 Census S01 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0019-Data.dta                 -       50        259     2010-05-21  b61c883facdfe037008a1d0aa0c73d74
+
+    02896-0019-Data.sav                 -       50        259     2010-05-21  99f69605d35fcc5d013f9a05334788b5
+
+    02896-0019-Data.stc                 -       50        259     2010-05-21  7789b8864c0e461e9a045c3d7f88e3fd
+
+    02896-0019-Data.txt                 1381    50        259     2010-05-21  fc8ecde1a9666c09eeba8c38ca335e58
+
+    02896-0019-Setup.dct                -       -         -       2010-05-21  33f3faac311e6e9101a2246235f5bf75
+
+    02896-0019-Setup.do                 -       -         -       2010-05-21  c4fa40277e21cfab05fa749da7ac8feb
+
+    02896-0019-Setup.sas                -       -         -       2010-05-21  3425d87fc65ac3bcea9e8456e16e531f
+
+    02896-0019-Setup.sps                -       -         -       2010-05-21  83d21300d546d34c7eb881acd2f1d52c
+
+
+DS0020 1900 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0020-Data.dta                 -       2,972     191     2010-05-21  3e7a5c1a3ed76683bc4a38481fee4530
+
+    02896-0020-Data.sav                 -       2,972     191     2010-05-21  927af8ac2c3f2b7de2b8923fc0c82487
+
+    02896-0020-Data.stc                 -       2,972     191     2010-05-21  410ab2c8259db85442c108687d26a1d5
+
+    02896-0020-Data.txt                 1306    2,972     191     2010-05-21  3a05faeaf7355246c69f4c25911ff0d7
+
+    02896-0020-Setup.dct                -       -         -       2010-05-21  205e9fcf631e168a7c2fcbcce7039653
+
+    02896-0020-Setup.do                 -       -         -       2010-05-21  d504a352bd32d110450bc79a8658c6f0
+
+    02896-0020-Setup.sas                -       -         -       2010-05-21  4cce9f14479cf77adcc661384b037097
+
+    02896-0020-Setup.sps                -       -         -       2010-05-21  d98e213f1004c660cc8251f1fc243360
+
+
+DS0021 1900 Census S01 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0021-Data.dta                 -       55        20      2010-05-21  45678396169e458820777d95aa23f989
+
+    02896-0021-Data.sav                 -       55        20      2010-05-21  84b32ac9a8796156c8959eba1f77cf76
+
+    02896-0021-Data.stc                 -       55        20      2010-05-21  4f221010b7693f61a0d061f6edf0b2f3
+
+    02896-0021-Data.txt                 125     55        20      2010-05-21  1c4e93d9902fc8ef2ea317c213c0e499
+
+    02896-0021-Setup.dct                -       -         -       2010-05-21  affbc8858513d692df59bc05227799e2
+
+    02896-0021-Setup.do                 -       -         -       2010-05-21  5cda9d7b23818c511af51b9b8cdc7b67
+
+    02896-0021-Setup.sas                -       -         -       2010-05-21  70fbdb3a9ace109323125a89d23857c1
+
+    02896-0021-Setup.sps                -       -         -       2010-05-21  4ad1bbad65f1f66df5fb350e499a7e20
+
+
+DS0022 1910 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0022-Data.dta                 -       3,013     195     2010-05-21  2658a26cead63dd4c65c119dea30bcf9
+
+    02896-0022-Data.sav                 -       3,013     195     2010-05-21  10d845be43cbeed8d70244271c6cf123
+
+    02896-0022-Data.stc                 -       3,013     195     2010-05-21  3ef71313504c7995fd04c03bc6872c90
+
+    02896-0022-Data.txt                 1291    3,013     195     2010-05-21  cd12d6f47dd8b3bb7fd79c6d0c963b53
+
+    02896-0022-Setup.dct                -       -         -       2010-05-21  7d2ac6b8ff5722df5e1a8ed12b57d253
+
+    02896-0022-Setup.do                 -       -         -       2010-05-21  db4a45fbd53dca4d2fc50b521dfb90ce
+
+    02896-0022-Setup.sas                -       -         -       2010-05-21  ab49e1abd4afd3d0b51085506e9aa666
+
+    02896-0022-Setup.sps                -       -         -       2010-05-21  51486f14f20439656060fabe16ad1878
+
+
+DS0023 1910 Census S01 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0023-Data.dta                 -       50        116     2010-05-21  6eab40be05513ec8526f0cc9ec272bf6
+
+    02896-0023-Data.sav                 -       50        116     2010-05-21  cc0709c16e08d5750827af6194fa70ef
+
+    02896-0023-Data.stc                 -       50        116     2010-05-21  18c0561e1b692f91b4e96dc09232a0d6
+
+    02896-0023-Data.txt                 740     50        116     2010-05-21  517516795225b945b5741b5f05e463a9
+
+    02896-0023-Setup.dct                -       -         -       2010-05-21  fa7ca0667e2764b86e58928d33ae154a
+
+    02896-0023-Setup.do                 -       -         -       2010-05-21  f5f36ebae93e2a74439146e63b675967
+
+    02896-0023-Setup.sas                -       -         -       2010-05-21  c0b165aef4557462ce19211a1720fe8a
+
+    02896-0023-Setup.sps                -       -         -       2010-05-21  d658364555a64e5e90dcd7cc619b932d
+
+
+DS0024 1920 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0024-Data.dta                 -       3,132     199     2010-05-21  1d81f41decfcbada8e82cee16e40a678
+
+    02896-0024-Data.sav                 -       3,132     199     2010-05-21  05b2716965bb8629c0c760c231e38844
+
+    02896-0024-Data.stc                 -       3,132     199     2010-05-21  0ee0b03d0e6af440a04fb9aee2d19b49
+
+    02896-0024-Data.txt                 1424    3,132     199     2010-05-21  e8c6c84a79f90965e95e91d6abba4138
+
+    02896-0024-Setup.dct                -       -         -       2010-05-21  a0ec1dda771412482a08b0a40f7a87a7
+
+    02896-0024-Setup.do                 -       -         -       2010-05-21  387f9f32b186fc0740ee384aa141d80f
+
+    02896-0024-Setup.sas                -       -         -       2010-05-21  7d5ae8f2021301e1e340b85f9e9fe9d1
+
+    02896-0024-Setup.sps                -       -         -       2010-05-21  a571d1b94ef5163d5ea21f22d044793b
+
+
+DS0025 1920 Census S01 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0025-Data.dta                 -       50        171     2010-05-21  580b9f98bd8d19d57b6eeaef92c9ecb4
+
+    02896-0025-Data.sav                 -       50        171     2010-05-21  07ee53720ca7a69ec2def9618478d69d
+
+    02896-0025-Data.stc                 -       50        171     2010-05-21  5eca5d1f26a9adf6c1a5a76a84181ea7
+
+    02896-0025-Data.txt                 1368    50        171     2010-05-21  ae3ca3b671f5e4816c8fa7916e10756e
+
+    02896-0025-Setup.dct                -       -         -       2010-05-21  9f1cace49c6c66ea5537698decd7e200
+
+    02896-0025-Setup.do                 -       -         -       2010-05-21  1ce8925f340cb32e52493bd61e3ac829
+
+    02896-0025-Setup.sas                -       -         -       2010-05-21  8e14cc7c4562893ecba82f729638b80a
+
+    02896-0025-Setup.sps                -       -         -       2010-05-21  76823800dd890a521389124744ca2f3f
+
+
+DS0026 1930 Census I (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0026-Data.dta                 -       3,162     253     2010-05-21  0a1f9322cc7d940be11622134d9d4542
+
+    02896-0026-Data.sav                 -       3,162     253     2010-05-21  bafe9f8e3cd5de9f11f02c8fbeb4d08d
+
+    02896-0026-Data.stc                 -       3,162     253     2010-05-21  ae8cbf1d963b2128bd62359d50295099
+
+    02896-0026-Data.txt                 1836    3,162     253     2010-05-21  cd04a7f9c845934aa97bd4c74add08fd
+
+    02896-0026-Setup.dct                -       -         -       2010-05-21  9865e523c32ffa4f26f910b7a777c9ec
+
+    02896-0026-Setup.do                 -       -         -       2010-05-21  a5f5e192bf89f579b4b480e8475b9d5b
+
+    02896-0026-Setup.sas                -       -         -       2010-05-21  bd3a12f16914115c17a3ddded208c616
+
+    02896-0026-Setup.sps                -       -         -       2010-05-21  32ca185f595b11cf80e32e9086da0861
+
+
+DS0027 1930 Census II (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0027-Data.dta                 -       3,162     200     2010-05-21  da5e2018e554532998570832ff2c3502
+
+    02896-0027-Data.sav                 -       3,162     200     2010-05-21  de94e04dda63abcd475b2c03a4dc417f
+
+    02896-0027-Data.stc                 -       3,162     200     2010-05-21  274850853a2a11b3109e88bd5e7849a4
+
+    02896-0027-Data.txt                 1264    3,162     200     2010-05-21  5385bc50ee652e56a39fc2cc0d12491a
+
+    02896-0027-Setup.dct                -       -         -       2010-05-21  cedaa43c1cdbd9c1034d59ad1e718049
+
+    02896-0027-Setup.do                 -       -         -       2010-05-21  b70a409a5379edd29c5c227064248761
+
+    02896-0027-Setup.sas                -       -         -       2010-05-21  feb50cd489c016a227bf6241a269f3e7
+
+    02896-0027-Setup.sps                -       -         -       2010-05-21  f567efcc8600c58660565289bcf7cb02
+
+
+DS0028 1930 Census III (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0028-Data.dta                 -       3,161     205     2010-05-21  bd3cb39118d5134df493400a26b2bb6b
+
+    02896-0028-Data.sav                 -       3,161     205     2010-05-21  de007d1457d3cbc441dc0360d0f9b0ec
+
+    02896-0028-Data.stc                 -       3,161     205     2010-05-21  cbb97083f792924e980de619612b5e1d
+
+    02896-0028-Data.txt                 1282    3,161     205     2010-05-21  7fa63f8d8d1a6940d93e3b5688066771
+
+    02896-0028-Setup.dct                -       -         -       2010-05-21  c7e3e6df0d47f20c31e1fdbe2c4f6b59
+
+    02896-0028-Setup.do                 -       -         -       2010-05-21  41bec24280827f779ceb07be756ac1e0
+
+    02896-0028-Setup.sas                -       -         -       2010-05-21  e39edede361e0017ec51fbde687476be
+
+    02896-0028-Setup.sps                -       -         -       2010-05-21  b5e325e47626dfcfb70ed3605f0fe02a
+
+
+DS0029 1930 Census IV Families (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0029-Data.dta                 -       3,162     161     2010-05-21  5449cf6dea6563f3a8e6881c03d838a7
+
+    02896-0029-Data.sav                 -       3,162     161     2010-05-21  3fa217edf6a275b233348317c92cdc7d
+
+    02896-0029-Data.stc                 -       3,162     161     2010-05-21  f61009b34e60bc48c67c8335f16b3ef8
+
+    02896-0029-Data.txt                 1125    3,162     161     2010-05-21  aa46d96f2b35b8cc4ef0496bc3e15c95
+
+    02896-0029-Setup.dct                -       -         -       2010-05-21  a2b233f5230bb60e506bb54f8d635ea1
+
+    02896-0029-Setup.do                 -       -         -       2010-05-21  10f4a1f9294c8781f03a93e13993207b
+
+    02896-0029-Setup.sas                -       -         -       2010-05-21  34387ba1ef535b612df7d7d2094bb6c3
+
+    02896-0029-Setup.sps                -       -         -       2010-05-21  7adda8f0a9e5f29874c95ba437fd5553
+
+
+DS0030 1937 Census of Unemployment (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0030-Data.dta                 -       3,163     69      2010-05-21  ddc81c9ada7d977df1f762366e285476
+
+    02896-0030-Data.sav                 -       3,163     69      2010-05-21  ed30399306618d52761e34d384a061f5
+
+    02896-0030-Data.stc                 -       3,163     69      2010-05-21  dcc0e610c133b925440660a0fbce968d
+
+    02896-0030-Data.txt                 388     3,163     69      2010-05-21  11ce5b1947954e78e44bad88029047c3
+
+    02896-0030-Setup.dct                -       -         -       2010-05-21  cb60c83676696dae27cec4d8d1ca1018
+
+    02896-0030-Setup.do                 -       -         -       2010-05-21  f067ae8a286e375b58733ee603d713a9
+
+    02896-0030-Setup.sas                -       -         -       2010-05-21  fdd096d2392ace390d200a0c05b9c56a
+
+    02896-0030-Setup.sps                -       -         -       2010-05-21  c876a6e31a75a7f8dee1c54ae8fe3722
+
+
+DS0031 1930 Census S01 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0031-Data.dta                 -       50        37      2010-05-21  c6a7404abe6e38471bb40db275cab7a2
+
+    02896-0031-Data.sav                 -       50        37      2010-05-21  e8d9ae98177cb2036dc1b5d955ae7d65
+
+    02896-0031-Data.stc                 -       50        37      2010-05-21  1e8a9cf731b5315ad0c01efc74a14a13
+
+    02896-0031-Data.txt                 414     50        37      2010-05-21  17e5f2eb821cc82ddb59ff6bf40bc8e8
+
+    02896-0031-Setup.dct                -       -         -       2010-05-21  af7d7d5731f90302e19e31ab3f13d1a2
+
+    02896-0031-Setup.do                 -       -         -       2010-05-21  e422c3ffdaa2551f019ce0afa190660d
+
+    02896-0031-Setup.sas                -       -         -       2010-05-21  7632181c0e982cbbcfc5fb1ffa80ba6e
+
+    02896-0031-Setup.sps                -       -         -       2010-05-21  5246304246d3d047127a31ed4caf0c99
+
+
+DS0032 1940 Census I (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0032-Data.dta                 -       3,160     404     2010-05-21  9e70250956ba35ac005dcdf7b31c9fb7
+
+    02896-0032-Data.sav                 -       3,160     404     2010-05-21  cf5c01fa736f8f8371abadf639a7fcdb
+
+    02896-0032-Data.stc                 -       3,160     404     2010-05-21  d0746fa1c29f5253a48aedb5aa991916
+
+    02896-0032-Data.txt                 2980    3,160     404     2010-05-21  0daaf4898db39cd8fce96b244161a4f8
+
+    02896-0032-Setup.dct                -       -         -       2010-05-21  93b58a35ef36f020dded46c915b63ab8
+
+    02896-0032-Setup.do                 -       -         -       2010-05-21  50c5412dda806b33f3ba162345da7337
+
+    02896-0032-Setup.sas                -       -         -       2010-05-21  039503e137e6b37911725e0bfc3ffc4a
+
+    02896-0032-Setup.sps                -       -         -       2010-05-21  cbc94c4ae23c5d1e80cf861ec453ccb1
+
+
+DS0033 1940 Census II (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0033-Data.dta                 -       3,161     236     2010-05-21  b9b9b2771d46f7b210b88f4a51aaaa0b
+
+    02896-0033-Data.sav                 -       3,161     236     2010-05-21  6c9c9d67b6b48770d564d069798af337
+
+    02896-0033-Data.stc                 -       3,161     236     2010-05-21  f2c2a99e02c3c360da0174c6d4b4292d
+
+    02896-0033-Data.txt                 1485    3,161     236     2010-05-21  1580d8ecc0b2498c6d671cce092f0738
+
+    02896-0033-Setup.dct                -       -         -       2010-05-21  417755daaf21c29b3dddda55e3273a60
+
+    02896-0033-Setup.do                 -       -         -       2010-05-21  9c3ac326951ca0e2bb8dc9d21f897219
+
+    02896-0033-Setup.sas                -       -         -       2010-05-21  39b921c99e90ca365cee57c94e6cf0eb
+
+    02896-0033-Setup.sps                -       -         -       2010-05-21  4e786cf9d956200e4091f7d52afae3bc
+
+
+DS0034 1940 Census SO1 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0034-Data.dta                 -       50        33      2010-05-21  c4bb20d4e5bb0fb93847d7057dedfcc9
+
+    02896-0034-Data.sav                 -       50        33      2010-05-21  b003ab9ada63b59ff10580aeb6188add
+
+    02896-0034-Data.stc                 -       50        33      2010-05-21  65664a861f3a2faa883b613e801cda37
+
+    02896-0034-Data.txt                 347     50        33      2010-05-21  a3f9b54146985f99db17841eaf13a320
+
+    02896-0034-Setup.dct                -       -         -       2010-05-21  7c0c363da33ad648fd0bb1e844547f1b
+
+    02896-0034-Setup.do                 -       -         -       2010-05-21  10dd63a78e0129955985023844e8cb61
+
+    02896-0034-Setup.sas                -       -         -       2010-05-21  6d5213c8e58ea8b7509cd9dbf0e6b4fd
+
+    02896-0034-Setup.sps                -       -         -       2010-05-21  10f4436eb6aba0c4b6598c6d73e33f69
+
+
+DS0035 1950 Census I (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0035-Data.dta                 -       3,164     313     2010-05-21  6eeae1dcc1bdf22640faae5737fb7221
+
+    02896-0035-Data.sav                 -       3,164     313     2010-05-21  bae7f2d22162ebf9b45e8332ba90699f
+
+    02896-0035-Data.stc                 -       3,164     313     2010-05-21  7b51786b3fca70bcac45f18705507364
+
+    02896-0035-Data.txt                 2103    3,164     313     2010-05-21  11027d91da8049859cc85dc5a5b3c858
+
+    02896-0035-Setup.dct                -       -         -       2010-05-21  2d8f036fdb224da428a9398777b1745f
+
+    02896-0035-Setup.do                 -       -         -       2010-05-21  da3cc0a0dcfc10dc85252b68aad5f573
+
+    02896-0035-Setup.sas                -       -         -       2010-05-21  07d11a2cef7ee3451a35b9d109f816bf
+
+    02896-0035-Setup.sps                -       -         -       2010-05-21  02ff8da3cc239e0829019a42623017e5
+
+
+DS0036 1950 Census II (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0036-Data.dta                 -       3,164     287     2010-05-21  0cd8422566b86039974fd02b687ce9a0
+
+    02896-0036-Data.sav                 -       3,164     287     2010-05-21  d308901a467fb6c5000b8b54b5ed227e
+
+    02896-0036-Data.stc                 -       3,164     287     2010-05-21  376cfb0e11235fd2b1f612a91c323efa
+
+    02896-0036-Data.txt                 1956    3,164     287     2010-05-21  e4a6be6948515d10d5d5552430feb368
+
+    02896-0036-Setup.dct                -       -         -       2010-05-21  f9851bfef097078d9f1a347dfabcce53
+
+    02896-0036-Setup.do                 -       -         -       2010-05-21  5a18cf69af236b14bdbdf2dbf966c1ec
+
+    02896-0036-Setup.sas                -       -         -       2010-05-21  059a136202912d44791a28465987f884
+
+    02896-0036-Setup.sps                -       -         -       2010-05-21  2b70e773c51415196088cbcf544fb4e1
+
+
+DS0037 1950 Census SO1 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0037-Data.dta                 -       52        37      2010-05-21  e2320050dc98b42d89ed2743cf41b0da
+
+    02896-0037-Data.sav                 -       52        37      2010-05-21  89a4ecdd0b83d01387fc0aecf657a4e0
+
+    02896-0037-Data.stc                 -       52        37      2010-05-21  22f873f1f45436287b6a4adfd9d01878
+
+    02896-0037-Data.txt                 396     52        37      2010-05-21  24d949f8270d5114c998f57116f92f9f
+
+    02896-0037-Setup.dct                -       -         -       2010-05-21  d2ee5a2334e361db7a8cc28f571e541a
+
+    02896-0037-Setup.do                 -       -         -       2010-05-21  cc7097b53e89763f088ee97bd30b0051
+
+    02896-0037-Setup.sas                -       -         -       2010-05-21  bfd6d4d686b2e5b103a7ffdb53f57e01
+
+    02896-0037-Setup.sps                -       -         -       2010-05-21  ddc6187414cdf6cb88ff5cc372d94e4b
+
+
+DS0038 1960 Census I (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0038-Data.dta                 -       3,185     65      2010-05-21  488d2c533bb3dbf1cc2e01308804601d
+
+    02896-0038-Data.sav                 -       3,185     65      2010-05-21  5d337311f54a10ef9c6b81d5f455a1bc
+
+    02896-0038-Data.stc                 -       3,185     65      2010-05-21  ee0a9bfe0f7552c9bab7011b5512b12c
+
+    02896-0038-Data.txt                 489     3,185     65      2010-05-21  b41e3fa4d6eb3ae44148086b3e46de71
+
+    02896-0038-Setup.dct                -       -         -       2010-05-21  63e2368ca45e81379b3b322d5464c038
+
+    02896-0038-Setup.do                 -       -         -       2010-05-21  adcb93232c1a2f7e612e5856f37a3a31
+
+    02896-0038-Setup.sas                -       -         -       2010-05-21  721a85e4ab638784159c2298dcb225a1
+
+    02896-0038-Setup.sps                -       -         -       2010-05-21  27b30829652cb926e8eda0521620e025
+
+
+DS0039 1960 Census II (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0039-Data.dta                 -       3,184     189     2010-05-21  63d3cb5f42fb3e2c65cf136f2382ba37
+
+    02896-0039-Data.sav                 -       3,184     189     2010-05-21  8bb0083b27aba9805750862428eda28c
+
+    02896-0039-Data.stc                 -       3,184     189     2010-05-21  1e07419c6ad5f781ba0c9a8e758264e9
+
+    02896-0039-Data.txt                 1293    3,184     189     2010-05-21  6174610f0916cb4bfb26a8560e688855
+
+    02896-0039-Setup.dct                -       -         -       2010-05-21  d94eac154b13aa27e9e51eff727b8088
+
+    02896-0039-Setup.do                 -       -         -       2010-05-21  11925c056260b1ec83460419a0408c41
+
+    02896-0039-Setup.sas                -       -         -       2010-05-21  6e38c547c944368ce0a7320c373d87a7
+
+    02896-0039-Setup.sps                -       -         -       2010-05-21  1d4b11897e4c15269159ddc02bf8aa22
+
+
+DS0040 1960 Census III (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0040-Data.dta                 -       3,184     161     2010-05-21  b2bb17ee04283c986e008604f4aa5b54
+
+    02896-0040-Data.sav                 -       3,184     161     2010-05-21  3480bf90a925265a9430a6854d9db7ee
+
+    02896-0040-Data.stc                 -       3,184     161     2010-05-21  0e0e4c37ef274e581f7e1e85dce28cc3
+
+    02896-0040-Data.txt                 1099    3,184     161     2010-05-21  786b59a5aeba22f568a69b6e39fd069b
+
+    02896-0040-Setup.dct                -       -         -       2010-05-21  dec2a6e6b53d4e38b52275610d976b66
+
+    02896-0040-Setup.do                 -       -         -       2010-05-21  7f4e89b6f70325bd7cc7d6e7b5e66650
+
+    02896-0040-Setup.sas                -       -         -       2010-05-21  d98aa3436ab412e53e42b5f24eef31a3
+
+    02896-0040-Setup.sps                -       -         -       2010-05-21  7b95315fa5bc5d7af228255544f2b858
+
+
+DS0041 1970 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0041-Data.dta                 -       3,190     94      2010-05-21  e89568d4c1084c1e33a07dfbd38895f8
+
+    02896-0041-Data.sav                 -       3,190     94      2010-05-21  8aad79b24dc20c650d1c72aaff78a3f5
+
+    02896-0041-Data.stc                 -       3,190     94      2010-05-21  0c4a9a4fd53bc8d1bbdaf8d9a40148f9
+
+    02896-0041-Data.txt                 579     3,190     94      2010-05-21  eb9e205a99f001759ff1278710d8cfcb
+
+    02896-0041-Setup.dct                -       -         -       2010-05-21  a1015fe1fa2e3a16eca7bcc3bb803699
+
+    02896-0041-Setup.do                 -       -         -       2010-05-21  8dc6660cdaa0f73d8484ff6e75840180
+
+    02896-0041-Setup.sas                -       -         -       2010-05-21  a81fc0e88996a392d8a6119ed99ae4b0
+
+    02896-0041-Setup.sps                -       -         -       2010-05-21  93e778adbea49bb10fe35ca4199b2593
+
+
+DS0042 1840 Manufacturing Data (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0042-Data.dta                 -       1,312     204     2010-05-21  8a79d14952e12f66bdf65cc4fb0314ea
+
+    02896-0042-Data.sav                 -       1,312     204     2010-05-21  f5c48a6e8467b5585f285c90e450a203
+
+    02896-0042-Data.stc                 -       1,312     204     2010-05-21  17bc8a6baacab299603b0a828d49cab7
+
+    02896-0042-Data.txt                 1173    1,312     204     2010-05-21  82973ebfe1fc1588ad61899ebffd6dba
+
+    02896-0042-Setup.dct                -       -         -       2010-05-21  eab7877ae1bb6ae1e6ffca6c31fd837d
+
+    02896-0042-Setup.do                 -       -         -       2010-05-21  16bd8a48f644af9bcd9e517328625fa0
+
+    02896-0042-Setup.sas                -       -         -       2010-05-21  3a83ce1453eb3475aa1902a434c5fd7c
+
+    02896-0042-Setup.sps                -       -         -       2010-05-21  6bec496f67440d352344bed61f3e7c95
+
+
+DS0043 1870 Manufacturing Data (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0043-Data.dta                 -       2,365     22      2010-05-21  5b9b1fc5c55e1c978dfc4b9364ecee24
+
+    02896-0043-Data.sav                 -       2,365     22      2010-05-21  305d298b11a9dc0348151010a3e94ddf
+
+    02896-0043-Data.stc                 -       2,365     22      2010-05-21  aff67b266422817b5cfd45711cd63eee
+
+    02896-0043-Data.txt                 162     2,365     22      2010-05-21  d0157f244c8cf65db41e36a640f1b3ec
+
+    02896-0043-Setup.dct                -       -         -       2010-05-21  59f08b1cf4d4f062e3ffbef24a7f5ee0
+
+    02896-0043-Setup.do                 -       -         -       2010-05-21  6077faf0f9e5a4d4e0cb9d324945f73f
+
+    02896-0043-Setup.sas                -       -         -       2010-05-21  bcb224b331cd580d9af3a9dd690642e0
+
+    02896-0043-Setup.sps                -       -         -       2010-05-21  61ccebe78907d9750eb47c3f8af68a52
+
+
+DS0044 1840 Census of Agriculture (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0044-Data.dta                 -       1,310     93      2010-05-21  c3e6816495df0e177b19c8ccb88a27e0
+
+    02896-0044-Data.sav                 -       1,310     93      2010-05-21  8a8198c995defabe94d5032ae344311d
+
+    02896-0044-Data.stc                 -       1,310     93      2010-05-21  8bf34de649541722e665f0a577e0b6e5
+
+    02896-0044-Data.txt                 1218    1,310     93      2010-05-21  0e530660bcd8eb7f845d35d96c78a1c9
+
+    02896-0044-Setup.dct                -       -         -       2010-05-21  45d13c9a24fb547f0444348b3a104a1b
+
+    02896-0044-Setup.do                 -       -         -       2010-05-21  1c76058dfd82095f5a0c7e8fa0c5c882
+
+    02896-0044-Setup.sas                -       -         -       2010-05-21  477c2035fb70e3a8f012a53b4dfbdc13
+
+    02896-0044-Setup.sps                -       -         -       2010-05-21  d86a9a6e1d35187a2ac6ccf94aecfce1
+
+
+DS0045 1850 Census of Agriculture (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0045-Data.dta                 -       1,666     120     2010-05-21  5de1bee5faa5b91046916b72add5bfd8
+
+    02896-0045-Data.sav                 -       1,666     120     2010-05-21  40a729f06feaaf6010e6d33a48246a18
+
+    02896-0045-Data.stc                 -       1,666     120     2010-05-21  ed15c8334adda4b4f7d85d3af38c65eb
+
+    02896-0045-Data.txt                 1446    1,666     120     2010-05-21  2cbb1980403661df75410e57eb6a6dbf
+
+    02896-0045-Setup.dct                -       -         -       2010-05-21  e338d58e553ef718d5b778a3030286a8
+
+    02896-0045-Setup.do                 -       -         -       2010-05-21  cfe907289565460013eb44c1398054f1
+
+    02896-0045-Setup.sas                -       -         -       2010-05-21  9c0962279f6b991f08e9d8cc957d3583
+
+    02896-0045-Setup.sps                -       -         -       2010-05-21  f59791d33d8e7dd12caa081ab9269452
+
+
+DS0046 1860 Census of Agriculture (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0046-Data.dta                 -       2,141     155     2010-05-21  ccbdfd9593c1cccfdf36be5feb09052d
+
+    02896-0046-Data.sav                 -       2,141     155     2010-05-21  53d7f2ce517747fa80d7dc71b26c9158
+
+    02896-0046-Data.stc                 -       2,141     155     2010-05-21  9b8696b962ea91a292922ee4024e13df
+
+    02896-0046-Data.txt                 1864    2,141     155     2010-05-21  2225c7a3d460a2b86dcf50db3a1a40be
+
+    02896-0046-Setup.dct                -       -         -       2010-05-21  cc0f0c32ff06f101d98c3d271f75408e
+
+    02896-0046-Setup.do                 -       -         -       2010-05-21  f12939715f327561f38780c632d47fcb
+
+    02896-0046-Setup.sas                -       -         -       2010-05-21  c4099e3cb704cdeff70217345abc8e88
+
+    02896-0046-Setup.sps                -       -         -       2010-05-21  a937e25cbe05fb98d547d69346c8c476
+
+
+DS0047 1870 Census of Agriculture (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0047-Data.dta                 -       2,364     71      2010-05-21  efe1b957bc582b2514fcc9ce597c664a
+
+    02896-0047-Data.sav                 -       2,364     71      2010-05-21  e02dae5e527cb5df9d65e0e1fa35feff
+
+    02896-0047-Data.stc                 -       2,364     71      2010-05-21  976f8fb8f9c6b3a2f2cf2d566dd49e8f
+
+    02896-0047-Data.txt                 533     2,364     71      2010-05-21  b12f5eb5962f5a1427002962f89ef58a
+
+    02896-0047-Setup.dct                -       -         -       2010-05-21  97bf7c67d827cc37c68273f84a5289a2
+
+    02896-0047-Setup.do                 -       -         -       2010-05-21  37200c77f7713d482a25e002c8d62374
+
+    02896-0047-Setup.sas                -       -         -       2010-05-21  f648e4ce32febfab5ea52908d919a959
+
+    02896-0047-Setup.sps                -       -         -       2010-05-21  7b56d3f9b0604697c0bb98801c0c5669
+
+
+DS0048 1880 Census of Agriculture (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0048-Data.dta                 -       2,663     123     2010-05-21  0b0b0d2119a91eea33e90a3420c571c3
+
+    02896-0048-Data.sav                 -       2,663     123     2010-05-21  0ef04a6555d02bf403e0782a55c801d8
+
+    02896-0048-Data.stc                 -       2,663     123     2010-05-21  edcc533d9a1449ff25f438e87b1176a0
+
+    02896-0048-Data.txt                 860     2,663     123     2010-05-21  975af0b5144b1edbecc8608fe80d9014
+
+    02896-0048-Setup.dct                -       -         -       2010-05-21  3107eedf97d3d5b897e42d1e3f95bb6e
+
+    02896-0048-Setup.do                 -       -         -       2010-05-21  1f71452022eaff997b9bb39b88d8785b
+
+    02896-0048-Setup.sas                -       -         -       2010-05-21  ab20cf3ce0ca51b71261f61bf5caa9a3
+
+    02896-0048-Setup.sps                -       -         -       2010-05-21  ad91bb9516e8d2f4c9af09ebd7b76a24
+
+
+DS0049 1890 Census of Agriculture (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0049-Data.dta                 -       2,857     236     2010-05-21  2cdf281652f6cd270045653cffe8e880
+
+    02896-0049-Data.sav                 -       2,857     236     2010-05-21  84558c982086314278a556a97a007b64
+
+    02896-0049-Data.stc                 -       2,857     236     2010-05-21  f6a1c69021ae53b6cde66550ede15e6f
+
+    02896-0049-Data.txt                 1670    2,857     236     2010-05-21  ac2e01ab1f612a4dd6ca156b010fa3f6
+
+    02896-0049-Setup.dct                -       -         -       2010-05-21  cc9720fc44f2a15f7c61169c23017dfe
+
+    02896-0049-Setup.do                 -       -         -       2010-05-21  4acf6047553265e7398cd032e7c87304
+
+    02896-0049-Setup.sas                -       -         -       2010-05-21  d6029bff0930bac0caab33c08db081f3
+
+    02896-0049-Setup.sps                -       -         -       2010-05-21  b3e9cfa68651a9700b2fc715751b4a5e
+
+
+DS0050 1900 Census of Agriculture (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0050-Data.dta                 -       2,980     320     2010-05-21  971f20e09a4f4e47026ac2c872112ae2
+
+    02896-0050-Data.sav                 -       2,980     320     2010-05-21  a504d0c84c80e0e150d950c91a247a55
+
+    02896-0050-Data.stc                 -       2,980     320     2010-05-21  211db93ff34105409f4344dea69a8d2f
+
+    02896-0050-Data.txt                 2207    2,980     320     2010-05-21  c891ff9531494e9e0e1773e863513b4f
+
+    02896-0050-Setup.dct                -       -         -       2010-05-21  c90c327c8d737b32d6a992311229062a
+
+    02896-0050-Setup.do                 -       -         -       2010-05-21  b3f2102a72d44d72116fd3f488cd9e79
+
+    02896-0050-Setup.sas                -       -         -       2010-05-21  4798704cf5beb0c8ed42865d2d70a12b
+
+    02896-0050-Setup.sps                -       -         -       2010-05-21  2b7873649ae5cbfbf3d416d80533062e
+
+
+DS0051 1870 Census of Religious Bodies (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0051-Data.dta                 -       2,365     48      2010-05-21  83b1b560013f8959fd04244104bde99d
+
+    02896-0051-Data.sav                 -       2,365     48      2010-05-21  b464ca28263269808c6c4592c7907aa4
+
+    02896-0051-Data.stc                 -       2,365     48      2010-05-21  c7ec883fc55b58a8c77fe037cf1e2dca
+
+    02896-0051-Data.txt                 262     2,365     48      2010-05-21  462819b01fca3eb1315c7447cfbf30e9
+
+    02896-0051-Setup.dct                -       -         -       2010-05-21  3b5fe02ea41a64a0e002e68f6377c82a
+
+    02896-0051-Setup.do                 -       -         -       2010-05-21  939d4d28f50878bc6f85cf9c3beb7ef3
+
+    02896-0051-Setup.sas                -       -         -       2010-05-21  be4c440f6c9754293aeb237573cc5244
+
+    02896-0051-Setup.sps                -       -         -       2010-05-21  c56bad1e3364679988553414c45606e4
+
+
+DS0052 1890 Census of Religious Bodies (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0052-Data.dta                 -       2,851     316     2010-05-21  eaa414ceff9f257ad67a93c7d4a17962
+
+    02896-0052-Data.sav                 -       2,851     316     2010-05-21  0151eaabb281238dda9cb2665f167368
+
+    02896-0052-Data.stc                 -       2,851     316     2010-05-21  85edfdb53887e9dcd215fa2481f29295
+
+    02896-0052-Data.txt                 1615    2,851     316     2010-05-21  825079ba22c31e01330c6961137cbd7c
+
+    02896-0052-Setup.dct                -       -         -       2010-05-21  e6b5b2b647b4236c165585f7575586e5
+
+    02896-0052-Setup.do                 -       -         -       2010-05-21  0bb507c52087d9d268e6dc17ca8d89fe
+
+    02896-0052-Setup.sas                -       -         -       2010-05-21  ac7ced1e68087f42d5bdb8270eacb644
+
+    02896-0052-Setup.sps                -       -         -       2010-05-21  17f3565f9d5a86a920c7e8189d889554
+
+
+DS0053 1906 Census of Religious Bodies (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0053-Data.dta                 -       3,008     103     2010-05-21  10d72a167f0a0667a8e634822a6c62d9
+
+    02896-0053-Data.sav                 -       3,008     103     2010-05-21  82248fad1908506ae3750797713e7a80
+
+    02896-0053-Data.stc                 -       3,008     103     2010-05-21  0ce6944d719a418f91f0b430324ce8b5
+
+    02896-0053-Data.txt                 510     3,008     103     2010-05-21  3bf8918cd1ab639e68488ecd92050813
+
+    02896-0053-Setup.dct                -       -         -       2010-05-21  da10aaa1c66e27ad993715a2e0a7b2d7
+
+    02896-0053-Setup.do                 -       -         -       2010-05-21  49b3788f1d6154e7628601ef1da0788c
+
+    02896-0053-Setup.sas                -       -         -       2010-05-21  d4ab54465f85d2f381b16c8d94145b5a
+
+    02896-0053-Setup.sps                -       -         -       2010-05-21  013ab2bc729e78c1ac91470a43c4196c
+
+
+DS0054 1916 Census of Religious Bodies (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0054-Data.dta                 -       3,121     120     2010-05-21  f319cb54577fb937afebba2ea99ab991
+
+    02896-0054-Data.sav                 -       3,121     120     2010-05-21  81b914465c567c1d70358add374c42ec
+
+    02896-0054-Data.stc                 -       3,121     120     2010-05-21  1958c8d858889b42393b9132211b72a8
+
+    02896-0054-Data.txt                 556     3,121     120     2010-05-21  928c145ec4744298ab0e4326909d353e
+
+    02896-0054-Setup.dct                -       -         -       2010-05-21  6ff03bc579e1f3e889e2e5a248bf2100
+
+    02896-0054-Setup.do                 -       -         -       2010-05-21  3c96c5bb0079b6fc4782c9e3b3f55c1b
+
+    02896-0054-Setup.sas                -       -         -       2010-05-21  e15f75f4866abb5f77d85c712819c098
+
+    02896-0054-Setup.sps                -       -         -       2010-05-21  87c9787fa5106eb0066dbd70b1f521f1
+
+
+DS0055 1926 Census of Religious Bodies (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0055-Data.dta                 -       3,150     93      2010-05-21  30a6dde2d5d0c80147a2a5f967e165b0
+
+    02896-0055-Data.sav                 -       3,150     93      2010-05-21  00a0974930fdcb2ff08f385b5cf6edb8
+
+    02896-0055-Data.stc                 -       3,150     93      2010-05-21  b741a48dc9de5c4d70046f400fbd26e0
+
+    02896-0055-Data.txt                 459     3,150     93      2010-05-21  901757ffdd2ca0fe6658db0da81dd04d
+
+    02896-0055-Setup.dct                -       -         -       2010-05-21  4efe3fcfc2f82eafb98c6b7a87a6452b
+
+    02896-0055-Setup.do                 -       -         -       2010-05-21  7014e7ee16f642045360079c62d10e35
+
+    02896-0055-Setup.sas                -       -         -       2010-05-21  137adbacf68577ef0c638b1e57b4742d
+
+    02896-0055-Setup.sps                -       -         -       2010-05-21  902e1c6ca9b6b9e97b64f6476a1f43e4
+
+
+DS0056 1936 Census of Religious Bodies (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0056-Data.dta                 -       3,147     85      2010-05-21  8c9015531cacf42b17b329f601ae676a
+
+    02896-0056-Data.sav                 -       3,147     85      2010-05-21  34ac374ceef9326db45424a6ef66d139
+
+    02896-0056-Data.stc                 -       3,147     85      2010-05-21  b284496970ca7bac6f5e589a1940e240
+
+    02896-0056-Data.txt                 426     3,147     85      2010-05-21  b92df276016364206d257c8e79130ce1
+
+    02896-0056-Setup.dct                -       -         -       2010-05-21  b922fce4ad5fbbc5679d63fed533e84c
+
+    02896-0056-Setup.do                 -       -         -       2010-05-21  8457c1a7b37d7ffc5a7c1a3b46d2e59a
+
+    02896-0056-Setup.sas                -       -         -       2010-05-21  75b201b82b04c64949d9f85f1af26df3
+
+    02896-0056-Setup.sps                -       -         -       2010-05-21  7c95327650274a233bb59a87efb93e38
+
+
+DS0057 1952 Survey of Churches and Church Membership (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0057-Data.dta                 -       3,163     50      2010-05-21  8fea242836b078d338ae07f81e6ef2c6
+
+    02896-0057-Data.sav                 -       3,163     50      2010-05-21  b54d398276fa6b32f1bcdb258d93fae3
+
+    02896-0057-Data.stc                 -       3,163     50      2010-05-21  5a70c91845573c495f3b8091d6f3e95e
+
+    02896-0057-Data.txt                 253     3,163     50      2010-05-21  6ef4acf21b30c62b377a24e3f7db73f6
+
+    02896-0057-Setup.dct                -       -         -       2010-05-21  88e1331a4e70820997598003525e8633
+
+    02896-0057-Setup.do                 -       -         -       2010-05-21  7fd803ec040b855919f8567aa9723aeb
+
+    02896-0057-Setup.sas                -       -         -       2010-05-21  fcbcc391f85009b0117795e7de705209
+
+    02896-0057-Setup.sps                -       -         -       2010-05-21  65f4c5630f487c14e52bceee504f382a
+
+
+DS0058 1944 City Data Book
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0058-Data.dta                 -       412       89      2010-05-21  37b52ca10e8547e18bfca867ca2c835e
+
+    02896-0058-Data.sav                 -       412       89      2010-05-21  87177c5c9a70866c7735656abf6b6c29
+
+    02896-0058-Data.stc                 -       412       89      2010-05-21  58cde9a44cf0ade50dd92e1897c0ff49
+
+    02896-0058-Data.txt                 658     412       89      2010-05-21  6e9a843b85008ad6941417d4619c9574
+
+    02896-0058-Setup.dct                -       -         -       2010-05-21  ec1bbbafed21b3857da65b27f74d410b
+
+    02896-0058-Setup.do                 -       -         -       2010-05-21  cc3238cd3c0e7a022d8ba2abebb075d2
+
+    02896-0058-Setup.sas                -       -         -       2010-05-21  e95b7b5ccd4d1eca9ca649b8de16d6a4
+
+    02896-0058-Setup.sps                -       -         -       2010-05-21  da40dbea475198eec27654d55116593c
+
+
+DS0059 1949 City Data Book
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0059-Data.dta                 -       417       102     2010-05-21  0783e7df6cf9a8797339404b121fd762
+
+    02896-0059-Data.sav                 -       417       102     2010-05-21  6942aea2cc8b04cb410dd0f635bbfced
+
+    02896-0059-Data.stc                 -       417       102     2010-05-21  ca8d14113e709f64d0bb25d90eb82592
+
+    02896-0059-Data.txt                 670     417       102     2010-05-21  399726a18ad0aeba2d032b8a76f31967
+
+    02896-0059-Setup.dct                -       -         -       2010-05-21  7007d7251aab408029c69d70110eadb5
+
+    02896-0059-Setup.do                 -       -         -       2010-05-21  05e1fefe3776292989d3f3ae6a805e8e
+
+    02896-0059-Setup.sas                -       -         -       2010-05-21  c01246fb43a98533c2038b5821bab1c8
+
+    02896-0059-Setup.sps                -       -         -       2010-05-21  0c53ad522efbe82e1c468f6fa5f45752
+
+
+DS0060 1952 City Data Book
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0060-Data.dta                 -       489       142     2010-05-21  e9053ded6fc646d85407c834bc6bb2b6
+
+    02896-0060-Data.sav                 -       489       142     2010-05-21  d7956be0440bd0d6cfc65bf2e44d5b40
+
+    02896-0060-Data.stc                 -       489       142     2010-05-21  5420b619895e62ffb72bc631849908f2
+
+    02896-0060-Data.txt                 1239    489       142     2010-05-21  282608350f4a2ebd39ba0d387abb1378
+
+    02896-0060-Setup.dct                -       -         -       2010-05-21  c497a02448ddf03f22d38133ac4caeb0
+
+    02896-0060-Setup.do                 -       -         -       2010-05-21  2e57049c3e9fb32ad24aee8974f42836
+
+    02896-0060-Setup.sas                -       -         -       2010-05-21  9d54dfc9501b6fdc0ec172a60ba42462
+
+    02896-0060-Setup.sps                -       -         -       2010-05-21  c533fc7eb17814d704c55680c2c38b6b
+
+
+DS0061 1956 City Data Book
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0061-Data.dta                 -       489       144     2010-05-21  c6dab15c76a25f10f30d1f68380f10f8
+
+    02896-0061-Data.sav                 -       489       144     2010-05-21  68b606e493351e04d9c8e183c24461a1
+
+    02896-0061-Data.stc                 -       489       144     2010-05-21  572963e7979fc61a13d659291fcc96c2
+
+    02896-0061-Data.txt                 1060    489       144     2010-05-21  5637815a1f87f99a09c2fc52fe31fcf6
+
+    02896-0061-Setup.dct                -       -         -       2010-05-21  a79563b7be600ed12cceb061e920de7b
+
+    02896-0061-Setup.do                 -       -         -       2010-05-21  68ec880f9627fa53ed6701c898c1ab23
+
+    02896-0061-Setup.sas                -       -         -       2010-05-21  d1f088d5f008fb54de4d80c71c495fa2
+
+    02896-0061-Setup.sps                -       -         -       2010-05-21  1b7d28189d655b15e2ebaf66f9773d2e
+
+
+DS0062 1962 City Data Book
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0062-Data.dta                 -       681       176     2010-05-21  ba02ff66e1ac6156bf7667d4bea2f8ac
+
+    02896-0062-Data.sav                 -       681       176     2010-05-21  458063d74344e8e0d941b42d42c1d5f8
+
+    02896-0062-Data.stc                 -       681       176     2010-05-21  670b6991306078d7cc3060e78b6b1787
+
+    02896-0062-Data.txt                 1599    681       176     2010-05-21  cf116cee53a25f6d35b7ac587b2f864a
+
+    02896-0062-Setup.dct                -       -         -       2010-05-21  5004e4599e779b2639becb3d0eac5006
+
+    02896-0062-Setup.do                 -       -         -       2010-05-21  81cb3eda13f0503d51352a4980ec4371
+
+    02896-0062-Setup.sas                -       -         -       2010-05-21  54dab819a26ee723ef71457c3ce24908
+
+    02896-0062-Setup.sps                -       -         -       2010-05-21  cab543d1d7648af25aa9caf278d52c98
+
+
+DS0063 1967 City Data Book
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0063-Data.dta                 -       683       162     2010-05-21  bcd7531e8a92a2dd29428e135267bb55
+
+    02896-0063-Data.sav                 -       683       162     2010-05-21  bc3f05b02e7f8b96284b6db78e117493
+
+    02896-0063-Data.stc                 -       683       162     2010-05-21  0327e66460d748823faf0cbeb5522915
+
+    02896-0063-Data.txt                 1319    683       162     2010-05-21  f1bb31952db3f00052a89b036afa04a0
+
+    02896-0063-Setup.dct                -       -         -       2010-05-21  025ef132fd14faa53e02cf0793740570
+
+    02896-0063-Setup.do                 -       -         -       2010-05-21  71fe42ff046e38a6058479ff3d2eb678
+
+    02896-0063-Setup.sas                -       -         -       2010-05-21  2d300480b01cd966815b94c0b404b48e
+
+    02896-0063-Setup.sps                -       -         -       2010-05-21  4921181ef8359d7c6beaae9268ad7d2b
+
+
+DS0064 1972 City Data Book
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0064-Data.dta                 -       895       207     2010-05-21  79fbc4fb73d2f365d406adc18cceabbf
+
+    02896-0064-Data.sav                 -       895       207     2010-05-21  b9a30aa72800555b3b3067d4f5710044
+
+    02896-0064-Data.stc                 -       895       207     2010-05-21  af04a8eb4208463f9ab875981bb78254
+
+    02896-0064-Data.txt                 996     895       207     2010-05-21  51d9bbcdab8ccf7cb00f58ec310277f3
+
+    02896-0064-Setup.dct                -       -         -       2010-05-21  29fff0ed7f6552fe2d8bb7b6aeef0109
+
+    02896-0064-Setup.do                 -       -         -       2010-05-21  7e8c7a7d8c6c5e29bc169e500ae333e6
+
+    02896-0064-Setup.sas                -       -         -       2010-05-21  79c8979c23ef8bc8692aa2fd07b25614
+
+    02896-0064-Setup.sps                -       -         -       2010-05-21  d84a07cd4d47b7c907de8a264f85edfc
+
+
+DS0065 1977 City Data Book
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0065-Data.dta                 -       965       206     2010-05-21  da4bd40a7f4a5a6c9adce89beeabdfe2
+
+    02896-0065-Data.sav                 -       965       206     2010-05-21  6da4d6c7e91e1581c249f3c6b1f4282e
+
+    02896-0065-Data.stc                 -       965       206     2010-05-21  9bbd0c475f08f3f01ba36204da249822
+
+    02896-0065-Data.txt                 1095    965       206     2010-05-21  19fc3e62ea300856496b6ae3be20790f
+
+    02896-0065-Setup.dct                -       -         -       2010-05-21  995cea30a97ac12547b289247493d6b2
+
+    02896-0065-Setup.do                 -       -         -       2010-05-21  dda526d30864b2a6499f024c67936dae
+
+    02896-0065-Setup.sas                -       -         -       2010-05-21  9fcea646051bf9c21fcdc904e929fbd1
+
+    02896-0065-Setup.sps                -       -         -       2010-05-21  2b6a535557c38a1eb38d972a450f5f2c
+
+
+DS0066 1983 City Data Book
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0066-Data.dta                 -       1,008     371     2010-05-21  58f4fc51e663c5f569306251a603c1c9
+
+    02896-0066-Data.sav                 -       1,008     371     2010-05-21  7a67c7e2d81c60a20978d21437b064bb
+
+    02896-0066-Data.stc                 -       1,008     371     2010-05-21  9fe7e12a87087ecd098ebdbc89e76b9b
+
+    02896-0066-Data.txt                 1387    1,008     371     2010-05-21  2df3e14c6d977fabe7f09250b719a5d8
+
+    02896-0066-Setup.dct                -       -         -       2010-05-21  a981b08bd106faca5c8f4c40099906fa
+
+    02896-0066-Setup.do                 -       -         -       2010-05-21  286d9581a63838947dc28827dbfa8268
+
+    02896-0066-Setup.sas                -       -         -       2010-05-21  96746b40d82f15dd652c0bfdc286fe0b
+
+    02896-0066-Setup.sps                -       -         -       2010-05-21  fb87ea8fd9eeea9c939f2023e86d320e
+
+
+DS0067 1988 City Data Book
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0067-Data.dta                 -       1,008     248     2010-05-21  40c432b1542f26b0b3fbebe5bceb1cf3
+
+    02896-0067-Data.sav                 -       1,008     248     2010-05-21  207c7ee89dfbb3966d2b736ad333bb82
+
+    02896-0067-Data.stc                 -       1,008     248     2010-05-21  3425f750d5cbf203c8e500a1672e4073
+
+    02896-0067-Data.txt                 923     1,008     248     2010-05-21  07c2794e050e7412f84d61a1cdcaf181
+
+    02896-0067-Setup.dct                -       -         -       2010-05-21  d2c23a522e01719c520fc35a5a994015
+
+    02896-0067-Setup.do                 -       -         -       2010-05-21  84551b63fbbf741be2b379b4db5e7064
+
+    02896-0067-Setup.sas                -       -         -       2010-05-21  0e7abbc413963bef65e543986d8bd72e
+
+    02896-0067-Setup.sps                -       -         -       2010-05-21  be7e15c13008110f83001a245870aa33
+
+
+DS0068 1994 City Data Book
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0068-Data.dta                 -       1,134     442     2010-05-21  7a329b1c061ce72e431606d21683ce9c
+
+    02896-0068-Data.sav                 -       1,134     442     2010-05-21  b12e375023195bcc4dc94e80ceace733
+
+    02896-0068-Data.stc                 -       1,134     442     2010-05-21  fb9feb2db7f7cf7bcd8abcd2e3e0acfe
+
+    02896-0068-Data.txt                 1492    1,134     442     2010-05-21  cd6da29371a2e041dfd02e11af172b96
+
+    02896-0068-Setup.dct                -       -         -       2010-05-21  974139f9ca8551735e0e3960dec47e23
+
+    02896-0068-Setup.do                 -       -         -       2010-05-21  da50d29314030e6c66cf39a5eefe9b2f
+
+    02896-0068-Setup.sas                -       -         -       2010-05-21  e85a50850998a696a1d062890aa8dfd1
+
+    02896-0068-Setup.sps                -       -         -       2010-05-21  c3f27afc3540c776877dc4cdc661640f
+
+
+DS0069 2000 City Data Book
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0069-Data.dta                 -       1,134     156     2010-05-21  875433f50b591d9a0b823a8e6c0facc3
+
+    02896-0069-Data.sav                 -       1,134     156     2010-05-21  1bcfe1f558c9d6e1e1692ca0e550b2e8
+
+    02896-0069-Data.stc                 -       1,134     156     2010-05-21  f6e058f5a9816b02a35c657c7c528846
+
+    02896-0069-Data.txt                 1010    1,134     156     2010-05-21  e6c31dd0d48d1701023150844e015aff
+
+    02896-0069-Setup.dct                -       -         -       2010-05-21  60508d7129c80a680b7d748bce1b1574
+
+    02896-0069-Setup.do                 -       -         -       2010-05-21  2a5c05393f36fdf9dc3a153820dccce2
+
+    02896-0069-Setup.sas                -       -         -       2010-05-21  61a4ec80c9587f702d4b0083e94e2c9c
+
+    02896-0069-Setup.sps                -       -         -       2010-05-21  cc1f169669ce9117a6da3c8e52abeafd
+
+
+DS0070 1947 County Data Book (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0070-Data.dta                 -       3,161     100     2010-05-21  25fcd86007bbf06095a7c10d2dc496b0
+
+    02896-0070-Data.sav                 -       3,161     100     2010-05-21  5cf6dd0cc835db42629d422bd29f3b34
+
+    02896-0070-Data.stc                 -       3,161     100     2010-05-21  284296e8a765bcacb5206058e3975739
+
+    02896-0070-Data.txt                 996     3,161     100     2010-05-21  15eff90ccb98d9fe76902d8c0b25bfb0
+
+    02896-0070-Setup.dct                -       -         -       2010-05-21  8147e778f3f238a027c912f2eed8d1e0
+
+    02896-0070-Setup.do                 -       -         -       2010-05-21  6e00a462b411e58a5c1ad01e8a21ad22
+
+    02896-0070-Setup.sas                -       -         -       2010-05-21  7f00b074fa611c9a32cdfb5fc9cef0ef
+
+    02896-0070-Setup.sps                -       -         -       2010-05-21  c55beeda735ea3e82feca21983bd5cae
+
+
+DS0071 1949 County Data Book (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0071-Data.dta                 -       3,164     109     2010-05-21  fa96b3867bf5dccc37b428b072a39333
+
+    02896-0071-Data.sav                 -       3,164     109     2010-05-21  fc753d9185766cce286e6547c01f62d3
+
+    02896-0071-Data.stc                 -       3,164     109     2010-05-21  fd0c285b1444f1cce0c21d3e7c3c5f15
+
+    02896-0071-Data.txt                 826     3,164     109     2010-05-21  a413fa471c4c9a35053a6e92e0a83ae8
+
+    02896-0071-Setup.dct                -       -         -       2010-05-21  6e15dd699ab6184adcebcd52eea49f48
+
+    02896-0071-Setup.do                 -       -         -       2010-05-21  acdda2647bf7b97e57f6028f9c7205a0
+
+    02896-0071-Setup.sas                -       -         -       2010-05-21  f1569cdb6299e728a6b8e335e3c3a8d9
+
+    02896-0071-Setup.sps                -       -         -       2010-05-21  d7bc40559f8e7614c72816a897d4548f
+
+
+DS0072 1952 County Data Book (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0072-Data.dta                 -       3,163     141     2010-05-21  a7b49779dae10663271964c4d54f464b
+
+    02896-0072-Data.sav                 -       3,163     141     2010-05-21  16c507b61f16a1c9cd97e0b63dc0c47b
+
+    02896-0072-Data.stc                 -       3,163     141     2010-05-21  72647f3947d7f15b87beb00b9056a0cb
+
+    02896-0072-Data.txt                 1322    3,163     141     2010-05-21  8229b6a096a620ffe2d9860b1c95be22
+
+    02896-0072-Setup.dct                -       -         -       2010-05-21  789bf0f59fcf6f7d501de2c7a3a62094
+
+    02896-0072-Setup.do                 -       -         -       2010-05-21  8228885caf41c7a6a7160c8a5728f796
+
+    02896-0072-Setup.sas                -       -         -       2010-05-21  cde118e9b0a5a08be62a69473a3cd236
+
+    02896-0072-Setup.sps                -       -         -       2010-05-21  ab12f463ab39274a6eb8ebd77f668af5
+
+
+DS0073 1956 County Data Book (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0073-Data.dta                 -       3,167     148     2010-05-21  550e70ac6a3dfd44e895b3f631982c10
+
+    02896-0073-Data.sav                 -       3,167     148     2010-05-21  14172b225b0fff65250acc5989dd5a80
+
+    02896-0073-Data.stc                 -       3,167     148     2010-05-21  64e6675f48e943d725522b1a8a801fcd
+
+    02896-0073-Data.txt                 1200    3,167     148     2010-05-21  288078f3d260a9ef816a704f80cb8d27
+
+    02896-0073-Setup.dct                -       -         -       2010-05-21  c77114fbf71ebdaf646609b25306dff5
+
+    02896-0073-Setup.do                 -       -         -       2010-05-21  473ec9bf3874b9178f3b51d85442f68d
+
+    02896-0073-Setup.sas                -       -         -       2010-05-21  004d3a567dee55954d1d6179d7dbbc1a
+
+    02896-0073-Setup.sps                -       -         -       2010-05-21  c331a7aaa3717514d15839b79f2be214
+
+
+DS0074 1962 County Data Book (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0074-Data.dta                 -       3,185     171     2010-05-21  44010b73b796e77d4742ba6f8dc8dfbb
+
+    02896-0074-Data.sav                 -       3,185     171     2010-05-21  e9f3e3e23fba9cd9f2be809884823b97
+
+    02896-0074-Data.stc                 -       3,185     171     2010-05-21  91257ceea392490c2ba7bea301bf7e69
+
+    02896-0074-Data.txt                 1047    3,185     171     2010-05-21  17c6a03d9dd5cefb90ce7b9322fe6909
+
+    02896-0074-Setup.dct                -       -         -       2010-05-21  993585854a429bbc550409833ef3a94a
+
+    02896-0074-Setup.do                 -       -         -       2010-05-21  795c584f6bfd6f997720069be86c67e9
+
+    02896-0074-Setup.sas                -       -         -       2010-05-21  9be61d7dd5a28ded3965a126b30c12a2
+
+    02896-0074-Setup.sps                -       -         -       2010-05-21  50360a2cacb280259d70197b84a6b515
+
+
+DS0075 1967 County Data Book (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0075-Data.dta                 -       3,189     157     2010-05-21  7e8016b4256b84bc444179ece3267f30
+
+    02896-0075-Data.sav                 -       3,189     157     2010-05-21  15d4b49b1736fc447771d2e657b7b17e
+
+    02896-0075-Data.stc                 -       3,189     157     2010-05-21  5fae43d385d7958ae9b0245decd091b4
+
+    02896-0075-Data.txt                 1370    3,189     157     2010-05-21  5e1fd8ae1bb21b64a7e34b5fc77851a4
+
+    02896-0075-Setup.dct                -       -         -       2010-05-21  829f348c0e0694aeab40160b27e3e9dd
+
+    02896-0075-Setup.do                 -       -         -       2010-05-21  4b8183b8507510ecfe0db5651f254239
+
+    02896-0075-Setup.sas                -       -         -       2010-05-21  a28cb2d7c9a646590bdd39de030c7437
+
+    02896-0075-Setup.sps                -       -         -       2010-05-21  ca752093f5fbffba8d9210c27e53c64a
+
+
+DS0076 1972 County Data Book (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0076-Data.dta                 -       3,192     208     2010-05-21  f75df1afb3069c9b2cb87314281dcbf0
+
+    02896-0076-Data.sav                 -       3,192     208     2010-05-21  50178d15e0a4d526b8ac05a0f915e89e
+
+    02896-0076-Data.stc                 -       3,192     208     2010-05-21  6473ee424b6b5f93c8dd2a497658de44
+
+    02896-0076-Data.txt                 1075    3,192     208     2010-05-21  8855200610301750dc2ce9c43aba3094
+
+    02896-0076-Setup.dct                -       -         -       2010-05-21  afc56798c656b2aeb5c519f069eca92e
+
+    02896-0076-Setup.do                 -       -         -       2010-05-21  90b0ba171a3beb08382efe305acbb06d
+
+    02896-0076-Setup.sas                -       -         -       2010-05-21  e69bfd384d34759e5ddd486630e5758b
+
+    02896-0076-Setup.sps                -       -         -       2010-05-21  3f839fc65e632e313b3a61e4350dae2f
+
+
+DS0077 1977 County Data Book (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0077-Data.dta                 -       3,196     205     2010-05-21  3522892d12646be7337d0da574e6ef02
+
+    02896-0077-Data.sav                 -       3,196     205     2010-05-21  63d0885bee61be6517d8824964a85d4a
+
+    02896-0077-Data.stc                 -       3,196     205     2010-05-21  327806310ab742cd4efde575084ace27
+
+    02896-0077-Data.txt                 1158    3,196     205     2010-05-21  0b6b4149888fc2eb050e0fc75c1bcd90
+
+    02896-0077-Setup.dct                -       -         -       2010-05-21  504bc6f2ad3643dc344271e405bcfcb8
+
+    02896-0077-Setup.do                 -       -         -       2010-05-21  5800f8ad0717de99c63f38fee2513561
+
+    02896-0077-Setup.sas                -       -         -       2010-05-21  8ced13e697c7adc7fc0fe6e1dc05fef6
+
+    02896-0077-Setup.sps                -       -         -       2010-05-21  c6ea405d959d3aefe7c88cc7b442b2a8
+
+
+DS0078 1983 County Data Book (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0078-Data.dta                 -       3,189     463     2010-05-21  6647dc27ee8e27a60b2179c4f9f33cdc
+
+    02896-0078-Data.sav                 -       3,189     463     2010-05-21  a7fdb3cbbdeaf28e43d6f0b1e4675633
+
+    02896-0078-Data.stc                 -       3,189     463     2010-05-21  1dad9d60cba5f0900616846b9c6024e1
+
+    02896-0078-Data.txt                 1942    3,189     463     2010-05-21  d67a115fa7e5fd6ce14e3663cf0edb5c
+
+    02896-0078-Setup.dct                -       -         -       2010-05-21  e721ac8b56b823b8814cd620fe403897
+
+    02896-0078-Setup.do                 -       -         -       2010-05-21  c8416138b99b7489387b66ec80fc768c
+
+    02896-0078-Setup.sas                -       -         -       2010-05-21  ea3fb45b19c1ac931cd2c0b2af3353a7
+
+    02896-0078-Setup.sps                -       -         -       2010-05-21  b798c4aab24fc906166cf7f483d302cd
+
+
+DS0079 1988 County Data Book (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0079-Data.dta                 -       3,191     346     2010-05-21  ef3fb52d9fdaa533a1046433ff36d6f9
+
+    02896-0079-Data.sav                 -       3,191     346     2010-05-21  5a87e703a4c67f1bc9b84b5fb8070981
+
+    02896-0079-Data.stc                 -       3,191     346     2010-05-21  344360a1d9d88045a9405c26c5028659
+
+    02896-0079-Data.txt                 1441    3,191     346     2010-05-21  0b3b44691e4a2d601f16cc5035669770
+
+    02896-0079-Setup.dct                -       -         -       2010-05-21  ec356d6b76eff01205b5489e8ca7b7c3
+
+    02896-0079-Setup.do                 -       -         -       2010-05-21  6a0ad5480bde82fdb25b2ba68130e9a4
+
+    02896-0079-Setup.sas                -       -         -       2010-05-21  12696604dae61ae34e5fdab0e80a9ab5
+
+    02896-0079-Setup.sps                -       -         -       2010-05-21  0a2ac800fa3b5bd5df483d11e62476da
+
+
+DS0080 1994 County Data Book (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0080-Data.dta                 -       3,193     498     2010-05-21  5c5bf68a8532b8424b214474ec7bcd1f
+
+    02896-0080-Data.sav                 -       3,193     498     2010-05-21  a14a677d33adbdfe3f56799322c4432d
+
+    02896-0080-Data.stc                 -       3,193     498     2010-05-21  de2fa9eabd33de0941e735337efd64ea
+
+    02896-0080-Data.txt                 1786    3,193     498     2010-05-21  0682689536f3e0286c98b9b2d5239beb
+
+    02896-0080-Setup.dct                -       -         -       2010-05-21  0ec16484a2f9caeab0db5dea92a60c0e
+
+    02896-0080-Setup.do                 -       -         -       2010-05-21  8aed160a907d00497f9f52d45a7c1912
+
+    02896-0080-Setup.sas                -       -         -       2010-05-21  0ff814356dcb14977a87436f65a46a81
+
+    02896-0080-Setup.sps                -       -         -       2010-05-21  8aee3295c36a316f381dec66f25cdf71
+
+
+DS0081 2000 County Data Book (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0081-Data.dta                 -       3,195     273     2010-05-21  e1ad2f1b358a69b010a41f58f3e9b5b3
+
+    02896-0081-Data.sav                 -       3,195     273     2010-05-21  e68014c33b3e4c61fff2cfa620b89a78
+
+    02896-0081-Data.stc                 -       3,195     273     2010-05-21  02ec17f6fcb7df478c8da952c0275590
+
+    02896-0081-Data.txt                 1817    3,195     273     2010-05-21  61f623f6ecbaffe9522401e616458642
+
+    02896-0081-Setup.dct                -       -         -       2010-05-21  9976cbfae185cc860bbccb85b2631d4f
+
+    02896-0081-Setup.do                 -       -         -       2010-05-21  9aeba7246c3e892ae997c15373b1a391
+
+    02896-0081-Setup.sas                -       -         -       2010-05-21  425c2bd571f84b24a8842800b6e29d34
+
+    02896-0081-Setup.sps                -       -         -       2010-05-21  9bd17e3fd75264857b1abd5bf31e58e3
+
+
+DS0082 1998 USA Counties Part A
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0082-Data.dta                 -       3,194     1897    2010-05-21  a7b8c63696e1f44c47974da6b547632c
+
+    02896-0082-Data.sav                 -       3,194     1897    2010-05-21  3beccf489166d97cfd845d2ab17f77fc
+
+    02896-0082-Data.stc                 -       3,194     1897    2010-05-21  08be8916762af9b12fb0b699b1b301d6
+
+    02896-0082-Data.txt                 14751   3,194     1897    2010-05-21  2bf9f3a08f6792b2ab1a836e03aeb871
+
+    02896-0082-Setup.dct                -       -         -       2010-05-21  ce8eea061d88f308e99e6f5435ce5c62
+
+    02896-0082-Setup.do                 -       -         -       2010-05-21  ff36d321911242113e271c5e67bb0997
+
+    02896-0082-Setup.sas                -       -         -       2010-05-21  29ceda4974166f0e1149695806fa7529
+
+    02896-0082-Setup.sps                -       -         -       2010-05-21  2b40882be13534c1360c90397342abdb
+
+
+DS0083 1998 USA Counties Part B
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0083-Data.dta                 -       3,194     1816    2010-05-21  6bc66d0cc96698d4554b0ada1af7d88e
+
+    02896-0083-Data.sav                 -       3,194     1816    2010-05-21  24786ea5a049a218a5a7c1e2cddd8bb0
+
+    02896-0083-Data.stc                 -       3,194     1816    2010-05-21  9a35dffa268652ab529bcbcc645212aa
+
+    02896-0083-Data.txt                 14627   3,194     1816    2010-05-21  f0ac1b57ed0142f6db3a6e4d8968ac72
+
+    02896-0083-Setup.dct                -       -         -       2010-05-21  c63f273535a4bf786ac9cde41f5ce16f
+
+    02896-0083-Setup.do                 -       -         -       2010-05-21  1f922faf681c8f74683979a1755df2d5
+
+    02896-0083-Setup.sas                -       -         -       2010-05-21  4def59da810c3fa9fb251ff0b8f3be20
+
+    02896-0083-Setup.sps                -       -         -       2010-05-21  eb73d1c5f3a82eebeee0544f1d912f50
+
+
+DS0084 1998 USA Counties Part C
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0084-Data.dta                 -       3,194     1580    2010-05-21  9f9c250029ba706531f46a43b41879c0
+
+    02896-0084-Data.sav                 -       3,194     1580    2010-05-21  ff1387a4e88c3814217af30835c3a4b5
+
+    02896-0084-Data.stc                 -       3,194     1580    2010-05-21  8e4cf8f733846ee741fb4d0298fa8a6c
+
+    02896-0084-Data.txt                 11648   3,194     1580    2010-05-21  280ff212c8c6a8cffeca6c8459d8042f
+
+    02896-0084-Setup.dct                -       -         -       2010-05-21  24f691fa72a78f4a2853d02b18651577
+
+    02896-0084-Setup.do                 -       -         -       2010-05-21  0db31f12706cabf9f21be27dcc9f778e
+
+    02896-0084-Setup.sas                -       -         -       2010-05-21  730a63e1ae2dcd5cc7ff2a3fb6945493
+
+    02896-0084-Setup.sps                -       -         -       2010-05-21  802db081583d5162e05af84f3c1a01d7
+
+
+DS0085 1910 Census of Agriculture (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0085-Data.dta                 -       3,026     419     2010-05-21  fc76f4fb943f33b8352bb733579ad4ce
+
+    02896-0085-Data.sav                 -       3,026     419     2010-05-21  3433cc5647fd8faabd07d23984bc6fb4
+
+    02896-0085-Data.stc                 -       3,026     419     2010-05-21  8e246feaffabadf57f3e805739ef1fc9
+
+    02896-0085-Data.txt                 3051    3,026     419     2010-05-21  e26e5ea67cf75af2bc292dbf1ce81bc1
+
+    02896-0085-Setup.dct                -       -         -       2010-05-21  bba38d4a3a69b0f307a5db3084629849
+
+    02896-0085-Setup.do                 -       -         -       2010-05-21  5aa58afb0a7e58de25208469971ee37d
+
+    02896-0085-Setup.sas                -       -         -       2010-05-21  01b25e35eb24e68b69345aeeb42e6bba
+
+    02896-0085-Setup.sps                -       -         -       2010-05-21  bbf885cccc0c7f49ec2afdda8051dbef
+
+
+DS0086 1920 Census of Agriculture (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0086-Data.dta                 -       3,127     576     2010-05-21  370706e66ae15e4830e849ae4d6aa87c
+
+    02896-0086-Data.sav                 -       3,127     576     2010-05-21  f3bafddbcbbeb84bd46457e0281ae9a5
+
+    02896-0086-Data.stc                 -       3,127     576     2010-05-21  4225a3b159da8bf24c10d8595c0c44d1
+
+    02896-0086-Data.txt                 3945    3,127     576     2010-05-21  81639f64a991098382fec93020436370
+
+    02896-0086-Setup.dct                -       -         -       2010-05-21  65751d179cf9c44591ff5e4872cc633c
+
+    02896-0086-Setup.do                 -       -         -       2010-05-21  19879dffd28d69e6190cac5bebdcac06
+
+    02896-0086-Setup.sas                -       -         -       2010-05-21  3d6192c6faf15f9da19c6619e0fa4cab
+
+    02896-0086-Setup.sps                -       -         -       2010-05-21  c4083a1dd38e847f4ce48c922245a3c1
+
+
+DS0087 1950 Data Set I (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0087-Data.dta                 -       3,159     583     2010-05-21  2a12f30bf8213d0537c36e337a83cfd4
+
+    02896-0087-Data.sav                 -       3,159     583     2010-05-21  731463be62c64f4d8eda3c6d6fb95684
+
+    02896-0087-Data.stc                 -       3,159     583     2010-05-21  aa6ff935ac3c9f965cf11399ab9272cc
+
+    02896-0087-Data.txt                 1524    3,159     583     2010-05-21  7676f68e0d3ffcc8bda80ba1f5f6195f
+
+    02896-0087-Setup.dct                -       -         -       2010-05-21  55bb7797329cdda2016822ee8aee0aaf
+
+    02896-0087-Setup.do                 -       -         -       2010-05-21  ff2ac887b577a5aa9c7c331ce301eceb
+
+    02896-0087-Setup.sas                -       -         -       2010-05-21  8e7d29e8f7aab5be49a0d9c1451974dd
+
+    02896-0087-Setup.sps                -       -         -       2010-05-21  788641be02372ee7907259893e999132
+
+
+DS0088 1950 Data Set II (County)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0088-Data.dta                 -       3,067     517     2010-05-21  2dff1a3c345b14bbba9bfd912dae2cbd
+
+    02896-0088-Data.sav                 -       3,067     517     2010-05-21  90ea9348bc95f0c9f473ba30ac051412
+
+    02896-0088-Data.stc                 -       3,067     517     2010-05-21  6a2f9b7362f97aa57409f4df5087b63d
+
+    02896-0088-Data.txt                 1634    3,067     517     2010-05-21  7e25bb78056ae6872b876c7da97664cf
+
+    02896-0088-Setup.dct                -       -         -       2010-05-21  40440d47aedb8dee04f86cafa00dd1ae
+
+    02896-0088-Setup.do                 -       -         -       2010-05-21  dc725373d20544b844ddcd07ecdd7a56
+
+    02896-0088-Setup.sas                -       -         -       2010-05-21  a46c91c01be95382aefebbbb666af418
+
+    02896-0088-Setup.sps                -       -         -       2010-05-21  5fcb9f484ea16bd976577082016dbcee
+
+
+DS0089 1954 Data Set I (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0089-Data.dta                 -       3,159     583     2010-05-21  4e21ca67a6682cf01a92184700173b4d
+
+    02896-0089-Data.sav                 -       3,159     583     2010-05-21  2dc5d527155cc7e8c1f244788ff1dbc7
+
+    02896-0089-Data.stc                 -       3,159     583     2010-05-21  32bc1b2c238f53d3c713f964304d3c87
+
+    02896-0089-Data.txt                 1614    3,159     583     2010-05-21  f14446d1601b4f85c39f51db78a23f0c
+
+    02896-0089-Setup.dct                -       -         -       2010-05-21  27679ea1e5839c434e0eff7c2e2521b5
+
+    02896-0089-Setup.do                 -       -         -       2010-05-21  ebea6769f6472886823e21ae890743c2
+
+    02896-0089-Setup.sas                -       -         -       2010-05-21  ae60a1ffe15749dd6cd9507f240173ce
+
+    02896-0089-Setup.sps                -       -         -       2010-05-21  c3acdcce6e024e63706389123f1ab278
+
+
+DS0090 1959 Data Set I (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0090-Data.dta                 -       3,159     583     2010-05-21  676ff44a87dd01c219243a786216975a
+
+    02896-0090-Data.sav                 -       3,159     583     2010-05-21  688c47e95c88ce45899b7ba916ab0caf
+
+    02896-0090-Data.stc                 -       3,159     583     2010-05-21  000cf47ed58f3e63c1426994a25e6686
+
+    02896-0090-Data.txt                 1868    3,159     583     2010-05-21  58dec6f061b5076cbae0fb7a92f16f7c
+
+    02896-0090-Setup.dct                -       -         -       2010-05-21  b5f4ab609f20ff521164e52f6d7be2c6
+
+    02896-0090-Setup.do                 -       -         -       2010-05-21  2ffbd5c9573fb12cffa0f780be60f8ab
+
+    02896-0090-Setup.sas                -       -         -       2010-05-21  43076966be7027296a60c1fd029655c1
+
+    02896-0090-Setup.sps                -       -         -       2010-05-21  d20f8ab50e8a94b8d2997030e0da042a
+
+
+DS0091 1959 Data Set II (County)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0091-Data.dta                 -       3,067     517     2010-05-21  b8f81c82e4f49078bab3c499daff8782
+
+    02896-0091-Data.sav                 -       3,067     517     2010-05-21  fc7344656dd9199889fecf2cd15125bb
+
+    02896-0091-Data.stc                 -       3,067     517     2010-05-21  06f9a5d169b0251acddd5fceb7e6fe62
+
+    02896-0091-Data.txt                 2488    3,067     517     2010-05-21  beaec967ba464211ea6ca3880992ea91
+
+    02896-0091-Setup.dct                -       -         -       2010-05-21  f235d09abf5af08e9744e33e4cfad477
+
+    02896-0091-Setup.do                 -       -         -       2010-05-21  70eab7c2d8fdc0532ae1b036d1783010
+
+    02896-0091-Setup.sas                -       -         -       2010-05-21  aa59e89e557a9185ae0d885aab369ab4
+
+    02896-0091-Setup.sps                -       -         -       2010-05-21  9a97b7f478e1a3df869a6fd77a3791ce
+
+
+DS0092 1964 Data Set I (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0092-Data.dta                 -       3,159     1147    2010-05-21  542e91cc533d05695487eb84d4fb0bd0
+
+    02896-0092-Data.sav                 -       3,159     1147    2010-05-21  225e48f69aa95d1e0da0bf07535e7436
+
+    02896-0092-Data.stc                 -       3,159     1147    2010-05-21  900273f045a82a6303c45817c9478630
+
+    02896-0092-Data.txt                 3171    3,159     1147    2010-05-21  8fe507b1e2a62476ca961aae930e263e
+
+    02896-0092-Setup.dct                -       -         -       2010-05-21  0ac12448c4168f82453cac865dc09c6c
+
+    02896-0092-Setup.do                 -       -         -       2010-05-21  0760eee7660615ea8ba89176df1b20e7
+
+    02896-0092-Setup.sas                -       -         -       2010-05-21  2a820002c99fe658852a581325462be2
+
+    02896-0092-Setup.sps                -       -         -       2010-05-21  a143842a5bce1a4b4d41c73a948cf409
+
+
+DS0093 1964 Data Set II (County)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0093-Data.dta                 -       3,067     517     2010-05-21  07864cc3e6bd1834b533f4f140c1ee42
+
+    02896-0093-Data.sav                 -       3,067     517     2010-05-21  e571646f3058a10f6d715fcb45f03941
+
+    02896-0093-Data.stc                 -       3,067     517     2010-05-21  abf7cc6c3d73eeb78c47f8585afe27ab
+
+    02896-0093-Data.txt                 1868    3,067     517     2010-05-21  dbf484412d2c79af560e04c378ab40cd
+
+    02896-0093-Setup.dct                -       -         -       2010-05-21  19adc24d62a0b8e5e8f36883a8479daa
+
+    02896-0093-Setup.do                 -       -         -       2010-05-21  2d26094de5496595841e9fce68c382dd
+
+    02896-0093-Setup.sas                -       -         -       2010-05-21  800084db9ce468b0ae7ba14a499ea1c3
+
+    02896-0093-Setup.sps                -       -         -       2010-05-21  0816423e7cd93f4d1f282f9f33c497ad
+
+
+DS0094 1969 Data Set I (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0094-Data.dta                 -       6,202     2130    2010-05-21  872e6b737366133aac621be7e39dc50a
+
+    02896-0094-Data.sav                 -       6,202     2130    2010-05-21  80457f9707fe8d448a92566589ff749f
+
+    02896-0094-Data.stc                 -       6,202     2130    2010-05-21  dac34815f7f5be9b634286e787bb377c
+
+    02896-0094-Data.txt                 5530    6,202     2130    2010-05-21  904020dac0d33d7268dbc029c048fcc9
+
+    02896-0094-Setup.dct                -       -         -       2010-05-21  41f294ff3948645e893da8b1d65109f8
+
+    02896-0094-Setup.do                 -       -         -       2010-05-21  d020a21b67460c2d38f156f364594fef
+
+    02896-0094-Setup.sas                -       -         -       2010-05-21  a82d14a46c90845596e6e719f7b711d4
+
+    02896-0094-Setup.sps                -       -         -       2010-05-21  fb439f93898a6128ca0b2a09863d8886
+
+
+DS0095 1969 Data Set II (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0095-Data.dta                 -       3,159     1147    2010-05-21  009849d789f0a027d6064f81cda946b5
+
+    02896-0095-Data.sav                 -       3,159     1147    2010-05-21  c66128406a5bc7b9b50156801867e85f
+
+    02896-0095-Data.stc                 -       3,159     1147    2010-05-21  8378a424f91130a477fbcfea423328f0
+
+    02896-0095-Data.txt                 3602    3,159     1147    2010-05-21  289a3b9a38d8f902fa2a2671b1b85f52
+
+    02896-0095-Setup.dct                -       -         -       2010-05-21  2781525eae9df0cc0339ac83b206b578
+
+    02896-0095-Setup.do                 -       -         -       2010-05-21  2f65aa15d9e31d2b316de3ae836c0f68
+
+    02896-0095-Setup.sas                -       -         -       2010-05-21  b80e843992d95d56da7ac414c91955bc
+
+    02896-0095-Setup.sps                -       -         -       2010-05-21  c5759fd3fc864ba7d5059f7ea29e9b93
+
+
+DS0096 1974 Data Set I (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0096-Data.dta                 -       12,404    2130    2010-05-21  1fc82661bb8cfbe37e6bd09b435cc453
+
+    02896-0096-Data.sav                 -       12,404    2130    2010-05-21  f73d701311faf13dc03459cb71dd837c
+
+    02896-0096-Data.stc                 -       12,404    2130    2010-05-21  87acdfcf345fc5c67d9b7129ee1ba1ba
+
+    02896-0096-Data.txt                 7410    12,404    2130    2010-05-21  856ab6764b1e80e2a634d033bdef60a6
+
+    02896-0096-Setup.dct                -       -         -       2010-05-21  27ad3d5906773f1ac7bc7b08b3308774
+
+    02896-0096-Setup.do                 -       -         -       2010-05-21  514adc33caa642dfd21e85633a378cfb
+
+    02896-0096-Setup.sas                -       -         -       2010-05-21  a8f632671e92da053406c00aa5b51526
+
+    02896-0096-Setup.sps                -       -         -       2010-05-21  4ea8521c650a431922bdb9625574adbb
+
+
+DS0097 1974 Data Set II (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0097-Data.dta                 -       3,159     1147    2010-05-21  336aba1521f0962e199d9ca4e9b862bd
+
+    02896-0097-Data.sav                 -       3,159     1147    2010-05-21  dc09def741306b1e5d4df6607cee3381
+
+    02896-0097-Data.stc                 -       3,159     1147    2010-05-21  a9f8556995f733efba7c976a38265b05
+
+    02896-0097-Data.txt                 3675    3,159     1147    2010-05-21  04fba46fcfb01d526f491fdec6e6e3b8
+
+    02896-0097-Setup.dct                -       -         -       2010-05-21  82bc41741cc5f48f8c27338eee8889b1
+
+    02896-0097-Setup.do                 -       -         -       2010-05-21  06358b53f43b1e2f2f925e257ed10aeb
+
+    02896-0097-Setup.sas                -       -         -       2010-05-21  e53f608876f7c005743882fe2693bb83
+
+    02896-0097-Setup.sps                -       -         -       2010-05-21  abde73de91a7b25f0e3282a6376b8ca1
+
+
+DS0098 1974 Data Set III
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0098-Data.dta                 -       3,142     2991    2010-05-21  c8e93ec68e48c9bcdfa1e2d1f5d6bf77
+
+    02896-0098-Data.sav                 -       3,142     2991    2010-05-21  89a21b84d2cbf383f8c0bbd922ddd9ff
+
+    02896-0098-Data.stc                 -       3,142     2991    2010-05-21  91b9d353a61e7cefb19c1712dc106835
+
+    02896-0098-Data.txt                 7390    3,142     2991    2010-05-21  c90ad2d0ea0c1c1f321435df87688035
+
+    02896-0098-Setup.dct                -       -         -       2010-05-21  5db4d7aff4c42397e1af56506ac8bbfc
+
+    02896-0098-Setup.do                 -       -         -       2010-05-21  b6b97d8d25fdcc73fefaf3b52f644e0c
+
+    02896-0098-Setup.sas                -       -         -       2010-05-21  18a5179caa92afa65f9f1848d05ede23
+
+    02896-0098-Setup.sps                -       -         -       2010-05-21  06a03ed332f2e4eb3792be4f303401ee
+
+
+DS0099 1978 Data Set (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0099-Data.sav                 -       3,179     5239    2010-05-21  e0ba8337504697df7adef33753eb9a8a
+
+    02896-0099-Data.stc                 -       3,179     5239    2010-05-21  3f3318039566d004ee2fc050e0738016
+
+    02896-0099-Data.txt                 14673   3,179     5239    2010-05-21  63a5c15bc19c75d0dbc0c1a6544b6b60
+
+    02896-0099-Setup.dct                -       -         -       2010-05-21  d05c3532fe2b6508443e9c8a194a1dbe
+
+    02896-0099-Setup.do                 -       -         -       2010-05-21  c62c4f4a23733a9c6a48a87136a4a193
+
+    02896-0099-Setup.sas                -       -         -       2010-05-21  81e511852ba8194ec24667429567e822
+
+    02896-0099-Setup.sps                -       -         -       2010-05-21  074cc4184577e2a39741b6e604d86005
+
+
+DS0100 1982 Data Set (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0100-Data.dta                 -       3,179     5239    2010-05-21  a880170721d93a0328f0f131a8955a83
+
+    02896-0100-Data.sav                 -       3,179     5239    2010-05-21  51643cbcf6ad6b930bab97a969ffe0ca
+
+    02896-0100-Data.stc                 -       3,179     5239    2010-05-21  5b511dcbec10f8bcf1edde3a85e53d47
+
+    02896-0100-Data.txt                 14969   3,179     5239    2010-05-21  3f98029eff9bbb09401ef33ea01cdd2f
+
+    02896-0100-Setup.dct                -       -         -       2010-05-21  e6eaf3dcb3c9b13cc26611477fdf76b2
+
+    02896-0100-Setup.do                 -       -         -       2010-05-21  94f6a705a48b38390f849734f6892d27
+
+    02896-0100-Setup.sas                -       -         -       2010-05-21  9e1aecce38793e91eb8eeaf7ed5fffb7
+
+    02896-0100-Setup.sps                -       -         -       2010-05-21  0fedf548ea183a1497b7d273cedd52e2
+
+
+DS0101 1987 Data Set (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0101-Data.dta                 -       3,179     5239    2010-05-21  40e768421b8042100963e8d70abf7bbe
+
+    02896-0101-Data.sav                 -       3,179     5239    2010-05-21  83a037cbd049b05c1b415daf7bf7506d
+
+    02896-0101-Data.stc                 -       3,179     5239    2010-05-21  d1d9c7efd704afe63b74632d8c6f931f
+
+    02896-0101-Data.txt                 17014   3,179     5239    2010-05-21  81b10ea88a9ae9dc3768f6abcdc5c2cd
+
+    02896-0101-Setup.dct                -       -         -       2010-05-21  286d4d790b703bc8745666bab587eb20
+
+    02896-0101-Setup.do                 -       -         -       2010-05-21  56a263bc147147d9927dfb3503fe2c90
+
+    02896-0101-Setup.sas                -       -         -       2010-05-21  4cca6630c801ad97e4fec3fe356c33b2
+
+    02896-0101-Setup.sps                -       -         -       2010-05-21  c43e5ca3f280d3429ecb4b6750752fac
+
+
+DS0102 1992 Data Set (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0102-Data.dta                 -       3,179     5569    2010-05-21  25bceb8463883cfe4debc1a0e32cbd6e
+
+    02896-0102-Data.sav                 -       3,179     5569    2010-05-21  2ad3cb076f233eab4db6146c2fc98693
+
+    02896-0102-Data.stc                 -       3,179     5569    2010-05-21  7bd776880362dbcee6b7544df6238be2
+
+    02896-0102-Data.txt                 18112   3,179     5569    2010-05-21  0e503c6dd1506ce63321826328ea28a9
+
+    02896-0102-Setup.dct                -       -         -       2010-05-21  9d33cfdcfaaebe725c943722e187b2d3
+
+    02896-0102-Setup.do                 -       -         -       2010-05-21  413fa36112ae022b854941dc6a41d7e1
+
+    02896-0102-Setup.sas                -       -         -       2010-05-21  e71ac61e14ec27aaed9d0fb8c476d314
+
+    02896-0102-Setup.sps                -       -         -       2010-05-21  8f6212c5a0b020e11509a8dc914381d7
+
+
+DS0103 1997 Data Set (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0103-Data.dta                 -       3,179     5601    2010-05-21  2c4238e8d541afc9e194869a71358974
+
+    02896-0103-Data.sav                 -       3,179     5601    2010-05-21  1dc94d5485ad853fea0ff2cba219576e
+
+    02896-0103-Data.stc                 -       3,179     5601    2010-05-21  bad7b73744f227aca0af525e92b7ac4f
+
+    02896-0103-Data.txt                 18268   3,179     5601    2010-05-21  6db7ac9391562388848a817fb937ef34
+
+    02896-0103-Setup.dct                -       -         -       2010-05-21  f611e1acaa23163e92edd31e1ef3a0e1
+
+    02896-0103-Setup.do                 -       -         -       2010-05-21  81a585fb4cb1e1b779ccf52cc1facc7f
+
+    02896-0103-Setup.sas                -       -         -       2010-05-21  2552f7112e09b4aa468d76b13b90aff1
+
+    02896-0103-Setup.sps                -       -         -       2010-05-21  94fc9853cb690b4d944f43e090c49985
+
+
+DS0104 2002 Data Set (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0104-Data.dta                 -       3,129     4156    2010-05-21  7158f58450091834f40809dbbf864a44
+
+    02896-0104-Data.sav                 -       3,129     4156    2010-05-21  e147ba734032aa64819783e0a441337d
+
+    02896-0104-Data.stc                 -       3,129     4156    2010-05-21  0a582d259666cba34f695d1cb5c96e0c
+
+    02896-0104-Data.txt                 19696   3,129     4156    2010-05-21  2e5f596df3f93c3cf83775e864e0c3b1
+
+    02896-0104-Setup.dct                -       -         -       2010-05-21  60412145dea5a54e8fae3070da2bf778
+
+    02896-0104-Setup.do                 -       -         -       2010-05-21  d707a7e3c0ab2acd6366a2e57c9655af
+
+    02896-0104-Setup.sas                -       -         -       2010-05-21  d39010da6a6fcbe8033375f144c6d6d2
+
+    02896-0104-Setup.sps                -       -         -       2010-05-21  32bccd7c12e808edbfa34e90f17910b1
+
+
+DS0105 2002 Data Set (Flags)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0105-Data.dta                 -       3,129     4156    2010-05-21  5b927624b69ae76c15972e57a0c48c1c
+
+    02896-0105-Data.sav                 -       3,129     4156    2010-05-21  9a537ffa27844182c75f026c6eca8c47
+
+    02896-0105-Data.stc                 -       3,129     4156    2010-05-21  39b9f1cf4754ead508e90b3af2a2baa8
+
+    02896-0105-Data.txt                 4197    3,129     4156    2010-05-21  5ceaa38a5424b7ad6eefa41ba87a5e0a
+
+    02896-0105-Setup.dct                -       -         -       2010-05-21  cd526246540aaf6e40a467fdd39e91a6
+
+    02896-0105-Setup.do                 -       -         -       2010-05-21  3ef8705280cd442d7e9e231135379395
+
+    02896-0105-Setup.sas                -       -         -       2010-05-21  90a1377f9d3e42c999b135a75058590d
+
+    02896-0105-Setup.sps                -       -         -       2010-05-21  55a5f4850f24f7049ad86bdda8e0a9b9
+
+
+DS0106 Farm Land Value Data Set
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    02896-0106-Data.dta                 -       3,121     23      2010-05-21  53fff1bfb052b97eaca4dc786d92f1eb
+
+    02896-0106-Data.sav                 -       3,121     23      2010-05-21  6e6c299b88a1b8be836fe5f770c9ad53
+
+    02896-0106-Data.stc                 -       3,121     23      2010-05-21  5b7f1f9641d30d22258b5ab37b57c04b
+
+    02896-0106-Data.txt                 98      3,121     23      2010-05-21  c8306e7cfddd8af86daacb17fd89f610
+
+    02896-0106-Setup.dct                -       -         -       2010-05-21  6a7fa1c45a185bcfec6a77e671be814a
+
+    02896-0106-Setup.do                 -       -         -       2010-05-21  09016f048fae3e3efedcd1abee6ce698
+
+    02896-0106-Setup.sas                -       -         -       2010-05-21  c5650c3ef090cf15b295feb997d5d75c
+
+    02896-0106-Setup.sps                -       -         -       2010-05-21  96e17fbad7ddd5579c113981669d09be
+
+
+Version History
+
+2010-05-21 Parts 7, 58 through 69, and 85 have been replaced with the
+updated version of the datasets. Parts 86 through 106 have been added to
+this version of the data collection. Also, SAS, PASW (SPSS), and Stata
+setup and ready-to-go files were produced for Parts 1-106.  2006-03-30 File
+CB2896.ALL.PDF was removed from any previous datasets and flagged as a
+study-level file, so that it will accompany all downloads.  2005-04-29
+These data are currently available as Stata system files. Technical issues
+were discovered with the files released with the previous version of this
+study. Also, Part 85, 1910 Census of Agriculture (County and State) has
+been added to this version.

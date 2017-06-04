@@ -1,0 +1,48 @@
+---
+title: "verify data"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+library(foreign)
+icpsr_1890 <- read.spss("../ICPSR_02896 5/DS0019/02896-0019-Data.sav")
+icpsr_1890 %>% glimpse()
+icpsr_1890_df <- as.data.frame(icpsr_1890)
+icpsr_1890_df %>% glimpse()
+states1890 %>% glimpse()
+```
+
+We need to match up state names in the icpsr_1890 dataset and the states1890 dataset and then look for correlations between each of the variables to determine how the columns match up!  
+
+```{r}
+icpsr_1890_df <- icpsr_1890_df %>% arrange(NAME)
+head(icpsr_1890_df)
+head(states1890)
+icpsr_1890_df <- icpsr_1890_df %>% mutate(State = trimws(NAME))
+anti_join(icpsr_1890_df, states1890, by = "State")
+
+corr_df <- right_join(icpsr_1890_df, states1890, by = "State")
+
+cor_matches_df <- data.frame("states1890_colnm" = colnames(corr_df[,262:428]), "max_cor_val" = -2, "max_cor_colnm" =  "Unknown", "min_dist_val" = -2, "min_dist_colnm" = "Unknown")
+cor_matches_df$max_cor_colnm <- as.character(cor_matches_df$max_cor_colnm)
+cor_matches_df$min_dist_colnm <- as.character(cor_matches_df$min_dist_colnm)
+
+for (i in 262:428){
+  corr_vals <- cor(corr_df[,i], corr_df[,3:258])
+  cor_matches_df$max_cor_val[i-261] <- max(corr_vals)
+  
+  cor_matches_df$max_cor_colnm[i-261] <- 
+    ifelse(is.na(cor_matches_df$max_cor_val[i-261]), "NA", 
+           colnames(corr_df)[3:258][which.max(corr_vals)])
+  
+  dist_vals <- sqrt(colSums((corr_df[,i] - corr_df[,3:258])^2))
+  cor_matches_df$min_dist_val[i-261] <- min(dist_vals)
+  cor_matches_df$min_dist_colnm[i-261] <- 
+    ifelse(is.na(cor_matches_df$min_dist_val[i-261]), "NA", 
+           colnames(corr_df)[3:258][which.min(dist_vals)])
+}
+## add in euclidean distance - also consider the size of the difference, not just the correlation (no units!)
+
+cor_matches_df
+```

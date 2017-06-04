@@ -53,10 +53,6 @@ fontsize: 11pt
 # U.S. Census Bureau only has available back until 1990 (as far as I can tell)
 # Still need to look at making a time series
 # Still trying to get the faint outline of the states on my images
-# If taking a class, will defend over the summer
-# If not, will defend early fall
-
-
 
 
 ## Correlation between variables from spss file and states1890 - to find which ones match (match state names first)

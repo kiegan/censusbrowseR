@@ -35,11 +35,11 @@ shinyApp(
     
 ####### REACTIVE FOR SINGLE YEAR TABLE #######
     mydata1 <- reactive({
-    library(statatlas)
+    library(censusbrowseR)
     data(stateslist)
     variables <- names(stateslist[[paste0("X",input$year)]])
-    variable1 = variables[grep(input$topic, variables)]
-    variable2 = variables[grep(input$topic2, variables)]
+    variable1 = variables[grep(toupper(input$topic), variables)]
+    variable2 = variables[grep(toupper(input$topic2), variables)]
     data.frame(available_colnames = variable1[variable1 %in% variable2])})
     
 ####### SINGLE YEAR TABLE ########
@@ -69,14 +69,14 @@ shinyApp(
   
 ####### REACTIVE FOR MULTIPLE YEAR TABLE #######
     mydata2 <- reactive({
-      library(statatlas)
+      library(censusbrowseR)
       data(stateslist)
       years <- as.integer(seq(input$range[1], input$range[2], by = 10))
       varvec <- c()
       is_present <- data.frame()
       for (i in 1:length(years)){
         variables <- names(stateslist[[paste0("X",years[i])]])
-        variable1 = variables[grep(input$topic3, variables)]
+        variable1 = variables[grep(toupper(input$topic3), variables)]
         varvec <- c(varvec,variable1)
       }
       varvec_u <- unique(varvec)
