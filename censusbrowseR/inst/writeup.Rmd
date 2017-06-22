@@ -4,6 +4,7 @@ author: "Kiegan Rice"
 output:
   pdf_document: 
     fig_caption: true
+    number_sections: true
 header-includes: \usepackage{float}
 bibliography: bibliography.bib
 fontsize: 11pt
@@ -56,9 +57,10 @@ fontsize: 11pt
 
 
 ## Correlation between variables from spss file and states1890 - to find which ones match (match state names first)
+## Also be sure to do the Euclidean distance - correlation is pretty likely anyways because it is a state-to-state, and proportionally the numbers in different states for various variables will be similar. 
 ```
 
-## Introduction  
+\section{Introduction}  
 Census data is an important snapshot of information about a country at different times throughout their history. It is an integral part of keeping track of the history of a country and the people who occupy it, as it gives us records of the occupants of a country and how they live their lives. The value of census data to a country and its citizens is difficult to overstate. Many recognize the usefulness of the census data, especially when aggregated and presented in a way that allows for viewers to learn something new about the world around them. While the history books we learn from in high school present us with a narrative of the events that occured, students often don't get to interact with the raw data ourselves in that learning environment. Accessible and usable census data allows the exploration of different demographic groups over time, or investigations of a particular period of time and what the demographic and economic landscape looked like in the past. Even today, for those who can't travel the world, data about the world around them could allow them to learn more about those places and learn something more about groups of people they may not usually engage with.  
 
 From an early point in the United States' history, there were "many eminent men of science" who recognized the value of the census data and worked to aggregate and present the data that had been collected on the population. Francis A. Walker's "Statistical Atlas of the United States", based on the 1870 census, was an impressive effort in aggregating population data to present it in a visually appealing way. Although the Census Bureau's "Statistical Atlases" eventually stopped being made, they were an important start to the effort of presenting census data to a wider public.  
@@ -69,55 +71,61 @@ Today, as methods of data analysis and visualization continue to be developed an
 _Mention Dr. Hofmann's paper to improve the Statistical Atlas here_
 
 
-- Ever-changing census means that we have different information in different years  
-
-- To get complete information, we have to be able to see what information we have and don't have  
-
-
 An inherent problem in census data is that a country's census changes over time; the variables collected, how they are collected, and even the locations they are collected for change as the country is formed, and subsequently grows and changes. The United States census data is no exception to this rule. In a little under two and a half centuries, the census has taken on many different forms. Data on occupations has transformed as the employment landscape has changed; new states have been formed, the most recent being within the last 100 years; definitions of various demographic groups and the terminology used to describe them have been updated as the demographic makeup of the country has changed. Each decennial census brings a different set of variables to the table. Sometimes these variables are new things the Census Bureau is interested in learning, while sometimes they remove variables that are no longer relevant or whose information is captured somewhere else.  
 
-Unfortunately, because the founders of the U.S. Census were unable see 200 years into the future, those interested in working with census data are left with quite the inescapable mess. If you want to focus in on a particular demographic group and their journey as part of the population of the United States, you may have ten or more different variables names to describe that one group over the course of the census from 1790 to 1960 - and that is just for one single group! Of course, we cannot just simply change variable names to match our own research needs. It is important to keep the data in its true form and be honest to the way that the population was defined at different times throughout history, even if our instinct may be to 'clean' the data by changing variable names.
+Unfortunately, because the founders of the U.S. Census were unable see 200 years into the future, those interested in working with census data are left with quite the inescapable mess. If you want to focus in on a particular demographic group and their journey as part of the population of the United States, you may have ten or more different variables names to describe that one group over the course of the census from 1790 to 1960 - and that is just for one single group! Of course, we cannot just simply change variable names to match our own research needs. It is important to keep the data in its true form and be honest to the way that the population was defined at different times throughout history, even if our instinct may be to 'clean' the data by changing variable names.  
+
+This, of course, leaves the user with a wide variety of variables that are far from consistent across years. In order to track one demographic group across years - let alone many groups - a clean user interface that helps users see exactly what information is available to them across years is a necessity. To streamline the process and assist researchers in finding out what information they have access to and what they don't, we present a U.S. census browser for R, with the user interface being a Shiny application, and the downloadable files being 'tidy' csv files that those with a small amount of R experience should be able to work with.  
 
 
 
-## Background ?(Literature Review)?  
+\section{Background ?(Literature Review)?}  
 
-The University of Virginia Library hosted a "Historical Census Browser" for many years that allowed users to search United States Census Data for use in research, teaching, and personal inquiry. The data included data on various aspects of the U.S. population from the 1790 Census through the 1960 Census. This Historical Census Browser was free and available for use for anyone with an internet connection. This Census Browser allowed a user to peruse available topics for each census year, at both the state and county levels. The Historical Census Browser was taken down on December 31, 2016, with the county-level aggregated data becoming unavailable several months before this. The source was widely used, with several other university libraries and educational resources including University of California Santa Barbara, University of Pennsylvania, University of Michigan[@UMich-HCB], and the Smithsonian's History Explorer directing researchers to use the University of Virginia source. 
+The University of Virginia Library hosted a "Historical Census Browser" for many years that allowed users to search United States Decennial Census Data for use in research, teaching, and personal inquiry. The data included data on various aspects of the U.S. population from the 1790 Census through the 1960 Census. This Historical Census Browser was free and available for use for anyone with an internet connection. This Census Browser allowed a user to peruse available topics for each census year, at both the state and county levels. The Historical Census Browser was taken down on December 31, 2016, with the county-level aggregated data becoming unavailable several months before this. The source was widely used, with several other university libraries and educational resources including University of California Santa Barbara, University of Pennsylvania, University of Michigan[@UMich-HCB], and the Smithsonian's History Explorer directing researchers to use the University of Virginia source.  
+
+The University of Virginia Libraries website now directs users to "Social Explorer" or the "National Historical Geographic Information System" website. However, neither resource provides the full advantages that the Historical Census Browser offered: a free-to-use and user-friendly data browser that allows users to choose which data they are interested in using, and download the complete records for their own independent use. Although the Historical Census Browser data is now dated based on the existence of an updated, cross-checked version of the decennial census through ICPSR, it is for the most part accurate and allows for free and open use for researchers and others alike. The NHGIS, hosted through the University of Minnesota, has complete records but fails on the user-friendly front.  
 
 _Look into what other things are available, different sources of data (NHGIS at U of Minn., different license). What issues there are with different sources of data_  
 
-## Work  
+\section{Work}   
 
-
-### Motivation  
-The University of Virginia Libraries website now directs users to "Social Explorer" or the "National Historical Geographic Information System" website. However, neither resource provides the full advantages that the Historical Census Browser offered: a free-to-use and user-friendly data browser that allows users to choose which data they are interested in using, and download the complete records for their own independent use.  
-
-
-
-### Description  
+\subsection{Data}  
 Although the county-level data had already been removed from the website, the state-level aggregated records for each decennial census from 1790 through 1960 were captured from the website in September of 2016 and saved as raw data with the intent to create a resource for R users that allowed the same main functionalities of the original University of Virginia Historical Census Browser, streamlined for easy data searches and data management.  
+
+The majority of files for the decennial censuses (sp?) were complete upon capture from the website. However, there were two years of census data that are missing some column names and thus are unverified data. For the 1890 and 1920 censuses (sp?), columns were compared to all columns from ICPSR 02896 5 data files by both correlation and Euclidean distance, and thus some columns were able to be correctly identified.  
+
+_Describe this process in more detail once you actually get this shit figured out. How many columns were correctly matched? How many weren't? Were we able to at least get a foothold on which columns go where in the excel spreadsheet after identifying a couple of them?_  
+
+
+
+
+\subsection{Description}  
+
+
 
 - What the package includes and what capabilities the Shiny app has  
 
 
-### Example  
-In the Shiny app, we can choose to focus in on a single year of the census or look for data across a range of years. 
-We can easily use the "Get Your Data" Shiny app to search for a topic of interest, find the data we want, download state-level information, and tell a visual story of populations in the United States over time. To demonstrate the all-knowing power of this Shiny app, we will walk through an example on the history of the African American population in the United States. We begin by running the shiny app: 
+\subsection{Example}  
 
-```
-put code chunk to run shiny app here
+In the Shiny app, we can choose to focus in on a single year of the census or look for data across a range of years. 
+We can easily use the "Get Your Data" Shiny app to search for a topic of interest, find the data we want, download state-level information, and tell a visual story of populations in the United States over time. To demonstrate the all-knowing power of this Shiny app, we will walk through an example on the history of the African American population in the United States. We begin by running the Shiny app: 
+
+```{r, eval=FALSE}
+library(shiny)
+shiny::runGitHub("kiegan/censusbrowseR", subdir = "shiny")
 ```
 The default set of years is 1790 to 1920. However, we can easily expand the slider range to be able to explore data across all the available years, 1790 to 1960. We can also order by how the "Total" column, or how many of years each of the variables appear in. These variables appear on the left side of the table, as rows.  
 
 ![An example of available column names for the years 1790 to 1880.](./figures/app-sshot-1790-to-1880.pdf)  
 
-The available variable names here are already ordered by how many years they appear in, so we can see right off the bat that we have a serious lack of variable continuity. The identifying variables that appear each year ar `YEAR`, `STATE`, `TOTAL.POPULATION`, and `TYPE`. That means the total number of times they appear is 10, the number of census years we are looking at. After that, the next most common variable only appears in 4 of the 10 years we have chosen. That means we are up against some pretty significant hurdles to track any demographic group over time.  
+The available variable names here are already ordered by how many years they appear in, so we can see right off the bat that we have a serious lack of variable continuity. The identifying variables that appear each year are `YEAR`, `STATE`, `TOTAL.POPULATION`, and `TYPE`. That means the total number of times they appear is 10, the number of census years we are looking at. After that, the next most common variable only appears in 4 of the 10 years we have chosen. That means we are up against some pretty significant hurdles to track any demographic group over time.  
 
 For now, we are focusing in on African Americans throughout U.S. history, which means we need to start with the term `SLAVE` in the early years of the U.S. census. The vast majority of African Americans were slaves when the United States was founded, so variables that count the number of slaves are important variables to have in order to get a grasp on the African American population in early U.S. history. 
 
-Once we have our range of years chosen, we simply enter a search term. **All variable names are in all caps, so search in all caps**. Searching for `SLAVE` gives us a list of all the possible variable names across all years, and we can again sort by how how many years each variable name appears in. Users are then able to click each of the variables they are interested in, and select `Download Data` in order to download a .csv file with the data for all states in the selected years. This .csv file will also always include the columns `YEAR`, `STATE`, `TOTAL.POPULATION`, and `TYPE`, even if they are not selected by the user.  
+Once we have our range of years chosen, we simply enter a search term. Searching for `SLAVE` gives us a list of all the possible variable names across all years, and we can again sort by how how many years each variable name appears in. Users are then able to click each of the variables they are interested in, and select `Download Data` in order to download a .csv file with the data for all states in the selected years. This .csv file will also always include the columns `YEAR`, `STATE`, `TOTAL.POPULATION`, and `TYPE`, even if they are not selected by the user.  
 
-For this example, I executed three separate searches within the `Get Your Data` app, using three different terms that were used to refer to African Americans at different points in the decennial census. This gave me three separate .csv files, which I was able to easily combine using `full_join` from the `dplyr` package. Now, for an entire demographic group, all of the state-aggregated population counts are together in one data frame, although different terms are used at different points in time.  
+For this example, I executed three separate searches within the `Get Your Data` app, using three different terms that the census used to categorize African Americans at different points in the decennial census. This gave me three separate .csv files, which I was able to easily combine using `full_join` from the `dplyr` package. Now, for an entire demographic group, all of the state-aggregated population counts are together in one data frame, although different terms are used at different points in time.  
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 library(statatlas)
@@ -212,16 +220,76 @@ grid.arrange(p1_1820, p2_1820, p3_1820, ncol = 2)
 ```
 
 
+Moving forward from there, we can start to see interesting patterns once slavery is abolished. In the year 1850, we can also start investigating what the total African American population looks like in each state, rather than just the slave population and free population.  
 
-### Implementation  
+```{r, r, fig.width = 10, fig.height = 9, echo = FALSE, message = FALSE, fig.pos = "H", fig.cap = "Number of Slaves, Number of Free Colored Persons, Percentage of Free Colored Persons, and Total African American Persons in 1850."}
+map_states_1850 <- us_boundaries("1850-07-04")
+
+m1850_df <- fortify(map_states_1850, region = "name")
+m1850_df <- m1850_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1850_df, by = "State")
+data_full_wmap <- full_join(data_full, m1850_df, by = "State")
+
+#data_full_wmap %>% glimpse
+
+#data_full_wmap %>% filter(Year == 1850) %>% summary()
+  # here we have 'TOTAL.SLAVES' and 'TOTAL.FREE.COLORED.POPULATION'. I assume 'TOTAL.FREE.COLORED.POPULATION' is just a different way to see 'TOTAL.FREE.COLORED.PERSONS'. Small wording changes like this happen a lot in the census data!
+
+
+# We also now have many northern states who do not report slaves as part of their census, since they were considered free states 
+## look up the laws about this 
+
+# We will turn 'NA' values for 'TOTAL.SLAVES' to 0 in a new variable called 'TOTAL.SLAVES.ZERO' so that we can continue to calculate the ratio of slaves to free. (We just assume 0 slaves in Free States)
+
+data_full_wmap <- data_full_wmap %>% mutate(TOTAL.SLAVES.ZERO = ifelse(is.na(TOTAL.SLAVES),0,TOTAL.SLAVES))
+
+data_full_wmap <- data_full_wmap %>% 
+  mutate(PERC.AFRICAN.AMERICANS.FREE = TOTAL.FREE.COLORED.POPULATION/(TOTAL.FREE.COLORED.POPULATION+TOTAL.SLAVES.ZERO))
+
+
+
+
+p1_1850 <- data_full_wmap %>%
+  filter(Year == 1850) %>% 
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(TOTAL.SLAVES)), colour = "black") + 
+  theme_bw() + labs(title = "Total Slaves (log scale)") + theme(legend.title = element_blank())
+
+p2_1850 <- data_full_wmap %>% 
+  filter(Year == 1850) %>%
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(TOTAL.FREE.COLORED.POPULATION)), colour = "black") + 
+  theme_bw() + labs(title = "Total Free Colored Persons (log scale)") + theme(legend.title = element_blank())
+
+p3_1850 <- data_full_wmap %>% 
+  filter(Year == 1850) %>%
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = PERC.AFRICAN.AMERICANS.FREE), colour = "black") + 
+  theme_bw() + labs(title = "Percent Free vs Percent Slaves") + 
+  scale_fill_gradient2(midpoint = .5) + theme(legend.title = element_blank())
+
+p4_1850 <- data_full_wmap %>% 
+  filter(Year == 1850) %>%
+  ggplot(aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = log(TOTAL.FREE.COLORED.POPULATION + TOTAL.SLAVES.ZERO)), colour = "black") + 
+  theme_bw() + labs(title = "Total African American Persons, Slave or Free (log scale)") + 
+  theme(legend.title = element_blank())
+
+grid.arrange(p1_1850, p2_1850, p3_1850, p4_1850, ncol = 2)
+```
+
+
+
+ 
+\subsection{Implementation}  
 How to use it - this is the most technical part  
 
 
-## Discussion of Future Work  
+\section{Discussion of Future Work}  
 - County-level data would be great  
 - Current data (up to 2010 Census)  
 
 
-## References  
+\section{References}  
 
 

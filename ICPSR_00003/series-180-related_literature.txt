@@ -1,0 +1,20 @@
+Bibliography
+Census of Population and Housing, 1790-1950 [United States] Series
+
+This bibliography includes published and unpublished works that are
+related to ICPSR series 180. It includes works that are based on
+primary or secondary analysis of the data, or which describe or critique
+those data or the collection methodology. This list represents all items
+known to ICPSR as of 2007-12-07.
+
+If you publish a work or know of other works that are based on these data,
+please send the complete citation and name of the ICPSR series used to:
+bibliography@icpsr.umich.edu.
+
+
+1. Akin, John S.; Garfinkel, Irwin, "The Quality of Education and Cohort
+Variation in Black-White Earnings Differentials: Comment." American
+Economic Review. Mar 1980, 70, (1), 186 - 191.
+
+2. Haines, Michael R., "Ethnic Differences in Demographic Behavior in the
+United States." Historical Methods. Fall 2003, 36, (4), 157 - 195.

@@ -11,6 +11,8 @@ icpsr_1890 %>% glimpse()
 icpsr_1890_df <- as.data.frame(icpsr_1890)
 icpsr_1890_df %>% glimpse()
 states1890 %>% glimpse()
+
+icpsr_3_1890 <- read.table("../ICPSR_00003/DS0011/00003-0011-Data.txt")
 ```
 
 We need to match up state names in the icpsr_1890 dataset and the states1890 dataset and then look for correlations between each of the variables to determine how the columns match up!  

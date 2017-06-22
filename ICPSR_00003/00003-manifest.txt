@@ -1,0 +1,502 @@
+File Manifest for ICPSR 3
+
+Inter-university Consortium for Political and Social Research. Historical,
+Demographic, Economic, and Social Data:  The United States, 1790-1970.
+ICPSR00003-v1. Ann Arbor, MI: Inter-university Consortium for Political and
+Social Research [distributor], 197?. http://doi.org/10.3886/ICPSR00003.v1
+
+Details on the version history can be found below the file listings.
+
+
+Study-level Documentation
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-related_literature.txt        -       -         -       2017-06-21  -
+
+    00003-manifest.txt                  -       -         -       2017-06-22  -
+
+    00003-Documentation.pdf             -       -         -       2001-09-19  44afda5ba5e5b56b3f8ac155c7e6dfc7
+
+
+DS0001 1790 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0001-Data.txt                 513     300       61      1996-06-04  09954c5003f52de6ed4e287096d72705
+
+    00003-0001-Data_map.txt             -       -         -       2000-10-20  97a508ca7497c31ab4319cff81589c0a
+
+    00003-0001-Setup.sas                -       -         -       2000-10-20  779dbab0f592fde140331ece4d7674fb
+
+    00003-0001-Setup.sps                -       -         -       2000-10-20  72e04c54b3e30c8afc50016d4197e1ca
+
+
+DS0002 1800 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0002-Data.txt                 153     421       21      1996-06-04  10ef5151dbb983e923f7cdb89a449922
+
+    00003-0002-Data_map.txt             -       -         -       2000-10-20  3e0335536fc153ae4a7a552d64b76fbb
+
+    00003-0002-Setup.sas                -       -         -       2000-10-20  8698f34019db1c9d41ddd2d945815a7e
+
+    00003-0002-Setup.sps                -       -         -       2000-10-20  01199dd2edc19122436f657500d9f236
+
+
+DS0003 1810 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0003-Data.txt                 153     535       21      1996-06-04  fb43e9315670516181c8300a2d0f1e72
+
+    00003-0003-Data_map.txt             -       -         -       2000-10-20  294aea701c48dba1c2a3505aea737034
+
+    00003-0003-Setup.sas                -       -         -       2000-10-20  9c07c425aabda123b8554133bbb2f389
+
+    00003-0003-Setup.sps                -       -         -       2000-10-20  574cf1875722a36c3c72729d88e8e4cb
+
+
+DS0004 1820 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0004-Data.txt                 333     770       41      1996-06-04  a6b15048042bc383beaae88e7e216bcb
+
+    00003-0004-Data_map.txt             -       -         -       2000-10-20  fa2f7b561f3754edb9b6db7a2cd49601
+
+    00003-0004-Setup.sas                -       -         -       2000-10-20  f52dc64560e8e7fbc86d6faa23fc817c
+
+    00003-0004-Setup.sps                -       -         -       2000-10-20  cd138a32d2f40fe909270111b8cf0fd5
+
+
+DS0005 1830 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0005-Data.txt                 504     998       60      1996-06-04  74738793671c30e126c931165d1a1f1d
+
+    00003-0005-Data_map.txt             -       -         -       2000-10-20  60d8f96276f48b5076baf17eb5dd6672
+
+    00003-0005-Setup.sas                -       -         -       2000-10-20  5551e74629b69b8a41b0eb24ac6498c5
+
+    00003-0005-Setup.sps                -       -         -       2000-10-20  07e13dff3ab55c95f502b692a7a9cf83
+
+
+DS0006 1840 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0006-Data.txt                 711     1,304     83      1996-06-04  e35bc394696a3834aac337a1767c3177
+
+    00003-0006-Data_map.txt             -       -         -       2000-10-20  d69389ddbd9852c3dabe22e0c14cce7c
+
+    00003-0006-Setup.sas                -       -         -       2000-10-20  94dc64567a9667d744589e9c35ef7f98
+
+    00003-0006-Setup.sps                -       -         -       2000-10-20  122547e9d9873d926608cff2d2a800b8
+
+
+DS0007 1850 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0007-Data.txt                 2313    1,638     261     1996-06-04  f57ed03744b87c88279805bd3b7a74ca
+
+    00003-0007-Data_map.txt             -       -         -       2000-10-20  be92850191af582ca2925aa1c79729b8
+
+    00003-0007-Setup.sas                -       -         -       2000-10-20  1a94fa3e99c8ae8bd097f93687430338
+
+    00003-0007-Setup.sps                -       -         -       2000-10-20  c7c4621b62ba5048f7af0c6567793851
+
+
+DS0008 1860 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0008-Data.txt                 3321    2,090     373     1996-06-04  17def0ebe69d9be6cccc1a982c71c775
+
+    00003-0008-Data_map.txt             -       -         -       2000-10-20  ecfe62e58367cee87c9c1678369fcdfa
+
+    00003-0008-Setup.sas                -       -         -       2000-10-20  6c4d0eef7a7f0a30d228df5020e49d94
+
+    00003-0008-Setup.sps                -       -         -       2000-10-20  a441cc66af8bcf2e6e5d2fa798f57f73
+
+
+DS0009 1870 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0009-Data.txt                 1665    2,266     189     1996-06-04  6c094c34a5ca24a63a6d69463f3eff90
+
+    00003-0009-Data_map.txt             -       -         -       2000-10-20  49e982dfcab96a999b7072a7ee70342c
+
+    00003-0009-Setup.sas                -       -         -       2000-10-20  ae784f9df5817b358f229235ea655cef
+
+    00003-0009-Setup.sps                -       -         -       2000-10-20  ee0bb938029fb1671c0c62653219ae33
+
+
+DS0010 1880 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0010-Data.txt                 1512    2,458     172     1996-06-04  210297a3a895efc314b02e7bf3528723
+
+    00003-0010-Data_map.txt             -       -         -       2000-10-20  6bb6a35b053a4d8fc08335fb74f6ff27
+
+    00003-0010-Setup.sas                -       -         -       2000-10-20  e234babb97442fcaf3e15a6c76574538
+
+    00003-0010-Setup.sps                -       -         -       2000-10-20  88422e1f062ea8ee7b1f9d0ba6374dfa
+
+
+DS0011 1890 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0011-Data.txt                 1530    2,824     174     1996-06-04  be312284aa4fb43b3c30ed7c3af694b5
+
+    00003-0011-Data_map.txt             -       -         -       2000-10-20  328b8501f59ccea618d8eb8c7c29ce41
+
+    00003-0011-Setup.sas                -       -         -       2000-10-20  5409553f19545afdc643182c94b3269c
+
+    00003-0011-Setup.sps                -       -         -       2000-10-20  14f9e35b9c411a78f50ee0b6dbfac352
+
+
+DS0012 1890 Census Religious Data (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0012-Data.txt                 2736    2,728     308     1996-06-04  9a95f9c4fd63a2e937cfd4e703cf303f
+
+    00003-0012-Data_map.txt             -       -         -       2000-12-18  59f3ab9d619b7f5de83d77dd10acd3ca
+
+    00003-0012-Setup.sas                -       -         -       2000-12-18  dd724514d0165174746060818f297c22
+
+    00003-0012-Setup.sps                -       -         -       2000-12-18  20cd8882075382208d2ff0bd20da0f49
+
+
+DS0013 1900 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0013-Data.txt                 1494    2,877     170     1996-06-04  9a6d8ee6228c6381a88a99fabe884d1c
+
+    00003-0013-Data_map.txt             -       -         -       2000-10-20  edc4388ef2a73c5cb3d01cf5a4e59fa8
+
+    00003-0013-Setup.sas                -       -         -       2000-10-20  c2a035c89b5cac4dace8e0bd014a42ab
+
+    00003-0013-Setup.sps                -       -         -       2000-10-20  e0e97849eae228cfde5c5d6d030e7eab
+
+
+DS0014 1910 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0014-Data.txt                 1566    3,002     178     1996-06-04  022a78a0134852f7421e10f1c935dab8
+
+    00003-0014-Data_map.txt             -       -         -       2000-10-20  4ad1e2767fa6cf52341502463924d5f3
+
+    00003-0014-Setup.sas                -       -         -       2000-10-20  89e5cf1483fd08c51c21183b58e3f53a
+
+    00003-0014-Setup.sps                -       -         -       2000-10-20  5a17338004a1c293328faddcf6918fd7
+
+
+DS0015 1920 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0015-Data.txt                 1611    3,118     183     1996-06-04  301a303af778a09becb012afa1760935
+
+    00003-0015-Data_map.txt             -       -         -       2000-10-20  5d520bc30786e6e0e4f50ef0d8a6abb5
+
+    00003-0015-Setup.sas                -       -         -       2000-10-20  d5803f411b9154df430ae869bbb5a130
+
+    00003-0015-Setup.sps                -       -         -       2000-10-20  a092428a7e4d262b8806f106ed9bf984
+
+
+DS0016 1930 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0016-Data.txt                 2214    3,149     250     1996-06-04  b389084ef6ec48b5a949d970fddee415
+
+    00003-0016-Data_map.txt             -       -         -       2000-10-20  e438a6056b89fb968e147e0e43b7219e
+
+    00003-0016-Setup.sas                -       -         -       2000-10-20  adc0d46148010c795f3f9e6aef9302f1
+
+    00003-0016-Setup.sps                -       -         -       2000-10-20  16dcbf915fbd376cc41e30a628243b40
+
+
+DS0017 1940 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0017-Data.txt                 3445    3,146     389     1996-06-04  15a980220998d0096d39af2cdeefdbf8
+
+    00003-0017-Data_map.txt             -       -         -       2000-10-20  ae46741603b6beeb6f65a78a69975576
+
+    00003-0017-Setup.sas                -       -         -       2000-10-20  774469cddb6a9a42d55dedfd35dc8f2d
+
+    00003-0017-Setup.sps                -       -         -       2000-10-20  07e3405e5fb963a1d95d5d0ab5bc38bd
+
+
+DS0018 1950 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0018-Data.txt                 2570    3,149     309     1996-06-04  0ab3a4acc5b18d4a4cfe1896141d185a
+
+    00003-0018-Data_map.txt             -       -         -       2000-10-20  400eea19bad6c17a6ca692f5184cd596
+
+    00003-0018-Setup.sas                -       -         -       2000-10-20  d628c74ab93b459d257046d2f8ec0cbd
+
+    00003-0018-Setup.sps                -       -         -       2000-10-20  383899cd04af3cd704e2feddbd0801b1
+
+
+DS0019 1960 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0019-Data.txt                 527     3,187     63      1996-06-04  0df221c780f5bd2e3cc04564d89a6793
+
+    00003-0019-Data_map.txt             -       -         -       2000-10-20  5973e3054a579e2a054a1517a9c446e7
+
+    00003-0019-Setup.sas                -       -         -       2000-10-20  04854783247fbec99fb91b30b5446271
+
+    00003-0019-Setup.sps                -       -         -       2000-10-20  748d7f7a8ccff21b5b749bad280f39a0
+
+
+DS0020 1970 Census (County and State)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0020-Data.txt                 712     3,190     90      1996-06-04  7d48b963a8f768fe433d394808647228
+
+    00003-0020-Data_map.txt             -       -         -       2000-10-20  a4f5de06e5ee45e89b53cb3ff58a1136
+
+    00003-0020-Setup.sas                -       -         -       2000-10-20  740acfc4908c51a55c3815bdd267d44b
+
+    00003-0020-Setup.sps                -       -         -       2000-10-20  75fa689d735a6a7af9638080f3f2b895
+
+
+DS0021 1850 Census Dataset S01 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0021-Data.txt                 1778    33        201     1996-06-04  a43a970011ccfae017bf5dd2672d1ddd
+
+    00003-0021-Data_map.txt             -       -         -       2000-12-18  e8a67f6a783afe43733bd19f9f55d5de
+
+    00003-0021-Setup.sas                -       -         -       2000-12-18  d33e58725d315c48c61a3e5a63d35429
+
+    00003-0021-Setup.sps                -       -         -       2000-12-18  90f6b81058b24ee08836438bbb699528
+
+
+DS0022 1860 Census Dataset S01 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0022-Data.txt                 2129    36        240     1996-06-04  ee73e263ffcdcca853f53bbb2421f4fe
+
+    00003-0022-Data_map.txt             -       -         -       2000-12-18  09d48238b908ef579bc8087c8db9e65e
+
+    00003-0022-Setup.sas                -       -         -       2000-12-18  60083088f09a10b2b8ccf4c97f8eefd1
+
+    00003-0022-Setup.sps                -       -         -       2000-12-18  2c208b6f489763372b80b3e39af26c8b
+
+
+DS0023 1870 Census Dataset S01 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0023-Data.txt                 2822    38        317     1996-06-04  ec0700681f8f88f0d44b00fa836a3d4a
+
+    00003-0023-Data_map.txt             -       -         -       2000-12-18  c60706c9d42d41ea096630cc0a4ab722
+
+    00003-0023-Setup.sas                -       -         -       2000-12-18  8fabcf51a1bba0160ce17beb10f5b2ed
+
+    00003-0023-Setup.sps                -       -         -       2000-12-18  31ae62c669fa48838535a298acd7cbc8
+
+
+DS0024 1870 Census Dataset S02 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0024-Data.txt                 2039    38        230     1996-06-04  4343b6dcc9ed6bffda6130062e13b351
+
+    00003-0024-Data_map.txt             -       -         -       2000-12-18  f4eb4d13752a9360c9927c5416249c7e
+
+    00003-0024-Setup.sas                -       -         -       2000-12-18  623beb916926d53a8750bc9dd8f0a2f6
+
+    00003-0024-Setup.sps                -       -         -       2000-12-18  18227f092b0a687caa0628a6200e5e00
+
+
+DS0025 1870 Census Dataset S03 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0025-Data.txt                 2552    38        287     1996-06-04  b9a9c5d7e537c03479978b8b524c6abb
+
+    00003-0025-Data_map.txt             -       -         -       2000-12-18  039ac7188b50ee09d6b65ed10b7ba1eb
+
+    00003-0025-Setup.sas                -       -         -       2000-12-18  4d0dcfbcb34d3693423163cce71723e8
+
+    00003-0025-Setup.sps                -       -         -       2000-12-18  b06425bd210dee3234ea6dd3a1b29c55
+
+
+DS0026 1880 Census Dataset S01 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0026-Data.txt                 3524    38        395     1996-06-04  be10d0e0877ff75444460a60ed166130
+
+    00003-0026-Data_map.txt             -       -         -       2000-12-18  1c61e6fe3f7b9aa6876b36a6c5c57aaa
+
+    00003-0026-Setup.sas                -       -         -       2000-12-18  2da3d6d13ec3b1f4f60ff9f0cb506ed8
+
+    00003-0026-Setup.sps                -       -         -       2000-12-18  0b07216da5ef53570cd3ce1c5e041ea9
+
+
+DS0027 1880 Census Dataset S02 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0027-Data.txt                 3533    38        396     1996-06-04  e597566658bc352615687cdfbf0e9690
+
+    00003-0027-Data_map.txt             -       -         -       2000-12-18  0e9c14d78366fcb28fa951a3e2c408da
+
+    00003-0027-Setup.sas                -       -         -       2000-12-18  3f029f89c90c41a43c44fd94d779474e
+
+    00003-0027-Setup.sps                -       -         -       2000-12-18  7565d1aaf57b7e6a3a2d15e38be31887
+
+
+DS0028 1890 Census Dataset S01 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0028-Data.txt                 2300    45        259     1996-06-04  933966191fe5402a7fd98726e240c0f5
+
+    00003-0028-Data_map.txt             -       -         -       2000-12-18  a4079ef205e5060c42867dab9ad2294f
+
+    00003-0028-Setup.sas                -       -         -       2000-12-18  c190e5ee280b30ee95e3eb6c25e7a695
+
+    00003-0028-Setup.sps                -       -         -       2000-12-18  276a6b8cfef216175192891c7306c314
+
+
+DS0029 1900 Census Dataset S01 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0029-Data.txt                 158     45        21      1996-06-04  adf7ab90749dd996ed0777bc0ad9d0b6
+
+    00003-0029-Data_map.txt             -       -         -       2000-12-18  ea918ce9b3792f43abaaabaef7c3a53a
+
+    00003-0029-Setup.sas                -       -         -       2000-12-18  e4785c291a8d2f4592d7fd343bc65af3
+
+    00003-0029-Setup.sps                -       -         -       2000-12-18  5a549fb56147d56274d508bda17724ec
+
+
+DS0030 1910 Census Dataset S01 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0030-Data.txt                 1094    48        125     1996-06-04  5e09a5375bd6eda1a6490d9ed93b6de3
+
+    00003-0030-Data_map.txt             -       -         -       2000-12-18  31997025a5fda16025e2bd06676bb913
+
+    00003-0030-Setup.sas                -       -         -       2000-12-18  1a42933504b6afe6a2743d5fbafb8bea
+
+    00003-0030-Setup.sps                -       -         -       2000-12-18  af85e10c115f1e6617f3e8acec67a7f7
+
+
+DS0031 1920 Census Dataset S01 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0031-Data.txt                 1508    48        171     1996-06-04  3f0c50cecd68d0ff45d8e37d8b80511a
+
+    00003-0031-Data_map.txt             -       -         -       2000-12-18  0948f84286193112e9eb8c1522d4ad4d
+
+    00003-0031-Setup.sas                -       -         -       2000-12-18  421bbc6549f8d826ab4a5ecdaafc6e53
+
+    00003-0031-Setup.sps                -       -         -       2000-12-18  bc001a95c315c52bb59182f2212b1676
+
+
+DS0032 1930 Census Dataset S01 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0032-Data.txt                 311     48        38      1996-06-04  b3adb639d4077e580fe12544f94b7151
+
+    00003-0032-Data_map.txt             -       -         -       2000-12-18  af310b606c7e15c7f565d87c38f99b55
+
+    00003-0032-Setup.sas                -       -         -       2000-12-18  97e79e98e1e70f29ca88f07adc53ca71
+
+    00003-0032-Setup.sps                -       -         -       2000-12-18  aad33dd69cdcd92e9cb7fe8973d0bfb5
+
+
+DS0033 1940 Census Dataset S01 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0033-Data.txt                 266     48        33      1996-06-04  ddb2cffc198b7f281c955f01bf310b9b
+
+    00003-0033-Data_map.txt             -       -         -       2000-12-18  7dcdc80e0c565008cfb5cf1111f83776
+
+    00003-0033-Setup.sas                -       -         -       2000-12-18  950edf84552a573f1e8b2cf3813de1d5
+
+    00003-0033-Setup.sps                -       -         -       2000-12-18  d965838ee1ad1a8e16786368a6f3893e
+
+
+DS0034 1950 Census Dataset S01 (State Only)
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    00003-0034-Data.txt                 302     48        37      1996-06-04  44b81e6d06a32d0605d1a457c9176fb5
+
+    00003-0034-Data_map.txt             -       -         -       2000-12-18  3aa9d6c3342707b3005bf39f75cc50ba
+
+    00003-0034-Setup.sas                -       -         -       2000-12-18  42774d63c7e180dbf4b24a7ae3ec2508
+
+    00003-0034-Setup.sps                -       -         -       2000-12-18  21dd140735500b9a8b8fc787fac5e2e1
+
+
+Version History
+
+2005-12-22 All files were removed from dataset 35 and flagged as study-
+level files, so that they will accompany all downloads.
