@@ -58,6 +58,16 @@ fontsize: 11pt
 
 ## Correlation between variables from spss file and states1890 - to find which ones match (match state names first)
 ## Also be sure to do the Euclidean distance - correlation is pretty likely anyways because it is a state-to-state, and proportionally the numbers in different states for various variables will be similar. 
+
+## NOTES DURING WRITING : 
+  # How do I rotate images? (.pdf from figures folder)
+  # How do I get the images to not take up an entire page (ugh)
+  # Should I write a function to combine multiple .csv files with different variables from the same year to be exported?
+  # Could also write a function to combine multiple different .csv files with varying distinctions for the same demographic group over all time
+      # This one could also just be suggesting "use full_join"
+  # WTF is the plural of census?
+  # Should I do a percentage of total population graphic as well? Perhaps following the abolition of slavery in 1850, this would be something interesting to investigate.
+  
 ```
 
 \section{Introduction}  
@@ -86,7 +96,8 @@ The University of Virginia Library hosted a "Historical Census Browser" for many
 
 The University of Virginia Libraries website now directs users to "Social Explorer" or the "National Historical Geographic Information System" (NHGIS) website. Social Explorer, which is populated with the ICPSR 2896 data, requires that users pay to use (or use through library access from a library who has paid for it), and  does not offer full download. NHGIS, hosted through the University of Minnesota, is very difficult for users to navigate when looking for specific information across multiple years. The Institute for Social Research at the University of Michigan (ICPSR), has the full ICPSR 2896 data set, split into 106 separate data sets, but requires that users be a part of a member institution, and requires users to agree that they will not distribute the information in any way after gaining access to it. It also does not have any browser function for users to look at the data unless they download the entire file for each year, in either a SAS, SPSS, ASCII, or Stata set-up.  
 
-None of the aforementioned resources provide the full advantages that the Historical Census Browser offered: a free-to-use and user-friendly data browser that allows users to choose which data they are interested in using, and download the complete (aggregated) records for their own independent use. Although the Historical Census Browser data is now dated based on the existence of an updated, cross-checked version of the decennial census through ICPSR (2896), it is for the most part accurate and allows for free and open use for researchers and others alike.   
+None of the aforementioned resources provide the full advantages that the Historical Census Browser offered: a free-to-use and user-friendly data browser that allows users to choose which data they are interested in using, and download the complete (aggregated) records for their own independent use. Although the Historical Census Browser data is now dated based on the existence of an updated, cross-checked version of the decennial census through ICPSR (2896), it is for the most part accurate and allows for free and open use for researchers and others alike. _This is a bad sentence, figure out a better way to state this._  
+
 
 
 
@@ -95,38 +106,48 @@ None of the aforementioned resources provide the full advantages that the Histor
 \subsection{Data}  
 Although the county-level data had already been removed from the website, the state-level aggregated records for each decennial census from 1790 through 1960 were captured from the website in September of 2016 and saved as raw data with the intent to create a resource for R users that allowed the same main functionalities of the original University of Virginia Historical Census Browser, streamlined for easy data searches and data management.  
 
-The majority of files for the decennial censuses (sp?) were complete upon capture from the website. However, there were two years of census data that are missing some column names and thus are unverified data. For the 1890 and 1920 censuses (sp?), columns were compared to all columns from ICPSR 02896 5 data files by both correlation and Euclidean distance, and thus some columns were able to be correctly identified.  
+The majority of files for the decennial censuses (sp?) were complete upon capture from the website. However, there were two years of census data that are missing some column names and thus are unverified data. For the 1890 and 1920 censuses (sp?), columns were compared to all columns from ICPSR 02896 and ICPSR 3 data files by both correlation and Euclidean distance, and thus some columns were able to be correctly identified.  
 
 _Describe this process in more detail once you actually get this shit figured out. How many columns were correctly matched? How many weren't? Were we able to at least get a foothold on which columns go where in the excel spreadsheet after identifying a couple of them?_  
 
+Each year of the dataset began in a separate file, with rows being each State, each column being a demographic variable, and values being state-aggregated counts of number of people in that category. Each state was given a label `Type` as either a State or Territory, as some U.S. territories participated in the decennial census before they received full statehood. Each individual file can be found as `states` followed by the year of the census, (e.g. `states1790`) in this package. Each of these datasets were combined into one list, `stateslist`, which is the list of data that is used to populate the census browser.  
 
 
 
 \subsection{Description}  
 
+This package includes the state-aggregated data for each individual year, as well as a list of all of the years together. The intended interaction with these data sources is via the Shiny application, `Get Your Data`. This interactive Shiny application presents the user with two options - focusing on a single year of the census, found in the `Single Year` tab, or focusing on multiple years at once, found in the `Multiple Years` tab.  
+
+The `Single Year` tab allows users to choose which year they are interested in from a drop-down menu, as well as up to two variables of interest they want to search for within the data for that year. For example, if a user is interested in the prevalence of farms in 1860, they can select 1860 and then search for "farms" in the first "Variable of Interest" spot (see Figure). Users can then see a complete list of all variable names in that particular year that have "farms" in their title. With this list now available, users can select each variable they want by clicking on it. Once users have selected all variables they want to download data for, clicking on the "Download Filtered Data" button will open a window in which the user can choose a file name and directory location for saving the resulting csv file. Variables will not remain selected if the user chooses to change their search term or add a second search term. However, if the user has interest in many separate variables that require different search terms, it is quite easy to combine multiple csv files in R once they have been downloaded. _Should I write a function for this?? To be an exported function within the package? That seems like a good idea..._  The variables `STATE`, `YEAR`, `TOTAL.POPULATION`, and `TYPE` will always be included in the resulting csv file, whether the user selects them or not.   
 
 
-- What the package includes and what capabilities the Shiny app has  
+![The resulting view of a search for "farms" in the 1860 U.S. Census on the Single Year tab of the Get Your Data app.](./figures/app-sshot-single-year.pdf)  
+
+The `Multiple Years` tab allows users to look for variables over a range of years. It offers all decennial censuses (sp?) from 1790 to 1960, and offers the same search tool as before, but only allows users to narrow down results by one search term rather than the two provided in the `Single Year` tab. Users can select the range of years they are interested in by using the slider tool to specify their range of interest, and subsequently use the "Variable of Interest" search bar to narrow down their results. The results, being two-dimensional rather than just a list of available variables, are presented somewhat differently in the `Multiple Years` tab. Each available variable is listed along the left side of the interface, and each selected year is presented across the top as a column in the table. For each variable in the table, an `X` indicates for which years that particular variable is present. Far to the right, there is a column which denotes a count how many of the selected years have that particular variable. Users can choose to order the results by most years present to least years present, if they choose. This is where it is important to keep in mind that variable names for different demographic groups change drastically over the course of the decennial census, and thus users will want to be cognizant of varying search terms that may need to be checked. _Should I still try to add a feature that pops up when they look for certain search terms? This seems hard to do without singling out a few groups, since pretty much every group has changed terminologies over time._  
+
+Similar to the output file of the `Single Year` tab, once a user selects all variables they are interested in, they can select the "Download Filtered Data" button to download a csv file of the chosen variables for all states across the selected years. For years in the selected range that don't have a particular variable, the csv file will be filled in with NA values, which allows the structure of the data table to remain intact although there are some year-variable combinations that do not exist in the data. As mentioned previously, because of the changing nature of variable names in the decennial census, users may have to search for several separate terms, download each file separately, and combine them once the files are downloaded. However, they are fairly easy to combine because the structure ensures that key variables needed to add on new columns are in place, regardless of which variables users choose to download.  _Should I also write a function to combine different data tables from different year ranges / different variables?_ This results in all information about all variables of interest across the years of interest being together in one structured data table. Users can easily filter on specific variables or years while still maintaining the original full data set, which is advantageous for visualizing how a demographic group changes over time.  
+
 
 
 \subsection{Example}  
 
-In the Shiny app, we can choose to focus in on a single year of the census or look for data across a range of years. 
-We can easily use the "Get Your Data" Shiny app to search for a topic of interest, find the data we want, download state-level information, and tell a visual story of populations in the United States over time. To demonstrate the all-knowing power of this Shiny app, we will walk through an example on the history of the African American population in the United States. We begin by running the Shiny app: 
+We can easily use the "Get Your Data" Shiny app to search for a topic of interest, find the data we want, download state-level information, and tell a visual story of populations in the United States over time. To demonstrate the utility of this Shiny app, we will walk through an example on the history of the African American population in the United States. We begin by running the Shiny app: 
 
 ```{r, eval=FALSE}
 library(shiny)
 shiny::runGitHub("kiegan/censusbrowseR", subdir = "shiny")
 ```
-The default set of years is 1790 to 1920. However, we can easily expand the slider range to be able to explore data across all the available years, 1790 to 1960. We can also order by how the "Total" column, or how many of years each of the variables appear in. These variables appear on the left side of the table, as rows.  
+
+The default set of years is 1790 to 1920. However, we can easily expand the slider range to be able to explore data across all the available years.  
 
 ![An example of available column names for the years 1790 to 1880.](./figures/app-sshot-1790-to-1880.pdf)  
 
 The available variable names here are already ordered by how many years they appear in, so we can see right off the bat that we have a serious lack of variable continuity. The identifying variables that appear each year are `YEAR`, `STATE`, `TOTAL.POPULATION`, and `TYPE`. That means the total number of times they appear is 10, the number of census years we are looking at. After that, the next most common variable only appears in 4 of the 10 years we have chosen. That means we are up against some pretty significant hurdles to track any demographic group over time.  
 
-For now, we are focusing in on African Americans throughout U.S. history, which means we need to start with the term `SLAVE` in the early years of the U.S. census. The vast majority of African Americans were slaves when the United States was founded, so variables that count the number of slaves are important variables to have in order to get a grasp on the African American population in early U.S. history. 
+For now, we are focusing in on African Americans throughout U.S. history, which means we need to start with the term `SLAVE` in the early years of the U.S. census. The vast majority of African Americans were slaves when the United States was founded, so variables that count the number of slaves are important variables to have in order to get a grasp on the African American population in early U.S. history. It is important to note that the `SLAVE` categorization is the only term the U.S. census had related to African Americans in the early years of the census, so it is also the only source of information we have for that time period.  
 
-Once we have our range of years chosen, we simply enter a search term. Searching for `SLAVE` gives us a list of all the possible variable names across all years, and we can again sort by how how many years each variable name appears in. Users are then able to click each of the variables they are interested in, and select `Download Data` in order to download a .csv file with the data for all states in the selected years. This .csv file will also always include the columns `YEAR`, `STATE`, `TOTAL.POPULATION`, and `TYPE`, even if they are not selected by the user.  
+
+Once we have our range of years chosen, we simply enter a search term. Searching for `SLAVE` gives us a list of all the possible variable names across all years, and we can again sort by how how many years each variable name appears in. The results of this search can be seen in Figure __. 
 
 For this example, I executed three separate searches within the `Get Your Data` app, using three different terms that the census used to categorize African Americans at different points in the decennial census. This gave me three separate .csv files, which I was able to easily combine using `full_join` from the `dplyr` package. Now, for an entire demographic group, all of the state-aggregated population counts are together in one data frame, although different terms are used at different points in time.  
 
@@ -150,10 +171,11 @@ data_full <- full_join(data_full, data_n, by = c("Year", "State", "TOTAL.POPULAT
 ```
 
 
-We can now begin to explore this data. We can very easily plot state-level counts of the `SLAVES` variable for the year 1790. We recommend the use of the `USAboundaries` package in concert with this census browser, as it provides the most accurate boundaries of the United States at any given date, and it is important to realize that values in the data are for the states _as they were_ during that census, not the current (2017) boundaries of the states.  
+We can now begin to explore this data. For any particular year, we can subset the total data set to include only information for that year, so that we can more quickly determine which variables we have available for that particular year. For example, after subsetting on the year 1790, we can very easily plot state-level counts of the `SLAVES` variable for that year. Use of the `USAboundaries` package in concert with this census browser is recommended, as it provides the most accurate boundaries of the United States at any given date. Just as variable names and the make-up of the census rapidly changed throughout the United States' history, the boundaries of the states and territories changed as well. The recorded state-aggregated values in the dataset are for the states as they were during that census year, and thus sometimes include demographic counts from areas that differ from the current defined boundaries.  
 
 
-```{r chunk-1790-map, echo = FALSE, message = FALSE, warning = FALSE, fig.pos = "H", fig.cap = "Total number of slaves per state in 1790, plotted on a continuous log scale. State boundaries for July 4, 1790 were gathered from `USAboundaries` package."}
+
+```{r chunk-1790-map, fig.width = 5, fig.height = 4.5, echo = FALSE, message = FALSE, warning = FALSE, fig.pos = "H", fig.cap = "Total number of slaves per state in 1790, plotted on a continuous log scale. State boundaries for July 4, 1790 were gathered from `USAboundaries` package."}
 map_states_1790 <- us_boundaries("1790-07-04")
 
 m1790_df <- fortify(map_states_1790, region = "name")
@@ -171,12 +193,12 @@ data_full_wmap %>%
   filter(Year == 1790) %>% 
   ggplot(aes(x = long, y = lat, group = group)) + 
   geom_polygon(aes(fill = log(SLAVES)), colour = "black") + 
-  theme_bw() + theme(legend.title = element_blank()) + labs(title = "1790: Total Slaves (log scale)")
+  theme_bw() + theme(legend.title = element_blank()) + labs(title = "Total Slaves (log scale)")
 ```
 
 We now have a visualization of the slave population in the United States in 1790, and we can easily look at subsequent years of the decennial census to see how the population changes over time.  
 
-If we jump to the year 1820, the census now includes a count of `TOTAL.FREE.COLORED.PERSONS`, as now there are citizens who are African American or other minorities that are free, and not slaves. (yay!!!!)
+If we jump to the year 1820, and again filter on that particular year, we learn new information about the African American population.The census now includes a count of `TOTAL.FREE.COLORED.PERSONS`, as now there are citizens who are African American or other minorities that are free, and not slaves. At this time, many minorities were grouped together in the "colored persons" category, and as before, we do not have any other record for African Americans except this categorization and the "slaves" categorization. However, since the 1820 census included records for both `TOTAL.FREE.COLORED.PERSONS` and `TOTAL.SLAVES`, we can also now visualize the percentage of African Americans in each state that were categorized as "free persons". Knowing that both of these variables are available allows us to make a powerful comparison and visualize the growing divide in the United States at that time.  
 
 
 
@@ -223,7 +245,7 @@ grid.arrange(p1_1820, p2_1820, p3_1820, ncol = 2)
 ```
 
 
-Moving forward from there, we can start to see interesting patterns once slavery is abolished. In the year 1850, we can also start investigating what the total African American population looks like in each state, rather than just the slave population and free population.  
+Moving forward from there, we can glean even more information about this population. After subsetting on the year 1850, we see that although there is still a `TOTAL.SLAVES` column in the record, many states did not record this variable. This is due to the abolition of slavery and these states being "free states" already. We can transform these `NA` values into zeros to account for this difference in the data and allow us to still calculate the percentages of free African Americans. Starting in 1850, we can also start investigating what the total African American population looks like in each state, rather than just the slave population and free population. This is particularly interesting as slavery is abolished and some migration begins to occur out of certain areas. The balance of the total African American population in each state begins to change somewhat as this post-slavery period begins.  
 
 ```{r, r, fig.width = 10, fig.height = 9, echo = FALSE, message = FALSE, fig.pos = "H", fig.cap = "Number of Slaves, Number of Free Colored Persons, Percentage of Free Colored Persons, and Total African American Persons in 1850."}
 map_states_1850 <- us_boundaries("1850-07-04")
@@ -275,7 +297,7 @@ p4_1850 <- data_full_wmap %>%
   filter(Year == 1850) %>%
   ggplot(aes(x = long, y = lat, group = group)) + 
   geom_polygon(aes(fill = log(TOTAL.FREE.COLORED.POPULATION + TOTAL.SLAVES.ZERO)), colour = "black") + 
-  theme_bw() + labs(title = "Total African American Persons, Slave or Free (log scale)") + 
+  theme_bw() + labs(title = "Total African American Persons (log scale)") + 
   theme(legend.title = element_blank())
 
 grid.arrange(p1_1850, p2_1850, p3_1850, p4_1850, ncol = 2)
