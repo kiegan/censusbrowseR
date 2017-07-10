@@ -73,6 +73,12 @@ shinyApp(
       years <- as.integer(seq(input$range[1], input$range[2], by = 10))
       varvec <- c()
       is_present <- data.frame()
+      if(toupper(input$topic3) == "SLAVE" | toupper(input$topic3) == "NEGRO" | toupper(input$topic3) == "COLORED"){
+        showNotification("Notice to user: This search term may need to be changed for different years.", type = "warning", duration = NA)
+      }
+      if(toupper(input$topic3) == "AGE"){
+        showNotification("Notice to user: The age groups recorded change for different years.", type = "warning", duration = NA)
+      }
       for (i in 1:length(years)){
         variables <- names(stateslist[[paste0("X",years[i])]])
         variable1 = variables[grep(toupper(input$topic3), variables)]
@@ -90,6 +96,7 @@ shinyApp(
       table <- data.frame(cbind(varvec_u, is_present_01, rowSums(is_present)))
       
       names(table) <- c("Available_Colnames", years, "Total")
+
       table 
     })
     
