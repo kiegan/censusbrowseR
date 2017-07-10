@@ -21,7 +21,7 @@ shinyApp(
     tabPanel("Multiple Years",
              inputPanel(
                sliderInput("range", label = "Range of Years",
-                           min = 1790, max = 1960, step = 10, sep = "", value = c(1790, 1820)),
+                           min = 1790, max = 1960, step = 10, sep = "", value = c(1790, 1880)),
                
                textInput("topic3", label = "Variable of Interest:",
                          value = "")),

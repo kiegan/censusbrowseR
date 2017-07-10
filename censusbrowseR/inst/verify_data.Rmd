@@ -3,16 +3,37 @@ title: "verify data"
 output: html_document
 ---
 
+
 ```{r}
 library(tidyverse)
 library(foreign)
-icpsr_1890 <- read.spss("../ICPSR_02896 5/DS0019/02896-0019-Data.sav")
+icpsr_1890 <- read.spss(file = "../ICPSR_02896 5/DS0019/02896-0019-Data.sav")
 icpsr_1890 %>% glimpse()
 icpsr_1890_df <- as.data.frame(icpsr_1890)
 icpsr_1890_df %>% glimpse()
 states1890 %>% glimpse()
 
-icpsr_3_1890 <- read.table("../ICPSR_00003/DS0011/00003-0011-Data.txt")
+icpsr_3_1890 <- readr::read_fwf(file = "../ICPSR_00003/DS0028/00003-0028-Data.txt", 
+                                col_positions = 
+                                  fwf_positions(start = c(1,2,5,7,9,26,30,33,seq(42, 2292, by = 9)),
+                                                end = c(1,4,6,8,25,29,32,41,seq(50, 2300, by = 9))))
+
+names(icpsr_3_1890) <- c("DATA TYPE", "YEAR", "ICPR STATE CODE", "CNGSL DIST NUMBER", "COUNTY NAME", "CTLG ENTRY NMBR",
+                         "TABLE NMBR", "890TTL POP", "890TTL POP 1880", "890URBAN POP", "890URBAN POP 1880", 
+                         "890NMBR NG", "890NMBR MULATTOES", "890NMBR QUADROONS", "890NMBR OCTAROONS", 
+                         "890NMBR CHINESE", "890NMBR JAPANESE", "890NMBR CVLZD INDN", "890N.W N.B.P MAINE", 
+                         "890N.W N.B.P NW.H", "890N.W N.B.P VERMONT", "890N.W N.B.P MSCHSTS",
+                         "890N.W N.B.P RHODE ISLD", "890N.W N.B.P CNCTCT", "890N.W N.B.P NEW YORK",
+                         "890N.W N.B.P NEW JERSEY", "890N.W N.B.P PA", "890N.W N.B.P DELAWARE", 
+                         "890N.W N.B.P MARYLAND", "890N.W N.B.P D.C", "890N.W N.B.P VA", "890N.W N.B.P WST VA",
+                         "890N.W N.B.P NTH.C", "890N.W N.B.P STH.C", "890N.W N.B.P GEORGIA", "890N.W N.B.P FLORIDA",
+                         "890N.W N.B.P OHIO", "890N.W N.B.P INDIANA", "890N.W N.B.P ILLINOIS", "890N.W N.B.P MICHIGAN",
+                         "890N.W N.B.P WISCONSIN", "890N.W N.B.P MINNESOTA", "890N.W N.B.P IOWA", 
+                         "890N.W N.B.P MISSOURI", "890N.W N.B.P NTH.D", "890N.W N.B.P STH.D", "890N.W N.B.P NEBRASKA",
+                         "890N.W N.B.P KANSAS", "890N.W N.B.P KENTUCKY", "890N.W N.B.P TENNESSEE", 
+                         "890N.W N.B.P ALABAMA", "890N.W N.B.P MSSPI", "890N.W N.B.P LOUISIANA", "890N.W N.B.P TEXAS",
+                         "890N.W N.B.P INDN TRTRY", "890N.W N.B.P OKLAHOMA", "890N.W N.B.P ARKANSAS", "890N.W N.B.P MONTANA",
+                         "890N.W N.B.P WYOMING", "890N.W N.B.P COLORADO", "890N.W N.B.P NEW MEXICO", names(icpsr_3_1890[62:259]))
 ```
 
 We need to match up state names in the icpsr_1890 dataset and the states1890 dataset and then look for correlations between each of the variables to determine how the columns match up!  
@@ -31,18 +52,18 @@ cor_matches_df$max_cor_colnm <- as.character(cor_matches_df$max_cor_colnm)
 cor_matches_df$min_dist_colnm <- as.character(cor_matches_df$min_dist_colnm)
 
 for (i in 262:428){
-  corr_vals <- cor(corr_df[,i], corr_df[,3:258])
+  corr_vals <- cor(corr_df[,i], corr_df[,8:258])
   cor_matches_df$max_cor_val[i-261] <- max(corr_vals)
   
   cor_matches_df$max_cor_colnm[i-261] <- 
     ifelse(is.na(cor_matches_df$max_cor_val[i-261]), "NA", 
-           colnames(corr_df)[3:258][which.max(corr_vals)])
+           colnames(corr_df)[8:258][which.max(corr_vals)])
   
-  dist_vals <- sqrt(colSums((corr_df[,i] - corr_df[,3:258])^2))
+  dist_vals <- sqrt(colSums((corr_df[,i] - corr_df[,8:258])^2))
   cor_matches_df$min_dist_val[i-261] <- min(dist_vals)
   cor_matches_df$min_dist_colnm[i-261] <- 
     ifelse(is.na(cor_matches_df$min_dist_val[i-261]), "NA", 
-           colnames(corr_df)[3:258][which.min(dist_vals)])
+           colnames(corr_df)[8:258][which.min(dist_vals)])
 }
 ## add in euclidean distance - also consider the size of the difference, not just the correlation (no units!)
 

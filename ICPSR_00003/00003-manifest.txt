@@ -13,9 +13,9 @@ Study-level Documentation
     Filename                            Record  Record    Var.    Date        MD5
                                         Length  Count     Count   Updated     Checksum
 
-    00003-related_literature.txt        -       -         -       2017-06-21  -
+    00003-related_literature.txt        -       -         -       2017-07-04  -
 
-    00003-manifest.txt                  -       -         -       2017-06-22  -
+    00003-manifest.txt                  -       -         -       2017-07-05  -
 
     00003-Documentation.pdf             -       -         -       2001-09-19  44afda5ba5e5b56b3f8ac155c7e6dfc7
 

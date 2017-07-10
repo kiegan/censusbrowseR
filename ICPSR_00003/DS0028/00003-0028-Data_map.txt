@@ -1,0 +1,2217 @@
+DATA MAP FOR HISTORICAL, DEMOGRAPHIC...UNITED STATES, 1890 DATASET S01 (STATE)  
+                     [ICPSR 0003, DATASET 0028]                                 
+                                                                                
+                                                                                
+THE FOLLOWING IS A LIST OF ABBREVIATIONS THE USER MAY ENCOUNTER IN THIS FILE:   
+                                                                                
+                                                                                
+    COL   = COLUMN LOCATION FOR CARD-IMAGE DATA.                                
+                                                                                
+    LOC   = LOCATION FOR OSIRIS OR LOGICAL RECORD LENGTH DATA.                  
+                                                                                
+    NDEC  = NUMBER OF DECIMAL DIGITS.                                           
+            (THIS IS OMITTED IF THERE ARE NO DECIMAL DIGITS.)                   
+                                                                                
+    MD    = MISSING DATA CODE.                                                  
+                                                                                
+    VAR   = VARIABLE NUMBER.                                                    
+                                                                                
+    REF   = REFERENCE NUMBER; NORMALLY THE SAME AS VARIABLE NUMBER.             
+                                                                                
+    WIDTH = FIELD WIDTH OF THE VARIABLE.                                        
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                 DUBESTER 0177:  ELEVENTH DECENNIAL CENSUS OF THE               
+                                 UNITED STATES, 1890:  VOL. I, REPORT ON THE    
+                                 POPULATION OF THE UNITED STATES.               
+                                 (WASHINGTON, D.C.:  1895).                     
+                                                                                
+                 DUBESTER 0188:  ELEVENTH DECENNIAL CENSUS OF THE               
+                                 UNITED STATES, 1890:  VOL. V, REPORTS ON THE   
+                                 STATISTICS OF AGRICULTURE IN THE               
+                                 UNITED STATES.  (WASHINGTON, D.C.:  1895).     
+                                                                                
+                                                                                
+                 ----                                                           
+                                                                                
+              VAR 0001      DATA TYPE                   NO MISSING DATA CODES   
+              REF 0001         LOC    1 WIDTH  1                                
+                                                                                
+                                                                                
+                 DATA TYPE                                                      
+                 ---------                                                      
+                                                                                
+                     C.  COUNTY DATA                                            
+                     S.  STATE DATA                                             
+              ...............................................................   
+              VAR 0002      YEAR                        NO MISSING DATA CODES   
+              REF 0002         LOC    2 WIDTH  3                                
+                                                                                
+                                                                                
+                 YEAR TO WHICH DATA ARE RELEVANT                                
+                 -------------------------------                                
+                                                                                
+                     890.  1890                                                 
+              ...............................................................   
+              VAR 0003      ICPR STATE CODE             NO MISSING DATA CODES   
+              REF 0003         LOC    5 WIDTH  2                                
+                                                                                
+              ...............................................................   
+              VAR 0004      CNGSL DIST NUMBER           NO MISSING DATA CODES   
+              REF 0004         LOC    7 WIDTH  2                                
+                                                                                
+                                                                                
+                 CONGRESSIONAL DISTRICT NUMBER                                  
+                 -----------------------------                                  
+              ...............................................................   
+              VAR 0005      COUNTY NAME                 NO MISSING DATA CODES   
+              REF 0005         LOC    9 WIDTH 17                                
+              ...............................................................   
+              VAR 0006      CTLG ENTRY NMBR             NO MISSING DATA CODES   
+              REF 0006         LOC   26 WIDTH  4                                
+                                                                                
+                                                                                
+                 CATALOG ENTRY NUMBER                                           
+                     "CATALOG OF UNITED STATES CENSUS PUBLICATIONS,             
+                     1790-1945", PREPARED BY HENRY J. DUBESTER                  
+                 --------------------------------------------------             
+              ...............................................................   
+              VAR 0007      TABLE NMBR                  NO MISSING DATA CODES   
+              REF 0007         LOC   30 WIDTH  3                                
+                                                                                
+                                                                                
+                 TABLE NUMBER                                                   
+                 ------------                                                   
+              ...............................................................   
+              VAR 0008      890TTL POP                         MD=-1 OR LE -2   
+              REF 0008         LOC   33 WIDTH  9                                
+                                                                                
+                                                                                
+                 TOTAL POPULATION, 1890                                         
+                 (1890) SOURCE: DUB. 177, UNNUM. TABLE, P. LXVIII               
+                 ------------------------------------------------               
+              ...............................................................   
+              VAR 0009      890TTL POP 1880                    MD=-1 OR LE -2   
+              REF 0009         LOC   42 WIDTH  9                                
+                                                                                
+                                                                                
+                 TOTAL POPULATION, 1880                                         
+                 (1880) SOURCE: DUB. 177, UNNUM. TABLE, P. LXVIII               
+                 ------------------------------------------------               
+              ...............................................................   
+              VAR 0010      890URBAN POP                       MD=-1 OR LE -2   
+              REF 0010         LOC   51 WIDTH  9                                
+                                                                                
+                                                                                
+                 URBAN POPULATION, 1890                                         
+                 (1890) SOURCE: DUB. 177, UNNUM. TABLE, P. LXVIII               
+                 ------------------------------------------------               
+              ...............................................................   
+              VAR 0011      890URBAN POP 1880                  MD=-1 OR LE -2   
+              REF 0011         LOC   60 WIDTH  9                                
+                                                                                
+                                                                                
+                 URBAN POPULATION, 1880                                         
+                 (1880) SOURCE: DUB. 177, UNNUM. TABLE, P. LXVIII               
+                 ------------------------------------------------               
+              ...............................................................   
+              VAR 0012      890NMBR NG                         MD=-1 OR LE -2   
+              REF 0012         LOC   69 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NEGROES                                              
+                 (1890) SOURCE: DUB. 177, TABLE 10                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0013      890NMBR MULATTOES                  MD=-1 OR LE -2   
+              REF 0013         LOC   78 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF MULATTOES                                            
+                 (1890) SOURCE: DUB. 177, TABLE 10                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0014      890NMBR QUADROONS                  MD=-1 OR LE -2   
+              REF 0014         LOC   87 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF QUADROONS                                            
+                 (1890) SOURCE: DUB. 177, TABLE 10                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0015      890NMBR OCTAROONS                  MD=-1 OR LE -2   
+              REF 0015         LOC   96 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF OCTOROONS                                            
+                 (1890) SOURCE: DUB. 177, TABLE 10                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0016      890NMBR CHINESE                    MD=-1 OR LE -2   
+              REF 0016         LOC  105 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF CHINESE                                              
+                 (1890) SOURCE: DUB. 177, TABLE 10                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0017      890NMBR JAPANESE                   MD=-1 OR LE -2   
+              REF 0017         LOC  114 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF JAPANESE                                             
+                 (1890) SOURCE: DUB. 177, TABLE 10                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0018      890NMBR CVLZD INDN                 MD=-1 OR LE -2   
+              REF 0018         LOC  123 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF CIVILIZED INDIANS                                    
+                 (1890) SOURCE: DUB. 177, TABLE 10                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0019      890N.W N.B.P MAINE                 MD=-1 OR LE -2   
+              REF 0019         LOC  132 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN MAINE                                                   
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0020      890N.W N.B.P NW.H                  MD=-1 OR LE -2   
+              REF 0020         LOC  141 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN NEW HAMPSHIRE                                           
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0021      890N.W N.B.P VERMONT               MD=-1 OR LE -2   
+              REF 0021         LOC  150 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN VERMONT                                                 
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                                                                                
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0022      890N.W N.B.P MSCHSTS               MD=-1 OR LE -2   
+              REF 0022         LOC  159 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN MASSACHUSETTS                                           
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0023      890N.W N.B.P RHODE ISLD            MD=-1 OR LE -2   
+              REF 0023         LOC  168 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN RHODE ISLAND                                            
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0024      890N.W N.B.P CNCTCT                MD=-1 OR LE -2   
+              REF 0024         LOC  177 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PQRENTAGE BORN        
+                     IN CONNECTICUT                                             
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0025      890N.W N.B.P NEW YORK              MD=-1 OR LE -2   
+              REF 0025         LOC  186 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN NEW YORK                                                
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0026      890N.W N.B.P NEW JERSEY            MD=-1 OR LE -2   
+              REF 0026         LOC  195 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN NEW JERSEY                                              
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0027      890N.W N.B.P PA                    MD=-1 OR LE -2   
+              REF 0027         LOC  204 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN PENNSYLVANIA                                            
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0028      890N.W N.B.P DELAWARE              MD=-1 OR LE -2   
+              REF 0028         LOC  213 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN DELAWARE                                                
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0029      890N.W N.B.P MARYLAND              MD=-1 OR LE -2   
+              REF 0029         LOC  222 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN MARYLAND                                                
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0030      890N.W N.B.P D.C                   MD=-1 OR LE -2   
+              REF 0030         LOC  231 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN THE DISTRICT OF COLUMBIA                                
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0031      890N.W N.B.P VA                    MD=-1 OR LE -2   
+              REF 0031         LOC  240 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN VIRGINIA                                                
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0032      890N.W N.B.P WST VA                MD=-1 OR LE -2   
+              REF 0032         LOC  249 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN WEST VIRGINIA                                           
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0033      890N.W N.B.P NTH.C                 MD=-1 OR LE -2   
+              REF 0033         LOC  258 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN NORTH CAROLINA                                          
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0034      890N.W N.B.P STH.C                 MD=-1 OR LE -2   
+              REF 0034         LOC  267 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN SOUTH CAROLINA                                          
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0035      890N.W N.B.P GEORGIA               MD=-1 OR LE -2   
+              REF 0035         LOC  276 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN GEORGIA                                                 
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0036      890N.W N.B.P FLORIDA               MD=-1 OR LE -2   
+              REF 0036         LOC  285 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN FLORIDA                                                 
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0037      890N.W N.B.P OHIO                  MD=-1 OR LE -2   
+              REF 0037         LOC  294 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN OHIO                                                    
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0038      890N.W N.B.P INDIANA               MD=-1 OR LE -2   
+              REF 0038         LOC  303 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN INDIANA                                                 
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0039      890N.W N.B.P ILLINOIS              MD=-1 OR LE -2   
+              REF 0039         LOC  312 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN ILLINOIS                                                
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0040      890N.W N.B.P MICHIGAN              MD=-1 OR LE -2   
+              REF 0040         LOC  321 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN MICHIGAN                                                
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0041      890N.W N.B.P WISCONSIN             MD=-1 OR LE -2   
+              REF 0041         LOC  330 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN WISCONSIN                                               
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0042      890N.W N.B.P MINNESOTA             MD=-1 OR LE -2   
+              REF 0042         LOC  339 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN MINNESOTA                                               
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0043      890N.W N.B.P IOWA                  MD=-1 OR LE -2   
+              REF 0043         LOC  348 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN IOWA                                                    
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0044      890N.W N.B.P MISSOURI              MD=-1 OR LE -2   
+              REF 0044         LOC  357 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IM MISSOURI                                                
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0045      890N.W N.B.P NTH.D                 MD=-1 OR LE -2   
+              REF 0045         LOC  366 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN NORTH DAKOTA                                            
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0046      890N.W N.B.P STH.D                 MD=-1 OR LE -2   
+              REF 0046         LOC  375 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN SOUTH DAKOTA                                            
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0047      890N.W N.B.P NEBRASKA              MD=-1 OR LE -2   
+              REF 0047         LOC  384 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN NEBRASKA                                                
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0048      890N.W N.B.P KANSAS                MD=-1 OR LE -2   
+              REF 0048         LOC  393 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN KANSAS                                                  
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0049      890N.W N.B.P KENTUCKY              MD=-1 OR LE -2   
+              REF 0049         LOC  402 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN KENTUCKY                                                
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0050      890N.W N.B.P TENNESSEE             MD=-1 OR LE -2   
+              REF 0050         LOC  411 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN TENNESSEE                                               
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0051      890N.W N.B.P ALABAMA               MD=-1 OR LE -2   
+              REF 0051         LOC  420 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN ALABAMA                                                 
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0052      890N.W N.B.P MSSPI                 MD=-1 OR LE -2   
+              REF 0052         LOC  429 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN MISSISSIPPI                                             
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0053      890N.W N.B.P LOUISIANA             MD=-1 OR LE -2   
+              REF 0053         LOC  438 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN LOUISIANA                                               
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0054      890N.W N.B.P TEXAS                 MD=-1 OR LE -2   
+              REF 0054         LOC  447 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN TEXAS                                                   
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0055      890N.W N.B.P INDN TRTRY            MD=-1 OR LE -2   
+              REF 0055         LOC  456 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN INDIAN TERRITORY                                        
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0056      890N.W N.B.P OKLAHOMA              MD=-1 OR LE -2   
+              REF 0056         LOC  465 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN OKLAHOMA                                                
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0057      890N.W N.B.P ARKANSAS              MD=-1 OR LE -2   
+              REF 0057         LOC  474 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN ARKANSAS                                                
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0058      890N.W N.B.P MONTANA               MD=-1 OR LE -2   
+              REF 0058         LOC  483 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN MONTANA                                                 
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0059      890N.W N.B.P WYOMING               MD=-1 OR LE -2   
+              REF 0059         LOC  492 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN WYOMING                                                 
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0060      890N.W N.B.P COLORADO              MD=-1 OR LE -2   
+              REF 0060         LOC  501 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN COLORADO                                                
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0061      890N.W N.B.P NEW MEXICO            MD=-1 OR LE -2   
+              REF 0061         LOC  510 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN NEW MEXICO                                              
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0062      890N.W N.B.P ARIZONA               MD=-1 OR LE -2   
+              REF 0062         LOC  519 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN ARIZONA                                                 
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0063      890N.W N.B.P UTAH                  MD=-1 OR LE -2   
+              REF 0063         LOC  528 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN UTAH                                                    
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0064      890N.W N.B.P NEVADA                MD=-1 OR LE -2   
+              REF 0064         LOC  537 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE BORN        
+                     IN NEVADA                                                  
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0065      890N.W N.B.P IDAHO                 MD=-1 OR LE -2   
+              REF 0065         LOC  546 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE             
+                     BORN IN IDAHO                                              
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 --------------------------------------------------             
+              ...............................................................   
+              VAR 0066      890N.W N.B.P WASHINGTON            MD=-1 OR LE -2   
+              REF 0066         LOC  555 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE             
+                     BORN IN WASHINGTON                                         
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 --------------------------------------------------             
+              ...............................................................   
+              VAR 0067      890N.W N.B.P OREGON                MD=-1 OR LE -2   
+              REF 0067         LOC  564 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE             
+                     BORN IN OREGON                                             
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 --------------------------------------------------             
+              ...............................................................   
+              VAR 0068      890N.W N.B.P CALIFORNIA            MD=-1 OR LE -2   
+              REF 0068         LOC  573 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE             
+                     BORN IN CALIFORNIA                                         
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 --------------------------------------------------             
+              ..............................................................    
+              VAR 0069      890N.W N.B.P ALASKA                MD=-1 OR LE -2   
+              REF 0069         LOC  582 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE             
+                     BORN IN ALASKA                                             
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 --------------------------------------------------             
+              ...............................................................   
+              VAR 0070      890N.W N.B.P U.S USPEC             MD=-1 OR LE -2   
+              REF 0070         LOC  591 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE             
+                     BORN IN UNITED STATES (STATE NOT SPECIFIED)                
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 --------------------------------------------------             
+              ...............................................................   
+              VAR 0071      890N.W N.B.P SEA                   MD=-1 OR LE -2   
+              REF 0071         LOC  600 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE             
+                     BORN AT SEA UNDER UNITED STATES FLAG                       
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 --------------------------------------------------             
+              ...............................................................   
+              VAR 0072      890N.W N.B.P ABROAD                MD=-1 OR LE -2   
+              REF 0072         LOC  609 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF NATIVE PARENTAGE             
+                     (UNITED STATES CITIZENS BORN ABROAD)                       
+                 (1890) SOURCE: DUB. 177, TABLE 26                              
+                 --------------------------------------------------             
+              ...............................................................   
+              VAR 0073      890N.W F.B.P MAINE                 MD=-1 OR LE -2   
+              REF 0073         LOC  618 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN MAINE                                              
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0074      890N.W F.B.P NW.H                  MD=-1 OR LE -2   
+              REF 0074         LOC  627 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN NEW HAMPSHIRE                                      
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0075      890N.W F.B.P VERMONT               MD=-1 OR LE -2   
+              REF 0075         LOC  636 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN VERMONT                                            
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0076      890N.W F.B.P MSCHSTS               MD=-1 OR LE -2   
+              REF 0076         LOC  645 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN MASSACHUSETTS                                      
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0077      890N.W F.B.P R.ISLD                MD=-1 OR LE -2   
+              REF 0077         LOC  654 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN RHODE ISLAND                                       
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0078      890N.W F.B.P CNCTCT                MD=-1 OR LE -2   
+              REF 0078         LOC  663 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN CONNECTICUT                                        
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0079      890N.W F.B.P NEW YORK              MD=-1 OR LE -2   
+              REF 0079         LOC  672 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN NEW YORK                                           
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0080      890N.W F.B.P NEW JERSEY            MD=-1 OR LE -2   
+              REF 0080         LOC  681 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN NEW JERSEY                                         
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0081      890N.W F.B.P PA                    MD=-1 OR LE -2   
+              REF 0081         LOC  690 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN PENNSYLVANIA                                       
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0082      890N.W F.B.P DELAWARE              MD=-1 OR LE -2   
+              REF 0082         LOC  699 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN DELAWARE                                           
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0083      890N.W F.B.P MARYLAND              MD=-1 OR LE -2   
+              REF 0083         LOC  708 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN MARYLAND                                           
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0084      890N.W F.B.P D.C                   MD=-1 OR LE -2   
+              REF 0084         LOC  717 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN THE DISTRICT OF COLUMBIA                           
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0085      890N.W F.B.P VA                    MD=-1 OR LE -2   
+              REF 0085         LOC  726 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN VIRGINIA                                           
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0086      890N.W F.B.P WST VA                MD=-1 OR LE -2   
+              REF 0086         LOC  735 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN WEST VIRGINIA                                      
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0087      890N.W F.B.P NTH.C                 MD=-1 OR LE -2   
+              REF 0087         LOC  744 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN NORTH CAROLINA                                     
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0088      890N.W F.B.P STH.C                 MD=-1 OR LE -2   
+              REF 0088         LOC  753 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN SOUTH CAROLINA                                     
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0089      890N.W F.B.P GEORGIA               MD=-1 OR LE -2   
+              REF 0089         LOC  762 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN GEORGIA                                            
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0090      890N.W F.B.P FLORIDA               MD=-1 OR LE -2   
+              REF 0090         LOC  771 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN FLORIDA                                            
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0091      890N.W F.B.P OHIO                  MD=-1 OR LE -2   
+              REF 0091         LOC  780 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN OHIO                                               
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0092      890N.W F.B.P INDIANA               MD=-1 OR LE -2   
+              REF 0092         LOC  789 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN INDIANA                                            
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0093      890N.W F.B.P ILLINOIS              MD=-1 OR LE -2   
+              REF 0093         LOC  798 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN ILLINOIS                                           
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0094      890N.W F.B.P MICHIGAN              MD=-1 OR LE -2   
+              REF 0094         LOC  807 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN MICHIGAN                                           
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0095      890N.W F.B.P WISCONSIN             MD=-1 OR LE -2   
+              REF 0095         LOC  816 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN WISCONSIN                                          
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0096      890N.W F.B.P MINNESOTA             MD=-1 OR LE -2   
+              REF 0096         LOC  825 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN MINNESOTA                                          
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0097      890N.W F.B.P IOWA                  MD=-1 OR LE -2   
+              REF 0097         LOC  834 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN IOWA                                               
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0098      890N.W F.B.P MISSOURI              MD=-1 OR LE -2   
+              REF 0098         LOC  843 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN MISSOURI                                           
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0099      890N.W F.B.P NTH.D                 MD=-1 OR LE -2   
+              REF 0099         LOC  852 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN NORTH DAKOTA                                       
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0100      890N.W F.B.P STH.D                 MD=-1 OR LE -2   
+              REF 0100         LOC  861 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN SOUTH DAKOTA                                       
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0101      890N.W F.B.P NEBRASKA              MD=-1 OR LE -2   
+              REF 0101         LOC  870 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN NEBRASKA                                           
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0102      890N.W F.B.P KANSAS                MD=-1 OR LE -2   
+              REF 0102         LOC  879 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN KANSAS                                             
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0103      890N.W F.B.P KENTUCKY              MD=-1 OR LE -2   
+              REF 0103         LOC  888 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN KENTUCKY                                           
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0104      890N.W F.B.P TENNESSEE             MD=-1 OR LE -2   
+              REF 0104         LOC  897 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN TENNESSEE                                          
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0105      890N.W F.B.P ALABAMA               MD=-1 OR LE -2   
+              REF 0105         LOC  906 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN ALABAMA                                            
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0106      890N.W F.B.P MSSPI                 MD=-1 OR LE -2   
+              REF 0106         LOC  915 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN MISSISSIPPI                                        
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0107      890N.W F.B.P LOUISIANA             MD=-1 OR LE -2   
+              REF 0107         LOC  924 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN LOUISIANA                                          
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0108      890N.W F.B.P TEXAS                 MD=-1 OR LE -2   
+              REF 0108         LOC  933 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN TEXAS                                              
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0109      890N.W F.B.P INDN TRTRY            MD=-1 OR LE -2   
+              REF 0109         LOC  942 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN INDIAN TERRITORY                                   
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0110      890N.W F.B.P OKLAHOMA              MD=-1 OR LE -2   
+              REF 0110         LOC  951 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN OKLAHOMA                                           
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0111      890N.W F.B.P ARKANSAS              MD=-1 OR LE -2   
+              REF 0111         LOC  960 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN ARKANSAS                                           
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0112      890N.W F.B.P MONTANA               MD=-1 OR LE -2   
+              REF 0112         LOC  969 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN MONTANA                                            
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0113      890N.W F.B.P WYOMING               MD=-1 OR LE -2   
+              REF 0113         LOC  978 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN WYOMING                                            
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0114      890N.W F.B.P COLORADO              MD=-1 OR LE -2   
+              REF 0114         LOC  987 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN COLORADO                                           
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0115      890N.W F.B.P NEW MEXICO            MD=-1 OR LE -2   
+              REF 0115         LOC  996 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN NEW MEXICO                                         
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0116      890N.W F.B.P ARIZONA               MD=-1 OR LE -2   
+              REF 0116         LOC 1005 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN ARIZONA                                            
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0117      890N.W F.B.P UTAH                  MD=-1 OR LE -2   
+              REF 0117         LOC 1014 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN UTAH                                               
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0118      890N.W F.B.P NEVADA                MD=-1 OR LE -2   
+              REF 0118         LOC 1023 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN NEVADA                                             
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0119      890N.W F.B.P IDAHO                 MD=-1 OR LE -2   
+              REF 0119         LOC 1032 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN IDAHO                                              
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0120      890N.W F.B.P WASHINGTON            MD=-1 OR LE -2   
+              REF 0120         LOC 1041 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN WASHINGTON                                         
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0121      890N.W F.B.P OREGON                MD=-1 OR LE -2   
+              REF 0121         LOC 1050 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN OREGON                                             
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0122      890N.W F.B.P CALIFORNIA            MD=-1 OR LE -2   
+              REF 0122         LOC 1059 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN CALIFORNIA                                         
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0123      890N.W F.B.P ALASKA                MD=-1 OR LE -2   
+              REF 0123         LOC 1068 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN ALASKA                                             
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0124      890N.W F.B.P U.S USPEC             MD=-1 OR LE -2   
+              REF 0124         LOC 1077 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN IN THE UNITED STATES (STATE NOT SPECIFIED)            
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0125      890N.W F.B.P SEA                   MD=-1 OR LE -2   
+              REF 0125         LOC 1086 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     BORN AT SEA UNDER THE UNITED STATES FLAG                   
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0126      890N.W F.B.P ABROAD                MD=-1 OR LE -2   
+              REF 0126         LOC 1095 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE WHITE PERSONS OF FOREIGN PARENTAGE            
+                     (UNITED STATES CITIZENS BORN ABROAD)                       
+                 (1890) SOURCE: DUB. 177, TABLE 27                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0127      890CLRD BRN MAINE                  MD=-1 OR LE -2   
+              REF 0127         LOC 1104 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN MAINE                 
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ----------------------------------------------                 
+              ...............................................................   
+              VAR 0128      890CLRD BRN NW.H                   MD=-1 OR LE -2   
+              REF 0128         LOC 1113 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN NEW HAMPSHIRE         
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ------------------------------------------------------         
+              ...............................................................   
+              VAR 0129      890CLRD BRN VERMONT                MD=-1 OR LE -2   
+              REF 0129         LOC 1122 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN VERMONT               
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ------------------------------------------------               
+              ...............................................................   
+              VAR 0130      890CLRD BRN MSCHSTS                MD=-1 OR LE -2   
+              REF 0130         LOC 1131 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN MASSACHUSETTS         
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ------------------------------------------------------         
+              ...............................................................   
+              VAR 0131      890CLRD BRN R.ISLD                 MD=-1 OR LE -2   
+              REF 0131         LOC 1140 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN RHODE ISLAND          
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -----------------------------------------------------          
+              ...............................................................   
+              VAR 0132      890CLRD BRN CNCTCT                 MD=-1 OR LE -2   
+              REF 0132         LOC 1149 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN CONNECTICUT           
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ----------------------------------------------------           
+              ...............................................................   
+              VAR 0133      890CLRD BRN NEW YORK               MD=-1 OR LE -2   
+              REF 0133         LOC 1158 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN NEW YORK              
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -------------------------------------------------              
+              ...............................................................   
+              VAR 0134      890CLRD BRN NEW JERSEY             MD=-1 OR LE -2   
+              REF 0134         LOC 1167 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN NEW JERSEY            
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0135      890CLRD BRN PA                     MD=-1 OR LE -2   
+              REF 0135         LOC 1176 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN PENNSYLVANIA          
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -----------------------------------------------------          
+              ...............................................................   
+              VAR 0136      890CLRD BRN DELAWARE               MD=-1 OR LE -2   
+              REF 0136         LOC 1185 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN DELAWARE              
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -------------------------------------------------              
+              ...............................................................   
+              VAR 0137      890CLRD BRN MARYLAND               MD=-1 OR LE -2   
+              REF 0137         LOC 1194 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN MARYLAND              
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -------------------------------------------------              
+              ...............................................................   
+              VAR 0138      890CLRD BRN D.C                    MD=-1 OR LE -2   
+              REF 0138         LOC 1203 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN DISTRICT OF           
+                     COLUMBIA                                                   
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ----------------------------------------------------           
+              ...............................................................   
+              VAR 0139      890CLRD BRN VA                     MD=-1 OR LE -2   
+              REF 0139         LOC 1212 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN VIRGINIA              
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -------------------------------------------------              
+              ...............................................................   
+              VAR 0140      890CLRD BRN WST VA                 MD=-1 OR LE -2   
+              REF 0140         LOC 1221 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN WEST VIRGINIA         
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ------------------------------------------------------         
+              ...............................................................   
+              VAR 0141      890CLRD BRN NTH.C                  MD=-1 OR LE -2   
+              REF 0141         LOC 1230 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN NORTH CAROLINA        
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0142      890CLRD BRN STH.C                  MD=-1 OR LE -2   
+              REF 0142         LOC 1239 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN SOUTH CAROLINA        
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0143      890CLRD BRN GEORGIA                MD=-1 OR LE -2   
+              REF 0143         LOC 1248 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN GEORGIA               
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ------------------------------------------------               
+              ...............................................................   
+              VAR 0144      890CLRD BRN FLORIDA                MD=-1 OR LE -2   
+              REF 0144         LOC 1257 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN FLORIDA               
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ------------------------------------------------               
+              ...............................................................   
+              VAR 0145      890CLRD BRN OHIO                   MD=-1 OR LE -2   
+              REF 0145         LOC 1266 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN OHIO                  
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ---------------------------------------------                  
+              ...............................................................   
+              VAR 0146      890CLRD BRN INDIANA                MD=-1 OR LE -2   
+              REF 0146         LOC 1275 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN INDIANA               
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ------------------------------------------------               
+              ...............................................................   
+              VAR 0147      890CLRD BRN ILLINOIS               MD=-1 OR LE -2   
+              REF 0147         LOC 1284 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN ILLINOIS              
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -------------------------------------------------              
+              ...............................................................   
+              VAR 0148      890CLRD BRN MICHIGAN               MD=-1 OR LE -2   
+              REF 0148         LOC 1293 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN MICHIGAN              
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -------------------------------------------------              
+              ...............................................................   
+              VAR 0149      890CLRD BRN WISCONSIN              MD=-1 OR LE -2   
+              REF 0149         LOC 1302 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN WISCONSIN             
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 --------------------------------------------------             
+              ...............................................................   
+              VAR 0150      890CLRD BRN MINNESOTA              MD=-1 OR LE -2   
+              REF 0150         LOC 1311 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN MINNESOTA             
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 --------------------------------------------------             
+              ...............................................................   
+              VAR 0151      890CLRD BRN IOWA                   MD=-1 OR LE -2   
+              REF 0151         LOC 1320 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN IOWA                  
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ---------------------------------------------                  
+              ...............................................................   
+              VAR 0152      890CLRD BRN MISSOURI               MD=-1 OR LE -2   
+              REF 0152         LOC 1329 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN MISSOURI              
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -------------------------------------------------              
+              ...............................................................   
+              VAR 0153      890CLRD BRN NTH.D                  MD=-1 OR LE -2   
+              REF 0153         LOC 1338 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN NORTH DAKOTA          
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -----------------------------------------------------          
+              ...............................................................   
+              VAR 0154      890CLRD BRN STH.D                  MD=-1 OR LE -2   
+              REF 0154         LOC 1347 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN SOUTH DAKOTA          
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -----------------------------------------------------          
+              ...............................................................   
+              VAR 0155      890CLRD BRN NEBRASKA               MD=-1 OR LE -2   
+              REF 0155         LOC 1356 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN NEBRASKA              
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -------------------------------------------------              
+              ...............................................................   
+              VAR 0156      890CLRD BRN KANSAS                 MD=-1 OR LE -2   
+              REF 0156         LOC 1365 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN KANSAS                
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -----------------------------------------------                
+              ...............................................................   
+              VAR 0157      890CLRD BRN KENTUCKY               MD=-1 OR LE -2   
+              REF 0157         LOC 1374 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN KENTUCKY              
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -------------------------------------------------              
+              ...............................................................   
+              VAR 0158      890CLRD BRN TENNESSEE              MD=-1 OR LE -2   
+              REF 0158         LOC 1383 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN TENNESSEE             
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 --------------------------------------------------             
+              ...............................................................   
+              VAR 0159      890CLRD BRN ALABAMA                MD=-1 OR LE -2   
+              REF 0159         LOC 1392 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN ALABAMA               
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ------------------------------------------------               
+              ...............................................................   
+              VAR 0160      890CLRD BRN MSSPI                  MD=-1 OR LE -2   
+              REF 0160         LOC 1401 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN MISSISSIPPI           
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ----------------------------------------------------           
+              ...............................................................   
+              VAR 0161      890CLRD BRN LOUISIANA              MD=-1 OR LE -2   
+              REF 0161         LOC 1410 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN LOUISIANA             
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 --------------------------------------------------             
+              ...............................................................   
+              VAR 0162      890CLRD BRN TEXAS                  MD=-1 OR LE -2   
+              REF 0162         LOC 1419 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN TEXAS                 
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ----------------------------------------------                 
+              ...............................................................   
+              VAR 0163      890CLRD BRN INDN TRTRY             MD=-1 OR LE -2   
+              REF 0163         LOC 1428 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN INDIAN TERRITORY      
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ---------------------------------------------------------      
+              ...............................................................   
+              VAR 0164      890CLRD BRN OKLAHOMA               MD=-1 OR LE -2   
+              REF 0164         LOC 1437 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN OKLAHOMA              
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -------------------------------------------------              
+              ...............................................................   
+              VAR 0165      890CLRD BRN ARKANSAS               MD=-1 OR LE -2   
+              REF 0165         LOC 1446 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN ARKANSAS              
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -------------------------------------------------              
+              ...............................................................   
+              VAR 0166      890CLRD BRN MONTANA                MD=-1 OR LE -2   
+              REF 0166         LOC 1455 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN MONTANA               
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ------------------------------------------------               
+              ...............................................................   
+              VAR 0167      890CLRD BRN WYOMING                MD=-1 OR LE -2   
+              REF 0167         LOC 1464 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN WYOMING               
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ------------------------------------------------               
+              VAR 0168      890CLRD BRN COLORADO               MD=-1 OR LE -2   
+              REF 0168         LOC 1473 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN COLORADO              
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -------------------------------------------------              
+              ...............................................................   
+              VAR 0169      890CLRD BRN NEW MEXICO             MD=-1 OR LE -2   
+              REF 0169         LOC 1482 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN NEW MEXICO            
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0170      890CLRD BRN ARIZONA                MD=-1 OR LE -2   
+              REF 0170         LOC 1491 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN ARIZONA               
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ------------------------------------------------               
+              ...............................................................   
+              VAR 0171      890CLRD BRN UTAH                   MD=-1 OR LE -2   
+              REF 0171         LOC 1500 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN UTAH                  
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ---------------------------------------------                  
+              ...............................................................   
+              VAR 0172      890CLRD BRN NEVADA                 MD=-1 OR LE -2   
+              REF 0172         LOC 1509 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN NEVADA                
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -----------------------------------------------                
+              ..............................................................    
+              VAR 0173      890CLRD BRN IDAHO                  MD=-1 OR LE -2   
+              REF 0173         LOC 1518 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN IDAHO                 
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ----------------------------------------------                 
+              ...............................................................   
+              VAR 0174      890CLRD BRN WASHINGTON             MD=-1 OR LE -2   
+              REF 0174         LOC 1527 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN WASHINGTON            
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0175      890CLRD BRN OREGON                 MD=-1 OR LE -2   
+              REF 0175         LOC 1536 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN OREGON                
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -----------------------------------------------                
+              ...............................................................   
+              VAR 0176      890CLRD BRN CALIFORNIA             MD=-1 OR LE -2   
+              REF 0176         LOC 1545 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN CALIFORNIA            
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0177      890CLRD BRN ALASKA                 MD=-1 OR LE -2   
+              REF 0177         LOC 1554 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN ALASKA                
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -----------------------------------------------                
+              ...............................................................   
+              VAR 0178      890CLRD BRN USA USPEC              MD=-1 OR LE -2   
+              REF 0178         LOC 1563 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN IN UNITED STATES         
+                     (STATE NOT SPECIFIED)                                      
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 ------------------------------------------------------         
+              ...............................................................   
+              VAR 0179      890CLRD BRN SEA                    MD=-1 OR LE -2   
+              REF 0179         LOC 1572 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED PERSONS BORN AT SEA UNDER             
+                     THE UNITED STATES FLAG                                     
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 --------------------------------------------------             
+              ...............................................................   
+              VAR 0180      890CLRD BRN ABROAD                 MD=-1 OR LE -2   
+              REF 0180         LOC 1581 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF NATIVE COLORED UNITED STATES CITIZENS BORN ABROAD    
+                 (1890) SOURCE: DUB. 177, TABLE 28                              
+                 -----------------------------------------------------------    
+              ...............................................................   
+              VAR 0181      890PSN BRN CNDA NWFNDLD            MD=-1 OR LE -2   
+              REF 0181         LOC 1590 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN CANADA AND NEWFOUNDLAND              
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 -------------------------------------------------              
+              ...............................................................   
+              VAR 0182      890PSN BRN MEXICO                  MD=-1 OR LE -2   
+              REF 0182         LOC 1599 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN MEXICO                               
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0183      890PSN BRN CTRL AMER               MD=-1 OR LE -2   
+              REF 0183         LOC 1608 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN CENTRAL AMERICA                      
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 -----------------------------------------                      
+              ...............................................................   
+              VAR 0184      890PSN BRN STH AMER                MD=-1 OR LE -2   
+              REF 0184         LOC 1617 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN SOUTH AMERICA                        
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------------                        
+              ...............................................................   
+              VAR 0185      890PSN BRN CUBA & W.I              MD=-1 OR LE -2   
+              REF 0185         LOC 1626 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN CUBA AND WEST INDIES                 
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ----------------------------------------------                 
+              ...............................................................   
+              VAR 0186      890PSN BRN ENGLAND                 MD=-1 OR LE -2   
+              REF 0186         LOC 1635 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN ENGLAND                              
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0187      890PSN BRN SCTLND                  MD=-1 OR LE -2   
+              REF 0187         LOC 1644 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN SCOTLAND                             
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ----------------------------------                             
+              ...............................................................   
+              VAR 0188      890PSN BRN WALES                   MD=-1 OR LE -2   
+              REF 0188         LOC 1653 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN WALES                                
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0189      890PSN BRN GRT BRITAIN             MD=-1 OR LE -2   
+              REF 0189         LOC 1662 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN GREAT BRITAIN (NOT SPECIFIED)        
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 -------------------------------------------------------        
+              ...............................................................   
+              VAR 0190      890PSN BRN IRELAND                 MD=-1 OR LE -2   
+              REF 0190         LOC 1671 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN IRELAND                              
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0191      890PSN BRN GERMANY                 MD=-1 OR LE -2   
+              REF 0191         LOC 1680 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN GERMANY                              
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0192      890PSN BRN AUSTRIA                 MD=-1 OR LE -2   
+              REF 0192         LOC 1689 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN AUSTRIA                              
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0193      890PSN BRN HOLLAND                 MD=-1 OR LE -2   
+              REF 0193         LOC 1698 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN HOLLAND                              
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0194      890PSN BRN BELGIUM                 MD=-1 OR LE -2   
+              REF 0194         LOC 1707 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN BELGIUM                              
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0195      890PSN BRN LUXEMBURG               MD=-1 OR LE -2   
+              REF 0195         LOC 1716 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN LUXEMBURG                            
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 -----------------------------------                            
+              ...............................................................   
+              VAR 0196      890PSN BRN SWTZRLD                 MD=-1 OR LE -2   
+              REF 0196         LOC 1725 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN SWITZERLAND                          
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 -------------------------------------                          
+              ...............................................................   
+              VAR 0197      890PSN BRN NORWAY                  MD=-1 OR LE -2   
+              REF 0197         LOC 1734 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN NORWAY                               
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0198      890PSN BRN SWDN                    MD=-1 OR LE -2   
+              REF 0198         LOC 1743 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN SWEDEN                               
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0199      890PSN BRN DENMARK                 MD=-1 OR LE -2   
+              REF 0199         LOC 1752 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN DENMARK                              
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0200      890PSN BRN RUSSIA                  MD=-1 OR LE -2   
+              REF 0200         LOC 1761 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN RUSSIA                               
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0201      890PSN BRN HUNGARY                 MD=-1 OR LE -2   
+              REF 0201         LOC 1770 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN HUNGARY                              
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0202      890PSN BRN BOHEMIA                 MD=-1 OR LE -2   
+              REF 0202         LOC 1779 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN BOHEMIA                              
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0203      890PSN BRN POLAND                  MD=-1 OR LE -2   
+              REF 0203         LOC 1788 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN POLAND                               
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0204      890PSN BRN FRANCE                  MD=-1 OR LE -2   
+              REF 0204         LOC 1797 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN FRANCE                               
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0205      890PSN BRN ITALY                   MD=-1 OR LE -2   
+              REF 0205         LOC 1806 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN ITALY                                
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0206      890PSN BRN SPAIN                   MD=-1 OR LE -2   
+              REF 0206         LOC 1815 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN SPAIN                                
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0207      890PSN BRN PORTUGAL                MD=-1 OR LE -2   
+              REF 0207         LOC 1824 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN PORTUGAL                             
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ----------------------------------                             
+              ...............................................................   
+              VAR 0208      890PSN BRN GREECE                  MD=-1 OR LE -2   
+              REF 0208         LOC 1833 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN GREECE                               
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0209      890PSN BRN ASIA                    MD=-1 OR LE -2   
+              REF 0209         LOC 1842 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN ASIA (COUNTRY NOT SPECIFIED)         
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ------------------------------------------------------         
+              ...............................................................   
+              VAR 0210      890PSN BRN CHINA                   MD=-1 OR LE -2   
+              REF 0210         LOC 1851 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN CHINA                                
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0211      890PSN BRN JAPAN                   MD=-1 OR LE -2   
+              REF 0211         LOC 1860 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN JAPAN                                
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0212      890PSN BRN INDIA                   MD=-1 OR LE -2   
+              REF 0212         LOC 1869 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN INDIA                                
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0213      890PSN BRN AFRICA                  MD=-1 OR LE -2   
+              REF 0213         LOC 1878 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN AFRICA                               
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ................................................................  
+              VAR 0214      890PSN BRN ATLNTC ISLD             MD=-1 OR LE -2   
+              REF 0214         LOC 1887 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN ATLANTIC ISLANDS                     
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ------------------------------------------                     
+              ...............................................................   
+              VAR 0215      890PSN BRN AUSTRALIA               MD=-1 OR LE -2   
+              REF 0215         LOC 1896 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN AUSTRALIA                            
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 -----------------------------------                            
+              ...............................................................   
+              VAR 0216      890PSN BRN EUR                     MD=-1 OR LE -2   
+              REF 0216         LOC 1905 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN EUROPE                               
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0217      890PSN BRN PACIFIC ISLD            MD=-1 OR LE -2   
+              REF 0217         LOC 1914 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN PACIFIC ISLANDS                      
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 -----------------------------------------                      
+              ...............................................................   
+              VAR 0218      890PSN BRN S.ISLD                  MD=-1 OR LE -2   
+              REF 0218         LOC 1923 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN SANDWICH ISLANDS                     
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ------------------------------------------                     
+              ...............................................................   
+              VAR 0219      890PSN BRN TURKEY                  MD=-1 OR LE -2   
+              REF 0219         LOC 1932 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN TURKEY                               
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0220      890PSN BRN SEA                     MD=-1 OR LE -2   
+              REF 0220         LOC 1941 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN AT SEA                                  
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0221      890PSN BRN OTR                     MD=-1 OR LE -2   
+              REF 0221         LOC 1950 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF PERSONS BORN IN OTHER COUNTRIES                      
+                 (1890) SOURCE: DUB. 177, TABLE 32                              
+                 -----------------------------------------                      
+              ...............................................................   
+              VAR 0222      890DWLING W 1 PSN                  MD=-1 OR LE -2   
+              REF 0222         LOC 1959 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF DWELLINGS WITH ONE PERSON                            
+                 (1890) SOURCE: DUB. 177, TABLE 90                              
+                 -----------------------------------                            
+              ...............................................................   
+              VAR 0223      890DWLING W 2 PSN                  MD=-1 OR LE -2   
+              REF 0223         LOC 1968 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF DWELLINGS WITH TWO PERSONS                           
+                 (1890) SOURCE: DUB. 177, TABLE 90                              
+                 ------------------------------------                           
+              ...............................................................   
+              VAR 0224      890DWLING W 3 PSN                  MD=-1 OR LE -2   
+              REF 0224         LOC 1977 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF DWELLINGS WITH THREE PERSONS                         
+                 (1890) SOURCE: DUB. 177, TABLE 90                              
+                 --------------------------------------                         
+              ...............................................................   
+              VAR 0225      890DWLING W 4 PSN                  MD=-1 OR LE -2   
+              REF 0225         LOC 1986 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF DWELLINGS WITH FOUR PERSONS                          
+                 (1890) SOURCE: DUB. 177, TABLE 90                              
+                 -------------------------------------                          
+              ...............................................................   
+              VAR 0226      890DWLING W 5 PSN                  MD=-1 OR LE -2   
+              REF 0226         LOC 1995 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF DWELLINGS WITH FIVE PERSONS                          
+                 (1890) SOURCE: DUB. 177, TABLE 90                              
+                 -------------------------------------                          
+              ...............................................................   
+              VAR 0227      890DWLING W 6 PSN                  MD=-1 OR LE -2   
+              REF 0227         LOC 2004 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF DWELLINGS WITH SIX PERSONS                           
+                 (1890) SOURCE: DUB. 177, TABLE 90                              
+                 ------------------------------------                           
+              ...............................................................   
+              VAR 0228      890DWLING W 7 PSN                  MD=-1 OR LE -2   
+              REF 0228         LOC 2013 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF DWELLINGS WITH SEVEN PERSONS                         
+                 (1890) SOURCE: DUB. 177, TABLE 90                              
+                 --------------------------------------                         
+              ...............................................................   
+              VAR 0229      890DWLING W 8 PSN                  MD=-1 OR LE -2   
+              REF 0229         LOC 2022 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF DWELLINGS WITH EIGHT PERSONS                         
+                 (1890) SOURCE: DUB. 177, TABLE 90                              
+                 --------------------------------------                         
+              ...............................................................   
+              VAR 0230      890DWLING W 9 PSN                  MD=-1 OR LE -2   
+              REF 0230         LOC 2031 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF DWELLINGS WITH NINE PERSONS                          
+                 (1890) SOURCE: DUB. 177, TABLE 90                              
+                 -------------------------------------                          
+              ...............................................................   
+              VAR 0231      890DWLING W 10 PSN                 MD=-1 OR LE -2   
+              REF 0231         LOC 2040 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF DWELLINGS WITH TEN PERSONS                           
+                 (1890) SOURCE: DUB. 177, TABLE 90                              
+                 ------------------------------------                           
+              ...............................................................   
+              VAR 0232      890DWLING W 11-15 PSN              MD=-1 OR LE -2   
+              REF 0232         LOC 2049 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF DWELLINGS WITH 11-15 PERSONS                         
+                 (1890) SOURCE: DUB. 177, TABLE 90                              
+                 --------------------------------------                         
+              ...............................................................   
+              VAR 0233      890DWLING W 16-20 PSN              MD=-1 OR LE -2   
+              REF 0233         LOC 2058 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF DWELLINGS WITH 16-20 PERSONS                         
+                 (1890) SOURCE: DUB. 177, TABLE 90                              
+                 --------------------------------------                         
+              ...............................................................   
+              VAR 0234      890DWLING W 21 PSN OVR             MD=-1 OR LE -2   
+              REF 0234         LOC 2067 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF DWELLINGS WITH 21 OR MORE PERSONS                    
+                 (1890) SOURCE: DUB. 177, TABLE 90                              
+                 -------------------------------------------                    
+              ...............................................................   
+              VAR 0235      890NMBR FAM W 1 PSN                MD=-1 OR LE -2   
+              REF 0235         LOC 2076 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF FAMILIES CONSISTING OF ONE PERSON                    
+                 (1890) SOURCE: DUB. 177, TABLE 92                              
+                 -------------------------------------------                    
+              ...............................................................   
+              VAR 0236      890NMBR FAM W 2 PSN                MD=-1 OR LE -2   
+              REF 0236         LOC 2085 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF FAMILIES CONSISTING OF TWO PERSONS                   
+                 (1890) SOURCE: DUB. 177, TABLE 92                              
+                 --------------------------------------------                   
+              ...............................................................   
+              VAR 0237      890NMBR FAM W 3 PSN                MD=-1 OR LE -2   
+              REF 0237         LOC 2094 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF FAMILIES CONSISTING OF THREE PERSONS                 
+                 (1890) SOURCE: DUB. 177, TABLE 92                              
+                 ----------------------------------------------                 
+              ...............................................................   
+              VAR 0238      890NMBR FAM W 4 PSN                MD=-1 OR LE -2   
+              REF 0238         LOC 2103 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF FAMILIES CONSISTING OF FOUR PERSONS                  
+                 (1890) SOURCE: DUB. 177, TABLE 92                              
+                 ---------------------------------------------                  
+              ..............................................................    
+              VAR 0239      890NMBR FAM W 5 PSN                MD=-1 OR LE -2   
+              REF 0239         LOC 2112 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF FAMILIES CONSISTING OF FIVE PERSONS                  
+                 (1890) SOURCE: DUB. 177, TABLE 92                              
+                 ---------------------------------------------                  
+              ...............................................................   
+              VAR 0240      890NMBR FAM W 6 PSN                MD=-1 OR LE -2   
+              REF 0240         LOC 2121 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF FAMILIES CONSISTING OF SIX PERSONS                   
+                 (1890) SOURCE: DUB. 177, TABLE 92                              
+                 --------------------------------------------                   
+              ...............................................................   
+              VAR 0241      890NMBR FAM W 7 PSN                MD=-1 OR LE -2   
+              REF 0241         LOC 2130 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF FAMILIES CONSISTING OF SEVEN PERSONS                 
+                 (1890) SOURCE: DUB. 177, TABLE 92                              
+                 ----------------------------------------------                 
+              ...............................................................   
+              VAR 0242      890NMBR FAM W 8 PSN                MD=-1 OR LE -2   
+              REF 0242         LOC 2139 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF FAMILIES CONSISTING OF EIGHT PERSONS                 
+                 (1890) SOURCE: DUB. 177, TABLE 92                              
+                 ----------------------------------------------                 
+              ...............................................................   
+              VAR 0243      890NMBR FAM W 9 PSN                MD=-1 OR LE -2   
+              REF 0243         LOC 2148 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF FAMILIES CONSISTING OF NINE PERSONS                  
+                 (1890) SOURCE: DUB. 177, TABLE 92                              
+                 ---------------------------------------------                  
+              ...............................................................   
+              VAR 0244      890NMBR FAM W 10 PSN               MD=-1 OR LE -2   
+              REF 0244         LOC 2157 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF FAMILIES CONSISTING OF TEN PERSONS                   
+                 (1890) SOURCE: DUB. 177, TABLE 92                              
+                 --------------------------------------------                   
+              ...............................................................   
+              VAR 0245      890NMBR FAM W 11-15 PSN            MD=-1 OR LE -2   
+              REF 0245         LOC 2166 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF FAMILIES CONSISTING OF 11-15 PERSONS                 
+                 (1890) SOURCE: DUB. 177, TABLE 92                              
+                 ----------------------------------------------                 
+              ...............................................................   
+              VAR 0246      890NMBR FAM W 16-20 PSN            MD=-1 OR LE -2   
+              REF 0246         LOC 2175 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF FAMILIES CONSISTING OF 16-20 PERSONS                 
+                 (1890) SOURCE: DUB. 177, TABLE 92                              
+                 ----------------------------------------------                 
+              ...............................................................   
+              VAR 0247      890NMBR FAM W 21 PSN OVR           MD=-1 OR LE -2   
+              REF 0247         LOC 2184 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF FAMILIES CONSISTING OF 21 OR MORE PERSONS            
+                 (1890) SOURCE: DUB. 177, TABLE 92                              
+                 ---------------------------------------------------            
+              ...............................................................   
+              VAR 0248      890TTL ACR CEREALS                 MD=-1 OR LE -2   
+              REF 0248         LOC 2193 WIDTH  9                                
+                                                                                
+                                                                                
+                 TOTAL AREA IN CEREALS  (IN ACRES)                              
+                 (1890) SOURCE: DUB. 188, UNNUM. TABLE, P. 7                    
+                 -------------------------------------------                    
+              ...............................................................   
+              VAR 0249      890TTL BSHL ALL CEREALS            MD=-1 OR LE -2   
+              REF 0249         LOC 2202 WIDTH  9                                
+                                                                                
+                                                                                
+                 TOTAL PRODUCTION OF ALL CEREALS (IN BUSHELS)                   
+                 (1890) SOURCE: DUB. 188, UNNUM. TABLE, P. 8                    
+                 --------------------------------------------                   
+              ...............................................................   
+              VAR 0250      890SINGLE M                        MD=-1 OR LE -2   
+              REF 0250         LOC 2211 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF SINGLE MALES                                         
+                 (1890) SOURCE: DUB. 177, TABLE 81                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0251      890MARRIED M                       MD=-1 OR LE -2   
+              REF 0251         LOC 2220 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF MARRIED MALES                                        
+                 (1890) SOURCE: DUB. 177, TABLE 81                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0252      890WIDOWED M                       MD=-1 OR LE -2   
+              REF 0252         LOC 2229 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF WIDOWED MALES                                        
+                 (1890) SOURCE: DUB. 177, TABLE 81                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0253      890DIVORCED M                      MD=-1 OR LE -2   
+              REF 0253         LOC 2238 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF DIVORCED MALES                                       
+                 (1890) SOURCE: DUB. 177, TABLE 81                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0254      890M UNKNOWN CONJUGAL              MD=-1 OR LE -2   
+              REF 0254         LOC 2247 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF MALES OF UNKNOWN CONJUGAL CONDITION                  
+                 (1890) SOURCE: DUB. 177, TABLE 81                              
+                 ---------------------------------------------                  
+              ...............................................................   
+              VAR 0255      890SINGLE F                        MD=-1 OR LE -2   
+              REF 0255         LOC 2256 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF SINGLE FEMALES                                       
+                 (1890) SOURCE: DUB. 177, TABLE 81                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0256      890MARRIED F                       MD=-1 OR LE -2   
+              REF 0256         LOC 2265 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF MARRIED FEMALES                                      
+                 (1890) SOURCE: DUB. 177, TABLE 81                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0257      890WIDOWED F                       MD=-1 OR LE -2   
+              REF 0257         LOC 2274 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF WIDOWED FEMALES                                      
+                 (1890) SOURCE: DUB. 177, TABLE 81                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0258      890DIVORCED F                      MD=-1 OR LE -2   
+              REF 0258         LOC 2283 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF DIVORCED FEMALES                                     
+                 (1890) SOURCE: DUB. 177, TABLE 81                              
+                 ---------------------------------                              
+              ...............................................................   
+              VAR 0259      890F UNKNOWN CONJUGAL              MD=-1 OR LE -2   
+              REF 0259         LOC 2292 WIDTH  9                                
+                                                                                
+                                                                                
+                 NUMBER OF FEMALES OF UNKNOWN CONJUGAL CONDITION                
+                 (1890) SOURCE: DUB. 177, TABLE 81                              
+                 -----------------------------------------------                
+    TERMINATION OF CODEBOOK LIST.                                               

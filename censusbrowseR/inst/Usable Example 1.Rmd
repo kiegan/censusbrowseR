@@ -24,6 +24,10 @@ data_full <- full_join(data_s, data_c, by = c("Year", "State", "TOTAL.POPULATION
 data_full <- full_join(data_full, data_n, by = c("Year", "State", "TOTAL.POPULATION", "Type"))
 #data_full %>% glimpse
 
+states_current <- us_boundaries("1999-12-31")
+mcurr_df <- fortify(states_current, region = "name")
+mcurr_df <- mcurr_df %>% mutate(State = toupper(id)) %>% filter(long >= -127)
+
 ```
 
 ## 1790  
@@ -42,11 +46,20 @@ data_full_wmap %>% glimpse
 #data_full_wmap %>% filter(Year == 1790) %>% summary()
   # this tells us that the only variable recorded this year is 'SLAVES'. We will use that.
 
+#### THIS IS THE OLD IMAGE WITHOUT THE BACKGROUND OUTLINE #### 
 data_full_wmap %>%
   filter(Year == 1790) %>% 
   ggplot(aes(x = long, y = lat, group = group)) + 
   geom_polygon(aes(fill = log(SLAVES)), colour = "black") + 
   theme_bw() + theme(legend.title = element_blank()) + labs(title = "Total Slaves (log scale)")
+
+data_full_wmap_1790 <- data_full_wmap %>% filter(Year == 1790)
+
+ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
+                        colour = "grey90", fill = "white") + theme_bw() + 
+  geom_polygon(data = data_full_wmap_1790, 
+               aes(x = long, y = lat, group = group, fill = log(SLAVES)), colour = "grey10") + 
+  theme(legend.title = element_blank()) + labs(title = "Total Slaves (log scale)", x = "", y = "") 
 ```
 
 ### Trying to get a shadow of the current US behind the map
@@ -75,11 +88,20 @@ data_full_wmap <- full_join(data_full, m1800_df, by = "State")
 #data_full_wmap %>% filter(Year == 1800) %>% summary()
   # again, 'SLAVES' is the only relevant column here
 
-data_full_wmap %>%
-  filter(Year == 1800) %>% 
-  ggplot(aes(x = long, y = lat, group = group)) + 
-  geom_polygon(aes(fill = log(SLAVES)), colour = "black") + 
-  theme_bw() + theme(legend.title = element_blank()) + labs(title = "Total Slaves (log scale)")
+#### OLD PLOT WITHOUT BACKGROUND IMAGE #### 
+#data_full_wmap %>%
+#  filter(Year == 1800) %>% 
+#  ggplot(aes(x = long, y = lat, group = group)) + 
+#  geom_polygon(aes(fill = log(SLAVES)), colour = "black") + 
+#  theme_bw() + theme(legend.title = element_blank()) + labs(title = "Total Slaves (log scale)")
+
+data_full_wmap_1800 <- data_full_wmap %>% filter(Year == 1800)
+
+ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
+                        colour = "grey90", fill = "white") + theme_bw() + 
+  geom_polygon(data = data_full_wmap_1800, aes(x = long, y = lat, group = group, fill = log(SLAVES)), colour = "black") +
+  theme_bw() + theme(legend.title = element_blank()) + labs(title = "Total Slaves (log scale)", x = "", y = "")
+  
 ```
 
 ## 1810  

@@ -6,7 +6,7 @@ This bibliography includes published and unpublished works that are related
 to ICPSR study 3. It includes works that are based on primary
 or secondary analysis of the data, or which describe or critique those
 data or the collection methodology. This list represents all items known
-to ICPSR as of 2017-06-22.
+to ICPSR as of 2017-07-05.
 
 If you publish a work or know of other works that are based on these data,
 please send the complete citation and name of the ICPSR study used to:
