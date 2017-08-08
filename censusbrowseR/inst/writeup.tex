@@ -205,21 +205,21 @@ helps users see exactly what information is available to them is a
 necessity. To streamline the process and assist researchers in finding
 out what information they have access to and what information they lack,
 a U.S. Census Browser for R is presented, with the user interface being
-a Shiny application, and the downloadable files being `tidy' csv files
-that those with a small amount of R experience should be able to work
-with.
+a Shiny application, and the downloadable files being `tidy'
+comma-separated values (csv) files that those with a minimal amount of R
+experience should be able to work with.
 
-\section{Background (Literature Review?)}
+\section{Data Access}
 
 There are two main datasets that contain the aggregated counts of
 historical, demographic, economic, and social characteristics from the
 United States decennial census. They were both collected and developed
-by the Inter-University Consortium for Political and Social Research.
-The ICPSR 3, gathered from computer-readable data collections from the
-U.S. Census Bureau as well as other reports (both published and
+by the Inter-University Consortium for Political and Social Research
+(ICPSR). The ICPSR 3, gathered from computer-readable data collections
+from the U.S. Census Bureau as well as other reports (both published and
 unpublished), contains data from 1790 to 1960. The ICPSR 2896, including
 much of the same information as the ICPSR 3, also includes a wider array
-of variables including manufacturing, and more county and city-level
+of variables including manufacturing and more county and city-level
 information. The ICPSR 2896 as a dataset is a restricted access dataset
 and requires users be part of a member institution in order to gain
 access to it.
@@ -254,15 +254,14 @@ Integrated Public Use Microdata Series (IPUMS USA), also hosted by the
 University of Minnesota, gives microsamples of census data on a finer
 grid - by person and household. However, this lacks state-aggregated
 data. The Institute for Social Research at the University of Michigan,
-which hosts the Inter-university Consortium for Political and Social
-Research (ICPSR) database, has both the full ICPSR 2896 dataset and the
-full ICPSR 3 dataset. Each of these are split into a separate data set
-for each year and by split by county-level and state-level. This
+which hosts the ICPSR database, has both the full ICPSR 2896 dataset and
+the full ICPSR 3 dataset. Each of these are split into a separate data
+set for each year and by split by county-level and state-level. This
 database requires that users be a part of a member institution, and
 requires users to agree that they will not distribute the information in
 any way after gaining access to it. It also does not have any browser
 function for users to look at the data - they must download the file for
-each year, in either a SAS, SPSS, ASCII, or Stata set-up.
+each year, in either a SAS, SPSS, ASCII, or Stata format.
 
 None of the aforementioned resources provide the full advantages that
 the Historical Census Browser offered: a free-to-use and user-friendly
@@ -287,22 +286,37 @@ data searches and data management.
 The majority of files for the decennial censuses were complete upon
 capture from the website. However, two years of census data were missing
 some column names and thus needed to be verified. For the 1890 and 1940
-censuses, each column was compared to all columns from ICPSR 2896 and
-ICPSR 3 data files by both correlation and Euclidean distance, and thus
-some columns were able to be correctly identified.
+censuses, each column was compared to all columns from the corresponding
+ICPSR 3 data file by both correlation and Euclidean distance, and thus
+some columns were able to be correctly identified. The column from ICPSR
+3 with the highest correlation and the lowest Euclidean distance to the
+raw data column in question was identified, and the correlation and
+distance values recorded. If that column from ICPSR had a correlation
+greater than .999 and a Euclidean distance below 100 from the raw data
+column, it was able to be automatically identified as that category. If
+that column from ICPSR had a correlation greater than .95 and a
+Euclidean distance below 5000, it was checked by hand. Some of these
+columns were able to be verified by this process and some were not. All
+other columns that did not fit these criterion were considered to be
+unverified data, and were thus removed from the data included in the
+package.
 
-\emph{Describe this process in more detail once I actually get this
-figured. How many columns were correctly matched? How many weren't?}
+It is important to note that many of the unverified columns were most
+likely farming and manufacturing data, as the ICPSR 3 did not include
+this information but the original data from the University of Virginia
+Historical Census Browser included variables of that type. Due to the
+need to verify using the ICPSR 3, there is a loss of some of the
+additional information that would have been an asset to the census
+browser.
 
-\emph{Currently I am struggling with the available data formats from
-ICPSR. I was able to compare the ICPSR 2896, but not many of the
-variables were actually able to be matched up, and I suspect this is
-because the ICPSR 2896 has some different values than the ICPSR 3. The
-ICPSR 3 is looking much more promising for verifying the column names,
-but\ldots{} it doesn't give column names. I have the variable names in a
-codebook, but I am stuck between manually entering in all of the column
-names (there are 259 of them) and finding an overly complicated way to
-automate that processs\ldots{}}
+\emph{Include a table here of numbers for verification }
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.70000\textwidth]{./figures/verification.png}
+\caption{Classification of variables in raw 1890 census data after
+comparing to the ICPSR 3 data.}
+\end{figure}
 
 Each year of the dataset began in a separate file, with each row
 corresponding to a State, each column being a demographic variable, and
@@ -329,8 +343,8 @@ The \texttt{Single\ Year} tab allows users to choose which year they are
 interested in from a drop-down menu, as well as two manual search entry
 boxes for variables of interest. For example, if a user is interested in
 the prevalence of farms in 1860, they can select 1860 and then search
-for ``farms'' in the first ``Variable of Interest'' spot (see Figure 1).
-Users can then see a complete list of all variable names in that
+for ``farms'' in the first ``Variable of Interest'' field (see Figure
+2). Users can then see a complete list of all variable names in that
 particular year that have ``farms'' in their title. With this list now
 available, users can select each variable they want by clicking on it.
 Once all desired variables have been selected, clicking on the
@@ -366,7 +380,7 @@ two-dimensional rather than just a single list of available variables,
 are presented somewhat differently in the \texttt{Multiple\ Years} tab.
 Each available variable is listed along the left side of the interface,
 and each selected year is presented across the top as a column in the
-table (see Figure 2). For each variable in the table, an \texttt{X}
+table (see Figure 3). For each variable in the table, an \texttt{X}
 indicates for which years that particular variable is present. Far to
 the right, there is a column which denotes a count how many of the
 selected years have that particular variable. Users can choose to order
@@ -445,14 +459,14 @@ are important variables to have in order to get a grasp on the African
 American population in early U.S. history. It is important to note that
 the \texttt{SLAVE} categorization is the only term the U.S. census had
 related to African Americans in the early years of the census, so it is
-also the only source of information available on that groupfor that time
-period.
+also the only source of information available on that group for that
+time period.
 
 Once a relevant range of years has been chosen, we simply enter a search
 term. Searching for \texttt{SLAVE} gives a list of all the possible
 variable names across all years, which can again be sorted by how how
 many years each variable name appears in. The results of this search can
-be seen in Figure 3.
+be seen in Figure 4.
 
 \begin{figure}[htbp]
 \centering
@@ -563,7 +577,7 @@ formed, with the United States gaining new states at each census.
 A period of growth and change can be seen at the turn of the 20th
 century as well, with a dramatic shift in the African American
 population out west to California and with the balance in the east and
-midwest shifting slightly further up north. Although the highest density
+midwest shifting slightly further north. Although the highest density
 still remains in the southern states, somewhat of a northern migration
 is visible.
 

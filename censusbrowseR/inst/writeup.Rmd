@@ -86,18 +86,18 @@ An inherent problem in census data is that a country's census changes over time;
 
 Unfortunately, because the founders of the U.S. Census were unable see 200 years into the future, those interested in working with census data are left with quite the inescapable mess. If you want to focus in on a particular demographic group and their journey as part of the population of the United States, you may have ten or more different variables names to describe that one group over the course of the census from 1790 to 1960 - and that is just for one single group! Of course, we cannot just simply change variable names to match our own research needs. It is important to keep the data in its true form and be honest to the way that the population was defined at different times throughout history, even if our instinct may be to 'clean' the data by changing variable names.  
 
-This, of course, leaves the user with a wide variety of variables that are far from consistent across years. In order to track one demographic group across years - let alone many groups - a clean user interface that helps users see exactly what information is available to them is a necessity. To streamline the process and assist researchers in finding out what information they have access to and what information they lack, a U.S. Census Browser for R is presented, with the user interface being a Shiny application, and the downloadable files being 'tidy' csv files that those with a small amount of R experience should be able to work with.  
+This, of course, leaves the user with a wide variety of variables that are far from consistent across years. In order to track one demographic group across years - let alone many groups - a clean user interface that helps users see exactly what information is available to them is a necessity. To streamline the process and assist researchers in finding out what information they have access to and what information they lack, a U.S. Census Browser for R is presented, with the user interface being a Shiny application, and the downloadable files being 'tidy' comma-separated values (csv) files that those with a minimal amount of R experience should be able to work with.  
 
 
 
-\section{Background (Literature Review?)}  
+\section{Data Access}  
 
-There are two main datasets that contain the aggregated counts of historical, demographic, economic, and social characteristics from the United States decennial census. They were both collected and developed by the Inter-University Consortium for Political and Social Research. The ICPSR 3, gathered from computer-readable data collections from the U.S. Census Bureau as well as other reports (both published and unpublished), contains data from 1790 to 1960. The ICPSR 2896, including much of the same information as the ICPSR 3, also includes a wider array of variables including manufacturing, and more county and city-level information. The ICPSR 2896 as a dataset is a restricted access dataset and requires users be part of a member institution in order to gain access to it.  
+There are two main datasets that contain the aggregated counts of historical, demographic, economic, and social characteristics from the United States decennial census. They were both collected and developed by the Inter-University Consortium for Political and Social Research (ICPSR). The ICPSR 3, gathered from computer-readable data collections from the U.S. Census Bureau as well as other reports (both published and unpublished), contains data from 1790 to 1960. The ICPSR 2896, including much of the same information as the ICPSR 3, also includes a wider array of variables including manufacturing and more county and city-level information. The ICPSR 2896 as a dataset is a restricted access dataset and requires users be part of a member institution in order to gain access to it.  
 
 
 The University of Virginia Library hosted a "Historical Census Browser" for many years that allowed users to search United States Decennial Census Data for use in research, teaching, and personal inquiry [@HCB]. The data included records on various aspects of the U.S. population from the 1790 Census through the 1960 Census, originally populated using the ICPSR 3 dataset. This Historical Census Browser was free and available for use for anyone with an internet connection. The browser allowed a user to peruse available topics for each census year, at both the state and county levels. The Historical Census Browser was taken down on December 31, 2016, with the county-level aggregated data becoming unavailable several months before this. The source was widely used, with several other university libraries and educational resources including University of California Santa Barbara [@UCSB-US-HCB], University of Pennsylvania [@UPenn-HCB], University of Michigan [@UMich-HCB], and the Smithsonian's History Explorer [@SmithsonianHistoryExplorer] directing researchers to use the University of Virginia site as of 2017.  
 
-The University of Virginia Libraries website now directs users to Social Explorer or the National Historical Geographic Information System (NHGIS) website. Social Explorer, populated with the ICPSR 2896 data, requires that users pay to use (or use through paid library access), and  does not offer a complete download of information. NHGIS, hosted through the University of Minnesota, is very difficult for users to navigate when looking for specific information across multiple years. The Integrated Public Use Microdata Series (IPUMS USA), also hosted by the University of Minnesota, gives microsamples of census data on a finer grid - by person and household. However, this lacks state-aggregated data. The Institute for Social Research at the University of Michigan, which hosts the Inter-university Consortium for Political and Social Research (ICPSR) database, has both the full ICPSR 2896 dataset and the full ICPSR 3 dataset. Each of these are split into a separate data set for each year and by split by county-level and state-level. This database requires that users be a part of a member institution, and requires users to agree that they will not distribute the information in any way after gaining access to it. It also does not have any browser function for users to look at the data - they must download the file for each year, in either a SAS, SPSS, ASCII, or Stata set-up.   
+The University of Virginia Libraries website now directs users to Social Explorer or the National Historical Geographic Information System (NHGIS) website. Social Explorer, populated with the ICPSR 2896 data, requires that users pay to use (or use through paid library access), and  does not offer a complete download of information. NHGIS, hosted through the University of Minnesota, is very difficult for users to navigate when looking for specific information across multiple years. The Integrated Public Use Microdata Series (IPUMS USA), also hosted by the University of Minnesota, gives microsamples of census data on a finer grid - by person and household. However, this lacks state-aggregated data. The Institute for Social Research at the University of Michigan, which hosts the ICPSR database, has both the full ICPSR 2896 dataset and the full ICPSR 3 dataset. Each of these are split into a separate data set for each year and by split by county-level and state-level. This database requires that users be a part of a member institution, and requires users to agree that they will not distribute the information in any way after gaining access to it. It also does not have any browser function for users to look at the data - they must download the file for each year, in either a SAS, SPSS, ASCII, or Stata format.   
 
 None of the aforementioned resources provide the full advantages that the Historical Census Browser offered: a free-to-use and user-friendly data browser that allows users to choose which data they are interested in using, and download the complete aggregated records for their own independent use. Having the data provided by the Historical Census Browser available once again and streamlined for simple and easy data browsing is a valuable resource for researchers and others alike.    
 
@@ -107,11 +107,14 @@ None of the aforementioned resources provide the full advantages that the Histor
 \subsection{Data}  
 Although the county-level data had already been removed from the website, the state-level aggregated records for each decennial census from 1790 through 1960 were captured from the website in September of 2016 and saved as raw data with the intent to create a resource for R users that allowed the same main functionalities of the original University of Virginia Historical Census Browser, streamlined for easy data searches and data management.  
 
-The majority of files for the decennial censuses were complete upon capture from the website. However, two years of census data were missing some column names and thus needed to be verified. For the 1890 and 1940 censuses, each column was compared to all columns from ICPSR 2896 and ICPSR 3 data files by both correlation and Euclidean distance, and thus some columns were able to be correctly identified.  
+The majority of files for the decennial censuses were complete upon capture from the website. However, two years of census data were missing some column names and thus needed to be verified. For the 1890 and 1940 censuses, each column was compared to all columns from the corresponding ICPSR 3 data file by both correlation and Euclidean distance, and thus some columns were able to be correctly identified. The column from ICPSR 3 with the highest correlation and the lowest Euclidean distance to the raw data column in question was identified, and the correlation and distance values recorded. If that column from ICPSR had a correlation greater than .999 and a Euclidean distance below 100 from the raw data column, it was able to be automatically identified as that category. If that column from ICPSR had a correlation greater than .95 and a Euclidean distance below 5000, it was checked by hand. Some of these columns were able to be verified by this process and some were not. All other columns that did not fit these criterion were considered to be unverified data, and were thus removed from the data included in the package.  
 
-_Describe this process in more detail once I actually get this figured. How many columns were correctly matched? How many weren't?_  
+It is important to note that many of the unverified columns were most likely farming and manufacturing data, as the ICPSR 3 did not include this information but the original data from the University of Virginia Historical Census Browser included variables of that type. Due to the need to verify using the ICPSR 3, there is a loss of some of the additional information that would have been an asset to the census browser.  
 
-_Currently I am struggling with the available data formats from ICPSR. I was able to compare the ICPSR 2896, but not many of the variables were actually able to be matched up, and I suspect this is because the ICPSR 2896 has some different values than the ICPSR 3. The ICPSR 3 is looking much more promising for verifying the column names, but... it doesn't give column names. I have the variable names in a codebook, but I am stuck between manually entering in all of the column names (there are 259 of them) and finding an overly complicated way to automate that processs..._  
+_Include a table here of numbers for verification _
+
+![Classification of variables in raw 1890 census data after comparing to the ICPSR 3 data.](./figures/verification.png){ width=70% }  
+
 
 Each year of the dataset began in a separate file, with each row corresponding to a State, each column being a demographic variable, and values being state-aggregated counts of number of people in that category. Each state was given a label `Type` as either a State or Territory, as some U.S. territories participated in the decennial census before they received full statehood. Each individual file can be found as `states` followed by the year of the census, (e.g. `states1790`) in this package. Each of these datasets were combined into one list, `stateslist`, which is the list of data that is used to populate the census browser.  
 
@@ -121,14 +124,16 @@ Each year of the dataset began in a separate file, with each row corresponding t
 
 This package includes the state-aggregated data for each individual year, as well as a list of all of the years together. The intended interaction with these data sources is via the Shiny application, `Get Your Data`. This interactive Shiny application presents the user with two options - focusing on a single year of the census, found in the `Single Year` tab, or focusing on multiple years at once, found in the `Multiple Years` tab.  
 
-The `Single Year` tab allows users to choose which year they are interested in from a drop-down menu, as well as two manual search entry boxes for variables of interest. For example, if a user is interested in the prevalence of farms in 1860, they can select 1860 and then search for "farms" in the first "Variable of Interest" spot (see Figure 1). Users can then see a complete list of all variable names in that particular year that have "farms" in their title. With this list now available, users can select each variable they want by clicking on it. Once all desired variables have been selected, clicking on the "Download Filtered Data" button will open a window in which the user can choose a file name and directory location for saving the resulting comma-separated values file. Variables will not remain selected if the user chooses to change their search term or add a second search term. However, if the user has interest in many separate variables that require different search terms, it is quite easy to combine multiple csv files in R using `full_join` from the `dplyr` package and specifying `State`, `Year`, `TOTAL.POPULATION`, and `Type` as the variables to join by. These four variables will always be included in the resulting csv file, whether the user selects them or not.   
+The `Single Year` tab allows users to choose which year they are interested in from a drop-down menu, as well as two manual search entry boxes for variables of interest. For example, if a user is interested in the prevalence of farms in 1860, they can select 1860 and then search for "farms" in the first "Variable of Interest" field (see Figure 2). Users can then see a complete list of all variable names in that particular year that have "farms" in their title. With this list now available, users can select each variable they want by clicking on it. Once all desired variables have been selected, clicking on the "Download Filtered Data" button will open a window in which the user can choose a file name and directory location for saving the resulting comma-separated values file. Variables will not remain selected if the user chooses to change their search term or add a second search term. However, if the user has interest in many separate variables that require different search terms, it is quite easy to combine multiple csv files in R using `full_join` from the `dplyr` package and specifying `State`, `Year`, `TOTAL.POPULATION`, and `Type` as the variables to join by. These four variables will always be included in the resulting csv file, whether the user selects them or not.   
 
 ```{r, echo = F, fig.width = 8, fig.pos =  "H", fig.cap = "The resulting view of a search for farms in the 1860 U.S. Census on the `Single Year` tab of the `Get Your Data` app."}
 knitr::include_graphics("./figures/app-sshot-farms.png")
 ```
 
 
-The `Multiple Years` tab allows users to look for variables of interest over a range of years. It offers all decennial censuses from 1790 to 1960, and offers the same search tool as before, but only allows users to narrow down results by one search term rather than the two provided in the `Single Year` tab. Users can select the range of years they are interested in by using the slider tool to specify their range of interest, and subsequently use the "Variable of Interest" search bar to narrow down their results. The results, being two-dimensional rather than just a single list of available variables, are presented somewhat differently in the `Multiple Years` tab. Each available variable is listed along the left side of the interface, and each selected year is presented across the top as a column in the table (see Figure 2). For each variable in the table, an `X` indicates for which years that particular variable is present. Far to the right, there is a column which denotes a count how many of the selected years have that particular variable. Users can choose to order the results by most years present to least years present, if they choose. This is where it is important to keep in mind that variable names for different demographic groups change drastically over the course of the decennial census, and thus users will want to be cognizant of varying search terms that may need to be checked. _I added a feature that pops up when they look for certain search terms. Right now, it only captures two different groups - the one in the example and then the differences between age groups. Should probably incorporate more of these in order to actually claim the element is there._  
+
+
+The `Multiple Years` tab allows users to look for variables of interest over a range of years. It offers all decennial censuses from 1790 to 1960, and offers the same search tool as before, but only allows users to narrow down results by one search term rather than the two provided in the `Single Year` tab. Users can select the range of years they are interested in by using the slider tool to specify their range of interest, and subsequently use the "Variable of Interest" search bar to narrow down their results. The results, being two-dimensional rather than just a single list of available variables, are presented somewhat differently in the `Multiple Years` tab. Each available variable is listed along the left side of the interface, and each selected year is presented across the top as a column in the table (see Figure 3). For each variable in the table, an `X` indicates for which years that particular variable is present. Far to the right, there is a column which denotes a count how many of the selected years have that particular variable. Users can choose to order the results by most years present to least years present, if they choose. This is where it is important to keep in mind that variable names for different demographic groups change drastically over the course of the decennial census, and thus users will want to be cognizant of varying search terms that may need to be checked. _I added a feature that pops up when they look for certain search terms. Right now, it only captures two different groups - the one in the example and then the differences between age groups. Should probably incorporate more of these in order to actually claim the element is there._  
 
 Similar to the output file of the `Single Year` tab, once a user selects all variables they are interested in, they can select the "Download Filtered Data" button to download a csv file of the chosen variables for all states across the selected years. For years in the selected range that don't have a particular variable, the csv file will be filled in with `NA` values, which allows the structure of the data table to remain intact although there are some year-variable combinations that do not exist in the data. As mentioned previously, because of the changing nature of variable names in the decennial census, users may have to search for several separate terms, download each file separately, and combine them once the files are downloaded. This process can be done in the same manner as the combination However, they are fairly easy to combine because the structure ensures that key variables needed to add on new columns are in place, regardless of which variables users choose to download. This results in all information about all variables of interest across the years of interest being together in one data table, with each row representing a year-state combination and all variables of interest represented as columns. Users can easily filter on specific variables or years while still maintaining the original full data set, which is advantageous for visualizing how a demographic group changes over time.  
 
@@ -149,10 +154,10 @@ The default set of years is 1790 to 1880. However, the slider range can be expan
 
 After ordering by how many years they appear in, the available variable names show a serious lack of continuity. The four ever-present variables (`Year`, `State`, `TOTAL.POPULATION`, and `Type`) each appear ten times, once in each year selected. After that, the next most common variable only appears in four of the ten years we have chosen. That immediately demonstrates some pretty significant hurdles that will persist when tracking any demographic group over time, without even focusing in on a particular group yet.  
 
-Since the focus is on African Americans throughout U.S. history, the first search term needed is `SLAVE` in the early years of the U.S. census. The vast majority of African Americans were slaves when the United States was founded, so variables that count the number of slaves are important variables to have in order to get a grasp on the African American population in early U.S. history. It is important to note that the `SLAVE` categorization is the only term the U.S. census had related to African Americans in the early years of the census, so it is also the only source of information available on that groupfor that time period.  
+Since the focus is on African Americans throughout U.S. history, the first search term needed is `SLAVE` in the early years of the U.S. census. The vast majority of African Americans were slaves when the United States was founded, so variables that count the number of slaves are important variables to have in order to get a grasp on the African American population in early U.S. history. It is important to note that the `SLAVE` categorization is the only term the U.S. census had related to African Americans in the early years of the census, so it is also the only source of information available on that group for that time period.  
 
 
-Once a relevant range of years has been chosen, we simply enter a search term. Searching for `SLAVE` gives a list of all the possible variable names across all years, which can again be sorted by how how many years each variable name appears in. The results of this search can be seen in Figure 3.  
+Once a relevant range of years has been chosen, we simply enter a search term. Searching for `SLAVE` gives a list of all the possible variable names across all years, which can again be sorted by how how many years each variable name appears in. The results of this search can be seen in Figure 4.  
 
 ![The resulting table after searching for the term 'slave' in the `Get Your Data` app.](./figures/app-sshot-slave.png)
 
@@ -165,6 +170,8 @@ library(USAboundaries)
 library(broom)
 library(maptools)
 library(gridExtra)
+library(ggthemes)
+library(scales)
 data_c <- readr::read_csv("./counts-using-word-colored.csv")
 data_s <- readr::read_csv("./counts-using-word-slave.csv")
 data_n <- readr::read_csv("./counts-using-word-negro.csv")
@@ -187,7 +194,7 @@ The data, being combined, can now be explored. For any particular year, a subset
 
 
 
-```{r chunk-1790-map, fig.width = 4, fig.height = 2.33, echo = FALSE, message = FALSE, warning = FALSE, fig.pos = "H", fig.cap = "Total number of slaves per state in 1790, plotted on a continuous log scale. State boundaries for July 4, 1790 were gathered from `USAboundaries` package."}
+```{r chunk-1790-map, fig.width = 6.66, fig.height = 4, echo = FALSE, message = FALSE, warning = FALSE, fig.pos = "H", fig.cap = "Total number of slaves per state in 1790, plotted on a continuous log scale. State boundaries for July 4, 1790 were gathered from `USAboundaries` package."}
 map_states_1790 <- us_boundaries("1790-07-04")
 
 m1790_df <- fortify(map_states_1790, region = "name")
@@ -210,17 +217,19 @@ data_full_wmap <- full_join(data_full, m1790_df, by = "State")
 data_full_wmap_1790 <- data_full_wmap %>% filter(Year == 1790)
 
 ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
-                        colour = "grey90", fill = "white") + theme_bw() + 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
   geom_polygon(data = data_full_wmap_1790, 
-               aes(x = long, y = lat, group = group, fill = log(SLAVES)), colour = "grey10") + 
-  theme(legend.title = element_blank()) + labs(title = "Total Slaves (log scale)", x = "", y = "") 
+               aes(x = long, y = lat, group = group, fill = SLAVES)) + 
+  scale_fill_gradient(trans = "log10", labels = comma) +
+  theme(legend.title = element_blank(), legend.background = element_rect(fill = "transparent")) + 
+  labs(title = "Total Slaves", x = "", y = "") 
 ```
 
 Now, with a visualization of the slave population in the United States in 1790 in hand, it is easy to look at subsequent years of the decennial census in a similar manner to see how the population changes over time.  
 
 
 
-```{r, fig.width = 8.33, fig.height = 5, echo = FALSE, message = FALSE, fig.pos = "H", fig.cap = "Number of Slaves, Number of Free Colored Persons, and Percentage of Free Colored Persons in 1820."}
+```{r, fig.width = 8.33, fig.height = 5, echo = FALSE, message = FALSE, warning = FALSE, fig.pos = "H", fig.cap = "Number of Slaves, Number of Free Colored Persons, and Percentage of Free Colored Persons in 1820."}
 map_states_1820 <- us_boundaries("1820-07-04")
 
 m1820_df <- fortify(map_states_1820, region = "name")
@@ -239,10 +248,12 @@ data_full_wmap <- data_full_wmap %>%
 data_full_wmap_1820 <- data_full_wmap %>% filter(Year == 1820)
 
 p1_1820 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
-                        colour = "grey90", fill = "white") + 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
   geom_polygon(data = data_full_wmap_1820, 
-               aes(x = long, y = lat, group = group, fill = log(TOTAL.SLAVES)), colour = "grey10") + 
-  theme_bw() + labs(title = "Total Slaves (log scale)", x = "", y = "") + theme(legend.title = element_blank())
+               aes(x = long, y = lat, group = group, fill = TOTAL.SLAVES)) + 
+  scale_fill_gradient(trans = "log10", labels = comma, limit = range(1, max(data_full_wmap_1820$TOTAL.SLAVES))) + 
+  labs(title = "Total Slaves", x = "", y = "") + 
+  theme(legend.title = element_blank(), legend.background = element_rect(fill = "transparent"))
 
 #p1_1820 <- data_full_wmap %>%
 #  filter(Year == 1820) %>% 
@@ -251,11 +262,12 @@ p1_1820 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group
 #  theme_bw() + labs(title = "Total Slaves (log scale)") + theme(legend.title = element_blank())
 
 p2_1820 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
-                        colour = "grey90", fill = "white") + 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
   geom_polygon(data = data_full_wmap_1820, 
-               aes(x = long, y = lat, group = group, fill = log(TOTAL.FREE.COLORED.PERSONS)), colour = "grey10") + 
-  theme_bw() + labs(title = "Total Free Colored Persons (log scale)", x = "", y = "") + 
-  theme(legend.title = element_blank())
+               aes(x = long, y = lat, group = group, fill = TOTAL.FREE.COLORED.PERSONS)) +
+  scale_fill_gradient(trans = "log10", labels = comma, limit = range(1,max(data_full_wmap_1820$TOTAL.SLAVES))) + 
+  labs(title = "Total Free Colored Persons", x = "", y = "") + 
+  theme(legend.title = element_blank(), legend.background = element_rect(fill = "transparent"))
 
 #p2_1820 <- data_full_wmap %>% 
 #  filter(Year == 1820) %>%
@@ -264,11 +276,12 @@ p2_1820 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group
 #  theme_bw() + labs(title = "Total Free Colored Persons (log scale)") + theme(legend.title = element_blank())
 
 p3_1820 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
-                        colour = "grey90", fill = "white") + 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
   geom_polygon(data = data_full_wmap_1820, 
-               aes(x = long, y = lat, group = group, fill = PERC.AFRICAN.AMERICANS.FREE), colour = "grey10") + 
-  theme_bw() + labs(title = "Percent of Colored Persons Free", x = "", y = "") + 
-  theme(legend.title = element_blank()) + scale_fill_gradient2(midpoint = .5)
+               aes(x = long, y = lat, group = group, fill = PERC.AFRICAN.AMERICANS.FREE)) + 
+  labs(title = "Percent of Colored Persons Free", x = "", y = "") + 
+  theme(legend.title = element_blank(), legend.background = element_rect(fill = "transparent")) +
+  scale_fill_gradient2(midpoint = .5)
 
 #p3_1820 <- data_full_wmap %>% 
 #  filter(Year == 1820) %>%
@@ -285,7 +298,7 @@ grid.arrange(p1_1820, p2_1820, p3_1820, ncol = 2)
 
 Jumping to the year 1820, and again filtering on that particular year, we learn new information about the African American population. The census at this time includes a count of `TOTAL.FREE.COLORED.PERSONS`, as there are citizens who are African American or other minorities that are free, and not slaves. At this time, many minorities were grouped together in the "colored persons" category, and as before, we do not have any other record for African Americans except this categorization and the "slaves" categorization. However, since the 1820 census included records for both `TOTAL.FREE.COLORED.PERSONS` and `TOTAL.SLAVES`, we can also now visualize the percentage of African Americans in each state that were categorized as "free persons" as opposed to slaves. Knowing that both of these variables are available allows for a powerful comparison by visualizing the growing divide in the United States at that time.  
 
-```{r, fig.width = 8.33, fig.height = 5, echo = FALSE, message = FALSE, fig.pos = "H", fig.cap = "Number of Slaves, Number of Free Colored Persons, Percentage of Free Colored Persons, and Total African American Persons in 1850."}
+```{r, fig.width = 8.33, fig.height = 5, echo = FALSE, message = FALSE, warning = FALSE, fig.pos = "H", fig.cap = "Number of Slaves, Number of Free Colored Persons, Percentage of Free Colored Persons, and Total African American Persons in 1850."}
 map_states_1850 <- us_boundaries("1850-07-04")
 
 m1850_df <- fortify(map_states_1850, region = "name")
@@ -310,61 +323,49 @@ data_full_wmap <- data_full_wmap %>%
   mutate(PERC.AFRICAN.AMERICANS.FREE = TOTAL.FREE.COLORED.POPULATION/(TOTAL.FREE.COLORED.POPULATION+TOTAL.SLAVES.ZERO))
 
 
-
 data_full_wmap_1850 <- data_full_wmap %>% filter(Year == 1850)
 
-p1_1850 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
-                        colour = "grey90", fill = "white") + 
-  geom_polygon(data = data_full_wmap_1850, 
-               aes(x = long, y = lat, group = group, fill = log(TOTAL.SLAVES)), colour = "grey10") + 
-  theme_bw() + labs(title = "Total Slaves (log scale)", x = "", y = "") + theme(legend.title = element_blank())
 
-#p1_1850 <- data_full_wmap %>%
-#  filter(Year == 1850) %>% 
-#  ggplot(aes(x = long, y = lat, group = group)) + 
-#  geom_polygon(aes(fill = log(TOTAL.SLAVES)), colour = "black") + 
-#  theme_bw() + labs(title = "Total Slaves (log scale)") + theme(legend.title = element_blank())
+legend_max <- max(data_full_wmap_1850$TOTAL.SLAVES.ZERO + data_full_wmap_1850$TOTAL.FREE.COLORED.POPULATION)
+
+
+p1_1850 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
+  geom_polygon(data = data_full_wmap_1850, 
+               aes(x = long, y = lat, group = group, fill = TOTAL.SLAVES)) +
+  scale_fill_gradient(trans = "log10", labels = comma, 
+                      limit = range(1,legend_max)) + 
+  labs(title = "Total Slaves", x = "", y = "") + 
+  theme(legend.title = element_blank(), legend.background = element_rect(fill = "transparent"))
+
 
 p2_1850 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
-                        colour = "grey90", fill = "white") + 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
   geom_polygon(data = data_full_wmap_1850, 
-               aes(x = long, y = lat, group = group, fill = log(TOTAL.FREE.COLORED.POPULATION)), colour = "grey10") + 
-  theme_bw() + labs(title = "Total Free Colored Persons (log scale)", x = "", y = "") + 
-  theme(legend.title = element_blank())
+               aes(x = long, y = lat, group = group, fill = TOTAL.FREE.COLORED.POPULATION)) +
+  scale_fill_gradient(trans = "log10", labels = comma, 
+                      limit = range(1, legend_max)) + 
+  labs(title = "Total Free Colored Persons", x = "", y = "") + 
+  theme(legend.title = element_blank(), legend.background = element_rect(fill = "transparent"))
 
-#p2_1850 <- data_full_wmap %>% 
-#  filter(Year == 1850) %>%
-#  ggplot(aes(x = long, y = lat, group = group)) + 
-#  geom_polygon(aes(fill = log(TOTAL.FREE.COLORED.POPULATION)), colour = "black") + 
-#  theme_bw() + labs(title = "Total Free Colored Persons (log scale)") + theme(legend.title = element_blank())
 
 p3_1850 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
-                        colour = "grey90", fill = "white") + 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
   geom_polygon(data = data_full_wmap_1850, 
-               aes(x = long, y = lat, group = group, fill = PERC.AFRICAN.AMERICANS.FREE), colour = "grey10") + 
-  theme_bw() + labs(title = "Percent of Colored Persons Free", x = "", y = "") + 
-  theme(legend.title = element_blank()) + scale_fill_gradient2(midpoint = .5)
+               aes(x = long, y = lat, group = group, fill = PERC.AFRICAN.AMERICANS.FREE)) + 
+  labs(title = "Percent of Colored Persons Free", x = "", y = "") + 
+  theme(legend.title = element_blank(), legend.background = element_rect(fill = "transparent")) +
+  scale_fill_gradient2(midpoint = .5)
 
-#p3_1850 <- data_full_wmap %>% 
-#  filter(Year == 1850) %>%
-#  ggplot(aes(x = long, y = lat, group = group)) + 
-#  geom_polygon(aes(fill = PERC.AFRICAN.AMERICANS.FREE), colour = "black") + 
-#  theme_bw() + labs(title = "Percent Free vs Percent Slaves") + 
-#  scale_fill_gradient2(midpoint = .5) + theme(legend.title = element_blank())
 
 p4_1850 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
-                        colour = "grey90", fill = "white") + 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
   geom_polygon(data = data_full_wmap_1850, 
-               aes(x = long, y = lat, group = group, fill = log(TOTAL.FREE.COLORED.POPULATION + TOTAL.SLAVES.ZERO)), colour = "grey10") + 
-  theme_bw() + labs(title = "Total African American Persons (log scale)", x = "", y = "") + 
-  theme(legend.title = element_blank()) 
+               aes(x = long, y = lat, group = group, fill = TOTAL.FREE.COLORED.POPULATION + TOTAL.SLAVES.ZERO)) + 
+  scale_fill_gradient(trans = "log10", labels = comma, limit = range(1, legend_max)) +
+  labs(title = "Total Slave and Free Colored Persons", x = "", y = "") +
+  theme(legend.title = element_blank(), legend.background = element_rect(fill = "transparent")) 
 
-#p4_1850 <- data_full_wmap %>% 
-#  filter(Year == 1850) %>%
-#  ggplot(aes(x = long, y = lat, group = group)) + 
-#  geom_polygon(aes(fill = log(TOTAL.FREE.COLORED.POPULATION + TOTAL.SLAVES.ZERO)), colour = "black") + 
-#  theme_bw() + labs(title = "Total African American Persons (log scale)") + 
-#  theme(legend.title = element_blank())
 
 grid.arrange(p1_1850, p2_1850, p3_1850, p4_1850, ncol = 2)
 ```
@@ -373,12 +374,16 @@ Moving forward from there, even more information can be gleaned about this popul
 
 
 ```{r, fig.width = 8.33, fig.height = 5, echo = FALSE, message = FALSE, fig.pos = "H", fig.cap = "Total Colored Persons in 19th Century United States"}
+
+legend_max <- 1000000
+
 p5_1850 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
-                        colour = "grey90", fill = "white") + 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
   geom_polygon(data = data_full_wmap_1850, 
-               aes(x = long, y = lat, group = group, fill = log(TOTAL.FREE.COLORED.POPULATION + TOTAL.SLAVES.ZERO)), colour = "grey10") + 
-  theme_bw() + labs(title = "1850", x = "", y = "") + 
-  theme(legend.title = element_blank()) 
+               aes(x = long, y = lat, group = group, fill = TOTAL.FREE.COLORED.POPULATION + TOTAL.SLAVES.ZERO)) +
+  scale_fill_gradient(trans = "log10", labels = comma, limit = range(1, legend_max)) + 
+  labs(title = "1850", x = "", y = "") + 
+  theme(legend.position = "none") 
 
 
 map_states_1860 <- us_boundaries("1860-07-04")
@@ -397,10 +402,13 @@ data_full_wmap <- data_full_wmap %>%
 data_full_wmap_1860 <- data_full_wmap %>% filter(Year == 1860)
 
 p4_1860 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
-                        colour = "grey90", fill = "white") + 
-  geom_polygon(data = data_full_wmap_1860, aes(x = long, y = lat, group = group, fill = log(TOTAL.FREE.COLORED.MALES + TOTAL.FREE.COLORED.FEMALES + AGGR..SLAVES.ZERO)), colour = "grey10") + 
-  theme_bw() + labs(title = "1860", x = "", y = "") + 
-  theme(legend.title = element_blank())
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
+  geom_polygon(data = data_full_wmap_1860, 
+               aes(x = long, y = lat, group = group, 
+                   fill = TOTAL.FREE.COLORED.MALES + TOTAL.FREE.COLORED.FEMALES + AGGR..SLAVES.ZERO)) + 
+  scale_fill_gradient(trans = "log10") + 
+  labs(title = "1860", x = "", y = "") + 
+  theme(legend.position = "none")
 
 
 map_states_1870 <- us_boundaries("1870-07-04")
@@ -412,9 +420,12 @@ data_full_wmap <- full_join(data_full, m1870_df, by = "State")
 data_full_wmap_1870 <- data_full_wmap %>% filter(Year == 1870)
 
 p4_1870 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group),
-                        colour = "grey90", fill = "white") + 
-  geom_polygon(data = data_full_wmap_1870, aes(x = long, y = lat, group = group, fill = log(COLORED.PERSONS)), colour = "grey10") + 
-  theme_bw() + labs(title = "1870", x = "", y = "") + theme(legend.title = element_blank())
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
+  scale_fill_gradient(trans = "log10", labels = comma, limit = range(1, legend_max)) + 
+  geom_polygon(data = data_full_wmap_1870, aes(x = long, y = lat, group = group, fill = COLORED.PERSONS)) + 
+  labs(title = "1870", x = "", y = "") + 
+  theme(legend.title = element_blank(), legend.background = element_rect(fill = alpha("white", 0.6)), 
+        legend.key.size = unit(.45, "cm"), legend.text = element_text(size = 6), legend.position = c(-.01, 0))
 
 map_states_1880 <- us_boundaries("1880-07-04")
 
@@ -425,30 +436,37 @@ data_full_wmap <- full_join(data_full, m1880_df, by = "State")
 data_full_wmap_1880 <- data_full_wmap %>% filter(Year == 1880)
 
 p4_1880 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group),
-                        colour = "grey90", fill = "white") + 
-  geom_polygon(data = data_full_wmap_1880, aes(x = long, y = lat, group = group, fill = log(COLORED.PERSONS)), colour = "grey10") + 
-  theme_bw() + labs(title = "1880", x = "", y = "") + theme(legend.title = element_blank())
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
+  geom_polygon(data = data_full_wmap_1880, aes(x = long, y = lat, group = group, fill = COLORED.PERSONS)) + 
+  scale_fill_gradient(trans = "log10", labels = comma, limit = range(1, legend_max)) + 
+  labs(title = "1880", x = "", y = "") + 
+  theme(legend.position = "none")
   
   
-grid.arrange(p5_1850, p4_1860, p4_1870, p4_1880, ncol = 2, top = "Total Colored Persons (log scale)")
+grid.arrange(p5_1850, p4_1860, p4_1870, p4_1880, ncol = 2, top = "Total Colored Persons")
 ```
 
 The total African American population is particularly interesting moving forward as well after slavery is abolished in the 1860s and some migration begins to occur out of certain areas. The balance of the total African American population in each state begins to change somewhat as the United States transitions into the post-slavery period. It is also clear to see how the boundaries of states change and new states are formed, with the United States gaining new states at each census.  
 
 
-```{r, fig.width = 8.33, fig.height = 5, echo = FALSE, message = FALSE, fig.pos = "H", fig.cap = "Total Black Persons in 20th Century United States"}  
+```{r, fig.width = 8.33, fig.height = 5, echo = FALSE, message = FALSE, warning = FALSE, fig.pos = "H", fig.cap = "Total Black Persons in 20th Century United States"}  
+
+legend_max <- 2000000
 map_states_1900 <- us_boundaries("1900-07-04")
 m1900_df <- fortify(map_states_1900, region = "name")
 m1900_df <- m1900_df %>% mutate(State = toupper(id))
 #anti_join(data_full, m1900_df, by = "State")
 data_full_wmap <- full_join(data_full, m1900_df, by = "State")
-data_full_wmap_1900 <- data_full_wmap %>% filter(Year == 1900
-                                                 )
+data_full_wmap_1900 <- data_full_wmap %>% filter(Year == 1900)
+
+
 p1_1900 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
-                        colour = "grey90", fill = "white") + theme_bw() + 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
   geom_polygon(data = data_full_wmap_1900, 
-               aes(x = long, y = lat, group = group, fill = log(NEGRO.FEMALES + NEGRO.MALES)), colour = "grey10") + 
-  labs(title = "1900", x = "", y = "") + theme(legend.title = element_blank())
+               aes(x = long, y = lat, group = group, fill = NEGRO.FEMALES + NEGRO.MALES)) + 
+  scale_fill_gradient(trans = "log10", labels = comma, limit = range(1, legend_max)) + 
+  labs(title = "1900", x = "", y = "") + 
+  theme(legend.position = "none")
 
 map_states_1910 <- us_boundaries("1910-07-04")
 m1910_df <- fortify(map_states_1910, region = "name")
@@ -458,10 +476,11 @@ data_full_wmap <- full_join(data_full, m1910_df, by = "State")
 data_full_wmap_1910 <- data_full_wmap %>% filter(Year == 1910)
 
 p1_1910 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
-                        colour = "grey90", fill = "white") + theme_bw() + 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
   geom_polygon(data = data_full_wmap_1910, 
-               aes(x = long, y = lat, group = group, fill = log(TOTAL.NEGROES)), colour = "grey10") + 
-  labs(title = "1910", x = "", y = "") + theme(legend.title = element_blank())
+               aes(x = long, y = lat, group = group, fill = TOTAL.NEGROES)) + 
+  scale_fill_gradient(trans = "log10", labels = comma, limit = range(1, legend_max)) + 
+  labs(title = "1910", x = "", y = "") + theme(legend.position = "none")
 
 
 map_states_1920 <- us_boundaries("1920-07-04")
@@ -472,10 +491,13 @@ data_full_wmap <- full_join(data_full, m1920_df, by = "State")
 data_full_wmap_1920 <- data_full_wmap %>% filter(Year == 1920)
 
 p1_1920 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
-                        colour = "grey90", fill = "white") + theme_bw() + 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
   geom_polygon(data = data_full_wmap_1920, 
-               aes(x = long, y = lat, group = group, fill = log(MALE.NEGROES + FEMALE.NEGROES)), colour = "grey10") + 
-  labs(title = "1920", x = "", y = "") + theme(legend.title = element_blank())
+               aes(x = long, y = lat, group = group, fill = MALE.NEGROES + FEMALE.NEGROES)) + 
+  scale_fill_gradient(trans = "log10", labels = comma, limit = range(1, legend_max)) + 
+  labs(title = "1920", x = "", y = "") + 
+  theme(legend.title = element_blank(), legend.background = element_rect(fill = alpha("white", 0.6)), 
+        legend.key.size = unit(.45, "cm"), legend.text = element_text(size = 6), legend.position = c(-.01, 0))
 
 map_states_1930 <- us_boundaries("1930-07-04")
 m1930_df <- fortify(map_states_1930, region = "name")
@@ -485,16 +507,20 @@ data_full_wmap <- full_join(data_full, m1930_df, by = "State")
 data_full_wmap_1930 <- data_full_wmap %>% filter(Year == 1930)
 
 p1_1930 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
-                        colour = "grey90", fill = "white") + theme_bw() + 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
   geom_polygon(data = data_full_wmap_1930, 
-               aes(x = long, y = lat, group = group, fill = log(NEGRO.FEMALES + NEGRO.MALES)), colour = "grey10") + 
-  labs(title = "1930", x = "", y = "") + theme(legend.title = element_blank())
+               aes(x = long, y = lat, group = group, fill = NEGRO.FEMALES + NEGRO.MALES)) + 
+  scale_fill_gradient(trans = "log10", labels = comma, limit = range(1, legend_max)) + 
+  labs(title = "1930", x = "", y = "") + 
+  theme(legend.position = "none")
 
-grid.arrange(p1_1900, p1_1910, p1_1920, p1_1930, ncol = 2, top = "Total Black Persons (log scale)")
+
+
+grid.arrange(p1_1900, p1_1910, p1_1920, p1_1930, ncol = 2, top = "Total Black Persons")
 ```
 
 
-A period of growth and change can be seen at the turn of the 20th century as well, with a dramatic shift in the African American population out west to California and with the balance in the east and midwest shifting slightly further up north. Although the highest density still remains in the southern states, somewhat of a northern migration is visible.   
+A period of growth and change can be seen at the turn of the 20th century as well, with a dramatic shift in the African American population out west to California and with the balance in the east and midwest shifting slightly further north. Although the highest density still remains in the southern states, somewhat of a northern migration is visible.   
 
 
 

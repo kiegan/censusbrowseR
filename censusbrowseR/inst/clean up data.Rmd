@@ -7,14 +7,14 @@ output: html_document
 
 ## messing around with it to see what we are dealing with
 ```{r}
-#states1790 <- read.csv("~/Statistical-Atlas/raw-data/1790 State Level Census Data.csv", skip = 22)
+#states1790 <- read.csv("~/censusbrowseR/raw-data/1790 State Level Census Data.csv", skip = 22)
 #head(states1790)
 
 #states1790.1 <- states1790[1:18,]
 ```
 
 ```{r}
-#states1800 <- read.csv("~/Statistical-Atlas/raw-data/1800 State Level Census Data.csv", skip = 22)
+#states1800 <- read.csv("~/censusbrowseR/raw-data/1800 State Level Census Data.csv", skip = 22)
 #head(states1800)
 
 #states1800.1 <- states1800[1:19,]
@@ -40,21 +40,41 @@ get.states <- function(filename, year){
 }
 
 # save clean data into separate R files and put into package
-states1790 <- get.states("~/Statistical-Atlas/raw-data/1790 State Level Census Data.csv", 1790)
-save(states1790, file = "~/Statistical-Atlas/statatlas/data/states1790.rda")
+states1790 <- get.states("~/censusbrowseR/raw-data/1790 State Level Census Data.csv", 1790)
+save(states1790, file = "~/censusbrowseR/statatlas/data/states1790.rda")
 
 
 ## repeat this for each year
-states1960 <- get.states("~/Statistical-Atlas/raw-data/1960 State Level Census Data.csv", 1960)
-save(states1960, file = "~/Statistical-Atlas/statatlas/data/states1960.rda")
+states1960 <- get.states("~/censusbrowseR/raw-data/1960 State Level Census Data.csv", 1960)
+save(states1960, file = "~/censusbrowseR/statatlas/data/states1960.rda")
 
 ## special fix for 1940
-#states1940 <- get.states("~/Statistical-Atlas/raw-data/1940 State Level Census Data.csv", 1940)
+#states1940 <- get.states("~/censusbrowseR/raw-data/1940 State Level Census Data.csv", 1940)
 #colnames(states1940)[3] <- "TOTAL.POPULATION" # changing "TOTAL.POPULATION..1940" to just "TOTAL.POPULATION"
-#save(states1940, file = "~/Statistical-Atlas/statatlas/data/states1940.rda")
+#save(states1940, file = "~/censusbrowseR/statatlas/data/states1940.rda")
 
 
 # put all of them into one file (rbind)
 # how much do the names match up with what was actually asked in the census
   # keep the names and document changes, but changing names could be a good idea
+```
+
+
+
+
+
+
+### UPDATING COLUMN NAMES FOR 1890 DATA BASED ON VERIFICATION  
+
+```{r}
+states1890 <- get.states("~/censusbrowseR/raw-data/1890 State Level Census Data.csv", 1890)
+states1890_colnm <- read.csv("~/censusbrowseR/raw-data/1890 Column Names.csv", skip = 1, header = T)
+
+colnames(states1890) <- colnames(states1890_colnm)
+
+states1890 <- states1890[,-c(145:170)]
+which.un <- grep("UNKNOWN", colnames(states1890))
+states1890 <- states1890 %>% select(-which.un) 
+save(states1890, file = "~/censusbrowseR/censusbrowseR/data/states1890.rda")
+
 ```

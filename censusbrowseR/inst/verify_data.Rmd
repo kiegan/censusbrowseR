@@ -7,13 +7,13 @@ output: html_document
 ```{r}
 library(tidyverse)
 library(foreign)
-icpsr_1890 <- read.spss(file = "../ICPSR_02896 5/DS0019/02896-0019-Data.sav")
+icpsr_1890 <- read.spss(file = "../../ICPSR_02896 5/DS0019/02896-0019-Data.sav")
 icpsr_1890 %>% glimpse()
 icpsr_1890_df <- as.data.frame(icpsr_1890)
 icpsr_1890_df %>% glimpse()
 states1890 %>% glimpse()
 
-icpsr_3_1890 <- readr::read_fwf(file = "../ICPSR_00003/DS0028/00003-0028-Data.txt", 
+icpsr_3_1890 <- readr::read_fwf(file = "../../ICPSR_00003/DS0028/00003-0028-Data.txt", 
                                 col_positions = 
                                   fwf_positions(start = c(1,2,5,7,9,26,30,33,seq(42, 2292, by = 9)),
                                                 end = c(1,4,6,8,25,29,32,41,seq(50, 2300, by = 9))))
@@ -32,8 +32,52 @@ names(icpsr_3_1890) <- c("DATA TYPE", "YEAR", "ICPR STATE CODE", "CNGSL DIST NUM
                          "890N.W N.B.P MISSOURI", "890N.W N.B.P NTH.D", "890N.W N.B.P STH.D", "890N.W N.B.P NEBRASKA",
                          "890N.W N.B.P KANSAS", "890N.W N.B.P KENTUCKY", "890N.W N.B.P TENNESSEE", 
                          "890N.W N.B.P ALABAMA", "890N.W N.B.P MSSPI", "890N.W N.B.P LOUISIANA", "890N.W N.B.P TEXAS",
-                         "890N.W N.B.P INDN TRTRY", "890N.W N.B.P OKLAHOMA", "890N.W N.B.P ARKANSAS", "890N.W N.B.P MONTANA",
-                         "890N.W N.B.P WYOMING", "890N.W N.B.P COLORADO", "890N.W N.B.P NEW MEXICO", names(icpsr_3_1890[62:259]))
+                         "890N.W N.B.P INDN TRTRY", "890N.W N.B.P OKLAHOMA", "890N.W N.B.P ARKANSAS", 
+                         "890N.W N.B.P MONTANA", "890N.W N.B.P WYOMING", "890N.W N.B.P COLORADO", 
+                         "890N.W N.B.P NEW MEXICO","890N.W N.B.P ARIZONA", "890N.W N.B.P UTAH", "890N.W N.B.P NEVADA",
+                         "890N.W N.B.P IDAHO","890N.W N.B.P WASHINGTON","890N.W N.B.P OREGON", "890N.W N.B.P CALIFORNIA",
+                         "890N.W N.B.P ALASKA", "890N.W N.B.P U.S USPEC", "890N.W N.B.P SEA", "890N.W N.B.P ABROAD", "890N.W F.B.P MAINE",
+                         "890N.W F.B.P NW.H", "890N.W F.B.P VERMONT", "890N.W F.B.P MSCHSTS", "890N.W F.B.P R.ISLD", "890N.W F.B.P CNCTCT",
+                         "890N.W F.B.P NEW YORK", "890N.W F.B.P NEW JERSEY", "890N.W F.B.P PA", "890N.W F.B.P DELAWARE", 
+                         "890N.W F.B.P MARYLAND", "890N.W F.B.P D.C", "890N.W F.B.P VA", "890N.W F.B.P WST VA", "890N.W F.B.P NTH.C",
+                         "890N.W F.B.P STH.C", "890N.W F.B.P GEORGIA", "890N.W F.B.P FLORIDA", "890N.W F.B.P OHIO", "890N.W F.B.P INDIANA",
+                         "890N.W F.B.P ILLINOIS", "890N.W F.B.P MICHIGAN", "890N.W F.B.P WISCONSIN", "890N.W F.B.P MINNESOTA", 
+                         "890N.W F.B.P IOWA", "890N.W F.B.P MISSOURI", "890N.W F.B.P NTH.D", "890N.W F.B.P STH.D", "890N.W F.B.P NEBRASKA",
+                         "890N.W F.B.P KANSAS", "890N.W F.B.P KENTUCKY", "890N.W F.B.P TENNESSEE", "890N.W F.B.P ALABAMA", "890N.W F.B.P MSSPI",
+                         "890N.W F.B.P LOUISIANA", "890N.W F.B.P TEXAS", "890N.W F.B.P INDN TRTRY", "890N.W F.B.P OKLAHOMA", 
+                         "890N.W F.B.P ARKANSAS", "890N.W F.B.P MONTANA", "890N.W F.B.P WYOMING", "890N.W F.B.P COLORADO", 
+                         "890N.W F.B.P NEW MEXICO", "890N.W F.B.P ARIZONA", "890N.W F.B.P UTAH", "890N.W F.B.P NEVADA",
+                         "890N.W F.B.P IDAHO", "890N.W F.B.P WASHINGTON", "890N.W F.B.P OREGON", "890N.W F.B.P CALIFORNIA",
+                         "890N.W F.B.P ALASKA", "890N.W F.B.P U.S USPEC", "890N.W F.B.P SEA", "890N.W F.B.P ABROAD", "890CLRD BRN MAINE",
+                         "890CLRD BRN NW.H", "890CLRD BRN VERMONT", "890CLRD BRN MSCHSTS", "890CLRD BRN R.ISLD", "890CLRD BRN CNCTCT", 
+                         "890CLRD BRN NEW YORK", "890CLRD BRN NEW JERSEY", "890CLRD BRN PA", "890CLRD BRN DELAWARE", "890CLRD BRN MARYLAND",
+                         "890CLRD BRN D.C", "890CLRD BRN VA", "890CLRD BRN WST VA", "890CLRD BRN NTH.C", "890CLRD BRN STH.C", 
+                         "890CLRD BRN GEORGIA", "890CLRD BRN FLORIDA", "890CLRD BRN OHIO", "890CLRD BRN INDIANA", "890CLRD BRN ILLINOIS",
+                         "890CLRD BRN MICHIGAN", "890CLRD BRN WISCONSIN", "890CLRD BRN MINNESOTA", "890CLRD BRN IOWA", "890CLRD BRN MISSOURI",
+                         "890CLRD BRN NTH.D", "890CLRD BRN STH.D","890CLRD BRN NEBRASKA", "890CLRD BRN KANSAS",
+                         "890CLRD BRN KENTUCKY", "890CLRD BRN TENNESSEE", "890CLRD BRN ALABAMA", "890CLRD BRN MSSPI", "890CLRD BRN LOUISIANA",
+                         "890CLRD BRN TEXAS", "890CLRD BRN INDN TRTRY", "890CLRD BRN OKLAHOMA", "890CLRD BRN ARKANSAS", "890CLRD BRN MONTANA",
+                         "890CLRD BRN WYOMING", "890CLRD BRN COLORADO", "890CLRD BRN NEW MEXICO", "890CLRD BRN ARIZONA", "890CLRD BRN UTAH", 
+                         "890CLRD BRN NEVADA", "890CLRD BRN IDAHO", "890CLRD BRN WASHINGTON", "890CLRD BRN OREGON", "890CLRD BRN CALIFORNIA",
+                         "890CLRD BRN ALASKA", "890CLRD BRN USA USPEC", "890CLRD BRN SEA", "890CLRD BRN ABROAD", "890PSN BRN CNDA NWFNDLD",
+                         "890PSN BRN MEXICO", "890PSN BRN CTRL AMER", "890PSN BRN STH AMER", "890PSN BRN CUBA AND W.I", "890PSN BRN ENGLAND",
+                         "890PSN BRN SCTLND", "890PSN BRN WALES", "890PSN BRN GRT BRITAIN", "890PSN BRN IRELAND", "890PSN BRN GERMANY",
+                         "890PSN BRN AUSTRIA", "890PSN BRN HOLLAND", "890PSN BRN BELGIUM", "890PSN BRN LUXEMBURG", "890PSN BRN SWTZRLD", 
+                         "890PSN BRN NORWAY", "890PSN BRN SWDN", "890PSN BRN DENMARK", "890PSN BRN RUSSIA", "890PSN BRN HUNGARY", 
+                         "890PSN BRN BOHEMIA", "890PSN BRN POLAND", "890PSN BRN FRANCE", "890PSN BRN ITALY", "890PSN BRN SPAIN", 
+                         "890PSN BRN PORTUGAL", "890PSN BRN GREECE", "890PSN BRN ASIA", "890PSN BRN CHINA", "890PSN BRN JAPAN",
+                         "890PSN BRN INDIA", "890PSN BRN AFRICA", "890PSN BRN ATLNTC ISLD", "890PSN BRN AUSTRALIA", "890PSN BRN EUR",
+                         "890PSN BRN PACIFIC ISLD", "890PSN BRN S.ISLD", "890PSN BRN TURKEY", "890PSN BRN SEA", "890PSN BRN OTR", 
+                         "890DWLING W 1 PSN", "890DWLING W 2 PSN", "890DWLING W 3 PSN", "890DWLING W 4 PSN", "890DWLING W 5 PSN",
+                         "890DWLING W 6 PSN", "890DWLING W 7 PSN", "890DWLING W 8 PSN", "890DWLING W 9 PSN", "890DWLING W 10 PSN",
+                         "890DWLING W 11-15 PSN", "890DWLING W 16-20 PSN", "890DWLING W 21 PSN OVR", "890NMBR FAM W 1 PSN", 
+                         "890NMBR FAM W 2 PSN", "890NMBR FAM W 3 PSN", "890NMBR FAM W 4 PSN", "890NMBR FAM W 5 PSN",
+                         "890NMBR FAM W 6 PSN", "890NMBR FAM W 7 PSN", "890NMBR FAM W 8 PSN", "890NMBR FAM W 9 PSN", "890NMBR FAM W 10 PSN", 
+                         "890NMBR FAM W 11-15 PSN", "890NMBR FAM W 16-20 PSN", "890NMBR FAM W 21 PSN OVR", "890TTL ACR CEREALS", 
+                         "890TTL BSHL ALL CEREALS", "890SINGLE M", "890MARRIED M", "890WIDOWED M", "890DIVORCED M", "890M UNKNOWN CONJUGAL",
+                         "890SINGLE F", "890MARRIED F", "890WIDOWED F", "890DIVORCED F", "890F UNKNOWN CONJUGAL")
+
+
 ```
 
 We need to match up state names in the icpsr_1890 dataset and the states1890 dataset and then look for correlations between each of the variables to determine how the columns match up!  
@@ -52,14 +96,14 @@ cor_matches_df$max_cor_colnm <- as.character(cor_matches_df$max_cor_colnm)
 cor_matches_df$min_dist_colnm <- as.character(cor_matches_df$min_dist_colnm)
 
 for (i in 262:428){
-  corr_vals <- cor(corr_df[,i], corr_df[,8:258])
+  corr_vals <- cor(corr_df[,i], corr_df[,8:258], use = "pairwise.complete.obs")
   cor_matches_df$max_cor_val[i-261] <- max(corr_vals)
   
   cor_matches_df$max_cor_colnm[i-261] <- 
     ifelse(is.na(cor_matches_df$max_cor_val[i-261]), "NA", 
            colnames(corr_df)[8:258][which.max(corr_vals)])
   
-  dist_vals <- sqrt(colSums((corr_df[,i] - corr_df[,8:258])^2))
+  dist_vals <- sqrt(colSums((corr_df[,i] - corr_df[,8:258])^2, na.rm = T))
   cor_matches_df$min_dist_val[i-261] <- min(dist_vals)
   cor_matches_df$min_dist_colnm[i-261] <- 
     ifelse(is.na(cor_matches_df$min_dist_val[i-261]), "NA", 
@@ -69,3 +113,80 @@ for (i in 262:428){
 
 cor_matches_df
 ```
+
+
+
+
+
+## ICPSR 0003
+```{r}
+icpsr_3_1890 %>% glimpse()
+icpsr_3_1890_df <- as.data.frame(icpsr_3_1890)
+icpsr_3_1890_df <- icpsr_3_1890_df %>% mutate(NAME = `COUNTY NAME`)
+
+icpsr_3_1890_df <- icpsr_3_1890_df %>% arrange(NAME)
+head(icpsr_3_1890_df)
+
+icpsr_3_1890_df[,8:258] <- apply(icpsr_3_1890_df[,8:258], MARGIN = 2, FUN = as.numeric)
+
+head(states1890)
+icpsr_3_1890_df <- icpsr_3_1890_df %>% mutate(State = trimws(NAME))
+anti_join(icpsr_3_1890_df, states1890, by = "State")
+
+corr_df_3 <- right_join(icpsr_3_1890_df, states1890, by = "State")
+
+cor_3_matches_df <- data.frame("states1890_colnm" = colnames(corr_df_3[,263:429]), "max_cor_val" = -2, "max_cor_colnm" =  "Unknown", "min_dist_val" = -2, "min_dist_colnm" = "Unknown")
+cor_3_matches_df$max_cor_colnm <- as.character(cor_3_matches_df$max_cor_colnm)
+cor_3_matches_df$min_dist_colnm <- as.character(cor_3_matches_df$min_dist_colnm)
+
+for (i in 263:429){
+  corr_vals_3 <- cor(corr_df_3[,i], corr_df_3[,8:258], use = "pairwise.complete.obs")
+  cor_3_matches_df$max_cor_val[i-262] <- max(corr_vals_3)
+  
+  cor_3_matches_df$max_cor_colnm[i-262] <- 
+    ifelse(is.na(cor_3_matches_df$max_cor_val[i-262]), "NA", 
+           colnames(corr_df_3)[8:258][which.max(corr_vals_3)])
+  
+  dist_vals_3 <- sqrt(colSums((corr_df_3[,i] - corr_df_3[,8:258])^2, na.rm = T))
+  cor_3_matches_df$min_dist_val[i-262] <- min(dist_vals_3)
+  cor_3_matches_df$min_dist_colnm[i-262] <- 
+    ifelse(is.na(cor_3_matches_df$min_dist_val[i-262]), "NA", 
+           colnames(corr_df_3)[8:258][which.min(dist_vals_3)])
+}
+## add in euclidean distance - also consider the size of the difference, not just the correlation (no units!)
+
+cor_3_matches_df
+```
+
+```{r}
+
+
+cor_3_matches_df <- cor_3_matches_df %>% 
+  mutate(var_id = ifelse(max_cor_val > .999 & min_dist_val < 100, "auto", "unverified")) %>% 
+  mutate(var_id = ifelse(var_id == "unverified" & max_cor_val > .95 & min_dist_val < 5000, "hand", var_id)) %>%
+  mutate(var_id = ifelse(is.na(var_id) & is.na(max_cor_val) & min_dist_val < 100, "auto", var_id))
+
+cor_3_matches_df %>%
+  ggplot() + 
+  geom_jitter(aes(x = max_cor_val, y = log(min_dist_val+1), colour = factor(var_id))) + 
+  theme_bw() + labs(x = "Maximum Correlation", y = "Minimum Euclidean Distance (log scale)") +
+  scale_color_manual(labels = c("Automatically Verified", "Checked by Hand", "Unverified"), 
+                     values = c("green", "blue", "black")) +
+  theme(legend.title = element_blank())
+```
+
+```{r}
+icpsr_3_1890_df[1:10,]
+
+cor_3_matches_df
+
+```
+
+
+
+
+
+
+
+## ICPSR 3 and 1940 Data...
+
