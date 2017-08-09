@@ -36,6 +36,9 @@ shinyApp(
     mydata1 <- reactive({
       library(censusbrowseR)
       data(stateslist)
+      if(toupper(input$topic) == "SLAVE" | toupper(input$topic) == "NEGRO" | toupper(input$topic) == "COLORED"){
+        showNotification("Notice to user: This search term may need to be changed for different years.", type = "warning", duration = NA)
+      }
       variables <- names(stateslist[[paste0("X",input$year)]])
       variable1 = variables[grep(toupper(input$topic), variables)]
       variable2 = variables[grep(toupper(input$topic2), variables)]
