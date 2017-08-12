@@ -70,9 +70,8 @@ save(states1960, file = "~/censusbrowseR/statatlas/data/states1960.rda")
 states1890 <- get.states("~/censusbrowseR/raw-data/1890 State Level Census Data.csv", 1890)
 states1890_colnm <- read.csv("~/censusbrowseR/raw-data/1890 Column Names.csv", skip = 1, header = T)
 
-colnames(states1890) <- colnames(states1890_colnm)
+colnames(states1890) <- c("Year",colnames(states1890_colnm), "Type")
 
-states1890 <- states1890[,-c(145:170)]
 which.un <- grep("UNKNOWN", colnames(states1890))
 states1890 <- states1890 %>% select(-which.un) 
 save(states1890, file = "~/censusbrowseR/censusbrowseR/data/states1890.rda")

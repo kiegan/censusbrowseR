@@ -107,11 +107,28 @@ None of the aforementioned resources provide the full advantages that the Histor
 \subsection{Data}  
 Although the county-level data had already been removed from the website, the state-level aggregated records for each decennial census from 1790 through 1960 were captured from the website in September of 2016 and saved as raw data with the intent to create a resource for R users that allowed the same main functionalities of the original University of Virginia Historical Census Browser, streamlined for easy data searches and data management.  
 
-The majority of files for the decennial censuses were complete upon capture from the website. However, two years of census data were missing some column names and thus needed to be verified. For the 1890 and 1940 censuses, each column was compared to all columns from the corresponding ICPSR 3 data file by both correlation and Euclidean distance, and thus some columns were able to be correctly identified. The column from ICPSR 3 with the highest correlation and the lowest Euclidean distance to the raw data column in question was identified, and the correlation and distance values recorded. If that column from ICPSR had a correlation greater than .999 and a Euclidean distance below 100 from the raw data column, it was able to be automatically identified as that category. If that column from ICPSR had a correlation greater than .95 and a Euclidean distance below 5000, it was checked by hand. Some of these columns were able to be verified by this process and some were not. All other columns that did not fit these criterion were considered to be unverified data, and were thus removed from the data included in the package.  
+The majority of files for the decennial censuses were complete upon capture from the website. However, two years of census data were missing some column names and thus needed to be verified. For the 1890 and 1940 censuses, each column was compared to all columns from the corresponding ICPSR 3 data file by both correlation and Euclidean distance, and thus some columns were able to be correctly identified. The column from ICPSR 3 with the highest correlation and the lowest Euclidean distance to the raw data column in question was identified, and the correlation and distance values recorded. If that column from ICPSR had a correlation greater than .999 and a Euclidean distance below 100 from the raw data column, it was able to be automatically identified as that category. If that column from ICPSR had a correlation greater than .95 and a Euclidean distance below 5000, it was checked by hand. Some of these columns were able to be verified by this process and some were not. All other columns that did not fit these criterion were considered to be unverified data, and were thus removed from the data included in the package. 
 
-It is important to note that many of the unverified columns were most likely farming and manufacturing data, as the ICPSR 3 did not include this information but the original data from the University of Virginia Historical Census Browser included variables of that type. Due to the need to verify using the ICPSR 3, there is a loss of some of the additional information that would have been an asset to the census browser.  
+A much larger proportion of the 1940 columns were able to be verified than those in 1890. It is important to note that many of the unverified columns in 1890 were most likely farming and manufacturing data, as the ICPSR 3 did not include this information but the original data from the University of Virginia Historical Census Browser included variables of that type. Due to the need to verify using the ICPSR 3, there is a loss of some of the additional information that would have been an asset to the census browser for the 1890 year. This loss is minimal with the 1940 data.  
+
 
 _Include a table here of numbers for verification _
+
+\begin{table}[H]
+\centering
+
+  \begin{tabular}{l|c|c|c|c}
+  \hline
+  Year & Automatically Verified & Verified by Hand & Unverified & Total \\ \hline
+  1890 & 37 & 9 & 121 & 167 \\ 
+  1940 & 349 & 8 & 24 & 381 \\ 
+  \end{tabular}
+
+  \caption{Counts of variables after going through the verification process.}
+  \label{verify-table}
+\end{table}
+
+
 
 ![Classification of variables in raw 1890 census data after comparing to the ICPSR 3 data.](./figures/verification.png){ width=70% }  
 

@@ -3,6 +3,9 @@ title: "verify data"
 output: html_document
 ---
 
+## the states1890 in the package has been updated based on this verification. the original raw data is still in the raw-data folder.
+
+
 
 ```{r}
 library(tidyverse)
@@ -180,6 +183,7 @@ icpsr_3_1890_df[1:10,]
 
 cor_3_matches_df
 
+summary(factor(cor_3_matches_df$var_id))
 ```
 
 
@@ -189,4 +193,192 @@ cor_3_matches_df
 
 
 ## ICPSR 3 and 1940 Data...
+```{r}
+library(tidyverse)
+library(foreign)
 
+states1940 %>% glimpse()
+
+icpsr_3_1940 <- readr::read_fwf(file = "../../ICPSR_00003_1940/DS0017/00003-0017-Data.txt", 
+                                col_positions = 
+                                  fwf_positions(start = c(1,2,5,7,9,26,30,33,seq(42, by = 9, length.out = 350), 
+                                                          3192, 3195, seq(3198, by = 9, length.out = 24)),
+                                                end = c(1,4,6,8,25,29,32,41,seq(50, by = 9, length.out = 350), 
+                                                        3194, 3197, seq(3206, by = 9, length.out = 24))))
+
+icpsr_3_1940[1:10,]
+
+names(icpsr_3_1940) <- c("DATA TYPE", "YEAR (940)", "ICPR STATE CODE", "CNGSL DIST NUMBER", "COUNTY NAME", 
+                         "CTLG ENTRY NMBR", "TABLE NMBR", "940TTL MALES", "940TTL FEMALES", "940NTV MALES",
+                         "940NTV FEMALES", "940F.B MALES", "940F.B FEMALES", "940NTV WHT PSNS",
+                         "940F.B WHT PSNS", "940NEGROES", "940OTR RACES", "940MALES 21 AND OVR",
+                         "940N.B MALES 21 AND OVR", "940NTRLZD F.B M 21", "940ALIEN F.B M 21", "940F.B M 21 UKWN",
+                         "940F.B WHT M 21","940NTRLZD F.B WHT M 21", "940F.B WHT M 21 1ST PPR", 
+                         "940F.B WHT M 21 NO PPR", "940F.B WHT M 21 UKWN", "940FEMALES 21 AND OVR", "940N.B F 21",
+                         "940NTRLZD F.B F 21", "940ALIEN F.B F 21", "940F.B F 21 UKWN", "940F.B WHT F 21", 
+                         "940NTRLZD F.B WHT F 21", "940F.B WHT F 21 1ST PPR", "940F.B WHT F 21 NO PPR",
+                         "940F.B WHT F 21 UKWN", "940PSNS 5-6 YRS", "9405-6 YRS ATNDG SCH", "940PSNS 7-13 YRS",
+                         "9407-13 ATNDG SCH", "940PSNS 14-15 YRS", "94014-15 ATNDG SCH", "940PSNS 16-17 YRS",
+                         "94016-17 ATNDG SCH", "940PSNS 18-20 YRS", "94018-20 ATNDG SCH", "940PSNS 21-24 YRS",
+                         "94021-24 ATNDG SCH", "940MALES 25 YRS AND OVR", "940M 25 NO SCH", "940M 25 1-4 GRADE SCH",
+                         "940M 25 5 OR 6 GRADE SCH", "940M 25 7 OR 8 GRADE SCH", "940M 25 1-3 HIGH SCH", "940M 25 4 HIGH SCH",
+                         "940M 25 1-3 COLLEGE", "940M 25 4 OR MR COLLEGE", "940M 25 SCH NOT RPRTD",
+                         "940FEMALES 25 YRS AND OVR", "940F 25 NO SCH", "940F 25 1-4 GRADE SCH", "940F 25 5 OR 6 GRADE SCH",
+                         "940F 25 7 OR 8 GRADE SCH", "940F 25 1-3 HIGH SCH", "940F 25 4 HIGH SCH", "940F 25 1-3 COLLEGE",
+                         "940F 25 4 OR MR COLLEGE", "940F 25 SCH NOT RPRTD", "940URBAN-FARM POP", "940RURAL-FARM POP",
+                         "940WHT BRN ENGLAND", "940WHT BRN SCOTLAND", "940WHT BRN WALES", "940WHT BRN NTRN IRELAND",
+                         "940WHT BRN EIRE", "940WHT BRN NORWAY", "940WHT BRN SWEDEN", "940WHT BRN DENMARK",
+                         "940WHT BRN NETHERLANDS", "940WHT BRN BELGIUM", "940WHT BRN LUXEMBURG", "940WHT BRN SWITZERLAND",
+                         "940WHT BRN FRANCE", "940WHT BRN GERMANY", "940WHT BRN POLAND", "940WHT BRN CZECHSLVKIA", "940WHT BRN AUSTRIA",
+                         "940WHT BRN HUNGARY", "940WHT BRN YUGOSLAVIA", "940WHT BRN RUSSIA", "940WHT BRN LITHUANIA", "940WHT BRN LATVIA",
+                         "940WHT BRN FINLAND", "940WHT BRN RUMANIA", "940WHT BRN BULGARIA", "940WHT BRN TURKEY EUR", "940WHT BRN GREECE",
+                         "940WHT BRN ITALY", "940WHT BRN SPAIN", "940WHT BRN PORTUGAL", "940WHT BRN OTR EUROPE",
+                         "940WHT BRN PLSTN AND SYRIA", "940WHT BRN TURKEY ASIA", "940WHT BRN OTR ASIA", "940WHT BRN FRENCH CNDA",
+                         "940WHT BRN OTR CNDA", "940WHT BRN NEWFOUNDLAND", "940WHT BRN MEXICO", "940WHT BRN WST INDIES", 
+                         "940WHT BRN CTRL STH AMER", "940WHT BRN AUSTRALIA", "940WHT BRN AZORES", "940WHT BRN OTR AND NOT",
+                         "940NMBR STBLSHTS MFGN", "940WG ERNRS MFGN", "940WGS MFGN", "940CST MTRLS FUEL MFGN",
+                         "940VAL PRDTS MFGN", "940VAL ADDED BY MFGN", "940TTL MALES 14AN AND OVR", "940TTL FEMALES 14 AND OVR",
+                         "940NMBR M IN LABOR FRC", "940NMBR F IN LABOR FRC", "940% M IN LABOR FRC" , "940% F IN LABOR FRC",
+                         "940NMBR EMPLD M", "940NMBR EMPLD F", "940EMPLD M WAGE AND SLRY", "940EMPLD F WAGE AND SLRY",
+                         "940EMPLD M EMPLOYERS", "940EMPLD F EMPLOYERS", "940EMPLD M UNPAID FAM", "940EMPL F UNPAID FAM",
+                         "940EMPL M NOT RPRTD", "940EMPL F NOT RPRTD", "940EMPL M EMRGC WRK", "940EMPL F EMRGC WRK",
+                         "940NMBR M SEEKING WRK", "940NMBR F SEEKING WRK", "940EXPRD M SEEKING WRK", "940EXPRD F SEEKING WRK",
+                         "940NEW M SEEKING WRK", "940NEW F SEEKING WRK", "940EMPLD M PFNL", "940EMPLD F PFNL", 
+                         "940EMPLD M SEMIPFNL", "940EMPLD F SEMIPFNL", "940EMPLD M FARMERS", "940EMPLD F FARMERS",
+                         "940EMPLD M PROPRIETORS", "940EMPLD F PROPRIETORS", "940EMPLD M CLERICAL", "940EMPLD F CLERICAL",
+                         "940EMPLD M CRAFTSMEN", "940EMPLD F CRAFTSMEN", "940EMPLD M OPERATIVES", "940EMPLD F OPERATIVES",
+                         "940EMPLD M DOMESTIC", "940EMPLD F DOMESTIC", "940EMPLD M SERVICE", "940EMPLD F SERVICE",
+                         "940EMPLD M FM LBRR WAGE", "940EMPLD F FM LBRR WAGE", "940EMPLD M FM LBRR", "940EMPLD F FM LBRR",
+                         "940EMPLD M LABORERS", "940EMPLD F LABORERS", "940EMPLD M NT RPRTD", "940EMPLD F NT RPRTD",
+                         "940NMBR RETAIL STORES", "940AMT RETAIL SALES", "940NMBR PRPTRS", "940AV NMBR EMPLES",
+                         "940AMT TTL PYRL", "940NMBR WHLSL BUSNS", "940AMT SALES", "940NMBR PRPTRS 2", "940NMBR EMPLES",
+                         "940AMT TTL PYRL 2", "940NMBR SRVC STBLSHTS", "940AMT RECEIPTS", "940NMBR PRPTRS 3",
+                         "940AV NMBR EMPLES 2", "940AMT TTL PYRL 3", "940TTL VAL CROPS - 1939", "940TTL VAL CROPS - 1929",
+                         "940VAL CEREALS - 1939", "940VAL CEREALS - 1929", "940VAL CORN - 1939", "940VAL CORN - 1929",
+                         "940VAL WHEAT - 1939", "940VAL WHEAT - 1929", "940VAL OTR GRAINS - 1939", "940VAL OTR GRAINS - 1929",
+                         "940VAL HAY - 1939", "940VAL HAY - 1929", "940VAL COTTON-1939", "940VAL COTTON-1929",
+                         "940VAL POTATOES - 1939", "940VAL POTATOES - 1929", "940VAL VEGETABLES - 1939",
+                         "940VAL VEGETABLES - 1929", "940VAL FRUITS AND NUTS-1939", "940VAL FRUITS AND NUTS-1929",
+                         "940VAL HRTCLTRL - 1939", "940VAL HRTCLTRL - 1929", "940VAL OTR CROPS - 1939",
+                         "940VAL OTR CROPS - 1929", "940VAL FOREST PRDTS-939", "940 LD AREA BY ACRES", 
+                         "940 AV SIZE OF FMS", "940 TTL FM WHT", "940 TTL FM NNWHT", "940 TTL ACR FM WHT",
+                         "940 TTL ACR FM NNWHT", "940 TTL VAL FM WHT", "940 TTL VAL FM NNWHT", "940TTL FM F.ONR",
+                         "940FM P.ONR", "940FM MGR", "940TTL TNT FM", "940FM C.T", "940FM SHR-C.T", 
+                         "940FM SHR TNT AND CROPPER", "940FM O.T", "940TTL ACR FM F.ONR", "940ACR FM P.ONR",
+                         "940ACR LD OWNED", "940ACR LD RENTED", "940ACR LD FM MGR", "940TTL ACR TNT FM",
+                         "940ACR FM C.T", "940ACR SHR-CASH", "940ACR S.T AND  CRPR", "940ACR LD FM O.T",
+                         "939ACR C.L HRVSTD F.ONR", "939ACR C.L HRVSTD P.ONR", "939ACR C.L HRVSTD MGR",
+                         "939ACR C.L HRVSTD TNT", "939ACR C.L HRVSTD C.T", "939C.L HRVSTD SHR-C.T",
+                         "939C.L HRVSTD S.T CRPR", "939ACR C.L HRVSTD O.T", "940VAL LD BLDG F.ONR",
+                         "940VAL LD BLDG P.ONR", "940TTL VAL OWNED LD", "940VAL RENTED LD", "940VAL LD BLDG MGR",
+                         "940TTL VAL LD BLDG TNT", "940VAL LD BLDG C.T", "940VAL LD BLDG SHR-C.T",
+                         "940VAL LD BLDG S.T CRPR", "940VAL LD BLDG O.T", "940TTL FM F.ONR RPRTNG 2", "940VAL FM BLDG F.ONR",
+                         "940FM P.ONR RPRTNG", "940VAL FM BLDG P.ONR", "940FM MGR RPRTNG", "940VAL FM BLDG MGR",
+                         "940TTL TNT FM RPRTNG", "940VAL BLDG TNT FM", "940FM C.T RPRTNG", "940VAL FM BLDG C.T",
+                         "940FM SHR-C.T RPRTNG", "940VAL FM BLDG SHR-C.T", "940FM S.T CRPR RPRTNG 3", 
+                         "940VAL FM BLDG S.T CRPR", "940FM O.T RPRTNG", "940VAL FM BLDG O.T", "940TTL FM F.ONR RPRTNG",
+                         "940VAL MCHNRY F.ONR", "940TTL FM P.ONR RPRTNG", "940VAL MCHNRY P.ONR", "940FM MGR RPRTNG 2",
+                         "940VAL MCHNRY MGR", "940TTL FM TNT RPRTNG", "940VAL MCHNRY TNT", "940FM C.T RPRTNG 2",
+                         "940VAL MCHNRY C.T", "940FM SHR-C.T RPRTNG 2", "940VAL MCHNRY SHR-C.T", "940FM S.T CRPR RPRTNG 2",
+                         "940VAL MCHNRY S.T CRPR", "940FM O.T RPRTNG 2", "940VAL MCHNRY O.T", "940TTL FM UNR 10 ACR",
+                         "940FM UNR 3 ACR", "940LD NT OND AND NT RNTD", "940FM 3-9 ACR", "940FM 10-19 ACR",
+                         "940FM 20-29 ACR", "940FM 30-49 ACR", "940FM 50-69 ACR", "940FM 70-99 ACR",
+                         "940FM 100-139 ACR", "940FM 140-179 ACR", "940FM 175-179 ACR", "940FM 180-219 ACR",
+                         "940FM 220-259 ACR", "940FM 260-379 ACR", "940FM 380-499 ACR", "940FM 500-699 ACR",
+                         "940FM 700-999 ACR", "940FM 1000 ACR OVR", "940 LAND AREA 940", "940 URBAN POP 940",
+                         "940 URBAN % 940", "940 URBAN % 930", "940TTL NMBR DWELLNG UNIT", "940TTL NMBR OCUPD DW UNT",
+                         "940NMBR DWL UN OCUPD WHT", "940NMBR DWL UN OCUPD NEG", "940NMBR DWL UN OCUPD OTH",
+                         "940% DWL OCUPD NEG AND OTH", "940TTL NMBR OWNR OCC DWL", "940% DWLNG OCCUPD OWNRS",
+                         "940NMBR DWL OWNR OCC WHT", "940NMBR DWL OWNR OCC NEG", "940NMBR DWL OWNR OCC OTH",
+                         "940TTL NMBR DWL TNANT OC", "940NMBR DWL TNANT OC WHT", "940NMBR DWL TNANT OC NEG",
+                         "940NMBR DWL TNANT OC OTH", "940NMBR VAC DWL SALE,RNT", "940% ALL DWL UN SALE,RNT",
+                         "940TTL POPULATION", "940POP PER OCCUPD UNIT", "940TTL POPULATION, 1930", "940POP PER PRVTE FAM 930",
+                         "940NMBR 1-FAM DETCHD STR", "940NMBR DWL NO MAJ REPAR", "940NMBR DWL RUNING WATER",
+                         "940NMBR DWL NO TUB,SHOWR", "940TTL NO DWELLING UNIT", "940NO DWL WTH ELEC LIGHT",
+                         "940% DWL WTH ELEC LIGHT", "940TTL NO OCCUPD DWLNG", "940MED NO PRSNS PER DWL",
+                         "940MED PRSNS OWNR-OC DWL", "940MED PRSN TNANT-OC DWL", "940NO OCC DWL WTH RADIO",
+                         "940% OCC DWL WTH RADIO", "940NO OC DW WTH MECH REF", "940% OC DW WTH MECH REF",
+                         "940TTL OWNR-OC NONFRM DW", "940OWNR-OC N-FRM DWL MTG", "940% OWN-OC N-FRM DW MTG", 
+                         "940TTL NO OWNR-OCUPD DWL", "940NO OWN-OC DW REPT VAL", "940AVG VAL OWNR-OCC DWL",
+                         "940MED VAL OWNR-OCC DWL", "940MED VAL OWN-OC DW 930", "940TTL NO TNANT-OCC DWL",
+                         "940NO TNANT-OCC DWL RENT", "940AV MO RNT TNANT-OC DW", "940MED MO RNT TNANT-O DW",
+                         "940MED MO RNT T-OC D 930", "940MD YRS SCH COMPL MALE", "940MD YRS SCH COMPL FEM",
+                         "937TOTALLY UNEMPLOYED", "937WHT M TTL UEMPLD", "937WHT F TTL UEMPLD", "937NG M TTL UEMPLD",
+                         "937NG F TTL UEMPLD", "937EMERGENCY WORKERS", "937WHT M EMRGY WRKRS", "937WHT F EMRGY WRKRS",
+                         "937NG M EMRGY WRKRS", "937NG F EMRGY WRKRS", "937PARTLY UNEMPLOYED", "937WHT M PTLY UEMPLD",
+                         "937WHT F PTLY UEMPLD", "937NG M PTLY UEMPLD", "937NG F PTLY UEMPLD", "937TTLY UEMPLD ON FMS",
+                         "937TTLY UEMPLD NNFM", "937TTLY UEMPLD UKWN", "937EMRGY WRKRS ON FMS", "937EMRGY WRKRS NNFM", 
+                         "937EMRGY WRKRS UKWN", "937PTLY UEMPLD ON FMS", "937PTLY UEMPLD NNFM", "937PTLY UEMPLD UKWN")
+
+
+icpsr_3_1940 <- icpsr_3_1940 %>% filter(`DATA TYPE` == "S")
+
+```
+
+
+
+```{r}
+icpsr_3_1940 %>% glimpse()
+icpsr_3_1940_df <- as.data.frame(icpsr_3_1940)
+icpsr_3_1940_df <- icpsr_3_1940_df %>% mutate(NAME = `COUNTY NAME`)
+
+icpsr_3_1940_df <- icpsr_3_1940_df %>% arrange(NAME)
+head(icpsr_3_1940_df)
+
+icpsr_3_1940_df[,8:384] <- apply(icpsr_3_1940_df[,8:384], MARGIN = 2, FUN = as.numeric)
+
+zero.sd <- which(apply(icpsr_3_1940_df, MARGIN = 2, FUN = sd) == 0)
+icpsr_3_1940_df <- icpsr_3_1940_df %>% select(-zero.sd)
+
+head(states1940)
+icpsr_3_1940_df <- icpsr_3_1940_df %>% mutate(State = trimws(NAME))
+anti_join(icpsr_3_1940_df, states1940, by = "State")
+
+corr_df_1940 <- right_join(icpsr_3_1940_df, states1940, by = "State")
+
+cor_1940_matches_df <- data.frame("states1940_colnm" = colnames(corr_df_1940[,372:752]), "max_cor_val" = -2, "max_cor_colnm" =  "Unknown", "min_dist_val" = -2, "min_dist_colnm" = "Unknown")
+cor_1940_matches_df$max_cor_colnm <- as.character(cor_1940_matches_df$max_cor_colnm)
+cor_1940_matches_df$min_dist_colnm <- as.character(cor_1940_matches_df$min_dist_colnm)
+
+for (i in 372:752){
+  corr_vals_1940 <- cor(corr_df_1940[,i], corr_df_1940[,7:368], use = "pairwise.complete.obs")
+  cor_1940_matches_df$max_cor_val[i-371] <- max(corr_vals_1940)
+  
+  cor_1940_matches_df$max_cor_colnm[i-371] <- 
+    ifelse(is.na(cor_1940_matches_df$max_cor_val[i-371]), "NA", 
+           colnames(corr_df_1940)[7:368][which.max(corr_vals_1940)])
+  
+  dist_vals_1940 <- sqrt(colSums((corr_df_1940[,i] - corr_df_1940[,7:368])^2, na.rm = T))
+  cor_1940_matches_df$min_dist_val[i-371] <- min(dist_vals_1940)
+  cor_1940_matches_df$min_dist_colnm[i-371] <- 
+    ifelse(is.na(cor_1940_matches_df$min_dist_val[i-371]), "NA", 
+           colnames(corr_df_1940)[7:368][which.min(dist_vals_1940)])
+}
+## add in euclidean distance - also consider the size of the difference, not just the correlation (no units!)
+
+cor_1940_matches_df
+head(corr_df_1940)
+corr_df_1940
+
+```
+
+
+```{r}
+cor_1940_matches_df <- cor_1940_matches_df %>% 
+  mutate(var_id = ifelse(max_cor_val > .999 & min_dist_val < 100, "auto", "unverified")) %>% 
+  mutate(var_id = ifelse(var_id == "unverified" & max_cor_val > .95 & min_dist_val < 5000, "hand", var_id)) %>%
+  mutate(var_id = ifelse(is.na(var_id) & is.na(max_cor_val) & min_dist_val < 100, "auto", var_id))
+
+cor_1940_matches_df %>%
+  ggplot() + 
+  geom_jitter(aes(x = max_cor_val, y = log(min_dist_val+1), colour = factor(var_id))) + 
+  theme_bw() + labs(x = "Maximum Correlation", y = "Minimum Euclidean Distance (log scale)") +
+  scale_color_manual(labels = c("Automatically Verified", "Checked by Hand", "Unverified"), 
+                     values = c("green", "blue", "black")) +
+  theme(legend.title = element_blank())
+
+summary(factor(cor_1940_matches_df$var_id))
+
+
+cor_1940_matches_df
+```
