@@ -77,3 +77,20 @@ states1890 <- states1890 %>% select(-which.un)
 save(states1890, file = "~/censusbrowseR/censusbrowseR/data/states1890.rda")
 
 ```
+
+
+
+### UPDATING COLUMN NAMES FOR 1940 DATA BASED ON VERIFICATION
+
+
+```{r}
+states1940 <- get.states("~/censusbrowseR/raw-data/1940 State Level Census Data.csv", 1940)
+states1940_colnm <- read.csv("~/censusbrowseR/raw-data/1940 Column Names.csv", header = T)
+
+colnames(states1940) <- c("Year",colnames(states1940_colnm), "Type")
+
+which.un <- grep("UNKNOWN", colnames(states1940))
+states1940 <- states1940 %>% select(-which.un) 
+save(states1940, file = "~/censusbrowseR/censusbrowseR/data/states1940.rda")
+
+```
