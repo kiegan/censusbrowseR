@@ -155,11 +155,10 @@ Today, as methods of data analysis and visualization continue to be
 developed and improved, access to census data allows us to look back on
 that history and explore, synthesize, and visualize the information.
 When aggregated and presented in a clear manner, viewers can learn more
-about patterns in many different parts of the population.
-
-\emph{Mention Dr.~Hofmann's paper on recreating/improving the
-Statistical Atlas here\ldots{} forthcoming? published? As well as
-Haley's ggmosaic stuff.}
+about patterns in many different parts of the population. A 2007 paper
+about the Statistical Atlas discusses just how much information there is
+present in those original charts and demonstrates several other ways of
+presenting the information that can be found within (Hofmann 2007).
 
 Ever-improving visualization and data-wrangling methods in R (R Core
 Team 2015) give those interested in statistical graphics a wealth of
@@ -301,16 +300,6 @@ other columns that did not fit these criterion were considered to be
 unverified data, and were thus removed from the data included in the
 package.
 
-It is important to note that many of the unverified columns were most
-likely farming and manufacturing data, as the ICPSR 3 did not include
-this information but the original data from the University of Virginia
-Historical Census Browser included variables of that type. Due to the
-need to verify using the ICPSR 3, there is a loss of some of the
-additional information that would have been an asset to the census
-browser.
-
-\emph{Include a table here of numbers for verification }
-
 \begin{table}[H]
 \centering
 
@@ -318,12 +307,22 @@ browser.
   \hline
   Year & Automatically Verified & Verified by Hand & Unverified & Total \\ \hline
   1890 & 37 & 9 & 121 & 167 \\ 
-  1940 & & & & \\ 
+  1940 & 284 & 3 & 94 & 381 \\ 
   \end{tabular}
 
   \caption{Counts of variables after going through the verification process.}
   \label{verify-table}
 \end{table}
+
+A larger proportion of the 1940 columns were able to be verified than
+those in 1890. It is important to note that many of the unverified
+columns in 1890 were most likely farming and manufacturing data, as the
+ICPSR 3 did not include this information but the original data from the
+University of Virginia Historical Census Browser included variables of
+that type. Due to the need to verify using the ICPSR 3, there is a loss
+of some of the additional information that would have been an asset to
+the census browser for the 1890 year. This loss is minimal with the 1940
+data.
 
 \begin{figure}[htbp]
 \centering
@@ -402,11 +401,12 @@ the results by most years present to least years present, if they
 choose. This is where it is important to keep in mind that variable
 names for different demographic groups change drastically over the
 course of the decennial census, and thus users will want to be cognizant
-of varying search terms that may need to be checked. \emph{I added a
-feature that pops up when they look for certain search terms. Right now,
-it only captures two different groups - the one in the example and then
-the differences between age groups. Should probably incorporate more of
-these in order to actually claim the element is there.}
+of varying search terms that may need to be checked. For some of these
+terms, a notification will pop up to the user in the corner of the app.
+The notification states that the term the user is searching for may
+change over time. While it is not yet comprehensive to every difference
+that exists in the data, it can act as an early warning system for some
+differences that have already been identified.
 
 Similar to the output file of the \texttt{Single\ Year} tab, once a user
 selects all variables they are interested in, they can select the
@@ -554,7 +554,7 @@ that time.
 \centering
 \includegraphics{writeup_files/figure-latex/unnamed-chunk-6-1.pdf}
 \caption{Number of Slaves, Number of Free Colored Persons, Percentage of
-Free Colored Persons, and Total African American Persons in 1850.}
+Free Colored Persons, and Total Colored Persons in 1850.}
 \end{figure}
 
 Moving forward from there, even more information can be gleaned about
@@ -653,6 +653,10 @@ Historical Census Browser.''
 Chang, W., J. Cheng, JJ. Allaire, Y. Xie, and J. McPherson. 2017.
 ``Shiny: Web Application Framework for R.'' Computer Program.
 \url{http://CRAN.R-project.org/package=shiny}.
+
+\hypertarget{ref-ChartInterview}{}
+Hofmann, Heike. 2007. ``Interview with a Centennial Chart.'' Journal
+Article. \emph{CHANCE} 20:2: 26--35.
 
 \hypertarget{ref-USAboundaries}{}
 Mullen, L., and J. Bratt. 2017. ``USAboundaries: Historical and
