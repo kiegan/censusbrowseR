@@ -1,0 +1,521 @@
+---
+title: "A User-Friendly U.S. Census Browser for R"
+author: "Kiegan Rice"
+ratio: 16x10
+output:
+  rmdshower::shower_presentation:
+    self_contained: false
+    katex: true
+    theme: material
+    fig_caption: TRUE
+    highlight: NULL 
+---
+
+## A User-Friendly </br> U.S. Census Browser </br> for R { .black }
+
+<img src = "figures/presentation-background.png" class = "cover">
+
+<p class = "black">
+Kiegan Rice
+</p>
+
+
+## Introduction  
+
+- The U.S. Decennial Census 
+    - Began in 1790 
+    - "Historical, demographic, economic, and social" information
+
+
+## Introduction  
+
+<div class="double">
+<p class="double-flow">
+<img src="figures/colored-population-stat-atlas.png" class="one-col-image">  
+</p>
+
+<p class="double-flow">
+
+- Statistical Atlases of the U.S. Census  
+    - U.S. Census Office & Francis A. Walker  
+    - 1870 (1874)  
+    - 1880 through 1920  
+- Power of visualizing census data
+</p>
+</div>
+
+## Introduction  
+- Problems with census data  
+    - Change over time  
+    - Variables and nomenclature
+    - Tracking demographic groups?  
+
+## Data Access  
+- University of Virginia Library's Historical Census Browser  
+    - open to all
+    - for use in "research, teaching, and personal inquiry"  
+    - aggregated data, state and county level  
+    - removal in December 2016  
+    - county level before December 2016  
+- What dataset populated this browser?  
+    
+## Data Access   
+- Inter-University Consortium for Political and Social Research (ICPSR)  
+    - ICPSR 3: 1790 - 1960
+        - data collections from Census Bureau
+        - other reports (published & unpublished)  
+        - originally populated HCB
+        - currently restricted?
+    - ICPSR 2896: 1790 - 2010  
+        - also included manufacturing
+        - more county and city-level information  
+        - restricted dataset
+
+
+## Data Access - where can we get this data now? 
+- University of Virginia redirects to  
+    - Social Explorer  
+        - populated with ICPSR 2896  
+        - paid use, no complete data download offered  
+    - National Historical Geographic Information System (NHGIS)  
+        - difficult to navigate when looking for information across years  
+        
+## Data Access - where can we get this data now?  
+
+- ICPSR datasets  
+    - Hosted at University of Michigan's Institute for Social Research 
+        - requires member institution
+        - no distribution of information allowed
+        - no browser function  
+        
+## Data Access - other census data  
+
+- Integrated Public Use Microdata Series (IPUMS USA) 
+    - hosted by University of Minnesota
+    - difficult to navigate
+    - microsamples on a finer grid, not aggregated data  
+    
+## Data Access - what now?  
+- Use original Historical Census Browser data  
+- Host the data and allow free and open access  
+- Create an intuitive way for users to explore data  
+- Allow download of all relevant data in 'tidy' way
+
+__censusbrowseR__  
+
+- R package
+- 'Get Your Data' Shiny app  
+
+
+## Data Collection  
+- County-level: None  
+- State-level: December 2016  
+    - Raw data, copy-pasted 
+    - Saved as csv files  
+    - Separate file for each year, 1790 - 1960  
+    - Missing column names: 1890, 1940  
+    
+## Data Verification  
+- Using ICPSR 3 data sets 
+    - downloaded from ICPSR, University of Michigan  
+- Columns from ICPSR compared to each column in raw data 
+    - column with highest correlation
+    - column with lowest Euclidean distance  
+- Automated verification
+    - Correlation > .999 and distance < 100 
+- Checked by hand 
+    - Correlation > .95 and distance < 5000
+    - Not all of these were correct
+- Unverified  
+
+
+## Data Verification  
+<img src="figures/verification.png", width=600>  
+
+## Data Verification  
+
+Results of Verification  
+
+
+|        Year       |  Automatically Verified  |  Verified by Hand  |  Unverified  |  Total  |
+|:-----------------:|:------------------------:|:------------------:|:------------:|:-------:|
+|       1890        |            37            |          9         |     121      |   167   |
+|       1940        |           284            |          3         |      94      |   381   |
+
+- 1890: Large loss of data  
+- 1940: Fewer losses, marjority verified  
+
+
+## "Get Your Data" App  
+- Shiny app  
+- Single Year
+- Multiple Years  
+
+## "Get Your Data" App - Single Year  
+<img src="figures/app-sshot-single-year.png", width=800> 
+
+## "Get Your Data" App - Multiple Years
+<img src="figures/app-sshot-multiple-years.png", width=800>
+
+
+## Example  
+- Following the African American population throughout history
+- Using the app to find data
+- Three major terms: "slave", "colored", "negro"
+    - Note: for remainder of example, "black" will be used instead of "negro"
+
+## Example 
+<img src="figures/app-sshot-slave.png", width=800>
+
+## Example
+- "Download Filtered Data" button for each of these terms
+- Join the resulting datasets together in R  
+- Each row is a State-Year combination, with all possible terms as columns
+
+<img src="figures/data-sshot-slaves.png", width = 600>
+
+## Example  
+- 1790 data, using TOTAL.SLAVES variable  
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height=4, fig.width = 6}
+library(statatlas)
+library(tidyverse)
+library(USAboundaries)
+library(broom)
+library(maptools)
+library(gridExtra)
+library(ggthemes)
+library(scales)
+data_c <- readr::read_csv("./counts-using-word-colored.csv")
+data_s <- readr::read_csv("./counts-using-word-slave.csv")
+data_n <- readr::read_csv("./counts-using-word-negro.csv")
+
+data_full <- full_join(data_s, data_c, by = c("Year", "State", "TOTAL.POPULATION", "Type"))
+#data_full %>% glimpse
+
+data_full <- full_join(data_full, data_n, by = c("Year", "State", "TOTAL.POPULATION", "Type"))
+#data_full %>% glimpse
+
+
+states_current <- us_boundaries("1999-12-31")
+mcurr_df <- fortify(states_current, region = "name")
+mcurr_df <- mcurr_df %>% mutate(State = toupper(id)) %>% filter(long >= -127)
+
+
+map_states_1790 <- us_boundaries("1790-07-04")
+
+m1790_df <- fortify(map_states_1790, region = "name")
+m1790_df <- m1790_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1790_df, by = "State")
+data_full_wmap <- full_join(data_full, m1790_df, by = "State")
+
+#data_full_wmap %>% glimpse
+
+
+#data_full_wmap %>% filter(Year == 1790) %>% summary()
+  # this tells us that the only variable recorded this year is 'SLAVES'. We will use that.
+
+#data_full_wmap %>%
+#  filter(Year == 1790) %>% 
+#  ggplot(aes(x = long, y = lat, group = group)) + 
+#  geom_polygon(aes(fill = log(SLAVES)), colour = "black") + 
+#  theme_bw() + theme(legend.title = element_blank()) + labs(title = "Total Slaves (log scale)")
+
+data_full_wmap_1790 <- data_full_wmap %>% filter(Year == 1790)
+
+ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
+  geom_polygon(data = data_full_wmap_1790, 
+               aes(x = long, y = lat, group = group, fill = SLAVES)) + 
+  scale_fill_gradient(trans = "log10", labels = comma) +
+  theme(legend.title = element_blank(), legend.background = element_rect(fill = "transparent")) + 
+  labs(title = "Total Slaves", x = "", y = "") 
+```
+
+
+## Example  
+- 1820 Data, using TOTAL.SLAVES and TOTAL.FREE.COLORED.PERSONS  
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height=4, fig.width = 6}
+map_states_1820 <- us_boundaries("1820-07-04")
+
+m1820_df <- fortify(map_states_1820, region = "name")
+m1820_df <- m1820_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1820_df, by = "State")
+data_full_wmap <- full_join(data_full, m1820_df, by = "State")
+
+
+data_full_wmap <- data_full_wmap %>% 
+  mutate(PERC.AFRICAN.AMERICANS.FREE = TOTAL.FREE.COLORED.PERSONS/(TOTAL.FREE.COLORED.PERSONS+TOTAL.SLAVES))
+
+data_full_wmap_1820 <- data_full_wmap %>% filter(Year == 1820)
+
+p1_1820 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
+  geom_polygon(data = data_full_wmap_1820, 
+               aes(x = long, y = lat, group = group, fill = TOTAL.SLAVES)) + 
+  scale_fill_gradient(trans = "log10", labels = comma, limit = range(1, max(data_full_wmap_1820$TOTAL.SLAVES))) + 
+  labs(title = "Total Slaves", x = "", y = "") + 
+  theme(legend.title = element_blank(), legend.background = element_rect(fill = "transparent"))
+
+
+p2_1820 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
+  geom_polygon(data = data_full_wmap_1820, 
+               aes(x = long, y = lat, group = group, fill = TOTAL.FREE.COLORED.PERSONS)) +
+  scale_fill_gradient(trans = "log10", labels = comma, limit = range(1,max(data_full_wmap_1820$TOTAL.SLAVES))) + 
+  labs(title = "Total Free Colored Persons", x = "", y = "") + 
+  theme(legend.title = element_blank(), legend.background = element_rect(fill = "transparent"))
+
+p3_1820 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
+  geom_polygon(data = data_full_wmap_1820, 
+               aes(x = long, y = lat, group = group, fill = PERC.AFRICAN.AMERICANS.FREE)) + 
+  labs(title = "Percent of Colored Persons Free", x = "", y = "") + 
+  theme(legend.title = element_blank(), legend.background = element_rect(fill = "transparent")) +
+  scale_fill_gradient2(midpoint = .5)
+
+
+grid.arrange(p1_1820, p2_1820, p3_1820, ncol = 2)
+```
+
+## Example  
+- 1850 Data, using TOTAL.SLAVES and TOTAL.FREE.COLORED.POPULATION
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.height=4, fig.width = 6}
+map_states_1850 <- us_boundaries("1850-07-04")
+
+m1850_df <- fortify(map_states_1850, region = "name")
+m1850_df <- m1850_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1850_df, by = "State")
+data_full_wmap <- full_join(data_full, m1850_df, by = "State")
+
+data_full_wmap <- data_full_wmap %>% mutate(TOTAL.SLAVES.ZERO = ifelse(is.na(TOTAL.SLAVES),0,TOTAL.SLAVES))
+
+data_full_wmap <- data_full_wmap %>% 
+  mutate(PERC.AFRICAN.AMERICANS.FREE = TOTAL.FREE.COLORED.POPULATION/(TOTAL.FREE.COLORED.POPULATION+TOTAL.SLAVES.ZERO))
+
+
+data_full_wmap_1850 <- data_full_wmap %>% filter(Year == 1850)
+
+
+legend_max <- max(data_full_wmap_1850$TOTAL.SLAVES.ZERO + data_full_wmap_1850$TOTAL.FREE.COLORED.POPULATION)
+
+
+p1_1850 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
+  geom_polygon(data = data_full_wmap_1850, 
+               aes(x = long, y = lat, group = group, fill = TOTAL.SLAVES)) +
+  scale_fill_gradient(trans = "log10", labels = comma, 
+                      limit = range(1,legend_max)) + 
+  labs(title = "Total Slaves", x = "", y = "") + 
+  theme(legend.title = element_blank(), legend.background = element_rect(fill = "transparent"))
+
+
+p2_1850 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
+  geom_polygon(data = data_full_wmap_1850, 
+               aes(x = long, y = lat, group = group, fill = TOTAL.FREE.COLORED.POPULATION)) +
+  scale_fill_gradient(trans = "log10", labels = comma, 
+                      limit = range(1, legend_max)) + 
+  labs(title = "Total Free Colored Persons", x = "", y = "") + 
+  theme(legend.title = element_blank(), legend.background = element_rect(fill = "transparent"))
+
+
+p3_1850 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
+  geom_polygon(data = data_full_wmap_1850, 
+               aes(x = long, y = lat, group = group, fill = PERC.AFRICAN.AMERICANS.FREE)) + 
+  labs(title = "Percent of Colored Persons Free", x = "", y = "") + 
+  theme(legend.title = element_blank(), legend.background = element_rect(fill = "transparent")) +
+  scale_fill_gradient2(midpoint = .5)
+
+
+p4_1850 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
+  geom_polygon(data = data_full_wmap_1850, 
+               aes(x = long, y = lat, group = group, fill = TOTAL.FREE.COLORED.POPULATION + TOTAL.SLAVES.ZERO)) + 
+  scale_fill_gradient(trans = "log10", labels = comma, limit = range(1, legend_max)) +
+  labs(title = "Total Slave and Free Colored Persons", x = "", y = "") +
+  theme(legend.title = element_blank(), legend.background = element_rect(fill = "transparent")) 
+
+
+grid.arrange(p1_1850, p2_1850, p3_1850, p4_1850, ncol = 2)
+```
+
+
+## Example
+- Comparing Total Colored Population across years
+    - different variable names for different years
+    - __1850__: `TOTAL.FREE.COLORED.POPULATION`, `TOTAL.SLAVES`
+    - __1860__: `AGGR..SLAVES`, `TOTAL.FREE.COLORED.MALES`, `TOTAL.FREE.COLORED.FEMALES`
+    - __1870__: `COLORED.PERSONS`
+    - __1880__: `COLORED.PERSONS`
+    
+## Example 
+```{r,echo = FALSE, warning = FALSE, message = FALSE, fig.height=5, fig.width = 7}
+legend_max <- 1000000
+
+p5_1850 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
+  geom_polygon(data = data_full_wmap_1850, 
+               aes(x = long, y = lat, group = group, fill = TOTAL.FREE.COLORED.POPULATION + TOTAL.SLAVES.ZERO)) +
+  scale_fill_gradient(trans = "log10", labels = comma, limit = range(1, legend_max)) + 
+  labs(title = "1850", x = "", y = "") + 
+  theme(legend.position = "none") 
+
+
+map_states_1860 <- us_boundaries("1860-07-04")
+
+m1860_df <- fortify(map_states_1860, region = "name")
+m1860_df <- m1860_df %>% mutate(State = toupper(id))
+data_full_wmap <- full_join(data_full, m1860_df, by = "State")
+
+data_full_wmap <- data_full_wmap %>% mutate(AGGR..SLAVES.ZERO = ifelse(is.na(AGGR..SLAVES),0,AGGR..SLAVES))
+
+data_full_wmap <- data_full_wmap %>% 
+  mutate(PERC.AFRICAN.AMERICANS.FREE = 
+           (TOTAL.FREE.COLORED.MALES + TOTAL.FREE.COLORED.FEMALES)/
+           (TOTAL.FREE.COLORED.MALES + TOTAL.FREE.COLORED.FEMALES + AGGR..SLAVES.ZERO))
+
+data_full_wmap_1860 <- data_full_wmap %>% filter(Year == 1860)
+
+p4_1860 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
+  geom_polygon(data = data_full_wmap_1860, 
+               aes(x = long, y = lat, group = group, 
+                   fill = TOTAL.FREE.COLORED.MALES + TOTAL.FREE.COLORED.FEMALES + AGGR..SLAVES.ZERO)) + 
+  scale_fill_gradient(trans = "log10") + 
+  labs(title = "1860", x = "", y = "") + 
+  theme(legend.position = "none")
+
+
+map_states_1870 <- us_boundaries("1870-07-04")
+
+m1870_df <- fortify(map_states_1870, region = "name")
+m1870_df <- m1870_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1870_df, by = "State")
+data_full_wmap <- full_join(data_full, m1870_df, by = "State")
+data_full_wmap_1870 <- data_full_wmap %>% filter(Year == 1870)
+
+p4_1870 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group),
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
+  scale_fill_gradient(trans = "log10", labels = comma, limit = range(1, legend_max)) + 
+  geom_polygon(data = data_full_wmap_1870, aes(x = long, y = lat, group = group, fill = COLORED.PERSONS)) + 
+  labs(title = "1870", x = "", y = "") + 
+  theme(legend.title = element_blank(), legend.background = element_rect(fill = alpha("white", 0.6)), 
+        legend.key.size = unit(.45, "cm"), legend.text = element_text(size = 6), legend.position = c(-.01, 0))
+
+map_states_1880 <- us_boundaries("1880-07-04")
+
+m1880_df <- fortify(map_states_1880, region = "name")
+m1880_df <- m1880_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1880_df, by = "State")
+data_full_wmap <- full_join(data_full, m1880_df, by = "State")
+data_full_wmap_1880 <- data_full_wmap %>% filter(Year == 1880)
+
+p4_1880 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group),
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
+  geom_polygon(data = data_full_wmap_1880, aes(x = long, y = lat, group = group, fill = COLORED.PERSONS)) + 
+  scale_fill_gradient(trans = "log10", labels = comma, limit = range(1, legend_max)) + 
+  labs(title = "1880", x = "", y = "") + 
+  theme(legend.position = "none")
+  
+  
+grid.arrange(p5_1850, p4_1860, p4_1870, p4_1880, ncol = 2, top = "Total Colored Persons")
+```  
+
+
+## Example
+- Comparing Total Black Population across years
+    - different variable names for different years
+    - __1900__: `NEGRO.FEMALES`, `NEGRO.MALES`
+    - __1910__: `TOTAL.NEGROES`
+    - __1920__: `MALE.NEGROES`, `FEMALE.NEGROES`
+    - __1930__: `NEGRO.FEMALES`, `NEGRO.MALES`
+    
+## Example  
+
+```{r,echo = FALSE, warning = FALSE, message = FALSE, fig.height=5, fig.width = 7}
+legend_max <- 2000000
+map_states_1900 <- us_boundaries("1900-07-04")
+m1900_df <- fortify(map_states_1900, region = "name")
+m1900_df <- m1900_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1900_df, by = "State")
+data_full_wmap <- full_join(data_full, m1900_df, by = "State")
+data_full_wmap_1900 <- data_full_wmap %>% filter(Year == 1900)
+
+
+p1_1900 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
+  geom_polygon(data = data_full_wmap_1900, 
+               aes(x = long, y = lat, group = group, fill = NEGRO.FEMALES + NEGRO.MALES)) + 
+  scale_fill_gradient(trans = "log10", labels = comma, limit = range(1, legend_max)) + 
+  labs(title = "1900", x = "", y = "") + 
+  theme(legend.position = "none")
+
+map_states_1910 <- us_boundaries("1910-07-04")
+m1910_df <- fortify(map_states_1910, region = "name")
+m1910_df <- m1910_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1910_df, by = "State")
+data_full_wmap <- full_join(data_full, m1910_df, by = "State")
+data_full_wmap_1910 <- data_full_wmap %>% filter(Year == 1910)
+
+p1_1910 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
+  geom_polygon(data = data_full_wmap_1910, 
+               aes(x = long, y = lat, group = group, fill = TOTAL.NEGROES)) + 
+  scale_fill_gradient(trans = "log10", labels = comma, limit = range(1, legend_max)) + 
+  labs(title = "1910", x = "", y = "") + theme(legend.position = "none")
+
+
+map_states_1920 <- us_boundaries("1920-07-04")
+m1920_df <- fortify(map_states_1920, region = "name")
+m1920_df <- m1920_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1920_df, by = "State")
+data_full_wmap <- full_join(data_full, m1920_df, by = "State")
+data_full_wmap_1920 <- data_full_wmap %>% filter(Year == 1920)
+
+p1_1920 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
+  geom_polygon(data = data_full_wmap_1920, 
+               aes(x = long, y = lat, group = group, fill = MALE.NEGROES + FEMALE.NEGROES)) + 
+  scale_fill_gradient(trans = "log10", labels = comma, limit = range(1, legend_max)) + 
+  labs(title = "1920", x = "", y = "") + 
+  theme(legend.title = element_blank(), legend.background = element_rect(fill = alpha("white", 0.6)), 
+        legend.key.size = unit(.45, "cm"), legend.text = element_text(size = 6), legend.position = c(-.01, 0))
+
+map_states_1930 <- us_boundaries("1930-07-04")
+m1930_df <- fortify(map_states_1930, region = "name")
+m1930_df <- m1930_df %>% mutate(State = toupper(id))
+#anti_join(data_full, m1930_df, by = "State")
+data_full_wmap <- full_join(data_full, m1930_df, by = "State")
+data_full_wmap_1930 <- data_full_wmap %>% filter(Year == 1930)
+
+p1_1930 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
+                        colour = "grey90", fill = "white") + ggthemes::theme_map() + 
+  geom_polygon(data = data_full_wmap_1930, 
+               aes(x = long, y = lat, group = group, fill = NEGRO.FEMALES + NEGRO.MALES)) + 
+  scale_fill_gradient(trans = "log10", labels = comma, limit = range(1, legend_max)) + 
+  labs(title = "1930", x = "", y = "") + 
+  theme(legend.position = "none")
+
+
+
+grid.arrange(p1_1900, p1_1910, p1_1920, p1_1930, ncol = 2, top = "Total Black Persons")
+```
+
+
+## Discussion  
+- Connectivity across years 
+- Well-structured data
+- Assess completeness of information for a group  
+- Quick determination of differences in recording variables  
+
+
+## Future Work  
+- County level data  
+    - Extra challenges with discontinuity across states & counties
+- Updated, current data (through 2010) would be valuable  
+- Including more 'warnings' for variables whose nomenclature changes  
+

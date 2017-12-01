@@ -1,6 +1,10 @@
 library(shiny)
 library(censusbrowseR)
 library(DT)
+library(tidyverse)
+library(USAboundaries)
+library(ggthemes)
+library(scales)
 
 shinyApp(
   ui = navbarPage(
@@ -26,7 +30,15 @@ shinyApp(
                textInput("topic3", label = "Variable of Interest:",
                          value = "")),
              DT::dataTableOutput('tbl2'),
-             p(class = 'text-center', downloadButton('dnld2', 'Download Filtered Data')))),
+             p(class = 'text-center', downloadButton('dnld2', 'Download Filtered Data'))
+    ),
+    
+    tabPanel("Visualize",
+             inputPanel(
+               radioButtons("checkall", "All in one?", choices = c("yes", "no"))), 
+             plotOutput('map'),
+             p(class = 'text-center', downloadButton('none', 'Download Filtered Data'))
+    )),
   
   
   server = function(input, output, session){
@@ -35,7 +47,7 @@ shinyApp(
     ####### REACTIVE FOR SINGLE YEAR TABLE #######
     mydata1 <- reactive({
       library(censusbrowseR)
-      data(stateslist)
+      #data(stateslist)
       if(toupper(input$topic) == "SLAVE" | toupper(input$topic) == "NEGRO" | toupper(input$topic) == "COLORED"){
         showNotification("Notice to user: This search term may need to be changed for different years.", type = "warning", duration = NA)
       }
@@ -72,7 +84,7 @@ shinyApp(
     ####### REACTIVE FOR MULTIPLE YEAR TABLE #######
     mydata2 <- reactive({
       library(censusbrowseR)
-      data(stateslist)
+      #data(stateslist)
       years <- as.integer(seq(input$range[1], input$range[2], by = 10))
       varvec <- c()
       is_present <- data.frame()
@@ -131,6 +143,46 @@ shinyApp(
       write.csv(dnld.dat.join, file, row.names=FALSE)
     })
     
+    output$map <- renderPlot({
+      colstoget <- as.character(mydata2()[input$tbl2_rows_selected,1])
+      years <- as.integer(seq(input$range[1], input$range[2], by = 10))
+      #      dnld.dat.join <- data.frame(State = stateslist[[paste0("X", input$range[2])]]$State, 
+      #                                  Year = stateslist[[paste0("X", input$range[2])]]$Year,
+      #                                  TOTAL.POPULATION = 
+      #                                    stateslist[[paste0("X", input$range[2])]]$TOTAL.POPULATION)
+      dnld.dat.join <- stateslist[[paste0("X", years[1])]]
+      dnld.dat.join <- dnld.dat.join[,names(dnld.dat.join)%in%c("Year", "State", "TOTAL.POPULATION", "Type", colstoget)]
+      
+      if (length(years) > 1) {
+        for (i in 2:length(years)){
+          yr.dat <- stateslist[[paste0("X", years[i])]]
+          dnld.dat <- yr.dat[,names(yr.dat)%in%c("Year", "State", "TOTAL.POPULATION", "Type", colstoget)]
+          dnld.dat.join <- full_join(dnld.dat.join, dnld.dat)
+        }
+      }
+      
+      dnld.long <- dnld.dat.join %>% gather(variable, value, one_of(colstoget)) %>% filter(!is.na(value))
+      # facet by year only - check input
+      dnld.long <- dnld.long %>% group_by(Year, State) %>% 
+        summarize(
+          TOTAL.POPULATION = TOTAL.POPULATION[1],
+          value = sum(value), 
+          label=paste(unique(variable), sep=",", collapse="\n")[1]
+          )%>% mutate(
+            state=tolower(State)
+          )
+      map_boundaries <- data.frame(years) %>% mutate(map_the_things = purrr::map(years, .f = function(x){
+        map_states <- fortify(us_boundaries(paste0(as.character(x), "-07-04")), region = "name")
+      }))
+      
+      map_boundaries <- map_boundaries %>% unnest()
+      map_boundaries <- map_boundaries %>% mutate(State = toupper(id), Year = years) %>% filter(long >= -127)
+      dnld.map <- left_join(map_boundaries, dnld.long, by=c("State", "Year"))
+      dnld.map %>% ggplot(aes(x = long, y = lat, fill=value/TOTAL.POPULATION, group=group),
+                          colour = "grey90", fill = "white") + geom_polygon() + facet_wrap(~Year) +
+        geom_text(aes(label=label), x = -100, y = 50, colour="black") + ggthemes::theme_map() +
+        theme(legend.title = element_blank(), legend.background = element_rect(fill = "transparent")) 
+    })
     
     ## to close the output part    
   }

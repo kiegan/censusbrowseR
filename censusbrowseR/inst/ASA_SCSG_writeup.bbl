@@ -1,0 +1,24 @@
+\begin{thebibliography}{1}
+
+\bibitem{Shiny}
+W.~Chang, J.~Cheng, J.~Allaire, Y.~Xie, and J.~McPherson.
+\newblock shiny: Web application framework for r., 2017.
+
+\bibitem{ChartInterview}
+H.~Hofmann.
+\newblock Interview with a centennial chart.
+\newblock {\em CHANCE}, 20:2:26--35, 2007.
+
+\bibitem{StatisticalAtlas}
+U.~S.~C. Office and F.~A. Walker.
+\newblock {\em Statistical atlas of the United States based on the results of
+  the ninth census 1870 with contributions from many eminent men of science and
+  several departments of the government}.
+\newblock 1874.
+
+\bibitem{RCoreTeam}
+{R Core Team}.
+\newblock R: A language and environment for statistical computing.
+\newblock 2015.
+
+\end{thebibliography}

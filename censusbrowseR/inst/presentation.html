@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A User-Friendly U.S. Census Browser for R</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="presentation_files/rmdshower/node_modules/shower-material/styles/screen-4x3.css">
+  <link rel="stylesheet" href="presentation_files/rmdshower/style-common.css">
+  <link rel="stylesheet" href="presentation_files/rmdshower/style-material.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
+  <script src="presentation_files/rmdshower/auto-render.min.js" type="text/javascript"></script>
+  
+  
+  
+  
+  
+</head>
+
+<body class="shower list">
+
+  <header class="caption">
+    <h1>A User-Friendly U.S. Census Browser for R</h1>
+    <p>Kiegan Rice</p>
+  </header>
+
+    
+  
+<section id="a-user-friendly-u.s.-census-browser-for-r" class="slide level2 black">
+<h2>A User-Friendly </br> U.S. Census Browser </br> for R</h2>
+<p><img src = "figures/presentation-background.png" class = "cover"></p>
+<p class="black">
+Kiegan Rice
+</p>
+</section>
+<section id="introduction" class="slide level2">
+<h2>Introduction</h2>
+<ul>
+<li>The U.S. Decennial Census
+<ul>
+<li>Began in 1790</li>
+<li>“Historical, demographic, economic, and social” information</li>
+</ul></li>
+</ul>
+</section>
+<section id="introduction-1" class="slide level2">
+<h2>Introduction</h2>
+<div class="double">
+<p class="double-flow">
+<img src="figures/colored-population-stat-atlas.png" class="one-col-image">
+</p>
+<p class="double-flow">
+<ul>
+<li>Statistical Atlases of the U.S. Census
+<ul>
+<li>U.S. Census Office &amp; Francis A. Walker<br />
+</li>
+<li>1870 (1874)<br />
+</li>
+<li>1880 through 1920<br />
+</li>
+</ul></li>
+<li>Power of visualizing census data</li>
+</ul>
+</p>
+</div>
+</section>
+<section id="introduction-2" class="slide level2">
+<h2>Introduction</h2>
+<ul>
+<li>Problems with census data
+<ul>
+<li>Change over time<br />
+</li>
+<li>Variables and nomenclature</li>
+<li>Tracking demographic groups?</li>
+</ul></li>
+</ul>
+</section>
+<section id="data-access" class="slide level2">
+<h2>Data Access</h2>
+<ul>
+<li>University of Virginia Library’s Historical Census Browser
+<ul>
+<li>open to all</li>
+<li>for use in “research, teaching, and personal inquiry”<br />
+</li>
+<li>aggregated data, state and county level<br />
+</li>
+<li>removal in December 2016<br />
+</li>
+<li>county level before December 2016<br />
+</li>
+</ul></li>
+<li>What dataset populated this browser?</li>
+</ul>
+</section>
+<section id="data-access-1" class="slide level2">
+<h2>Data Access</h2>
+<ul>
+<li>Inter-University Consortium for Political and Social Research (ICPSR)
+<ul>
+<li>ICPSR 3: 1790 - 1960
+<ul>
+<li>data collections from Census Bureau</li>
+<li>other reports (published &amp; unpublished)<br />
+</li>
+<li>originally populated HCB</li>
+<li>currently restricted?</li>
+</ul></li>
+<li>ICPSR 2896: 1790 - 2010
+<ul>
+<li>also included manufacturing</li>
+<li>more county and city-level information<br />
+</li>
+<li>restricted dataset</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="data-access---where-can-we-get-this-data-now" class="slide level2">
+<h2>Data Access - where can we get this data now?</h2>
+<ul>
+<li>University of Virginia redirects to
+<ul>
+<li>Social Explorer
+<ul>
+<li>populated with ICPSR 2896<br />
+</li>
+<li>paid use, no complete data download offered<br />
+</li>
+</ul></li>
+<li>National Historical Geographic Information System (NHGIS)
+<ul>
+<li>difficult to navigate when looking for information across years</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="data-access---where-can-we-get-this-data-now-1" class="slide level2">
+<h2>Data Access - where can we get this data now?</h2>
+<ul>
+<li>ICPSR datasets
+<ul>
+<li>Hosted at University of Michigan’s Institute for Social Research
+<ul>
+<li>requires member institution</li>
+<li>no distribution of information allowed</li>
+<li>no browser function</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="data-access---other-census-data" class="slide level2">
+<h2>Data Access - other census data</h2>
+<ul>
+<li>Integrated Public Use Microdata Series (IPUMS USA)
+<ul>
+<li>hosted by University of Minnesota</li>
+<li>difficult to navigate</li>
+<li>microsamples on a finer grid, not aggregated data</li>
+</ul></li>
+</ul>
+</section>
+<section id="data-access---what-now" class="slide level2">
+<h2>Data Access - what now?</h2>
+<ul>
+<li>Use original Historical Census Browser data<br />
+</li>
+<li>Host the data and allow free and open access<br />
+</li>
+<li>Create an intuitive way for users to explore data<br />
+</li>
+<li>Allow download of all relevant data in ‘tidy’ way</li>
+</ul>
+<p><strong>censusbrowseR</strong></p>
+<ul>
+<li>R package</li>
+<li>‘Get Your Data’ Shiny app</li>
+</ul>
+</section>
+<section id="data-collection" class="slide level2">
+<h2>Data Collection</h2>
+<ul>
+<li>County-level: None<br />
+</li>
+<li>State-level: December 2016
+<ul>
+<li>Raw data, copy-pasted</li>
+<li>Saved as csv files<br />
+</li>
+<li>Separate file for each year, 1790 - 1960<br />
+</li>
+<li>Missing column names: 1890, 1940</li>
+</ul></li>
+</ul>
+</section>
+<section id="data-verification" class="slide level2">
+<h2>Data Verification</h2>
+<ul>
+<li>Using ICPSR 3 data sets
+<ul>
+<li>downloaded from ICPSR, University of Michigan<br />
+</li>
+</ul></li>
+<li>Columns from ICPSR compared to each column in raw data
+<ul>
+<li>column with highest correlation</li>
+<li>column with lowest Euclidean distance<br />
+</li>
+</ul></li>
+<li>Automated verification
+<ul>
+<li>Correlation &gt; .999 and distance &lt; 100</li>
+</ul></li>
+<li>Checked by hand
+<ul>
+<li>Correlation &gt; .95 and distance &lt; 5000</li>
+<li>Not all of these were correct</li>
+</ul></li>
+<li>Unverified</li>
+</ul>
+</section>
+<section id="data-verification-1" class="slide level2">
+<h2>Data Verification</h2>
+<p><img src="figures/verification.png", width=600></p>
+</section>
+<section id="data-verification-2" class="slide level2">
+<h2>Data Verification</h2>
+<p>Results of Verification</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Year</th>
+<th style="text-align: center;">Automatically Verified</th>
+<th style="text-align: center;">Verified by Hand</th>
+<th style="text-align: center;">Unverified</th>
+<th style="text-align: center;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1890</td>
+<td style="text-align: center;">37</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">121</td>
+<td style="text-align: center;">167</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1940</td>
+<td style="text-align: center;">284</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">94</td>
+<td style="text-align: center;">381</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>1890: Large loss of data<br />
+</li>
+<li>1940: Fewer losses, marjority verified</li>
+</ul>
+</section>
+<section id="get-your-data-app" class="slide level2">
+<h2>“Get Your Data” App</h2>
+<ul>
+<li>Shiny app<br />
+</li>
+<li>Single Year</li>
+<li>Multiple Years</li>
+</ul>
+</section>
+<section id="get-your-data-app---single-year" class="slide level2">
+<h2>“Get Your Data” App - Single Year</h2>
+<p><img src="figures/app-sshot-single-year.png", width=800></p>
+</section>
+<section id="get-your-data-app---multiple-years" class="slide level2">
+<h2>“Get Your Data” App - Multiple Years</h2>
+<p><img src="figures/app-sshot-multiple-years.png", width=800></p>
+</section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<ul>
+<li>Following the African American population throughout history</li>
+<li>Using the app to find data</li>
+<li>Three major terms: “slave”, “colored”, “negro”
+<ul>
+<li>Note: for remainder of example, “black” will be used instead of “negro”</li>
+</ul></li>
+</ul>
+</section>
+<section id="example-1" class="slide level2">
+<h2>Example</h2>
+<p><img src="figures/app-sshot-slave.png", width=800></p>
+</section>
+<section id="example-2" class="slide level2">
+<h2>Example</h2>
+<ul>
+<li>“Download Filtered Data” button for each of these terms</li>
+<li>Join the resulting datasets together in R<br />
+</li>
+<li>Each row is a State-Year combination, with all possible terms as columns</li>
+</ul>
+<p><img src="figures/data-sshot-slaves.png", width = 600></p>
+</section>
+<section id="example-3" class="slide level2">
+<h2>Example</h2>
+<ul>
+<li>1790 data, using TOTAL.SLAVES variable</li>
+</ul>
+<p><img src="presentation_files/figure-revealjs/unnamed-chunk-1-1.png" /><!-- --></p>
+</section>
+<section id="example-4" class="slide level2">
+<h2>Example</h2>
+<ul>
+<li>1820 Data, using TOTAL.SLAVES and TOTAL.FREE.COLORED.PERSONS</li>
+</ul>
+<p><img src="presentation_files/figure-revealjs/unnamed-chunk-2-1.png" /><!-- --></p>
+</section>
+<section id="example-5" class="slide level2">
+<h2>Example</h2>
+<ul>
+<li>1850 Data, using TOTAL.SLAVES and TOTAL.FREE.COLORED.POPULATION</li>
+</ul>
+<p><img src="presentation_files/figure-revealjs/unnamed-chunk-3-1.png" /><!-- --></p>
+</section>
+<section id="example-6" class="slide level2">
+<h2>Example</h2>
+<ul>
+<li>Comparing Total Colored Population across years
+<ul>
+<li>different variable names for different years</li>
+<li><strong>1850</strong>: <code>TOTAL.FREE.COLORED.POPULATION</code>, <code>TOTAL.SLAVES</code></li>
+<li><strong>1860</strong>: <code>AGGR..SLAVES</code>, <code>TOTAL.FREE.COLORED.MALES</code>, <code>TOTAL.FREE.COLORED.FEMALES</code></li>
+<li><strong>1870</strong>: <code>COLORED.PERSONS</code></li>
+<li><strong>1880</strong>: <code>COLORED.PERSONS</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="example-7" class="slide level2">
+<h2>Example</h2>
+<p><img src="presentation_files/figure-revealjs/unnamed-chunk-4-1.png" /><!-- --></p>
+</section>
+<section id="example-8" class="slide level2">
+<h2>Example</h2>
+<ul>
+<li>Comparing Total Black Population across years
+<ul>
+<li>different variable names for different years</li>
+<li><strong>1900</strong>: <code>NEGRO.FEMALES</code>, <code>NEGRO.MALES</code></li>
+<li><strong>1910</strong>: <code>TOTAL.NEGROES</code></li>
+<li><strong>1920</strong>: <code>MALE.NEGROES</code>, <code>FEMALE.NEGROES</code></li>
+<li><strong>1930</strong>: <code>NEGRO.FEMALES</code>, <code>NEGRO.MALES</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="example-9" class="slide level2">
+<h2>Example</h2>
+<p><img src="presentation_files/figure-revealjs/unnamed-chunk-5-1.png" /><!-- --></p>
+</section>
+<section id="discussion" class="slide level2">
+<h2>Discussion</h2>
+<ul>
+<li>Connectivity across years</li>
+<li>Well-structured data</li>
+<li>Assess completeness of information for a group<br />
+</li>
+<li>Quick determination of differences in recording variables</li>
+</ul>
+</section>
+<section id="future-work" class="slide level2">
+<h2>Future Work</h2>
+<ul>
+<li>County level data
+<ul>
+<li>Extra challenges with discontinuity across states &amp; counties</li>
+</ul></li>
+<li>Updated, current data (through 2010) would be valuable<br />
+</li>
+<li>Including more ‘warnings’ for variables whose nomenclature changes</li>
+</ul>
+</section>
+
+  <!--
+  To hide progress bar from entire presentation
+  just remove “progress” element.
+  -->
+  <!-- <div class="progress"></div> -->
+  <script src="presentation_files/rmdshower/node_modules/shower/node_modules/shower-core/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+
+    <script>renderMathInElement(document.body);</script>
+  
+  
+</body>
+</html>

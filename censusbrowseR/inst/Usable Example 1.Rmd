@@ -8,7 +8,7 @@ output: html_document
 We are interested in exploring the history of African Americans in the United States using the available census data. To do this, I have used the 'Get Your Data' Shiny tool to find three different .csv files relating to the population of African Americans in U.S. states. There are three different files because the census uses different words to refer to African Americans at different points in history. Because of these changes, one file contains variable names that use the term 'slave', one file contains variable names that use the term 'colored', and the third contains variable names that use the term 'negro'. These files are in the 'inst' folder in `censusbrowseR`.   
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
-library(statatlas)
+library(censusbrowseR)
 library(tidyverse)
 library(USAboundaries)
 library(broom)
