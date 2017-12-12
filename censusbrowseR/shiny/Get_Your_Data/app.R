@@ -5,10 +5,14 @@ library(tidyverse)
 library(USAboundaries)
 library(ggthemes)
 library(scales)
+states_current <- us_boundaries("1999-12-31")
+mcurr_df <- fortify(states_current, region = "name")
+mcurr_df <- mcurr_df %>% mutate(State = toupper(id)) %>% filter(long >= -127)
+
 
 shinyApp(
   ui = navbarPage(
-    "Get Your Data",
+    "U.S. Decennial Census Browser",
     tabPanel("Single Year",
              inputPanel(selectInput("year", label = "Census Year:",
                                     choices = 10*179:196, selected = 1790),
@@ -35,7 +39,7 @@ shinyApp(
     
     tabPanel("Visualize",
              inputPanel(
-               radioButtons("checkall", "All in one?", choices = c("yes", "no"))), 
+               radioButtons("checkall", "Sum all selected variables for each year?", choices = c("yes", "no"))), 
              plotOutput('map'),
              p(class = 'text-center', downloadButton('none', 'Download Filtered Data'))
     )),
@@ -152,7 +156,7 @@ shinyApp(
       #                                    stateslist[[paste0("X", input$range[2])]]$TOTAL.POPULATION)
       dnld.dat.join <- stateslist[[paste0("X", years[1])]]
       dnld.dat.join <- dnld.dat.join[,names(dnld.dat.join)%in%c("Year", "State", "TOTAL.POPULATION", "Type", colstoget)]
-      
+
       if (length(years) > 1) {
         for (i in 2:length(years)){
           yr.dat <- stateslist[[paste0("X", years[i])]]
@@ -160,28 +164,53 @@ shinyApp(
           dnld.dat.join <- full_join(dnld.dat.join, dnld.dat)
         }
       }
-      
+
       dnld.long <- dnld.dat.join %>% gather(variable, value, one_of(colstoget)) %>% filter(!is.na(value))
-      # facet by year only - check input
-      dnld.long <- dnld.long %>% group_by(Year, State) %>% 
-        summarize(
-          TOTAL.POPULATION = TOTAL.POPULATION[1],
-          value = sum(value), 
-          label=paste(unique(variable), sep=",", collapse="\n")[1]
-          )%>% mutate(
-            state=tolower(State)
+      ####### IF SUMMING OVER EVERYTHING #######
+      if (input$checkall == "yes"){
+        dnld.long <- dnld.long %>% group_by(Year, State) %>% 
+          dplyr::summarize(
+            TOTAL.POPULATION = TOTAL.POPULATION[1],
+            value = sum(value), 
+            label = paste(unique(variable), sep="+", collapse="\n")[1]
           )
-      map_boundaries <- data.frame(years) %>% mutate(map_the_things = purrr::map(years, .f = function(x){
-        map_states <- fortify(us_boundaries(paste0(as.character(x), "-07-04")), region = "name")
-      }))
+        map_boundaries <- data.frame(years) %>% mutate(map_the_things = purrr::map(years, .f = function(x){
+          map_states <- fortify(us_boundaries(paste0(as.character(x), "-07-04")), region = "name")
+        }))
+        
+        map_boundaries <- map_boundaries %>% unnest()
+        map_boundaries <- map_boundaries %>% mutate(State = toupper(id), Year = years) %>% filter(long >= -127)
+        dnld.map <- left_join(map_boundaries, dnld.long, by=c("State", "Year"))
+        
+        ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
+                                colour = "grey90", fill = "white") + 
+          geom_polygon(data = dnld.map, 
+                       aes(x = long, y = lat, group = group, fill = value/TOTAL.POPULATION)) + 
+          facet_wrap(~Year) + ggthemes::theme_map() +
+          geom_text(data = dnld.map, aes(label=label), x = -100, y = 50, colour="black") +
+          scale_fill_gradient(low = "bisque", high = "darkred") +
+          theme(legend.title = element_blank(), legend.background = element_rect(fill = "transparent")) 
+      }
+      ##### IF NOT WANTING TO SUM OVER EVERYTHING ####
+      else {
+        map_boundaries <- data.frame(years) %>% mutate(map_the_things = purrr::map(years, .f = function(x){
+          map_states <- fortify(us_boundaries(paste0(as.character(x), "-07-04")), region = "name")
+        }))
+        map_boundaries <- map_boundaries %>% unnest()
+        map_boundaries <- map_boundaries %>% mutate(State = toupper(id), Year = years) %>% filter(long >= -127)
+        dnld.map <- left_join(map_boundaries, dnld.long, by=c("State", "Year"))
+        
+        
+        ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group), 
+                                colour = "grey90", fill = "white") + 
+          geom_polygon(data = dnld.map, 
+                       aes(x = long, y = lat, group = group, fill = value/TOTAL.POPULATION)) + 
+          facet_grid(variable~Year) + ggthemes::theme_map() +
+          #geom_text(data = dnld.map, aes(label=label), x = -100, y = 50, colour="black") +
+          scale_fill_gradient(low = "bisque", high = "darkred") +
+          theme(legend.title = element_blank(), legend.background = element_rect(fill = "transparent"))
+      }
       
-      map_boundaries <- map_boundaries %>% unnest()
-      map_boundaries <- map_boundaries %>% mutate(State = toupper(id), Year = years) %>% filter(long >= -127)
-      dnld.map <- left_join(map_boundaries, dnld.long, by=c("State", "Year"))
-      dnld.map %>% ggplot(aes(x = long, y = lat, fill=value/TOTAL.POPULATION, group=group),
-                          colour = "grey90", fill = "white") + geom_polygon() + facet_wrap(~Year) +
-        geom_text(aes(label=label), x = -100, y = 50, colour="black") + ggthemes::theme_map() +
-        theme(legend.title = element_blank(), legend.background = element_rect(fill = "transparent")) 
     })
     
     ## to close the output part    
