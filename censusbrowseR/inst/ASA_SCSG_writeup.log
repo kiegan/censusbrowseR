@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  13 DEC 2017 14:22
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  13 DEC 2017 14:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -705,7 +705,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package xcolor Warning: Incompatible color definition on input line 296.
 
-<figure/map_1800s-1.pdf, id=95, 578.16pt x 361.35pt>
+<figure/map_1800s-1.pdf, id=94, 578.16pt x 361.35pt>
 File: figure/map_1800s-1.pdf Graphic file (type pdf)
 
 <use figure/map_1800s-1.pdf>
@@ -719,7 +719,7 @@ Overfull \hbox (5.0pt too wide) in paragraph at lines 297--297
 
 Package xcolor Warning: Incompatible color definition on input line 309.
 
-<figure/map_1900s-1.pdf, id=97, 578.16pt x 361.35pt>
+<figure/map_1900s-1.pdf, id=96, 578.16pt x 361.35pt>
 File: figure/map_1900s-1.pdf Graphic file (type pdf)
 
 <use figure/map_1900s-1.pdf>
@@ -751,7 +751,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 342.
 Here is how much of TeX's memory you used:
  11887 strings out of 493488
  184560 string characters out of 3141326
- 438263 words of memory out of 3000000
+ 437263 words of memory out of 3000000
  14845 multiletter control sequences out of 15000+200000
  21371 words of font info for 107 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -768,7 +768,7 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2012/t
 exmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2012/texmf-di
 st/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2012/texmf-dist/fon
 ts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on ASA_SCSG_writeup.pdf (6 pages, 6956570 bytes).
+Output written on ASA_SCSG_writeup.pdf (6 pages, 6956928 bytes).
 PDF statistics:
  182 PDF objects out of 1000 (max. 8388607)
  133 compressed objects within 2 object streams
