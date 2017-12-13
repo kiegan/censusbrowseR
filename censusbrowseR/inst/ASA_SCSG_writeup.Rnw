@@ -51,6 +51,12 @@
 
 \renewcommand{\headrulewidth}{0.0pt} % No header rule
 \renewcommand{\footrulewidth}{0.4pt} % Thin footer rule
+\setcounter{topnumber}{8}
+\setcounter{bottomnumber}{8}
+\setcounter{totalnumber}{8}
+\renewcommand{\floatpagefraction}{0.99} % Thin footer rule
+\renewcommand{\textfraction}{0.1} % Thin footer rule
+\renewcommand{\bottomfraction}{0.7} % Thin footer rule
 
 \usepackage{lettrine} % Package to accentuate the first letter of the text
 \newcommand{\initial}[1]{ % Defines the command and style for the first letter
@@ -128,7 +134,7 @@ Iowa State University % Your institution
 
 \par Unfortunately, because the founders of the U.S. Census were unable to see 200 years into the future, those interested in working with census data are left with quite the inescapable mess. If you want to focus in on a particular demographic group and their journey as part of the population of the United States, you may have ten or more different variable names to describe that one group over the course of the census from 1790 to 1960 - and that is just for a single group! Of course, we cannot just simply change variable names to match our own research needs. It is important to keep the data in their true form and be respectful of the way in which the population was defined at different times throughout history, even if our instinct may be to `clean' the data by changing variable names.  
 
-\par This, of course, leaves the user with a wide variety of variables that are far from consistent across years. In order to track one demographic group across years - let alone many groups - a clean user interface that helps users see exactly what information is available to them is a necessity. To streamline the process and assist researchers in finding out to what information they have access and what information they lack, a U.S. Decennial Census Browser is presented as a Shiny application, with the ability to explore available variables within a certain year or across several years. Additionally, a Visualization tab allows users to immediately visualize the variables they have picked across different years to get an initial look before downloading the data in the form of `tidy' comma-separated values (csv) files.  
+\par This, of course, leaves the user with a wide variety of variables that are far from consistent across years. In order to track one demographic group across years - let alone many groups - a clean user interface that helps users see exactly what information is available to them is a necessity. To streamline the process and assist researchers in finding out to what information they have access and what information they lack, a U.S. Decennial Census Browser is presented as a Shiny application, with the ability to explore available variables within a certain year or across several years. Additionally, a visualization tab allows users to immediately visualize the variables they have picked across different years to get an initial look before downloading the data in the form of `tidy' comma-separated values (csv) files.  
 
 \par I use this application to investigate trends in the African American population over time in the United States. First, this is done within the visualization tools provided by the Shiny application for a small subset of years. I subsequently download the relevant data and take a closer look at trends over the entire range of available data.  
 
@@ -136,28 +142,42 @@ Iowa State University % Your institution
 
 \section*{Data Access}
 
-Should I include a small section about Data Access? Or should I condense the introduction and add where the data is coming from in that initial section?  
+\par There are two main datasets that contain aggregated counts of historical, demographic, economic, and social characteristics from the United States decennial census. They were both collected and developed by the Inter-University Consortium for Political and Social Research (ICPSR). The ICPSR 3, gathered from computer-readable data collections from the U.S. Census Bureau as well as other reports (both published and unpublished), contains data from 1790 to 1960 (\textit{do i need to put a citation here?}). The ICPSR 2896 includes much of the same information as the ICPSR 3, and in addition also includes a wider array of variables such as manufacturing and more county and city-level information. The ICPSR 2896 is a restricted-access dataset that requires users be part of a member institution in order to gain access.  
+
+\par The University of Virginia Library hosted a ``Historical Census Browser" for many years that allowed users to search United States Decennial Census Data for research, teaching, and personal purposes \citep{HCB}. The data included records on various aspects of the U.S. population from the 1790 Census through the 1960 Census, originally populated using the ICPSR 3 dataset. This Historical Census Browser was free and available for use by anyone with an internet connection. The browser allowed a user to peruse available topics for each census year at both the state and county levels. The Historical Census Browser was taken down on December 31, 2016, but the county-level aggregated data had already become unavailable several months before then.  
+
+\par Although the county-level data had already been removed from the website, we captured the state-level aggregated records for each decennial census from 1790 through 1960 from the website in September of 2016 and saved them as raw data. These data are used to populate the Shiny application.  
 
 
 \section*{The Census Browser Shiny application}  
 
 \par The Shiny application has three main points of focus, split into separate tabs. The first tab, `Single Year', allows users to explore all available variable names for a single year of the decennial census at a time. After choosing a particular year, users can look for up to two specific variables of interest by using two available text search bars. This will narrow down the possible variable names, allowing for a more narrow focus in a given year.  
 
-\par The second tab, for `Multiple Years', brings in the ability to compare availability of variables across several years. Users may select a range of years and, if they so choose, narrow down the given results with a text search term. These results are presented as a table with all chosen years as `columns', while all relevant variable names appear as `rows' in the table. An `X` indicates the presence of that particular variable name in the corresponding year. A totals column to the far right allows users to not only see in how many years each variable appears, but also order the relevant variables by that frequency.  
+\par The second tab, for `Multiple Years', brings in the ability to compare availability of variables across several years. Users may select a range of years and, if they so choose, narrow down the given results with a text search term. These results are presented as a table with all chosen years as `columns', while all relevant variable names appear as `rows' in the table (see ~\autoref{shiny_1}). An \texttt{X} indicates the presence of that particular variable name in the corresponding year. A totals column to the far right allows users to not only see in how many years each variable appears, but also order the relevant variables by that frequency.  
 
-\begin{center}
+\begin{figure}[hbtp]
 \includegraphics[width=.48\textwidth]{./figures/search_slaves_40years.png}  
 \captionof{figure}{Resulting view of the `Multiple Years' tab after restricting the range of years to between 1800 and 1830, and searching for the term `slave'.}\label{shiny_1}
-\end{center}
+\end{figure}
 
-\par The final tab, `Visualize', creates an on-the-spot visual representation of the data selected in the `Multiple Years' portion of the application. Users may choose to simply separate data by year, and sum over all variables chosen within each year, or facet by both year and variable chosen. Depending on the range of years selected by the user and the number of different variables chosen, the latter can easily become a very large grid environment. However, it still allows users to see several things about the particular variables and years they are looking at (see \autoref{shiny_2}).
+\begin{figure}[hbtp]
+%\begin{center}
+\centering
+\includegraphics[width=.48\textwidth]{./figures/visualize_slaves_40years_sum.png}  
+\captionof{figure}{A visual represenation of chosen variables for total number of slaves between the years 1800 and 1830, with period-accurate mapping for state boundaries. Maps are labeled with the variable name used. Values are shown as a percentage of total population in the state at that time.}\label{shiny_2}
+%\end{center}
+\end{figure}
 
-\begin{center}
-\includegraphics[width=.48\textwidth]{./figures/visualize_slaves_40years.png}  
-\captionof{figure}{A visual represenation of chosen variables for total number of slaves between the years 1800 and 1830, with period-accurate mapping for state boundaries. Values are shown as a percentage of total population in the state at that time.}\label{shiny_2}
-\end{center}
+\par The final tab, `Visualize', creates an on-the-spot visual representation of the data selected in the `Multiple Years' portion of the application. Users may choose to simply separate data by year, and sum over all variables chosen within each year (see \autoref{shiny_2}), or facet by both year and variable chosen (see \autoref{shiny_3}). Depending on the range of years selected by the user and the number of different variables chosen, the latter can easily become a very large grid environment. However, it still allows users to see several things about the particular variables and years they are looking at .
 
-\par First of all, every plot has the outlines of the 48 contiguous states as of 1999. Above that base, the outlines for each state are plotted as they were in the year represented. This means that users can see varying state boundaries across years - however, since these are the areas data were actually collected on at the time, they are the true representation of the geographic regions for the demographic groups chosen. In some years, there are states that still hold Territory status, or are not yet included in the decennial census. These will show up in a bottom row, since they have \texttt{NA} values for the variables. However, it is still useful to see where those boundaries existed and see how they change over time as you pan across the columns.
+
+\begin{figure*}[hbtp]
+\centering
+\includegraphics[width=\textwidth]{./figures/visualize_slaves_40years.png}  
+\captionof{figure}{A visual represenation of chosen variables for total number of slaves between the years 1800 and 1830, with period-accurate mapping for state boundaries. Maps are facetted by variable name used to create the map. Values are shown as a percentage of total population in the state at that time.}\label{shiny_3}
+\end{figure*}
+
+\par The \texttt{USAboundaries} package was used to create period-accurate representations for each separate year \citep{USAboundaries}. First of all, every plot has the outlines of the 48 contiguous states as of 1999. Above that base, the outlines for each state are plotted as they were in the year represented. This means that users can see varying state boundaries across years - however, since these are the areas data were actually collected on at the time, they are the true representation of the geographic regions for the demographic groups chosen. In some years, there are states that still hold Territory status, or are not yet included in the decennial census. If users have chosen to sum over chosen variables for each year, these will show up with the other states, but be shown in grey as they contain \texttt{NA} values. If users have chosen to look at the expanded grid, these will show up in the bottom row. Both situations provide a useful look at where those boundaries existed. Users can immediately see how they change over time and see demographic groups represented correctly in the areas they were collected on.  
 
 \par Secondly, users can see how variable names change over time. They can see this during the initial selection of variables in the `Multiple Years' tab; however, now they can see differing variable names for an equivalent or similar demographic group and still directly compare the values on the maps. 
 
@@ -196,7 +216,7 @@ mcurr_df <- mcurr_df %>% mutate(State = toupper(id)) %>% filter(long >= -127)
 
 
 
-\par In the year 1790, we see the term \texttt{SLAVES} is our main source of information. Using a similar tactic to that portrayed in the `Visualize' tab of the Shiny application, we can plot the current state outlines as a base, followed by 1790 values for the \texttt{SLAVES} variable in another layer, with 1790-specific state outlines. The resulting image, seen in \autoref{map_1790}, provides a basic look at a single variable in a single year. Moving forward, the ways in which the African American population is accounted for in the census gets more complicated; thus, we will need to consider additional ways of exploring the information.  
+\par In the year 1790, we see the term \texttt{SLAVES} is our main source of information. Using a similar tactic to that portrayed in the `Visualize' tab of the Shiny application, we can plot the current state outlines as a base, followed by 1790 values for the \texttt{SLAVES} variable in another layer, with 1790-specific state outlines. The resulting image, seen in \autoref{fig:map_1790}, provides a basic look at a single variable in a single year. Moving forward, the ways in which the African American population is accounted for in the census gets more complicated; thus, we will need to consider additional ways of exploring the information.  
 
 <<map_1790, echo = FALSE, message=FALSE,warning=FALSE, fig.pos = 'h', fig.width=8, fig.height=5, out.width='.5\\textwidth', fig.cap="Total number of slaves per state in 1790, plotted on a continuous log scale. State boundaries for July 4, 1790 were gathered from `USAboundaries` package.">>=
 map_states_1790 <- us_boundaries("1790-07-04")
@@ -221,12 +241,12 @@ ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group = group),
 
 
 
-\par For example, let us examine the year 1820. In the first half of the 19th century, slavery was still quite prevalent in southern states. However, there were also some free African American persons residing in most states at that time. Thus, we can now expect to see at least two separate categories to capture this particular demographic. At this time in U.S. history, most non-white minorities were grouped together in the ``colored persons" category, and therefore we do not have any other record for African Americans except the grouped ``colored persons" categorization and the ``slaves" categorization. 
+\par For example, let us examine the year 1820. In the first half of the 19th century, slavery was still quite prevalent in southern states. However, there were also some free colored persons residing in most states at that time. Thus, we can now expect to see at least two separate categories to capture this particular demographic. At this time in U.S. history, most non-white minorities were grouped together in the ``colored persons" category, and therefore we do not have any other record for African Americans except the grouped ``colored persons" categorization and the ``slaves" categorization. 
 
-\par Upon examining the available variables, we observe a count of \texttt{TOTAL.FREE.COLORED.PERSONS} as well as a count of \texttt{TOTAL.SLAVES}. This gives us the ability to visualize not only the total numbers in each of these categories within each state, but also the percentage of African Americans in each state that were categorized as ``free persons" as opposed to slaves (see ~\autoref{map_1820}). Knowing that both of these variables are available allows for a powerful comparison by visualizing the growing divide between northern and southern states in the United States at that time. Although the census recorded values of \texttt{TOTAL.FREE.COLORED.PERSONS} in each state, there was still a huge majority enslaved in most southern states at this time.  
+\par Upon examining the available variables, we observe a count of \texttt{TOTAL.FREE.COLORED.PERSONS} as well as a count of \texttt{TOTAL.SLAVES}. This gives us the ability to visualize not only the total numbers in each of these categories within each state, but also the percentage of colored persons in each state that were categorized as ``free persons" as opposed to slaves (see \autoref{fig:map_1820}). Knowing that both of these variables are available allows for a powerful comparison by visualizing the growing divide between northern and southern states in the United States at that time. Although the census recorded values of \texttt{TOTAL.FREE.COLORED.PERSONS} in each state, there was still a huge majority enslaved in most southern states at this time.  
 
 
-<<map1820, echo = FALSE, message=FALSE,warning=FALSE, fig.pos = 'h', fig.width=8, fig.height=5, out.width='.5\\textwidth', fig.cap="Total number of slaves, total number of free colored persons, and percentage of colored persons free in each state in 1820 United States.">>=
+<<map_1820, echo = FALSE, message=FALSE,warning=FALSE, fig.pos = 'h', fig.width=8, fig.height=5, out.width='.5\\textwidth', fig.cap="Total number of slaves, total number of free colored persons, and percentage of colored persons free in each state in 1820 United States.">>=
 map_states_1820 <- us_boundaries("1820-07-04")
 
 m1820_df <- fortify(map_states_1820, region = "name")
@@ -273,7 +293,7 @@ grid.arrange(p1_1820, p2_1820, p3_1820, ncol = 2)
 @
 
 
-\par Moving forward in time, even more information can be gleaned about this population. When we subset our data on the year 1850, we see that although there is still a \texttt{TOTAL.SLAVES} column in the record, many states no longer record this variable; by then, they had already abolished slavery. Because this is a specific situation in which we know why there are `missing' data values, we can transform these \texttt{NA} values into zeros to account for this difference in the data and allow us to still calculate the percentages of free colored persons. Additionally, since free colored persons are becoming more prevalent in the data, we can also start investigating what the total colored population looks like in each state, beyond just the size of the slave population and freed population (see \autoref{map_1850}).
+\par Moving forward in time, even more information can be gleaned about this population. When we subset our data on the year 1850, we see that although there is still a \texttt{TOTAL.SLAVES} column in the record, many states no longer record this variable; by then, they had already abolished slavery. Because this is a specific situation in which we know why there are `missing' data values, we can transform these \texttt{NA} values into zeros to account for this difference in the data and allow us to still calculate the percentages of free colored persons. Additionally, since free colored persons are becoming more prevalent in the data, we can also start investigating what the total colored population looks like in each state, beyond just the size of the slave population and freed population (see \autoref{fig:map_1850}).
 
 
 <<map_1850, echo = FALSE, message=FALSE,warning=FALSE, fig.pos = 'h', fig.width=8, fig.height=5, out.width='.5\\textwidth', fig.cap="Total number of slaves, total number of free colored persons, and percentage of colored persons free in each state in 1850 United States.">>=
@@ -341,7 +361,7 @@ p4_1850 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group
 grid.arrange(p1_1850, p2_1850, p3_1850, p4_1850, ncol = 2)
 @
 
-\par Due to the abolition of slavery at the national level in 1865, it is also valuable to explore how the overall population of colored persons changes in each state throughout several years in the 19th century. Some migration begins to occur out of some southern states. Although the highest densities of the population of colored persons remains in southeastern states, a shift can be observed towards some northern states. A separate shift can also be seen out towards California, during a period of major gold mining operations. It is interesting to observe this overall shift of the total population of colored persons in each state as the United States transitions into the post-slavery period (see ~\autoref{map_1800s}). We also see how the boundaries of states change and new states are formed, with the United States gaining new states at each census.  
+\par Due to the abolition of slavery at the national level in 1865, it is also valuable to explore how the overall population of colored persons changes in each state throughout several years in the 19th century. Some migration begins to occur out of some southern states. Although the highest densities of the population of colored persons remains in southeastern states, a shift can be observed towards some northern states. A separate shift can also be seen out towards California, during a period of major gold mining operations. It is interesting to observe this overall shift of the total population of colored persons in each state as the United States transitions into the post-slavery period (see ~\autoref{fig:map_1800s}). We also see how the boundaries of states change and new states are formed, with the United States gaining new states at each census.  
 
 <<map_1800s, echo = FALSE, message=FALSE,warning=FALSE, fig.pos = 'h', fig.width=8, fig.height=5, out.width='.5\\textwidth', fig.cap="Total number of colored persons per state in 19th Century United States.", label = "map_1800s">>=
 legend_max <- 1000000
@@ -418,9 +438,9 @@ p4_1880 <- ggplot() + geom_polygon(data = mcurr_df, aes(x = long, y = lat, group
 grid.arrange(p5_1850, p4_1860, p4_1870, p4_1880, ncol = 2, top = "Total Colored Persons")
 @
 
-\par We end our investigation with a look at the beginning of the 20th century. For the first time in the census data, we see the arrival of variables referring specifically to the African American population. These variables are denoted in the original data as, for example, \texttt{TOTAL.NEGROES}. In visualizations, we will use these variables to represent `total black persons'; this is a clear example of changing terminology and the need to navigate census data with caution. 
+\par We end our investigation with a look at the beginning of the 20th century. For the first time in the census data, we see the arrival of variables referring specifically to the African American population. These variables are denoted in the original data with terminology such as \texttt{TOTAL.NEGROES}. In visualizations, we will use these variables to represent `total black persons'; this is a clear example of changing terminology and the need to navigate census data with caution. 
 
-\par In this final series of visuals, we can see the continuing shift of the African American population (which we previously observed as one part of the `colored' population) out west to California, and continuing northward movement in the east and midwest (see ~\autoref{"map_1900s"}). Although the highest density of African American persons remains in the southern states, we see a significant northern migration taking place. 
+\par In this final series of visuals, we can see the continuing shift of the African American population (which we previously observed as one part of the `colored' population) out west to California, and continuing northward movement in the east and midwest (see \autoref{fig:map_1900s}). Although the highest density of African American persons remains in the southern states, we see a significant northern migration taking place. 
 
 
 <<map_1900s, echo = FALSE, message=FALSE,warning=FALSE, fig.pos = 'h', fig.width=8, fig.height=5, out.width='.5\\textwidth', fig.cap="Total number of black persons per state in 20th Century United States.", label = "map_1900s">>=
@@ -499,13 +519,19 @@ grid.arrange(p1_1900, p1_1910, p1_1920, p1_1930, ncol = 2, top = "Total Black Pe
 
 
 
-
 \section*{Conclusion}
-The decennial census is a rich source of historical information. We have built a tool that can help extract and visualize that information to, for example, understand how demographic attributes of the U.S. population have changed over time.
 
-Although there is no county-level information available and the data for the census browser go only through 1960, users are able to efficiently explore variables of interest at different time points in U.S. history and tell a visual story about a growing nation and a changing population. This connectivity across years and ability to assess what information was available when, all in one browser, have the potential to save time and effort of researchers interested in delving into United States history.
+\par \textit{This section still needs some work.}
 
-The structure of our browsers also helps determine not only the variables that are available in a given year, but also where information is missing for some states on a particular variable. Finding these differences is easier when all relevant variables are combined in one data frame, which can be summarized and searched all at one time.
+\par Even when tracking one particular group, there is a huge lack of consistency within the data. For African Americans in the United States, there isn't even a single specific category to represent them until the beginning of the 20th century. Before that, tracking the African American population is very difficult without having some context for how terminologies and definition of demographic groups has changed. And even once a specific group is created within the census, there are continuing changes with variable naming; some years include a total count while some include a count of males and females, but no total. And definitions of demographic groups and the manner in which they are recorded continue to change to this day. 
+
+\par The decennial census is a rich source of historical information. We have built a tool that can help extract and visualize that information to, for example, understand how demographic attributes of the U.S. population have changed over time.
+
+\par Although there is no county-level information available and the data for the census browser go only through 1960, users are able to efficiently explore variables of interest at different time points in U.S. history and tell a visual story about a growing nation and a changing population. This connectivity across years and ability to assess what information was available when, all in one browser, have the potential to save time and effort of researchers interested in delving into United States history.
+
+\par The structure of our browsers also helps determine not only the variables that are available in a given year, but also where information is missing for some states on a particular variable. Finding these differences is easier when all relevant variables are combined in one data frame, which can be summarized and searched all at one time. These differences are even more clear in the `visualize' tab, where users can see not only which variables are relevant for different years, but also see whether states have missing data in the chosen years.  
+
+
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
 %----------------------------------------------------------------------------------------

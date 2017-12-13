@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  12 DEC 2017 01:32
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  13 DEC 2017 00:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -502,22 +502,22 @@ tim
 (./ASA_SCSG_writeup.aux)
 \openout1 = `ASA_SCSG_writeup.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
 
 (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -547,7 +547,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \microtypecontext on input line 141.
+LaTeX Info: Redefining \microtypecontext on input line 147.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -567,7 +567,7 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring OFF on input line 141.
+Package hyperref Info: Link coloring OFF on input line 147.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
@@ -577,9 +577,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count129
 )
-LaTeX Info: Redefining \ref on input line 141.
-LaTeX Info: Redefining \pageref on input line 141.
-LaTeX Info: Redefining \nameref on input line 141.
+LaTeX Info: Redefining \ref on input line 147.
+LaTeX Info: Redefining \pageref on input line 147.
+LaTeX Info: Redefining \nameref on input line 147.
 
 (./ASA_SCSG_writeup.out) (./ASA_SCSG_writeup.out)
 \@outlinefile=\write3
@@ -591,14 +591,14 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
-(lastpage)             ! on input line 141.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 146.
+(lastpage)             ! on input line 147.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 152.
 
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 164.
+LaTeX Font Info:    Try loading font information for U+msa on input line 170.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
@@ -606,7 +606,7 @@ File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 (/usr/local/texlive/2012/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 164.
+LaTeX Font Info:    Try loading font information for U+msb on input line 170.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -618,176 +618,154 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 File: ./figures/colored-population-stat-atlas.png Graphic file (type png)
 <use ./figures/colored-population-stat-atlas.png>
 Package pdftex.def Info: ./figures/colored-population-stat-atlas.png used on in
-put line 169.
+put line 175.
 (pdftex.def)             Requested size: 204.85674pt x 267.60878pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 170.
+(caption)                particular \caption on input line 176.
 See the caption package documentation for explanation.
 
 [1{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
  <./figures/colored-population-stat-atlas.png>]
-<./figures/search_slaves_40years.png, id=34, 1072.005pt x 711.65875pt>
+<./figures/search_slaves_40years.png, id=36, 1160.335pt x 717.68124pt>
 File: ./figures/search_slaves_40years.png Graphic file (type png)
 
 <use ./figures/search_slaves_40years.png>
 Package pdftex.def Info: ./figures/search_slaves_40years.png used on input line
- 199.
-(pdftex.def)             Requested size: 245.82964pt x 163.1894pt.
+ 209.
+(pdftex.def)             Requested size: 245.82964pt x 152.04257pt.
 
+<./figures/visualize_slaves_40years_sum.png, id=37, 1160.335pt x 453.695pt>
+File: ./figures/visualize_slaves_40years_sum.png Graphic file (type png)
 
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 200.
-See the caption package documentation for explanation.
+<use ./figures/visualize_slaves_40years_sum.png>
+Package pdftex.def Info: ./figures/visualize_slaves_40years_sum.png used on inp
+ut line 216.
+(pdftex.def)             Requested size: 245.82964pt x 96.11642pt.
 
-<./figures/visualize_slaves_40years.png, id=36, 1072.005pt x 645.41125pt>
+<./figures/visualize_slaves_40years.png, id=40, 1159.33125pt x 455.7025pt>
 File: ./figures/visualize_slaves_40years.png Graphic file (type png)
 
 <use ./figures/visualize_slaves_40years.png>
 Package pdftex.def Info: ./figures/visualize_slaves_40years.png used on input l
-ine 206.
-(pdftex.def)             Requested size: 245.82964pt x 147.99829pt.
+ine 226.
+(pdftex.def)             Requested size: 512.14966pt x 201.30936pt.
+ [2 <./figures/search_slaves_40years.png> <./figures/visualize_slaves_40years_s
+um.png>]
 
+Package xcolor Warning: Incompatible color definition on input line 248.
 
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 207.
-See the caption package documentation for explanation.
-
-[2 <./figures/search_slaves_40years.png> <./figures/visualize_slaves_40years.pn
-g>]
-
-LaTeX Warning: Reference `map_1790' on page 3 undefined on input line 225.
-
-
-Package xcolor Warning: Incompatible color definition on input line 228.
-
-<figure/map_1790-1.pdf, id=49, 578.16pt x 361.35pt>
+<figure/map_1790-1.pdf, id=57, 578.16pt x 361.35pt>
 File: figure/map_1790-1.pdf Graphic file (type pdf)
 
 <use figure/map_1790-1.pdf>
-Package pdftex.def Info: figure/map_1790-1.pdf used on input line 229.
+Package pdftex.def Info: figure/map_1790-1.pdf used on input line 249.
 (pdftex.def)             Requested size: 256.07483pt x 160.0421pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 229--229
+Overfull \hbox (5.0pt too wide) in paragraph at lines 249--249
+[][] 
+ []
+
+[3 <./figures/visualize_slaves_40years.png> <./figure/map_1790-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 263.
+
+<figure/map_1820-1.pdf, id=74, 578.16pt x 361.35pt>
+File: figure/map_1820-1.pdf Graphic file (type pdf)
+
+<use figure/map_1820-1.pdf>
+Package pdftex.def Info: figure/map_1820-1.pdf used on input line 264.
+(pdftex.def)             Requested size: 256.07483pt x 160.0421pt.
+
+Overfull \hbox (5.0pt too wide) in paragraph at lines 264--264
 [][] 
  []
 
 
-LaTeX Warning: Reference `map_1820' on page 3 undefined on input line 239.
+Package xcolor Warning: Incompatible color definition on input line 275.
 
-
-Package xcolor Warning: Incompatible color definition on input line 243.
-
-<figure/map1820-1.pdf, id=50, 578.16pt x 361.35pt>
-File: figure/map1820-1.pdf Graphic file (type pdf)
- <use figure/map1820-1.pdf>
-Package pdftex.def Info: figure/map1820-1.pdf used on input line 244.
-(pdftex.def)             Requested size: 256.07483pt x 160.0421pt.
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 244--244
-[][] 
- []
-
-
-LaTeX Warning: Reference `map_1850' on page 3 undefined on input line 251.
-
-
-Package xcolor Warning: Incompatible color definition on input line 255.
-
-<figure/map_1850-1.pdf, id=51, 578.16pt x 361.35pt>
+<figure/map_1850-1.pdf, id=76, 578.16pt x 361.35pt>
 File: figure/map_1850-1.pdf Graphic file (type pdf)
 
 <use figure/map_1850-1.pdf>
-Package pdftex.def Info: figure/map_1850-1.pdf used on input line 256.
+Package pdftex.def Info: figure/map_1850-1.pdf used on input line 276.
 (pdftex.def)             Requested size: 256.07483pt x 160.0421pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 256--256
-[][] 
- []
-
-
-LaTeX Warning: Reference `map_1800s' on page 3 undefined on input line 262.
-
-[3 <./figure/map_1790-1.pdf> <./figure/map1820-1.pdf> <./figure/map_1850-1.pdf>
-]
-
-Package xcolor Warning: Incompatible color definition on input line 265.
-
-<figure/map_1800s-1.pdf, id=85, 578.16pt x 361.35pt>
-File: figure/map_1800s-1.pdf Graphic file (type pdf)
-
-<use figure/map_1800s-1.pdf>
-Package pdftex.def Info: figure/map_1800s-1.pdf used on input line 266.
-(pdftex.def)             Requested size: 256.07483pt x 160.0421pt.
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 266--266
-[][] 
- []
-
-
-LaTeX Warning: Reference `"map_1900s"' on page 4 undefined on input line 274.
-
-
-Package xcolor Warning: Incompatible color definition on input line 278.
-
-<figure/map_1900s-1.pdf, id=86, 578.16pt x 361.35pt>
-File: figure/map_1900s-1.pdf Graphic file (type pdf)
-
-<use figure/map_1900s-1.pdf>
-Package pdftex.def Info: figure/map_1900s-1.pdf used on input line 279.
-(pdftex.def)             Requested size: 256.07483pt x 160.0421pt.
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 279--279
+Overfull \hbox (5.0pt too wide) in paragraph at lines 276--276
 [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+Package xcolor Warning: Incompatible color definition on input line 285.
+
+<figure/map_1800s-1.pdf, id=78, 578.16pt x 361.35pt>
+File: figure/map_1800s-1.pdf Graphic file (type pdf)
+
+<use figure/map_1800s-1.pdf>
+Package pdftex.def Info: figure/map_1800s-1.pdf used on input line 286.
+(pdftex.def)             Requested size: 256.07483pt x 160.0421pt.
+
+Overfull \hbox (5.0pt too wide) in paragraph at lines 286--286
+[][] 
+ []
+
+[4 <./figure/map_1820-1.pdf> <./figure/map_1850-1.pdf> <./figure/map_1800s-1.pd
+f>]
+
+Package xcolor Warning: Incompatible color definition on input line 298.
+
+<figure/map_1900s-1.pdf, id=114, 578.16pt x 361.35pt>
+File: figure/map_1900s-1.pdf Graphic file (type pdf)
+
+<use figure/map_1900s-1.pdf>
+Package pdftex.def Info: figure/map_1900s-1.pdf used on input line 299.
+(pdftex.def)             Requested size: 256.07483pt x 160.0421pt.
+
+Overfull \hbox (5.0pt too wide) in paragraph at lines 299--299
+[][] 
+ []
+
 (./ASA_SCSG_writeup.bbl) 
 AED: lastpage setting LastPage
-[4 <./figure/map_1800s-1.pdf> <./figure/map_1900s-1.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 305.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 305.
-
-(./ASA_SCSG_writeup.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 305.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 305.
+[5 <./figure/map_1900s-1.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 331.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 331.
+ (./ASA_SCSG_writeup.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 331.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 331.
 Package rerunfilecheck Info: File `ASA_SCSG_writeup.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 305.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 331.
  ) 
 Here is how much of TeX's memory you used:
- 11860 strings out of 493488
- 184082 string characters out of 3141326
- 433831 words of memory out of 3000000
- 14838 multiletter control sequences out of 15000+200000
- 20843 words of font info for 100 fonts, out of 3000000 for 9000
+ 11884 strings out of 493488
+ 184498 string characters out of 3141326
+ 436254 words of memory out of 3000000
+ 14842 multiletter control sequences out of 15000+200000
+ 21114 words of font info for 107 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 40i,11n,47p,1016b,367s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,11n,47p,1184b,367s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
-xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texl
-ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
-e/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
-012/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/20
-12/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/201
-2/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2012/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2012/t
-exmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2012/texmf-di
-st/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2012/texmf-dist/fon
-ts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on ASA_SCSG_writeup.pdf (4 pages, 6789321 bytes).
+exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/tex
+live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
+ve/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
+2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2
+012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
+12/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2012
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2012/
+texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2012/texmf-d
+ist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2012/texmf-dist/fo
+nts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on ASA_SCSG_writeup.pdf (5 pages, 6935557 bytes).
 PDF statistics:
- 157 PDF objects out of 1000 (max. 8388607)
- 112 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
- 22569 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 173 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
+ 22062 words of extra memory for PDF output out of 24883 (max. 10000000)
 
