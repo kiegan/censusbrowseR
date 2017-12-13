@@ -166,7 +166,7 @@ Iowa State University % Your institution
 %	ARTICLE CONTENTS
 %----------------------------------------------------------------------------------------
 
-\initial{C}\textbf{ensus data provide an important snapshot of information about a country at different times throughout its history, and their value is difficult to overstate. The evolving and adapting nature of census data creates quite the complicated data management problem, and this problem is only exaggerated when one is interested in visualizing data across several years simultaneously. However, improving methods available for data analysis and visualization provide a window for developing a more clean interface for census data exploration. I present a Shiny application that allows users to browse U.S. Census Data across multiple years simultaneously, create an initial visualization of variables of interest, and download chosen data in a `tidy' format. Using a dataset downloaded from this Shiny app, I then present a more in-depth set of visuals for the African American population between 1790 and 1960 in the United States.}  
+\initial{C}\textbf{ensus data provide an important snapshot of information about a country at different times throughout its history, and their value is difficult to overstate. The evolving and adapting nature of census data creates quite the complicated data management problem, and this problem is only exaggerated when one is interested in visualizing data across several years simultaneously. However, improving methods available for data analysis and visualization provide a window for developing a more clean interface for census data exploration. I present a Shiny application that allows users to browse U.S. Census Data across multiple years simultaneously, create an initial visualization of variables of interest, and download chosen data in a `tidy' format. Using an example dataset downloaded from this Shiny app, I then present a more in-depth set of visuals for the African American population between 1790 and 1960 in the United States.}  
 
 \section*{Introduction}
 
@@ -210,6 +210,8 @@ Census data provide an important snapshot of information about a country at diff
 \par The Shiny application has three main points of focus, split into separate tabs. The first tab, `Single Year', allows users to explore all available variable names for a single year of the decennial census at a time. After choosing a particular year, users can look for up to two specific variables of interest by using two available text search bars. This will narrow down the possible variable names, allowing for a more narrow focus in a given year.  
 
 \par The second tab, for `Multiple Years', brings in the ability to compare availability of variables across several years. Users may select a range of years and, if they so choose, narrow down the given results with a text search term. These results are presented as a table with all chosen years as `columns', while all relevant variable names appear as `rows' in the table (see ~\autoref{shiny_1}). An \texttt{X} indicates the presence of that particular variable name in the corresponding year. A totals column to the far right allows users to not only see in how many years each variable appears, but also order the relevant variables by that frequency.  
+
+\par \textit{Need to talk about using different search terms, joining them together, etc... set the stage for the example!}
 
 \begin{figure}[hbtp]
 \includegraphics[width=.48\textwidth]{./figures/search_slaves_40years.png}  
