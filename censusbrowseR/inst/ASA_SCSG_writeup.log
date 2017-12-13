@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  13 DEC 2017 00:24
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  13 DEC 2017 00:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -598,7 +598,7 @@ LaTeX Font Info:    Try loading font information for OT1+phv on input line 152.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 170.
+LaTeX Font Info:    Try loading font information for U+msa on input line 169.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
@@ -606,7 +606,7 @@ File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 (/usr/local/texlive/2012/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 170.
+LaTeX Font Info:    Try loading font information for U+msb on input line 169.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -614,87 +614,80 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 (/usr/local/texlive/2012/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<./figures/colored-population-stat-atlas.png, id=6, 1379.1525pt x 1801.73125pt>
+<./figures/colored-population-stat-atlas.png, id=7, 1379.1525pt x 1801.73125pt>
 File: ./figures/colored-population-stat-atlas.png Graphic file (type png)
 <use ./figures/colored-population-stat-atlas.png>
 Package pdftex.def Info: ./figures/colored-population-stat-atlas.png used on in
-put line 175.
+put line 183.
 (pdftex.def)             Requested size: 204.85674pt x 267.60878pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 176.
-See the caption package documentation for explanation.
-
-[1{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+ [1{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
  <./figures/colored-population-stat-atlas.png>]
-<./figures/search_slaves_40years.png, id=36, 1160.335pt x 717.68124pt>
+<./figures/search_slaves_40years.png, id=37, 1160.335pt x 717.68124pt>
 File: ./figures/search_slaves_40years.png Graphic file (type png)
 
 <use ./figures/search_slaves_40years.png>
 Package pdftex.def Info: ./figures/search_slaves_40years.png used on input line
- 209.
+ 215.
 (pdftex.def)             Requested size: 245.82964pt x 152.04257pt.
 
-<./figures/visualize_slaves_40years_sum.png, id=37, 1160.335pt x 453.695pt>
+<./figures/visualize_slaves_40years_sum.png, id=38, 1160.335pt x 453.695pt>
 File: ./figures/visualize_slaves_40years_sum.png Graphic file (type png)
 
 <use ./figures/visualize_slaves_40years_sum.png>
 Package pdftex.def Info: ./figures/visualize_slaves_40years_sum.png used on inp
-ut line 216.
+ut line 222.
 (pdftex.def)             Requested size: 245.82964pt x 96.11642pt.
-
-<./figures/visualize_slaves_40years.png, id=40, 1159.33125pt x 455.7025pt>
+ [2 <./figures/search_slaves_40years.png>]
+<./figures/visualize_slaves_40years.png, id=53, 1159.33125pt x 455.7025pt>
 File: ./figures/visualize_slaves_40years.png Graphic file (type png)
 
 <use ./figures/visualize_slaves_40years.png>
 Package pdftex.def Info: ./figures/visualize_slaves_40years.png used on input l
-ine 226.
+ine 232.
 (pdftex.def)             Requested size: 512.14966pt x 201.30936pt.
- [2 <./figures/search_slaves_40years.png> <./figures/visualize_slaves_40years_s
-um.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 248.
 
-<figure/map_1790-1.pdf, id=57, 578.16pt x 361.35pt>
+Package xcolor Warning: Incompatible color definition on input line 254.
+
+<figure/map_1790-1.pdf, id=56, 578.16pt x 361.35pt>
 File: figure/map_1790-1.pdf Graphic file (type pdf)
 
 <use figure/map_1790-1.pdf>
-Package pdftex.def Info: figure/map_1790-1.pdf used on input line 249.
+Package pdftex.def Info: figure/map_1790-1.pdf used on input line 255.
 (pdftex.def)             Requested size: 256.07483pt x 160.0421pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 249--249
+Overfull \hbox (5.0pt too wide) in paragraph at lines 255--255
 [][] 
  []
 
-[3 <./figures/visualize_slaves_40years.png> <./figure/map_1790-1.pdf>]
+[3 <./figures/visualize_slaves_40years_sum.png> <./figure/map_1790-1.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 263.
+Package xcolor Warning: Incompatible color definition on input line 269.
 
-<figure/map_1820-1.pdf, id=74, 578.16pt x 361.35pt>
+<figure/map_1820-1.pdf, id=75, 578.16pt x 361.35pt>
 File: figure/map_1820-1.pdf Graphic file (type pdf)
 
 <use figure/map_1820-1.pdf>
-Package pdftex.def Info: figure/map_1820-1.pdf used on input line 264.
+Package pdftex.def Info: figure/map_1820-1.pdf used on input line 270.
 (pdftex.def)             Requested size: 256.07483pt x 160.0421pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 264--264
+Overfull \hbox (5.0pt too wide) in paragraph at lines 270--270
 [][] 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 275.
+Package xcolor Warning: Incompatible color definition on input line 281.
 
-<figure/map_1850-1.pdf, id=76, 578.16pt x 361.35pt>
+<figure/map_1850-1.pdf, id=77, 578.16pt x 361.35pt>
 File: figure/map_1850-1.pdf Graphic file (type pdf)
 
 <use figure/map_1850-1.pdf>
-Package pdftex.def Info: figure/map_1850-1.pdf used on input line 276.
+Package pdftex.def Info: figure/map_1850-1.pdf used on input line 282.
 (pdftex.def)             Requested size: 256.07483pt x 160.0421pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 276--276
+Overfull \hbox (5.0pt too wide) in paragraph at lines 282--282
 [][] 
  []
 
@@ -702,70 +695,75 @@ Overfull \hbox (5.0pt too wide) in paragraph at lines 276--276
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Package xcolor Warning: Incompatible color definition on input line 285.
+Package xcolor Warning: Incompatible color definition on input line 291.
 
-<figure/map_1800s-1.pdf, id=78, 578.16pt x 361.35pt>
+<figure/map_1800s-1.pdf, id=79, 578.16pt x 361.35pt>
 File: figure/map_1800s-1.pdf Graphic file (type pdf)
 
 <use figure/map_1800s-1.pdf>
-Package pdftex.def Info: figure/map_1800s-1.pdf used on input line 286.
+Package pdftex.def Info: figure/map_1800s-1.pdf used on input line 292.
 (pdftex.def)             Requested size: 256.07483pt x 160.0421pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 286--286
+Overfull \hbox (5.0pt too wide) in paragraph at lines 292--292
 [][] 
  []
 
-[4 <./figure/map_1820-1.pdf> <./figure/map_1850-1.pdf> <./figure/map_1800s-1.pd
-f>]
 
-Package xcolor Warning: Incompatible color definition on input line 298.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figure/map_1900s-1.pdf, id=114, 578.16pt x 361.35pt>
+[4 <./figures/visualize_slaves_40years.png> <./figure/map_1820-1.pdf> <./figure
+/map_1850-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 304.
+
+<figure/map_1900s-1.pdf, id=106, 578.16pt x 361.35pt>
 File: figure/map_1900s-1.pdf Graphic file (type pdf)
 
 <use figure/map_1900s-1.pdf>
-Package pdftex.def Info: figure/map_1900s-1.pdf used on input line 299.
+Package pdftex.def Info: figure/map_1900s-1.pdf used on input line 305.
 (pdftex.def)             Requested size: 256.07483pt x 160.0421pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 299--299
+Overfull \hbox (5.0pt too wide) in paragraph at lines 305--305
 [][] 
  []
 
 (./ASA_SCSG_writeup.bbl) 
 AED: lastpage setting LastPage
-[5 <./figure/map_1900s-1.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 331.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 331.
- (./ASA_SCSG_writeup.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 331.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 331.
+[5 <./figure/map_1800s-1.pdf> <./figure/map_1900s-1.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 337.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 337.
+
+(./ASA_SCSG_writeup.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 337.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 337.
 Package rerunfilecheck Info: File `ASA_SCSG_writeup.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 331.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 337.
  ) 
 Here is how much of TeX's memory you used:
- 11884 strings out of 493488
- 184498 string characters out of 3141326
- 436254 words of memory out of 3000000
- 14842 multiletter control sequences out of 15000+200000
- 21114 words of font info for 107 fonts, out of 3000000 for 9000
+ 11885 strings out of 493488
+ 184536 string characters out of 3141326
+ 437263 words of memory out of 3000000
+ 14844 multiletter control sequences out of 15000+200000
+ 21371 words of font info for 107 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 40i,11n,47p,1184b,367s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,11n,47p,1184b,390s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/tex
-live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
-ve/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
-2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2
-012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
-12/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2012
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2012/
-texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2012/texmf-d
-ist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2012/texmf-dist/fo
-nts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on ASA_SCSG_writeup.pdf (5 pages, 6935557 bytes).
+exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
+xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texl
+ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
+e/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
+012/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/20
+12/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/201
+2/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2012/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2012/t
+exmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2012/texmf-di
+st/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2012/texmf-dist/fon
+ts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on ASA_SCSG_writeup.pdf (5 pages, 6953635 bytes).
 PDF statistics:
- 173 PDF objects out of 1000 (max. 8388607)
- 126 compressed objects within 2 object streams
+ 177 PDF objects out of 1000 (max. 8388607)
+ 129 compressed objects within 2 object streams
  28 named destinations out of 1000 (max. 500000)
- 22062 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 22574 words of extra memory for PDF output out of 24883 (max. 10000000)
 

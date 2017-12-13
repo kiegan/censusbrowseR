@@ -115,18 +115,24 @@ Iowa State University % Your institution
 %----------------------------------------------------------------------------------------
 %	ARTICLE CONTENTS
 %----------------------------------------------------------------------------------------
+
+\initial{C}\textbf{ensus data provide an important snapshot of information about a country at different times throughout its history, and their value is difficult to overstate. The evolving and adapting nature of census data creates quite the complicated data management problem, and this problem is only exaggerated when one is interested in visualizing data across several years simultaneously. However, improving methods available for data analysis and visualization provide a window for developing a more clean interface for census data exploration. I present a Shiny application that allows users to browse U.S. Census Data across multiple years simultaneously, create an initial visualization of variables of interest, and download chosen data in a `tidy' format. Using a dataset downloaded from this Shiny app, I then present a more in-depth set of visuals for the African American population between 1790 and 1960 in the United States.}  
+
 \section*{Introduction}
 
-\initial{C}ensus data provide an important snapshot of information about a country at different times throughout its history, and their value is difficult to overstate.  While history books present a narrative of the events that occured, students themselves often don't get to interact with the raw data in that learning environment. Clean and accessible census data allow the exploration of different demographic groups over time, or investigations of a particular period of time and what the demographic and economic landscape looked like in the past. Even today, data about the world around us opens a pathway for learning more about places we haven't been and groups of people with whom we may not usually engage.  
+Census data provide an important snapshot of information about a country at different times throughout its history, and their value is difficult to overstate.  While history books present a narrative of the events that occured, students themselves often don't get to interact with the raw data in that learning environment. Clean and accessible census data allow the exploration of different demographic groups over time, or investigations of a particular period of time and what the demographic and economic landscape looked like in the past. Even today, data about the world around us opens a pathway for learning more about places we haven't been and groups of people with whom we may not usually engage.  
+
 
 \par From an early point in the United States' history, there were many ``eminent men of science" who recognized the value of the census data and worked to aggregate and present those data. Francis A. Walker's ``Statistical Atlas of the United States", based on the 1870 census, was an impressive effort in aggregating population data to present them in a visually appealing way \citep{StatisticalAtlas}. Although the Census Bureau's "Statistical Atlases" eventually stopped being created, they were an important start to the effort of visually presenting census data to a wider public (see~\autoref{atlas}).
 
-\begin{center}
-\includegraphics[width=.4\textwidth]{./figures/colored-population-stat-atlas.png}  
-\captionof{figure}{A visualization of the African American population in the United States from the ``Statistical Atlas of the United States".}\label{atlas}
-\end{center}
 
 \par Today, as methods of data analysis and visualization continue to be developed and improved, access to census data allows us to look back on that history and explore, synthesize, and visualize the information. When aggregated and presented in a clear manner, viewers can learn more about patterns in many different parts of the population. A 2007 paper about the Statistical Atlas discusses just how much information is present in those original charts and demonstrates several other ways of presenting the information that can be found therein \citep{ChartInterview}.  
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=.4\textwidth]{./figures/colored-population-stat-atlas.png}  
+\captionof{figure}{A visualization of the African American population in the United States from the ``Statistical Atlas of the United States".}\label{atlas}
+\end{figure}
 
 \par Ever-improving visualization and data-wrangling methods in R \citep{RCoreTeam} give those interested in statistical graphics a wealth of opportunities to explore and learn from data; in particular, incorporating user interactivity using Shiny has revolutionized the way statisticians share and communicate information \citep{Shiny}. However, it is difficult to make use of these tools with census data if those data are not available and easy to explore in one location.  
 
