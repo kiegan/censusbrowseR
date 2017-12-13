@@ -159,9 +159,7 @@ Iowa State University % Your institution
 
 % The first character should be within \initial{}
 \vspace{-1cm}
-%\initial{U}\textbf{sing a new way to visualize network data in \texttt{R} with \texttt{gglot2}, I examine the evolution of the African slave trade from the $16^{th}$ through the $19^{th}$ centuries. \st{XXX I feel like I need more here. Will add more when paper is more fleshed out.}}
 
-%\initial{T}\textbf{he Trans-Atlantic Slave Trade Database, hosted by Emory University, contains information on nearly 35,000 voyages of slave ships from 1514 - 1866 between Europe, Africa, and the Americas. The entire database contains 279 variables with information on the 34,948 voyages. While the website dedicated to this data contains a dashboard to subset and visualize the data, I wanted to view the data in a new way. I use the \texttt{geomnet} package because I wanted to show that the user can visually explore the data in a way that leaves them with a deeper understanding of the structure of the slave trade. I start by visualizing all of the data I pulled from the database on one map, then I look at different subsets of it, and I end with a much deeper understanding of the slave trade and its impact on the world.}
 %----------------------------------------------------------------------------------------
 %	ARTICLE CONTENTS
 %----------------------------------------------------------------------------------------
@@ -211,8 +209,6 @@ Census data provide an important snapshot of information about a country at diff
 
 \par The second tab, for `Multiple Years', brings in the ability to compare availability of variables across several years. Users may select a range of years and, if they so choose, narrow down the given results with a text search term. These results are presented as a table with all chosen years as `columns', while all relevant variable names appear as `rows' in the table (see ~\autoref{shiny_1}). An \texttt{X} indicates the presence of that particular variable name in the corresponding year. A totals column to the far right allows users to not only see in how many years each variable appears, but also order the relevant variables by that frequency.  
 
-\par \textit{Need to talk about using different search terms, joining them together, etc... set the stage for the example!}
-
 \begin{figure}[hbtp]
 \includegraphics[width=.48\textwidth]{./figures/search_slaves_40years.png}  
 \captionof{figure}{Resulting view of the `Multiple Years' tab after restricting the range of years to between 1800 and 1830, and searching for the term `slave'.}\label{shiny_1}
@@ -239,18 +235,25 @@ Census data provide an important snapshot of information about a country at diff
 
 \par Secondly, users can see how variable names change over time. They can see this during the initial selection of variables in the `Multiple Years' tab; however, now they can see differing variable names for an equivalent or similar demographic group and still directly compare the values on the maps. 
 
-\par While this representation may not be without faults in some scenarios, and can easily become an overwhelming graphic with many different variables represented, we can get an initial visualization of our selected variables with very minimal effort. Choosing to download the filtered data and work with it ourselves in R proves even more fruitful. 
+\par While this representation may not be without faults in some scenarios, and can easily become an overwhelming graphic with many different variables represented, we can get an initial visualization of our selected variables with very minimal effort. Choosing to download the filtered data and work with it ourselves in R proves even more fruitful.  
+
+\par For the example of African Americans throughout U.S. history, we need several different search terms. Three searches were executed within the data, for variables containing the terms \texttt{SLAVE}, \texttt{COLORED}, and \texttt{NEGRO}. For each of these, all variables that counted total numbers within these categories were selected, as well as some that split by gender if the `total' variable was not available for that year. 
+
+\par After downloading each of these sets of selected variables, they were read in to R and combined using the \texttt{full\_join} function from the \texttt{dplyr} package. Downloaded data are kept in a `tidy' fashion and each file automatically includes the \texttt{YEAR}, \texttt{STATE}, \texttt{TOTAL.POPULATION}, and \texttt{TYPE} variables, the last of which indicates whether that state had yet earned statehood or was still considered a territory. This makes the files an excellent candidate for \texttt{full\_join}, since each row contains a year-state pair. In this case, this is advantageous since there are years in which there are variables for both the \texttt{SLAVE} and \texttt{COLORED} terms, and they can now reside together in one common row even though they originated from separate searches and were downloaded as separate csv files. 
+
+\par With this combined data set, we now have a wealth of information to use as a starting point for our exploration of the African American population throughout U.S. history. We can also create more detailed graphics and create comparisons between different variables.  
 
 \section*{A Closer Look at the Data}
 
-
-\par Since the focus is on African Americans throughout U.S. history, several different search terms will be needed across different years. The first search term needed is \texttt{SLAVE}, in the early years of the U.S. census. The vast majority of African Americans were slaves when the United States was founded, so variables that count the number of slaves tell the story about the African American population in early U.S. history. Note that the \texttt{SLAVE} categorization is also the only term the U.S. census had related to African Americans in the early years of the census, so it is also the only source of information available on that group for that time period.  
-
+\par Within our combined data set, we can filter our data on each year as we look through it to be able to quickly see what variables hold values for that particular year. In the early years of the U.S. decennial census, we are almost exclusively left with variables with the term \texttt{SLAVE} in them. The vast majority of African Americans were slaves when the United States was founded, so variables that count the number of slaves tell the story about the African American population in early U.S. history. Note that since the \texttt{SLAVE} categorization is also the only term the U.S. census had related to African Americans in the early years of the census, it is the only source of information available on that group for that time period.  
 
 
 
 
-\par In the year 1790, we see the term \texttt{SLAVES} is our main source of information. Using a similar tactic to that portrayed in the `Visualize' tab of the Shiny application, we can plot the current state outlines as a base, followed by 1790 values for the \texttt{SLAVES} variable in another layer, with 1790-specific state outlines. The resulting image, seen in \autoref{fig:map_1790}, provides a basic look at a single variable in a single year. Moving forward, the ways in which the African American population is accounted for in the census gets more complicated; thus, we will need to consider additional ways of exploring the information.  
+
+
+
+\par Beginning in the year 1790, we see the term \texttt{SLAVES} is our main source of information. Using a similar tactic to that portrayed in the `Visualize' tab of the Shiny application, we can plot the current state outlines as a base, followed by 1790 values for the \texttt{SLAVES} variable in another layer, with 1790-specific state outlines. The resulting image, seen in \autoref{fig:map_1790}, provides a basic look at a single variable in a single year. Moving forward, the ways in which the African American population is accounted for in the census gets more complicated; thus, we will need to consider additional ways of exploring the information.  
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[h]
