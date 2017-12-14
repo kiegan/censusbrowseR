@@ -1,8 +1,18 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{great-migration}
+R.~Andrews and H.~Wainer.
+\newblock The great migration: A graphics novel.
+\newblock {\em Significance}, 14:14--19, 2017.
 
 \bibitem{Shiny}
 W.~Chang, J.~Cheng, J.~Allaire, Y.~Xie, and J.~McPherson.
 \newblock shiny: Web application framework for r., 2017.
+
+\bibitem{ICPSR-2896}
+M.~R. Haines, I.~university Consortium~for Political, and S.~Research.
+\newblock Historical, demographic, economic, and social data: The united
+  states, 1790-2002, 2010.
 
 \bibitem{ChartInterview}
 H.~Hofmann.
@@ -29,5 +39,21 @@ U.~S.~C. Office and F.~A. Walker.
 {R Core Team}.
 \newblock R: A language and environment for statistical computing.
 \newblock 2015.
+
+\bibitem{ICPSR-3}
+I.~university Consortium~for Political and S.~Research.
+\newblock Historical, demographic, economic, and social data: The united
+  states, 1790-1970, 1970.
+
+\bibitem{ggplot2}
+H.~Wickham.
+\newblock A layered grammar of graphics.
+\newblock {\em Journal of Computational and Graphical Statistics}, 19:3--28,
+  2010.
+
+\bibitem{dplyr}
+H.~Wickham, R.~Francois, L.~Henry, and K.~Muller.
+\newblock A grammar of data manipulation.
+\newblock 2017.
 
 \end{thebibliography}

@@ -1,0 +1,10 @@
+name: get_your_data
+title:
+username:
+account: kiegan
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 248433
+bundleId: 1133812
+url: https://kiegan.shinyapps.io/get_your_data/
+when: 1513216325.76492

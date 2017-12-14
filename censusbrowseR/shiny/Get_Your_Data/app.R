@@ -1,3 +1,7 @@
+#library(devtools)
+#devtools::install_github("kiegan/censusbrowseR/censusbrowseR")
+
+#options(shiny.error = browser)
 library(shiny)
 library(censusbrowseR)
 library(DT)
@@ -5,6 +9,11 @@ library(tidyverse)
 library(USAboundaries)
 library(ggthemes)
 library(scales)
+library(rgeos)
+library(maptools)
+gpclibPermit()
+data(stateslist)
+
 states_current <- us_boundaries("1999-12-31")
 mcurr_df <- fortify(states_current, region = "name")
 mcurr_df <- mcurr_df %>% mutate(State = toupper(id)) %>% filter(long >= -127)
@@ -21,7 +30,7 @@ shinyApp(
                         
                         textInput("topic2", label = "Secondary Variable:", value = "")),
              DT::dataTableOutput('tbl'),
-             verbatimTextOutput('x4'),
+             #verbatimTextOutput('x4'),
              p(class = 'text-center', downloadButton('dnld', 'Download Filtered Data'))
              
     ),
@@ -67,23 +76,33 @@ shinyApp(
     )
     
     ####### PRINT SELECTED ROWS: JUST AS A TEST ########
-    output$x4 = renderPrint({
-      s = input$tbl_rows_selected
-      if (length(s)){
-        cat('These rows were selected:\n\n')
-        cat(s, sep = ', ')
-      }
-    })
+#   output$x4 = renderPrint({
+#      s = input$tbl_rows_selected
+#      if (length(s)){
+#        cat('These rows were selected:\n\n')
+#        cat(s, sep = ', ')
+#      }
+#    })
+    
+    
+
     
     ####### DOWNLOAD DATA, SINGLE YEAR #######
     output$dnld = downloadHandler('census-filtered.csv', content = function(file) {
       ## this is where to manipulate data into correct format (rows = colnames)
-      colstoget <- mydata1()[input$tbl_rows_selected,]
+      colstoget <- as.vector(mydata1()[input$tbl_rows_selected,])
       yr.dat <- stateslist[[paste0("X",input$year)]]
       dnld.dat <- yr.dat[,names(yr.dat)%in%c("Year", "State", "TOTAL.POPULATION", "Type", colstoget)]
-      write.csv(dnld.dat, file)
+      write.csv(dnld.dat, file, row.names = FALSE)
     })
-    
+    ####### PRINT DIMENSIONS OF DF: JUST AS A TEST #######
+    #output$x4 = renderPrint({
+    #  colstoget <- as.vector(mydata1()[input$tbl_rows_selected,])
+    #  yr.dat <- stateslist[[paste0("X",input$year)]]
+    #  dnld.dat <- yr.dat[,names(yr.dat)%in%c("Year", "State", "TOTAL.POPULATION", "Type", colstoget)]
+    ##  dim(yr.dat)
+    #  dim(dnld.dat)
+    #  })
     
     ####### REACTIVE FOR MULTIPLE YEAR TABLE #######
     mydata2 <- reactive({
